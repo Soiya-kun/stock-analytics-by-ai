@@ -1,0 +1,87 @@
+study_id: range_breakout_2018_study_20260319_151001
+generated_at: '2026-03-19T15:10:01.735297'
+dataset_key: japan-all-stock-prices/daily
+candidate_window:
+  start_date: 2018-07-01
+  end_date: 2020-12-30
+breakout_rule:
+  range_lookback_bars: 120
+  max_range_width_pct: 0.35
+  breakout_buffer_pct: 0.02
+  min_volume_ratio: 1.2
+  volume_lookback_bars: 20
+  cooldown_bars: 60
+  breakout_basis: close
+  range_high_basis: close
+  range_low_basis: close
+label_rule:
+  trend_confirm_bars: 120
+  trend_eval_bars: 240
+  failure_drawdown_bars: 60
+  trend_min_return_pct: 0.4
+  trend_min_confirm_return_pct: 0.2
+  failure_drawdown_pct: -0.1
+counts:
+  candidate_count: 3393
+  trend: 249
+  non_trend: 2696
+  neutral: 410
+  incomplete: 38
+  trend_rate_excluding_incomplete: 0.07421758569299552
+label_stats:
+  trend:
+    count: 249
+    unique_symbols: 243
+    avg_breakout_pct: 0.04900688591017694
+    avg_range_width_pct: 0.24404410255681933
+    avg_volume_ratio: 10.567848713707363
+    avg_return_20d: 0.1994304262550459
+    avg_return_60d: 0.528285808860933
+    avg_return_120d: 0.6882144250485032
+    avg_return_240d: 0.6332793518192542
+    avg_future_max_return_240d: 1.332383794054146
+    avg_future_min_return_60d: -0.018089845043390097
+  non_trend:
+    count: 2696
+    unique_symbols: 2042
+    avg_breakout_pct: 0.045196425924872115
+    avg_range_width_pct: 0.2261342880797822
+    avg_volume_ratio: 9.323460195689618
+    avg_return_20d: -0.028478664662624657
+    avg_return_60d: -0.08452606214715616
+    avg_return_120d: -0.11774788848322382
+    avg_return_240d: -0.07075249388981625
+    avg_future_max_return_240d: 0.207621801635611
+    avg_future_min_return_60d: -0.1702159120117516
+  neutral:
+    count: 410
+    unique_symbols: 394
+    avg_breakout_pct: 0.040408847109564223
+    avg_range_width_pct: 0.2427417114846238
+    avg_volume_ratio: 6.218497874486476
+    avg_return_20d: 0.05497180141878298
+    avg_return_60d: 0.1073709047312727
+    avg_return_120d: 0.12382824706508039
+    avg_return_240d: 0.12807516790012594
+    avg_future_max_return_240d: 0.4132916795866478
+    avg_future_min_return_60d: -0.035143152460360004
+  incomplete:
+    count: 38
+    unique_symbols: 38
+    avg_breakout_pct: 0.07701734548231967
+    avg_range_width_pct: 0.2112524141928412
+    avg_volume_ratio: 37.65208085250189
+    avg_return_20d: 0.19674575815465267
+    avg_return_60d: 0.2747821877880018
+    avg_return_120d: null
+    avg_return_240d: null
+    avg_future_max_return_240d: 0.28398000408379825
+    avg_future_min_return_60d: -0.012626328043371745
+files:
+  all_cases_csv: research/range-breakout-2018-study/range_breakout_2018_study_20260319_151001_cases_all.csv
+  trend_cases_csv: research/range-breakout-2018-study/range_breakout_2018_study_20260319_151001_cases_trend.csv
+  non_trend_cases_csv: research/range-breakout-2018-study/range_breakout_2018_study_20260319_151001_cases_non_trend.csv
+  neutral_cases_csv: research/range-breakout-2018-study/range_breakout_2018_study_20260319_151001_cases_neutral.csv
+  incomplete_cases_csv: research/range-breakout-2018-study/range_breakout_2018_study_20260319_151001_cases_incomplete.csv
+  summary_yaml: research/range-breakout-2018-study/range_breakout_2018_study_20260319_151001_summary.yaml
+  report_md: research/range-breakout-2018-study/range_breakout_2018_study_20260319_151001_report.md

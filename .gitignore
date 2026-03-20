@@ -1,0 +1,9 @@
+/stock/
+/.idea/
+/pgdata/
+/.import-progress/
+/outputs/
+/.env
+__pycache__/
+.pytest_cache/
+*.pyc

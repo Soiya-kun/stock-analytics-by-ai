@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stock Analytics Workflow"
+  short_description: "Maintain Kabuplus ingest workflow"
+  default_prompt: "Use this skill when working in stock-analytics-by-ai on data ingestion, SQL views, or analysis-principle updates."

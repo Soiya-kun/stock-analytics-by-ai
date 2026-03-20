@@ -1,0 +1,60 @@
+services:
+  db:
+    image: postgres:16
+    container_name: stock-analytics-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-stock_analytics}
+      POSTGRES_USER: ${POSTGRES_USER:-stock}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-stock}
+      TZ: Asia/Tokyo
+      PGTZ: Asia/Tokyo
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - ./:/workspace
+      - ./pgdata:/var/lib/postgresql/data
+      - ./sql/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${POSTGRES_USER:-stock} -d ${POSTGRES_DB:-stock_analytics}",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  importer:
+    build:
+      context: .
+      dockerfile: docker/importer/Dockerfile
+    profiles: ["tools"]
+    depends_on:
+      db:
+        condition: service_healthy
+    working_dir: /workspace
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-stock}:${POSTGRES_PASSWORD:-stock}@db:5432/${POSTGRES_DB:-stock_analytics}
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ./:/workspace
+    entrypoint: ["python", "/workspace/scripts/import_kabuplus.py"]
+    command: ["--stock-dir", "/workspace/stock"]
+
+  analysis:
+    build:
+      context: .
+      dockerfile: docker/importer/Dockerfile
+    profiles: ["tools"]
+    depends_on:
+      db:
+        condition: service_healthy
+    working_dir: /workspace
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-stock}:${POSTGRES_PASSWORD:-stock}@db:5432/${POSTGRES_DB:-stock_analytics}
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ./:/workspace
+    entrypoint: ["python", "/workspace/scripts/analyze_range_breakout.py"]
+    command: ["grid-search", "--output-dir", "/workspace/outputs/range-breakout"]

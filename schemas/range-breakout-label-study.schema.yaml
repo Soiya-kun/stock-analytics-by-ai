@@ -1,0 +1,62 @@
+type: range_breakout_label_study
+version: 1
+description: >
+  Durable YAML summary format for the 2018+ range-breakout labeling study.
+required:
+  - study_id
+  - generated_at
+  - dataset_key
+  - candidate_window
+  - breakout_rule
+  - label_rule
+  - counts
+  - label_stats
+properties:
+  study_id:
+    type: string
+  generated_at:
+    type: datetime
+  dataset_key:
+    type: string
+  candidate_window:
+    type: map
+    required: [start_date, end_date]
+    properties:
+      start_date: { type: date }
+      end_date: { type: date }
+  breakout_rule:
+    type: map
+    required:
+      - range_lookback_bars
+      - max_range_width_pct
+      - breakout_buffer_pct
+      - min_volume_ratio
+      - volume_lookback_bars
+      - cooldown_bars
+      - breakout_basis
+      - range_high_basis
+      - range_low_basis
+  label_rule:
+    type: map
+    required:
+      - trend_confirm_bars
+      - trend_eval_bars
+      - failure_drawdown_bars
+      - trend_min_return_pct
+      - trend_min_confirm_return_pct
+      - failure_drawdown_pct
+  counts:
+    type: map
+    required:
+      - candidate_count
+      - trend
+      - non_trend
+      - neutral
+      - incomplete
+      - trend_rate_excluding_incomplete
+  label_stats:
+    type: map
+    description: Summary metrics keyed by trend, non_trend, neutral, incomplete
+  files:
+    type: map
+    description: Paths to the generated md/csv/yaml artifacts
