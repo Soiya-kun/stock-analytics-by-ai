@@ -1,0 +1,34 @@
+type: entry_breakout_hypotheses
+version: 1
+required:
+  - run_id
+  - stage
+  - generated_at
+  - hypotheses
+properties:
+  run_id:
+    type: string
+  stage:
+    type: string
+    enum: [train, validation]
+  generated_at:
+    type: datetime
+  hypotheses:
+    type: sequence
+    each:
+      type: map
+      required:
+        - hypothesis_id
+        - rule_name
+        - conditions
+      properties:
+        hypothesis_id:
+          type: string
+        rule_name:
+          type: string
+        conditions:
+          type: sequence
+        train_metrics:
+          type: map
+        validation_metrics:
+          type: map

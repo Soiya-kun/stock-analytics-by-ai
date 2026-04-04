@@ -13,6 +13,9 @@ from pathlib import Path
 from statistics import median
 from typing import Iterable, Sequence
 
+from entry_breakout_research import handle_command as handle_research_command
+from entry_breakout_research import register_subcommands as register_research_subcommands
+
 try:
     import psycopg
     from psycopg.rows import dict_row
@@ -162,6 +165,7 @@ def parse_args() -> argparse.Namespace:
         help="Label breakout cases as trend / non_trend / neutral using forward price-only outcomes.",
     )
     add_label_study_args(study)
+    register_research_subcommands(subparsers)
 
     return parser.parse_args()
 
@@ -453,7 +457,7 @@ def build_signal_query(
         latest_market_day_cte = """
 , latest_market_day as (
     select max(trade_date) as trade_date
-    from analytics.stock_prices_daily
+    from analytics.stock_prices_adjusted_daily
 """
         latest_filters = []
         if end_date is not None:
@@ -484,7 +488,7 @@ with base as (
         min({range_low_col}) over lookback_window as range_low,
         avg(volume) over volume_window as avg_volume,
         {lead_columns}
-    from analytics.stock_prices_daily
+    from analytics.stock_prices_adjusted_daily
     where {" and ".join(base_filters)}
     window
         lookback_window as (
@@ -573,7 +577,7 @@ def build_label_study_params(args: argparse.Namespace) -> BreakoutLabelStudyPara
 
 def build_label_study_query(
     params: BreakoutLabelStudyParams,
-    source_relation: str = "analytics.stock_prices_daily",
+    source_relation: str = "analytics.stock_prices_adjusted_daily",
 ) -> str:
     base_start_date = params.candidate_start_date - timedelta(days=params.range_lookback_bars * 2)
     base_end_date = params.candidate_end_date + timedelta(days=params.trend_eval_bars * 2)
@@ -718,7 +722,7 @@ def fetch_label_study_rows(
                     high_price,
                     low_price,
                     volume
-                from analytics.stock_prices_daily
+                from analytics.stock_prices_adjusted_daily
                 where trade_date >= date '{base_start_date.isoformat()}'
                   and trade_date <= date '{base_end_date.isoformat()}'
                 """
@@ -1400,6 +1404,10 @@ def main() -> int:
         return run_scan(args, dsn)
     if args.command == "label-study":
         return run_label_study(args, dsn)
+
+    handled = handle_research_command(args, dsn)
+    if handled is not None:
+        return handled
 
     raise ValueError(f"Unsupported command: {args.command}")
 

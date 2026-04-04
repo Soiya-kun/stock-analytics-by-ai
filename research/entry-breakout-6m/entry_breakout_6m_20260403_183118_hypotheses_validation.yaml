@@ -1,0 +1,1026 @@
+type: entry_breakout_hypotheses
+version: 1
+run_id: entry_breakout_6m_20260403_183118
+stage: validation
+generated_at: '2026-04-03T19:11:02.871349'
+hypotheses:
+- hypothesis_id: 0479611b79fd
+  rule_name: range_width_pct >= 0.3083
+  conditions:
+  - feature: range_width_pct
+    operator: '>='
+    threshold: 0.30831643
+  train_metrics:
+    recall: 0.21653543307086615
+    coverage: 0.1526563550773369
+    precision: 0.1211453744493392
+    selected_count: 454
+    trend_selected: 55
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.4184501717021054
+    non_trend_selected: 399
+  validation_metrics:
+    selected_count: 435
+    trend_selected: 48
+    non_trend_selected: 387
+    precision: 0.1103448275862069
+    recall: 0.12121212121212122
+    coverage: 0.14285714285714285
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 0.8484848484848485
+- hypothesis_id: 06312eefda49
+  rule_name: ma_gap_60_pct >= 0.1425
+  conditions:
+  - feature: ma_gap_60_pct
+    operator: '>='
+    threshold: 0.14250819
+  train_metrics:
+    recall: 0.4921259842519685
+    coverage: 0.34936112979152656
+    precision: 0.12030798845043311
+    selected_count: 1039
+    trend_selected: 125
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.4086455025653073
+    non_trend_selected: 914
+  validation_metrics:
+    selected_count: 1138
+    trend_selected: 151
+    non_trend_selected: 987
+    precision: 0.13268892794376097
+    recall: 0.3813131313131313
+    coverage: 0.37372742200328407
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.0202974383554346
+- hypothesis_id: 094bd29c72b7
+  rule_name: ma_gap_20_pct >= 0.1235 and ma_slope_20_pct >= 0.0730
+  conditions:
+  - feature: ma_gap_20_pct
+    operator: '>='
+    threshold: 0.12345525
+  - feature: ma_slope_20_pct
+    operator: '>='
+    threshold: 0.07304747
+  train_metrics:
+    recall: 0.0984251968503937
+    coverage: 0.03665097511768662
+    precision: 0.22935779816513763
+    selected_count: 109
+    trend_selected: 25
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.685472802138265
+    non_trend_selected: 84
+  validation_metrics:
+    selected_count: 144
+    trend_selected: 19
+    non_trend_selected: 125
+    precision: 0.13194444444444445
+    recall: 0.047979797979797977
+    coverage: 0.04729064039408867
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.0145728114478114
+- hypothesis_id: 0d5ead5e8401
+  rule_name: breakout_margin_pct >= 0.0424
+  conditions:
+  - feature: breakout_margin_pct
+    operator: '>='
+    threshold: 0.04242424
+  train_metrics:
+    recall: 0.4645669291338583
+    coverage: 0.3258238063214526
+    precision: 0.1217750257997936
+    selected_count: 969
+    trend_selected: 118
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.425822546175536
+    non_trend_selected: 851
+  validation_metrics:
+    selected_count: 1027
+    trend_selected: 150
+    non_trend_selected: 877
+    precision: 0.1460564751703992
+    recall: 0.3787878787878788
+    coverage: 0.33727422003284074
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.1230857749845091
+- hypothesis_id: 1f604610ad9c
+  rule_name: atr_20_pct >= 0.0268
+  conditions:
+  - feature: atr_20_pct
+    operator: '>='
+    threshold: 0.02680556
+  train_metrics:
+    recall: 0.38976377952755903
+    coverage: 0.24983187626092804
+    precision: 0.13324360699865412
+    selected_count: 743
+    trend_selected: 99
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.5601042803700682
+    non_trend_selected: 644
+  validation_metrics:
+    selected_count: 857
+    trend_selected: 119
+    non_trend_selected: 738
+    precision: 0.13885647607934656
+    recall: 0.3005050505050505
+    coverage: 0.28144499178981935
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.067722145610127
+- hypothesis_id: 2aeff71ea82d
+  rule_name: atr_20_pct >= 0.0302 and ma_gap_60_pct >= 0.1898
+  conditions:
+  - feature: atr_20_pct
+    operator: '>='
+    threshold: 0.03024283
+  - feature: ma_gap_60_pct
+    operator: '>='
+    threshold: 0.18982726
+  train_metrics:
+    recall: 0.13385826771653545
+    coverage: 0.06220578345662407
+    precision: 0.1837837837837838
+    selected_count: 185
+    trend_selected: 34
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.1518620983187913
+    non_trend_selected: 151
+  validation_metrics:
+    selected_count: 229
+    trend_selected: 33
+    non_trend_selected: 196
+    precision: 0.14410480349344978
+    recall: 0.08333333333333333
+    coverage: 0.07520525451559934
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.1080786026200873
+- hypothesis_id: 2d19fc109263
+  rule_name: atr_20_pct >= 0.0302 and ma_gap_20_pct >= 0.1549
+  conditions:
+  - feature: atr_20_pct
+    operator: '>='
+    threshold: 0.03024283
+  - feature: ma_gap_20_pct
+    operator: '>='
+    threshold: 0.15493918
+  train_metrics:
+    recall: 0.13385826771653545
+    coverage: 0.06489576328177539
+    precision: 0.17616580310880828
+    selected_count: 193
+    trend_selected: 34
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.0626657419117946
+    non_trend_selected: 159
+  validation_metrics:
+    selected_count: 213
+    trend_selected: 31
+    non_trend_selected: 182
+    precision: 0.14553990610328638
+    recall: 0.07828282828282829
+    coverage: 0.06995073891625615
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.1191136719305732
+- hypothesis_id: 35150e815022
+  rule_name: atr_20_pct >= 0.0302 and breakout_margin_pct >= 0.0702
+  conditions:
+  - feature: atr_20_pct
+    operator: '>='
+    threshold: 0.03024283
+  - feature: breakout_margin_pct
+    operator: '>='
+    threshold: 0.07019563
+  train_metrics:
+    recall: 0.09055118110236221
+    coverage: 0.04303967720242098
+    precision: 0.1796875
+    selected_count: 128
+    trend_selected: 23
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.1039000984251968
+    non_trend_selected: 105
+  validation_metrics:
+    selected_count: 133
+    trend_selected: 19
+    non_trend_selected: 114
+    precision: 0.14285714285714285
+    recall: 0.047979797979797977
+    coverage: 0.04367816091954023
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.0984848484848484
+- hypothesis_id: 383fab805b42
+  rule_name: atr_20_pct >= 0.0302 and ma_gap_60_pct >= 0.1615
+  conditions:
+  - feature: atr_20_pct
+    operator: '>='
+    threshold: 0.03024283
+  - feature: ma_gap_60_pct
+    operator: '>='
+    threshold: 0.1615049
+  train_metrics:
+    recall: 0.18110236220472442
+    coverage: 0.08843308675184935
+    precision: 0.17490494296577946
+    selected_count: 263
+    trend_selected: 46
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.047902757402473
+    non_trend_selected: 217
+  validation_metrics:
+    selected_count: 335
+    trend_selected: 51
+    non_trend_selected: 284
+    precision: 0.15223880597014924
+    recall: 0.12878787878787878
+    coverage: 0.11001642036124795
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.1706241519674354
+- hypothesis_id: 3afd8d2aca1e
+  rule_name: prior_return_20d_pct >= 0.2019 and ma_slope_20_pct >= 0.0730
+  conditions:
+  - feature: prior_return_20d_pct
+    operator: '>='
+    threshold: 0.20191159
+  - feature: ma_slope_20_pct
+    operator: '>='
+    threshold: 0.07304747
+  train_metrics:
+    recall: 0.08661417322834646
+    coverage: 0.03900470746469401
+    precision: 0.1896551724137931
+    selected_count: 116
+    trend_selected: 22
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.220608199837089
+    non_trend_selected: 94
+  validation_metrics:
+    selected_count: 164
+    trend_selected: 29
+    non_trend_selected: 135
+    precision: 0.17682926829268292
+    recall: 0.07323232323232323
+    coverage: 0.053858784893267654
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.359709903917221
+- hypothesis_id: 3f29ed86b105
+  rule_name: ma_gap_20_pct >= 0.1549
+  conditions:
+  - feature: ma_gap_20_pct
+    operator: '>='
+    threshold: 0.15493918
+  train_metrics:
+    recall: 0.24803149606299213
+    coverage: 0.1496301277740417
+    precision: 0.14157303370786517
+    selected_count: 445
+    trend_selected: 63
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.657630717508626
+    non_trend_selected: 382
+  validation_metrics:
+    selected_count: 525
+    trend_selected: 72
+    non_trend_selected: 453
+    precision: 0.13714285714285715
+    recall: 0.18181818181818182
+    coverage: 0.1724137931034483
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.0545454545454547
+- hypothesis_id: 418489ca99e7
+  rule_name: breakout_margin_pct >= 0.0702
+  conditions:
+  - feature: breakout_margin_pct
+    operator: '>='
+    threshold: 0.07019563
+  train_metrics:
+    recall: 0.2047244094488189
+    coverage: 0.1378614660390047
+    precision: 0.12682926829268293
+    selected_count: 410
+    trend_selected: 52
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.485000960245823
+    non_trend_selected: 358
+  validation_metrics:
+    selected_count: 448
+    trend_selected: 57
+    non_trend_selected: 391
+    precision: 0.12723214285714285
+    recall: 0.14393939393939395
+    coverage: 0.1471264367816092
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 0.9783380681818181
+- hypothesis_id: 489f3111922b
+  rule_name: gap_pct >= 0.0527
+  conditions:
+  - feature: gap_pct
+    operator: '>='
+    threshold: 0.05272346
+  train_metrics:
+    recall: 0.18110236220472442
+    coverage: 0.12710154673839946
+    precision: 0.12169312169312169
+    selected_count: 378
+    trend_selected: 46
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.4248635587218264
+    non_trend_selected: 332
+  validation_metrics:
+    selected_count: 424
+    trend_selected: 65
+    non_trend_selected: 359
+    precision: 0.15330188679245282
+    recall: 0.16414141414141414
+    coverage: 0.13924466338259442
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.1787985991995424
+- hypothesis_id: 5597e71bbba7
+  rule_name: day_return_pct >= 0.0763
+  conditions:
+  - feature: day_return_pct
+    operator: '>='
+    threshold: 0.07629288
+  train_metrics:
+    recall: 0.36220472440944884
+    coverage: 0.2390719569603228
+    precision: 0.12939521800281295
+    selected_count: 711
+    trend_selected: 92
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.515044796615613
+    non_trend_selected: 619
+  validation_metrics:
+    selected_count: 784
+    trend_selected: 107
+    non_trend_selected: 677
+    precision: 0.1364795918367347
+    recall: 0.2702020202020202
+    coverage: 0.2574712643678161
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.0494453463203464
+- hypothesis_id: 5bfdaab3a167
+  rule_name: ma_gap_60_pct >= 0.1898
+  conditions:
+  - feature: ma_gap_60_pct
+    operator: '>='
+    threshold: 0.18982726
+  train_metrics:
+    recall: 0.2440944881889764
+    coverage: 0.1496301277740417
+    precision: 0.1393258426966292
+    selected_count: 445
+    trend_selected: 62
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.6313191188180127
+    non_trend_selected: 383
+  validation_metrics:
+    selected_count: 530
+    trend_selected: 64
+    non_trend_selected: 466
+    precision: 0.12075471698113208
+    recall: 0.16161616161616163
+    coverage: 0.17405582922824303
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 0.9285305889079474
+- hypothesis_id: 623fdcf3b0a5
+  rule_name: atr_20_pct >= 0.0268 and ma_slope_20_pct >= 0.0730
+  conditions:
+  - feature: atr_20_pct
+    operator: '>='
+    threshold: 0.02680556
+  - feature: ma_slope_20_pct
+    operator: '>='
+    threshold: 0.07304747
+  train_metrics:
+    recall: 0.1377952755905512
+    coverage: 0.05884330867518493
+    precision: 0.2
+    selected_count: 175
+    trend_selected: 35
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.341732283464567
+    non_trend_selected: 140
+  validation_metrics:
+    selected_count: 225
+    trend_selected: 33
+    non_trend_selected: 192
+    precision: 0.14666666666666667
+    recall: 0.08333333333333333
+    coverage: 0.07389162561576355
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.1277777777777778
+- hypothesis_id: 74ed8495372b
+  rule_name: ma_slope_20_pct >= 0.0730
+  conditions:
+  - feature: ma_slope_20_pct
+    operator: '>='
+    threshold: 0.07304747
+  train_metrics:
+    recall: 0.2283464566929134
+    coverage: 0.15030262273032952
+    precision: 0.1297539149888143
+    selected_count: 447
+    trend_selected: 58
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.519244658176117
+    non_trend_selected: 389
+  validation_metrics:
+    selected_count: 491
+    trend_selected: 70
+    non_trend_selected: 421
+    precision: 0.1425661914460285
+    recall: 0.17676767676767677
+    coverage: 0.161247947454844
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.0962476084675676
+- hypothesis_id: 7588caae3183
+  rule_name: atr_20_pct >= 0.0302 and range_width_pct >= 0.2835
+  conditions:
+  - feature: atr_20_pct
+    operator: '>='
+    threshold: 0.03024283
+  - feature: range_width_pct
+    operator: '>='
+    threshold: 0.28353659
+  train_metrics:
+    recall: 0.16141732283464566
+    coverage: 0.06590450571620712
+    precision: 0.20918367346938777
+    selected_count: 196
+    trend_selected: 41
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.4492608066848787
+    non_trend_selected: 155
+  validation_metrics:
+    selected_count: 265
+    trend_selected: 37
+    non_trend_selected: 228
+    precision: 0.13962264150943396
+    recall: 0.09343434343434344
+    coverage: 0.08702791461412152
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.073613493424814
+- hypothesis_id: 7a73ee10daca
+  rule_name: atr_20_pct >= 0.0302 and ma_slope_20_pct >= 0.0730
+  conditions:
+  - feature: atr_20_pct
+    operator: '>='
+    threshold: 0.03024283
+  - feature: ma_slope_20_pct
+    operator: '>='
+    threshold: 0.07304747
+  train_metrics:
+    recall: 0.0984251968503937
+    coverage: 0.04034969737726967
+    precision: 0.20833333333333334
+    selected_count: 120
+    trend_selected: 25
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.4393044619422573
+    non_trend_selected: 95
+  validation_metrics:
+    selected_count: 159
+    trend_selected: 25
+    non_trend_selected: 134
+    precision: 0.15723270440251572
+    recall: 0.06313131313131314
+    coverage: 0.052216748768472904
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.209024204307223
+- hypothesis_id: 88c790270b94
+  rule_name: ma_gap_20_pct >= 0.1048
+  conditions:
+  - feature: ma_gap_20_pct
+    operator: '>='
+    threshold: 0.10480677
+  train_metrics:
+    recall: 0.49606299212598426
+    coverage: 0.3503698722259583
+    precision: 0.12092130518234165
+    selected_count: 1042
+    trend_selected: 126
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.4158266205208034
+    non_trend_selected: 916
+  validation_metrics:
+    selected_count: 1207
+    trend_selected: 168
+    non_trend_selected: 1039
+    precision: 0.1391880695940348
+    recall: 0.42424242424242425
+    coverage: 0.39638752052545156
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.070271898772313
+- hypothesis_id: 8f82122b0785
+  rule_name: day_return_pct >= 0.1047 and ma_slope_20_pct >= 0.0730
+  conditions:
+  - feature: day_return_pct
+    operator: '>='
+    threshold: 0.10473649
+  - feature: ma_slope_20_pct
+    operator: '>='
+    threshold: 0.07304747
+  train_metrics:
+    recall: 0.03937007874015748
+    coverage: 0.014794889038332213
+    precision: 0.22727272727272727
+    selected_count: 44
+    trend_selected: 10
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.6610594130279166
+    non_trend_selected: 34
+  validation_metrics:
+    selected_count: 50
+    trend_selected: 11
+    non_trend_selected: 39
+    precision: 0.22
+    recall: 0.027777777777777776
+    coverage: 0.016420361247947456
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.6916666666666667
+- hypothesis_id: 964d25c6b285
+  rule_name: ma_gap_60_pct >= 0.1898 and ma_slope_20_pct >= 0.0730
+  conditions:
+  - feature: ma_gap_60_pct
+    operator: '>='
+    threshold: 0.18982726
+  - feature: ma_slope_20_pct
+    operator: '>='
+    threshold: 0.07304747
+  train_metrics:
+    recall: 0.1062992125984252
+    coverage: 0.04438466711499664
+    precision: 0.20454545454545456
+    selected_count: 132
+    trend_selected: 27
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.3949534717251253
+    non_trend_selected: 105
+  validation_metrics:
+    selected_count: 169
+    trend_selected: 25
+    non_trend_selected: 144
+    precision: 0.14792899408284024
+    recall: 0.06313131313131314
+    coverage: 0.0555008210180624
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.1374843105612336
+- hypothesis_id: 986b102b2737
+  rule_name: atr_20_pct >= 0.0244
+  conditions:
+  - feature: atr_20_pct
+    operator: '>='
+    threshold: 0.02444405
+  train_metrics:
+    recall: 0.5078740157480315
+    coverage: 0.3496973772696705
+    precision: 0.12403846153846154
+    selected_count: 1040
+    trend_selected: 129
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.452324348879467
+    non_trend_selected: 911
+  validation_metrics:
+    selected_count: 1207
+    trend_selected: 169
+    non_trend_selected: 1038
+    precision: 0.140016570008285
+    recall: 0.42676767676767674
+    coverage: 0.39638752052545156
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.0766425648364337
+- hypothesis_id: 9d08affbdfe6
+  rule_name: prior_return_20d_pct >= 0.2019 and range_width_pct >= 0.2835
+  conditions:
+  - feature: prior_return_20d_pct
+    operator: '>='
+    threshold: 0.20191159
+  - feature: range_width_pct
+    operator: '>='
+    threshold: 0.28353659
+  train_metrics:
+    recall: 0.12598425196850394
+    coverage: 0.05951580363147276
+    precision: 0.1807909604519774
+    selected_count: 177
+    trend_selected: 32
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.116820143244806
+    non_trend_selected: 145
+  validation_metrics:
+    selected_count: 237
+    trend_selected: 33
+    non_trend_selected: 204
+    precision: 0.13924050632911392
+    recall: 0.08333333333333333
+    coverage: 0.07783251231527094
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.070675105485232
+- hypothesis_id: 9d8d50e1be01
+  rule_name: atr_20_pct >= 0.0268 and range_width_pct >= 0.2835
+  conditions:
+  - feature: atr_20_pct
+    operator: '>='
+    threshold: 0.02680556
+  - feature: range_width_pct
+    operator: '>='
+    threshold: 0.28353659
+  train_metrics:
+    recall: 0.2283464566929134
+    coverage: 0.10692669804976462
+    precision: 0.18238993710691823
+    selected_count: 318
+    trend_selected: 58
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.135542019511712
+    non_trend_selected: 260
+  validation_metrics:
+    selected_count: 379
+    trend_selected: 52
+    non_trend_selected: 327
+    precision: 0.13720316622691292
+    recall: 0.13131313131313133
+    coverage: 0.12446633825944171
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.0550091948508835
+- hypothesis_id: 9e9387b89b15
+  rule_name: atr_20_pct >= 0.0302
+  conditions:
+  - feature: atr_20_pct
+    operator: '>='
+    threshold: 0.03024283
+  train_metrics:
+    recall: 0.27165354330708663
+    coverage: 0.1496301277740417
+    precision: 0.1550561797752809
+    selected_count: 445
+    trend_selected: 69
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.8155003096523048
+    non_trend_selected: 376
+  validation_metrics:
+    selected_count: 509
+    trend_selected: 70
+    non_trend_selected: 439
+    precision: 0.137524557956778
+    recall: 0.17676767676767677
+    coverage: 0.16715927750410509
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.0574805024706795
+- hypothesis_id: a181785bf2de
+  rule_name: ma_gap_20_pct >= 0.1549 and ma_slope_20_pct >= 0.0730
+  conditions:
+  - feature: ma_gap_20_pct
+    operator: '>='
+    threshold: 0.15493918
+  - feature: ma_slope_20_pct
+    operator: '>='
+    threshold: 0.07304747
+  train_metrics:
+    recall: 0.047244094488188976
+    coverage: 0.018493611297915265
+    precision: 0.21818181818181817
+    selected_count: 55
+    trend_selected: 12
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.5546170365068
+    non_trend_selected: 43
+  validation_metrics:
+    selected_count: 66
+    trend_selected: 9
+    non_trend_selected: 57
+    precision: 0.13636363636363635
+    recall: 0.022727272727272728
+    coverage: 0.02167487684729064
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.0485537190082643
+- hypothesis_id: b8a1aa6650dc
+  rule_name: atr_20_pct >= 0.0302 and prior_return_20d_pct >= 0.2019
+  conditions:
+  - feature: atr_20_pct
+    operator: '>='
+    threshold: 0.03024283
+  - feature: prior_return_20d_pct
+    operator: '>='
+    threshold: 0.20191159
+  train_metrics:
+    recall: 0.1377952755905512
+    coverage: 0.0652320107599193
+    precision: 0.18041237113402062
+    selected_count: 194
+    trend_selected: 35
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.112387369104635
+    non_trend_selected: 159
+  validation_metrics:
+    selected_count: 254
+    trend_selected: 37
+    non_trend_selected: 217
+    precision: 0.14566929133858267
+    recall: 0.09343434343434344
+    coverage: 0.08341543513957307
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.1201085659747076
+- hypothesis_id: bd928c5424c1
+  rule_name: ma_slope_20_pct >= 0.0730 and breakout_margin_pct >= 0.0702
+  conditions:
+  - feature: ma_slope_20_pct
+    operator: '>='
+    threshold: 0.07304747
+  - feature: breakout_margin_pct
+    operator: '>='
+    threshold: 0.07019563
+  train_metrics:
+    recall: 0.05905511811023622
+    coverage: 0.019502353732347006
+    precision: 0.25862068965517243
+    selected_count: 58
+    trend_selected: 15
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 3.0281020906869403
+    non_trend_selected: 43
+  validation_metrics:
+    selected_count: 69
+    trend_selected: 14
+    non_trend_selected: 55
+    precision: 0.2028985507246377
+    recall: 0.03535353535353535
+    coverage: 0.022660098522167486
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.560166886253843
+- hypothesis_id: c5cd4041e018
+  rule_name: ma_slope_20_pct >= 0.0730 and breakout_margin_pct >= 0.0424
+  conditions:
+  - feature: ma_slope_20_pct
+    operator: '>='
+    threshold: 0.07304747
+  - feature: breakout_margin_pct
+    operator: '>='
+    threshold: 0.04242424
+  train_metrics:
+    recall: 0.11811023622047244
+    coverage: 0.05043712172158709
+    precision: 0.2
+    selected_count: 150
+    trend_selected: 30
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.341732283464567
+    non_trend_selected: 120
+  validation_metrics:
+    selected_count: 161
+    trend_selected: 30
+    non_trend_selected: 131
+    precision: 0.18633540372670807
+    recall: 0.07575757575757576
+    coverage: 0.052873563218390804
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.4328063241106719
+- hypothesis_id: c6105e41d4d6
+  rule_name: ma_gap_60_pct >= 0.1615
+  conditions:
+  - feature: ma_gap_60_pct
+    operator: '>='
+    threshold: 0.1615049
+  train_metrics:
+    recall: 0.38976377952755903
+    coverage: 0.24949562878278414
+    precision: 0.1334231805929919
+    selected_count: 742
+    trend_selected: 99
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.5622068467856611
+    non_trend_selected: 643
+  validation_metrics:
+    selected_count: 845
+    trend_selected: 110
+    non_trend_selected: 735
+    precision: 0.1301775147928994
+    recall: 0.2777777777777778
+    coverage: 0.277504105090312
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.0009861932938855
+- hypothesis_id: ce0dddce7ec9
+  rule_name: prior_return_20d_pct >= 0.1681 and range_width_pct >= 0.2835
+  conditions:
+  - feature: prior_return_20d_pct
+    operator: '>='
+    threshold: 0.1681128
+  - feature: range_width_pct
+    operator: '>='
+    threshold: 0.28353659
+  train_metrics:
+    recall: 0.18503937007874016
+    coverage: 0.08977807666442501
+    precision: 0.1760299625468165
+    selected_count: 267
+    trend_selected: 47
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.061075230764694
+    non_trend_selected: 220
+  validation_metrics:
+    selected_count: 313
+    trend_selected: 45
+    non_trend_selected: 268
+    precision: 0.14376996805111822
+    recall: 0.11363636363636363
+    coverage: 0.10279146141215106
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.1055039209991286
+- hypothesis_id: d4529a3df895
+  rule_name: ma_gap_20_pct >= 0.1235
+  conditions:
+  - feature: ma_gap_20_pct
+    operator: '>='
+    threshold: 0.12345525
+  train_metrics:
+    recall: 0.38188976377952755
+    coverage: 0.24983187626092804
+    precision: 0.13055181695827725
+    selected_count: 743
+    trend_selected: 97
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.5285870221807738
+    non_trend_selected: 646
+  validation_metrics:
+    selected_count: 871
+    trend_selected: 129
+    non_trend_selected: 742
+    precision: 0.14810562571756603
+    recall: 0.32575757575757575
+    coverage: 0.28604269293924467
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.1388425007827994
+- hypothesis_id: dc62213741bc
+  rule_name: prior_return_20d_pct >= 0.1681
+  conditions:
+  - feature: prior_return_20d_pct
+    operator: '>='
+    threshold: 0.1681128
+  train_metrics:
+    recall: 0.3779527559055118
+    coverage: 0.24915938130464022
+    precision: 0.12955465587044535
+    selected_count: 741
+    trend_selected: 96
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.5169116006248207
+    non_trend_selected: 645
+  validation_metrics:
+    selected_count: 857
+    trend_selected: 127
+    non_trend_selected: 730
+    precision: 0.14819136522753792
+    recall: 0.3207070707070707
+    coverage: 0.28144499178981935
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.1395017856511438
+- hypothesis_id: dc7fa956de82
+  rule_name: prior_return_20d_pct >= 0.2019
+  conditions:
+  - feature: prior_return_20d_pct
+    operator: '>='
+    threshold: 0.20191159
+  train_metrics:
+    recall: 0.24803149606299213
+    coverage: 0.14660390047074648
+    precision: 0.1444954128440367
+    selected_count: 436
+    trend_selected: 63
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.6918478653471067
+    non_trend_selected: 373
+  validation_metrics:
+    selected_count: 578
+    trend_selected: 78
+    non_trend_selected: 500
+    precision: 0.13494809688581316
+    recall: 0.19696969696969696
+    coverage: 0.18981937602627258
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.037669078326518
+- hypothesis_id: df73b7392479
+  rule_name: prior_return_20d_pct >= 0.1443
+  conditions:
+  - feature: prior_return_20d_pct
+    operator: '>='
+    threshold: 0.14430014
+  train_metrics:
+    recall: 0.5118110236220472
+    coverage: 0.3486886348352387
+    precision: 0.1253616200578592
+    selected_count: 1037
+    trend_selected: 130
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.4678167639845403
+    non_trend_selected: 907
+  validation_metrics:
+    selected_count: 1154
+    trend_selected: 163
+    non_trend_selected: 991
+    precision: 0.1412478336221837
+    recall: 0.4116161616161616
+    coverage: 0.3789819376026273
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.086110235806943
+- hypothesis_id: e5d72836ee1e
+  rule_name: ma_slope_20_pct >= 0.0730 and day_return_pct >= 0.0763
+  conditions:
+  - feature: ma_slope_20_pct
+    operator: '>='
+    threshold: 0.07304747
+  - feature: day_return_pct
+    operator: '>='
+    threshold: 0.07629288
+  train_metrics:
+    recall: 0.06692913385826772
+    coverage: 0.02925353059852051
+    precision: 0.19540229885057472
+    selected_count: 87
+    trend_selected: 17
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.2878993574079103
+    non_trend_selected: 70
+  validation_metrics:
+    selected_count: 97
+    trend_selected: 17
+    non_trend_selected: 80
+    precision: 0.17525773195876287
+    recall: 0.04292929292929293
+    coverage: 0.03185550082101806
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.3476257419556388
+- hypothesis_id: e868c9484b91
+  rule_name: ma_slope_20_pct >= 0.0730 and range_width_pct >= 0.2835
+  conditions:
+  - feature: ma_slope_20_pct
+    operator: '>='
+    threshold: 0.07304747
+  - feature: range_width_pct
+    operator: '>='
+    threshold: 0.28353659
+  train_metrics:
+    recall: 0.1377952755905512
+    coverage: 0.06724949562878278
+    precision: 0.175
+    selected_count: 200
+    trend_selected: 35
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 2.0490157480314957
+    non_trend_selected: 165
+  validation_metrics:
+    selected_count: 209
+    trend_selected: 33
+    non_trend_selected: 176
+    precision: 0.15789473684210525
+    recall: 0.08333333333333333
+    coverage: 0.06863711001642037
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.214114832535885
+- hypothesis_id: f0fb1243550b
+  rule_name: day_return_pct >= 0.1047
+  conditions:
+  - feature: day_return_pct
+    operator: '>='
+    threshold: 0.10473649
+  train_metrics:
+    recall: 0.22440944881889763
+    coverage: 0.1452589105581708
+    precision: 0.13194444444444445
+    selected_count: 432
+    trend_selected: 57
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.544892825896763
+    non_trend_selected: 375
+  validation_metrics:
+    selected_count: 500
+    trend_selected: 74
+    non_trend_selected: 426
+    precision: 0.148
+    recall: 0.18686868686868688
+    coverage: 0.16420361247947454
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.138030303030303
+- hypothesis_id: fea855284f52
+  rule_name: range_width_pct >= 0.2835
+  conditions:
+  - feature: range_width_pct
+    operator: '>='
+    threshold: 0.28353659
+  train_metrics:
+    recall: 0.3779527559055118
+    coverage: 0.2511768661735037
+    precision: 0.1285140562248996
+    selected_count: 747
+    trend_selected: 96
+    base_trend_rate: 0.08540685944855414
+    trend_rate_uplift: 1.5047275717041393
+    non_trend_selected: 651
+  validation_metrics:
+    selected_count: 674
+    trend_selected: 88
+    non_trend_selected: 586
+    precision: 0.13056379821958458
+    recall: 0.2222222222222222
+    coverage: 0.2213464696223317
+    base_trend_rate: 0.13004926108374384
+    trend_rate_uplift: 1.0039564787339268

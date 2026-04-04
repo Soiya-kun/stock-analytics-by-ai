@@ -1,0 +1,99 @@
+type: inferred_price_actions
+version: 1
+generated_at: '2026-04-03T16:46:13.691766'
+detection_method: ohlc_integer_jump
+parameters:
+  min_factor: 2
+  max_factor: 10
+  median_error_threshold: 0.06
+  max_error_threshold: 0.12
+counts:
+  event_count: 1374
+  split: 1182
+  reverse_split: 192
+  matched_official_same_date: 0
+  inferred_only_same_date: 1374
+  official_only_same_date: 0
+samples:
+  inferred_only:
+  - sc: '3452'
+    action_date: 2018-01-12
+    action_type: split
+    integer_factor: 2
+  - sc: '3484'
+    action_date: 2018-01-29
+    action_type: split
+    integer_factor: 4
+  - sc: '3750'
+    action_date: 2018-01-29
+    action_type: split
+    integer_factor: 5
+  - sc: '3926'
+    action_date: 2018-01-29
+    action_type: split
+    integer_factor: 3
+  - sc: '3988'
+    action_date: 2018-01-29
+    action_type: split
+    integer_factor: 2
+  - sc: '4344'
+    action_date: 2018-01-29
+    action_type: split
+    integer_factor: 2
+  - sc: '6188'
+    action_date: 2018-01-29
+    action_type: split
+    integer_factor: 3
+  - sc: '6552'
+    action_date: 2018-01-29
+    action_type: split
+    integer_factor: 2
+  - sc: '7810'
+    action_date: 2018-01-29
+    action_type: split
+    integer_factor: 2
+  - sc: '2930'
+    action_date: 2018-02-09
+    action_type: split
+    integer_factor: 3
+  - sc: '2162'
+    action_date: 2018-02-26
+    action_type: split
+    integer_factor: 2
+  - sc: '2406'
+    action_date: 2018-02-26
+    action_type: split
+    integer_factor: 2
+  - sc: '2471'
+    action_date: 2018-02-26
+    action_type: split
+    integer_factor: 5
+  - sc: '2736'
+    action_date: 2018-02-26
+    action_type: reverse_split
+    integer_factor: 10
+  - sc: '3045'
+    action_date: 2018-02-26
+    action_type: split
+    integer_factor: 2
+  - sc: '3168'
+    action_date: 2018-02-26
+    action_type: split
+    integer_factor: 2
+  - sc: '3415'
+    action_date: 2018-02-26
+    action_type: split
+    integer_factor: 3
+  - sc: '3433'
+    action_date: 2018-02-26
+    action_type: split
+    integer_factor: 4
+  - sc: '3557'
+    action_date: 2018-02-26
+    action_type: split
+    integer_factor: 2
+  - sc: '3558'
+    action_date: 2018-02-26
+    action_type: split
+    integer_factor: 2
+  official_only: []

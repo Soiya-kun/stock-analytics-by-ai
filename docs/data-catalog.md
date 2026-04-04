@@ -4,6 +4,8 @@
 
 - `raw.kabuplus_records`: one row per CSV row. Original Japanese headers and values are stored in `payload jsonb`.
 - `ingest.kabuplus_files`: one row per imported CSV file with status, row counts, and failure message.
+- `analytics.inferred_price_actions`: inferred split / reverse-split events detected from one-day integer OHLC jumps.
+- `research.*`: durable study runs, breakout cases, and hypothesis records.
 - `analytics.*`: typed views for datasets that are likely to be queried first.
 
 ## Curated Views
@@ -11,6 +13,7 @@
 | View | Dataset key | Cadence | Purpose |
 | --- | --- | --- | --- |
 | `analytics.stock_prices_daily` | `japan-all-stock-prices/daily` | Daily | Close, open, high, low, change, volume, turnover |
+| `analytics.stock_prices_adjusted_daily` | `analytics.stock_prices_daily` + `analytics.inferred_price_actions` | Daily | Non-destructive split-adjusted OHLCV with raw and adjusted columns |
 | `analytics.stock_prices_daily_extended` | `japan-all-stock-prices-2/daily` | Daily | `stock_prices_daily` plus VWAP and year-to-date ranges |
 | `analytics.stock_snapshot_daily` | `japan-all-stock-data/daily` | Daily | Valuation and snapshot metrics such as PER/PBR/dividend yield |
 | `analytics.tosho_stock_ohlc_daily` | `tosho-stock-ohlc/daily` | Daily | TSE OHLC data including AM/PM session breakdown |
@@ -19,6 +22,14 @@
 | `analytics.margin_transactions_weekly` | `japan-all-stock-margin-transactions/weekly` | Weekly | Margin buy/sell balances |
 | `analytics.corporate_actions_monthly` | `corporate-action/monthly` | Monthly | Split and reverse split events |
 | `analytics.import_status` | `ingest.kabuplus_files` | Derived | Import coverage and status |
+
+## Research Tables
+
+| Relation | Purpose |
+| --- | --- |
+| `research.entry_study_runs` | One row per durable 6-month breakout study run |
+| `research.entry_cases` | Wide case table for breakout-point features and trend labels |
+| `research.entry_hypotheses` | Interpretable threshold rules stored for train / validation stages |
 
 ## Dataset Families Observed in `stock/kabuplus-2025.zip`
 

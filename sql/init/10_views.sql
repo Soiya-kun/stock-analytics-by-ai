@@ -183,3 +183,87 @@ select
     loaded_at
 from raw.kabuplus_records
 where dataset_key = 'corporate-action/monthly';
+
+create or replace view analytics.stock_prices_adjusted_daily as
+with price_base as (
+    select
+        sc,
+        name,
+        market,
+        industry,
+        trade_date,
+        open_price as raw_open_price,
+        high_price as raw_high_price,
+        low_price as raw_low_price,
+        close_price as raw_close_price,
+        previous_close_price as raw_previous_close_price,
+        day_change as raw_day_change,
+        day_change_pct as raw_day_change_pct,
+        volume::numeric as raw_volume,
+        turnover_thousand_yen as raw_turnover_thousand_yen,
+        market_cap_million_yen as raw_market_cap_million_yen,
+        price_limit_lower as raw_price_limit_lower,
+        price_limit_upper as raw_price_limit_upper,
+        source_zip,
+        source_entry,
+        loaded_at
+    from analytics.stock_prices_daily
+),
+scored as (
+    select
+        p.*,
+        coalesce(
+            (
+                select exp(sum(ln(ipa.price_multiplier::double precision)))::numeric(20, 10)
+                from analytics.inferred_price_actions ipa
+                where ipa.sc = p.sc
+                  and ipa.action_date > p.trade_date
+            ),
+            1::numeric(20, 10)
+        ) as adjustment_factor
+    from price_base p
+)
+select
+    sc,
+    name,
+    market,
+    industry,
+    trade_date,
+    raw_open_price,
+    raw_high_price,
+    raw_low_price,
+    raw_close_price,
+    raw_previous_close_price,
+    raw_day_change,
+    raw_day_change_pct,
+    raw_volume,
+    raw_turnover_thousand_yen,
+    raw_market_cap_million_yen,
+    raw_price_limit_lower,
+    raw_price_limit_upper,
+    adjustment_factor,
+    (raw_open_price * adjustment_factor)::numeric(20, 8) as adjusted_open_price,
+    (raw_high_price * adjustment_factor)::numeric(20, 8) as adjusted_high_price,
+    (raw_low_price * adjustment_factor)::numeric(20, 8) as adjusted_low_price,
+    (raw_close_price * adjustment_factor)::numeric(20, 8) as adjusted_close_price,
+    (raw_previous_close_price * adjustment_factor)::numeric(20, 8) as adjusted_previous_close_price,
+    (raw_day_change * adjustment_factor)::numeric(20, 8) as adjusted_day_change,
+    raw_day_change_pct as adjusted_day_change_pct,
+    (raw_volume / nullif(adjustment_factor, 0))::numeric(20, 8) as adjusted_volume,
+    (raw_open_price * adjustment_factor)::numeric(20, 8) as open_price,
+    (raw_high_price * adjustment_factor)::numeric(20, 8) as high_price,
+    (raw_low_price * adjustment_factor)::numeric(20, 8) as low_price,
+    (raw_close_price * adjustment_factor)::numeric(20, 8) as close_price,
+    (raw_previous_close_price * adjustment_factor)::numeric(20, 8) as previous_close_price,
+    (raw_day_change * adjustment_factor)::numeric(20, 8) as day_change,
+    raw_day_change_pct as day_change_pct,
+    (raw_volume / nullif(adjustment_factor, 0))::numeric(20, 8) as volume,
+    raw_turnover_thousand_yen as turnover_thousand_yen,
+    raw_market_cap_million_yen as market_cap_million_yen,
+    raw_price_limit_lower as price_limit_lower,
+    raw_price_limit_upper as price_limit_upper,
+    source_zip,
+    source_entry,
+    loaded_at
+from scored
+;

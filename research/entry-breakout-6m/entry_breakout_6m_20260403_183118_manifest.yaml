@@ -1,0 +1,60 @@
+type: entry_breakout_6m_study
+version: 1
+run_id: entry_breakout_6m_20260403_183118
+generated_at: '2026-04-03T19:10:28.303721'
+source_relation: analytics.stock_prices_adjusted_daily
+dataset_window:
+  train_start_date: '2018-01-01'
+  train_end_date: '2020-12-31'
+  validation_start_date: '2021-01-01'
+  validation_end_date: '2022-12-30'
+breakout_rule:
+  range_lookback_bars: 120
+  max_range_width_pct: 0.35
+  breakout_buffer_pct: 0.02
+  min_volume_ratio: 1.2
+  volume_lookback_bars: 20
+  cooldown_bars: 60
+  breakout_basis: close
+  range_high_basis: close
+  range_low_basis: close
+label_rule:
+  trend_confirm_bars: 120
+  trend_eval_bars: 240
+  failure_drawdown_bars: 60
+  trend_min_return_pct: 0.4
+  trend_min_confirm_return_pct: 0.2
+  failure_drawdown_pct: -0.1
+counts:
+  candidate_count: 7266
+  unique_symbols: 3295
+  split_counts:
+    train:
+      candidate_count: 3434
+      trend: 254
+      non_trend: 2720
+      neutral: 421
+      incomplete: 39
+      trend_rate_excluding_incomplete: 0.0748159057437408
+    validation:
+      candidate_count: 3832
+      trend: 396
+      non_trend: 2649
+      neutral: 693
+      incomplete: 94
+      trend_rate_excluding_incomplete: 0.10593900481540931
+    other:
+      candidate_count: 0
+      trend: 0
+      non_trend: 0
+      neutral: 0
+      incomplete: 0
+      trend_rate_excluding_incomplete: null
+  avg_breakout_margin_pct: 0.04635301438548907
+  avg_volume_ratio: 10.249256920008168
+files:
+  cases_all_csv: research/entry-breakout-6m/entry_breakout_6m_20260403_183118_cases_all.csv
+  cases_train_csv: research/entry-breakout-6m/entry_breakout_6m_20260403_183118_cases_train.csv
+  cases_validation_csv: research/entry-breakout-6m/entry_breakout_6m_20260403_183118_cases_validation.csv
+  manifest_yaml: research/entry-breakout-6m/entry_breakout_6m_20260403_183118_manifest.yaml
+  summary_md: research/entry-breakout-6m/entry_breakout_6m_20260403_183118_summary.md

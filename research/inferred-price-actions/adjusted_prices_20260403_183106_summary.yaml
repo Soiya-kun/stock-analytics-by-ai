@@ -1,0 +1,194 @@
+type: adjusted_price_audit
+version: 1
+generated_at: '2026-04-03T18:31:06.321981'
+summary:
+  raw_rows: 7422298
+  adjusted_rows: 7422298
+  adjusted_event_rows: null
+  adjusted_symbols: 1153
+  first_trade_date: '2018-01-04'
+  last_trade_date: '2025-12-30'
+  event_count: 1374
+  split_count: 1182
+  reverse_split_count: 192
+  samples:
+  - sc: '1333'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 3
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '3953'
+    action_day_raw_close: '1315.5'
+    prev_adjusted_close: '1317.66666653'
+    action_day_adjusted_close: '1315.50000000'
+  - sc: '1414'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 4
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '5231'
+    action_day_raw_close: '1328.5'
+    prev_adjusted_close: '1307.75000000'
+    action_day_adjusted_close: '1328.50000000'
+  - sc: '1980'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 3
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '7310'
+    action_day_raw_close: '2527'
+    prev_adjusted_close: '2436.66666642'
+    action_day_adjusted_close: '2527.00000000'
+  - sc: '2114'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 2
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '1209'
+    action_day_raw_close: '617'
+    prev_adjusted_close: '604.50000000'
+    action_day_adjusted_close: '617.00000000'
+  - sc: '2501'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 5
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '8271'
+    action_day_raw_close: '1702'
+    prev_adjusted_close: '1654.20000000'
+    action_day_adjusted_close: '1702.00000000'
+  - sc: '3661'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 2
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '1890'
+    action_day_raw_close: '948'
+    prev_adjusted_close: '945.00000000'
+    action_day_adjusted_close: '948.00000000'
+  - sc: '3916'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 2
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '2670'
+    action_day_raw_close: '1380'
+    prev_adjusted_close: '1335.00000000'
+    action_day_adjusted_close: '1380.00000000'
+  - sc: '3986'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 3
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '1371'
+    action_day_raw_close: '449'
+    prev_adjusted_close: '456.99999995'
+    action_day_adjusted_close: '449.00000000'
+  - sc: '4062'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 2
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '13240'
+    action_day_raw_close: '6626'
+    prev_adjusted_close: '6620.00000000'
+    action_day_adjusted_close: '6626.00000000'
+  - sc: '4107'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 9
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '43050'
+    action_day_raw_close: '4985'
+    prev_adjusted_close: '4783.33333286'
+    action_day_adjusted_close: '4985.00000000'
+  - sc: '4183'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 2
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '3951'
+    action_day_raw_close: '2015'
+    prev_adjusted_close: '1975.50000000'
+    action_day_adjusted_close: '2015.00000000'
+  - sc: '4396'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 2
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '2955'
+    action_day_raw_close: '1546'
+    prev_adjusted_close: '1477.50000000'
+    action_day_adjusted_close: '1546.00000000'
+  - sc: '4635'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 5
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '7500'
+    action_day_raw_close: '1490'
+    prev_adjusted_close: '1500.00000000'
+    action_day_adjusted_close: '1490.00000000'
+  - sc: '4811'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 3
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '3970'
+    action_day_raw_close: '1307'
+    prev_adjusted_close: '1323.33333320'
+    action_day_adjusted_close: '1307.00000000'
+  - sc: '4828'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 5
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '8280'
+    action_day_raw_close: '1758'
+    prev_adjusted_close: '1656.00000000'
+    action_day_adjusted_close: '1758.00000000'
+  - sc: '4935'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 5
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '1807'
+    action_day_raw_close: '361'
+    prev_adjusted_close: '361.40000000'
+    action_day_adjusted_close: '361.00000000'
+  - sc: '4976'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 3
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '4495'
+    action_day_raw_close: '1460'
+    prev_adjusted_close: '1498.33333318'
+    action_day_adjusted_close: '1460.00000000'
+  - sc: '5108'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 2
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '7200'
+    action_day_raw_close: '3554'
+    prev_adjusted_close: '3600.00000000'
+    action_day_adjusted_close: '3554.00000000'
+  - sc: '6061'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 2
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '6950'
+    action_day_raw_close: '3305'
+    prev_adjusted_close: '3475.00000000'
+    action_day_adjusted_close: '3305.00000000'
+  - sc: '6328'
+    action_date: '2025-12-29'
+    action_type: split
+    integer_factor: 2
+    prev_trade_date: '2025-12-26'
+    prev_raw_close: '4280'
+    action_day_raw_close: '2233'
+    prev_adjusted_close: '2140.00000000'
+    action_day_adjusted_close: '2233.00000000'

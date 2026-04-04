@@ -1,0 +1,50 @@
+type: entry_breakout_6m_study
+version: 1
+required:
+  - run_id
+  - generated_at
+  - source_relation
+  - dataset_window
+  - breakout_rule
+  - label_rule
+  - counts
+  - files
+properties:
+  run_id:
+    type: string
+  generated_at:
+    type: datetime
+  source_relation:
+    type: string
+  dataset_window:
+    type: map
+    required:
+      - train_start_date
+      - train_end_date
+      - validation_start_date
+      - validation_end_date
+  breakout_rule:
+    type: map
+    required:
+      - range_lookback_bars
+      - max_range_width_pct
+      - breakout_buffer_pct
+      - min_volume_ratio
+      - volume_lookback_bars
+      - cooldown_bars
+      - breakout_basis
+      - range_high_basis
+      - range_low_basis
+  label_rule:
+    type: map
+    required:
+      - trend_confirm_bars
+      - trend_eval_bars
+      - failure_drawdown_bars
+      - trend_min_return_pct
+      - trend_min_confirm_return_pct
+      - failure_drawdown_pct
+  counts:
+    type: map
+  files:
+    type: map

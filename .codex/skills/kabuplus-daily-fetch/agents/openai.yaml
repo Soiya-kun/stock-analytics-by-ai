@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kabuplus Daily Fetch"
+  short_description: "Fetch and import Kabuplus daily CSV files"
+  default_prompt: "Use $kabuplus-daily-fetch to fetch a KABU+ daily CSV into stock/kabuplus-2026 and load it into PostgreSQL."

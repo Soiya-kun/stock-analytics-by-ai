@@ -1,0 +1,18 @@
+type: inferred_price_actions
+version: 1
+required:
+  - generated_at
+  - detection_method
+  - parameters
+  - counts
+properties:
+  generated_at:
+    type: datetime
+  detection_method:
+    type: string
+  parameters:
+    type: map
+  counts:
+    type: map
+  samples:
+    type: map

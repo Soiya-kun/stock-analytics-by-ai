@@ -8,7 +8,7 @@ This file is the source of truth for analysis logic that must survive across fut
 
 - Intent: Find ways to capture stocks that spent multiple years inside a range and then break above that range.
 - Universe: Listed stocks with enough daily history and non-null price and volume data.
-- Base dataset/view: `analytics.stock_prices_daily`
+- Base dataset/view: `analytics.stock_prices_adjusted_daily`
 - Required filters:
   - Sufficient lookback history exists for the range window.
   - Historical range width stays below a configurable cap.
@@ -37,15 +37,15 @@ This file is the source of truth for analysis logic that must survive across fut
   - Latest candidate scan: `docker compose run --rm analysis scan`
   - Output directory: `outputs/range-breakout/`
 - Open questions:
-  - Whether price series should be adjusted for split or reverse split events.
+  - Whether the integer-jump inference thresholds are still too strict or too loose.
   - Whether close-based or high-based breakout judgment is better.
   - Whether to add liquidity filters, retest conditions, or multi-day confirmation.
 
 ## Principle 002 - Breakout To Long-Trend Labeling
 
 - Intent: Split breakout cases into `trend` and `non_trend` first, using only price and volume, so later parameter tuning can learn from both groups.
-- Universe: Breakout cases detected from `analytics.stock_prices_daily`.
-- Base dataset/view: `analytics.stock_prices_daily`
+- Universe: Breakout cases detected from `analytics.stock_prices_adjusted_daily`.
+- Base dataset/view: `analytics.stock_prices_adjusted_daily`
 - Required filters:
   - Pre-breakout range is defined over a fixed bar window.
   - Breakout day exceeds the pre-breakout range high by a fixed buffer.
@@ -80,6 +80,53 @@ This file is the source of truth for analysis logic that must survive across fut
   - Whether the trend threshold should be based on max return, end return, or moving-average slope.
   - Whether the failure rule should use close-only drawdown, intraday drawdown, or time-under-breakout.
   - Whether the breakout lookback should stay at `120` bars or be tuned across `120/180/240`.
+
+## Principle 003 - Six-Month Breakout Entry Study
+
+- Intent: Build a durable case dataset for 4-6 month range breakouts, then mine interpretable entry rules that separate future long trends from failed breakouts.
+- Universe: Listed stocks with daily adjusted OHLCV data from 2018-2022 and enough lookback / forward bars.
+- Base dataset/view: `analytics.stock_prices_adjusted_daily`
+- Required filters:
+  - Use the breakout-day close as the entry price.
+  - Use the prior `120` trading bars as the range window.
+  - Require the breakout-day basis to exceed the prior range high by `breakout_buffer_pct`.
+  - Reject candidates whose pre-breakout range width exceeds `max_range_width_pct`.
+  - Require breakout-day volume to exceed a recent average by `min_volume_ratio`.
+  - Suppress repeated cases for the same code inside `cooldown_bars`.
+- Parameters and defaults:
+  - `train_start_date`: `2018-01-01`
+  - `train_end_date`: `2020-12-31`
+  - `validation_start_date`: `2021-01-01`
+  - `validation_end_date`: `2022-12-30`
+  - `range_lookback_bars`: `120`
+  - `max_range_width_pct`: `0.35`
+  - `breakout_buffer_pct`: `0.02`
+  - `min_volume_ratio`: `1.20`
+  - `volume_lookback_bars`: `20`
+  - `cooldown_bars`: `60`
+  - `trend_confirm_bars`: `120`
+  - `trend_eval_bars`: `240`
+  - `failure_drawdown_bars`: `60`
+  - `trend_min_return_pct`: `0.40`
+  - `trend_min_confirm_return_pct`: `0.20`
+  - `failure_drawdown_pct`: `-0.10`
+  - `breakout_basis`: `close`
+  - `range_high_basis`: `close`
+  - `range_low_basis`: `close`
+- Signal or scoring logic:
+  - Build one case per `code x breakout_date`.
+  - Persist breakout-point features such as breakout margin, candle body / wick ratios, volume ratio, bullish counts, MA gaps, MA slopes, ATR context, range-high touch counts, and higher-high / higher-low counts.
+  - Label each case as `trend`, `non_trend`, `neutral`, or `incomplete` from future adjusted prices only.
+  - Mine only interpretable threshold rules, first with one feature, then with two-feature conjunctions.
+- Validation query or backtest method:
+  - Build durable case dataset: `docker compose run --rm analysis build-entry-dataset`
+  - Mine train-split hypotheses: `docker compose run --rm analysis mine-entry-hypotheses`
+  - Evaluate on validation split: `docker compose run --rm analysis evaluate-entry-hypotheses`
+  - Durable output directory: `research/entry-breakout-6m/`
+- Open questions:
+  - Whether `120` bars is the best breakout window or whether `100/140/160` should also be tested.
+  - Whether the wick and volume thresholds should be normalized by price level or volatility regime.
+  - Whether the next phase should optimize `sell / hold` policy with post-entry path rules instead of fixed label thresholds.
 
 ## Principle Template
 

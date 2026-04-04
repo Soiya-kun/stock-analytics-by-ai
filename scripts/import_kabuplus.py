@@ -48,6 +48,22 @@ def parse_args() -> argparse.Namespace:
         help="Glob pattern used to find ZIP files.",
     )
     parser.add_argument(
+        "--csv-file",
+        type=Path,
+        default=None,
+        help="Import one CSV file directly instead of scanning yearly ZIP files.",
+    )
+    parser.add_argument(
+        "--csv-dataset",
+        default="japan-all-stock-prices/daily",
+        help="Dataset key to use with --csv-file.",
+    )
+    parser.add_argument(
+        "--csv-source",
+        default="kabuplus-daily-csv",
+        help="Synthetic source_zip value to store when importing with --csv-file.",
+    )
+    parser.add_argument(
         "--dsn",
         default=None,
         help="PostgreSQL DSN. Defaults to DATABASE_URL.",
@@ -121,6 +137,22 @@ def extract_dataset_spec(entry_name: str) -> DatasetSpec:
     dataset_key = f"{dataset_name}/{frequency}"
     file_name = path.name
 
+    return DatasetSpec(
+        dataset_name=dataset_name,
+        frequency=frequency,
+        dataset_key=dataset_key,
+        file_name=file_name,
+        file_date=parse_file_date(file_name),
+    )
+
+
+def dataset_spec_from_key(dataset_key: str, file_name: str) -> DatasetSpec:
+    parts = dataset_key.split("/")
+    if len(parts) != 2:
+        raise ValueError(
+            f"--csv-dataset must look like dataset-name/frequency, got: {dataset_key}"
+        )
+    dataset_name, frequency = parts
     return DatasetSpec(
         dataset_name=dataset_name,
         frequency=frequency,
@@ -209,6 +241,14 @@ def should_import(
         row = cur.fetchone()
 
     return row is None or row[0] != "completed"
+
+
+def resolve_source_entry(csv_path: Path) -> str:
+    resolved = csv_path.resolve()
+    try:
+        return resolved.relative_to(Path.cwd().resolve()).as_posix()
+    except ValueError:
+        return resolved.as_posix()
 
 
 def mark_failed(
@@ -402,6 +442,144 @@ def import_entry(
     return imported_rows
 
 
+def import_csv_file(
+    conn: psycopg.Connection,
+    csv_path: Path,
+    spec: DatasetSpec,
+    source_zip: str,
+    source_entry: str,
+) -> int:
+    imported_rows = 0
+    pending_rows: list[tuple[object, ...]] = []
+
+    def flush_rows(cur: psycopg.Cursor[object]) -> None:
+        nonlocal imported_rows, pending_rows
+        if not pending_rows:
+            return
+        cur.executemany(
+            """
+            insert into raw.kabuplus_records (
+                dataset_key,
+                dataset_name,
+                frequency,
+                source_zip,
+                source_entry,
+                source_file_name,
+                file_date,
+                record_date,
+                security_code,
+                row_number,
+                payload
+            )
+            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            """,
+            pending_rows,
+        )
+        imported_rows += len(pending_rows)
+        pending_rows = []
+
+    with conn.transaction():
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                delete from raw.kabuplus_records
+                where source_zip = %s and source_entry = %s
+                """,
+                (source_zip, source_entry),
+            )
+            cur.execute(
+                """
+                insert into ingest.kabuplus_files (
+                    source_zip,
+                    source_entry,
+                    dataset_key,
+                    dataset_name,
+                    frequency,
+                    source_file_name,
+                    file_date,
+                    file_size,
+                    zip_crc,
+                    status,
+                    imported_rows,
+                    imported_at,
+                    last_error,
+                    created_at,
+                    updated_at
+                )
+                values (
+                    %s, %s, %s, %s, %s, %s, %s, %s, %s,
+                    'running', null, null, null, now(), now()
+                )
+                on conflict (source_zip, source_entry) do update
+                set dataset_key = excluded.dataset_key,
+                    dataset_name = excluded.dataset_name,
+                    frequency = excluded.frequency,
+                    source_file_name = excluded.source_file_name,
+                    file_date = excluded.file_date,
+                    file_size = excluded.file_size,
+                    zip_crc = excluded.zip_crc,
+                    status = 'running',
+                    imported_rows = null,
+                    imported_at = null,
+                    last_error = null,
+                    updated_at = now()
+                """,
+                (
+                    source_zip,
+                    source_entry,
+                    spec.dataset_key,
+                    spec.dataset_name,
+                    spec.frequency,
+                    spec.file_name,
+                    spec.file_date,
+                    csv_path.stat().st_size,
+                    0,
+                ),
+            )
+
+            with csv_path.open("r", encoding="cp932", newline="") as text_stream:
+                reader = csv.DictReader(text_stream)
+                if not reader.fieldnames:
+                    raise ValueError(f"CSV header not found: {csv_path}")
+
+                for row_number, row in enumerate(reader, start=1):
+                    payload = normalize_row(row)
+                    pending_rows.append(
+                        (
+                            spec.dataset_key,
+                            spec.dataset_name,
+                            spec.frequency,
+                            source_zip,
+                            source_entry,
+                            spec.file_name,
+                            spec.file_date,
+                            extract_record_date(payload, spec.file_date),
+                            extract_security_code(payload),
+                            row_number,
+                            Jsonb(payload),
+                        )
+                    )
+                    if len(pending_rows) >= 500:
+                        flush_rows(cur)
+
+                flush_rows(cur)
+
+            cur.execute(
+                """
+                update ingest.kabuplus_files
+                set status = 'completed',
+                    imported_rows = %s,
+                    imported_at = now(),
+                    last_error = null,
+                    updated_at = now()
+                where source_zip = %s and source_entry = %s
+                """,
+                (imported_rows, source_zip, source_entry),
+            )
+
+    return imported_rows
+
+
 def main() -> int:
     args = parse_args()
     configure_logging(args.log_level)
@@ -410,16 +588,50 @@ def main() -> int:
     if not dsn:
         raise ValueError("Pass --dsn or set DATABASE_URL.")
 
-    zip_files = discover_zip_files(args.stock_dir, args.zip_pattern)
-    if args.limit_zips is not None:
-        zip_files = zip_files[: args.limit_zips]
-
     dataset_filters = set(args.dataset)
     processed_files = 0
     imported_rows = 0
 
     with psycopg.connect(dsn, autocommit=True) as conn:
         conn.execute("set timezone to 'Asia/Tokyo'")
+
+        if args.csv_file is not None:
+            csv_path = args.csv_file.resolve()
+            if not csv_path.exists():
+                raise FileNotFoundError(f"CSV file does not exist: {csv_path}")
+
+            spec = dataset_spec_from_key(args.csv_dataset, csv_path.name)
+            source_entry = resolve_source_entry(csv_path)
+            if dataset_filters and spec.dataset_key not in dataset_filters:
+                logging.info(
+                    "Skipping %s because --dataset does not include %s",
+                    csv_path.name,
+                    spec.dataset_key,
+                )
+                return 0
+            if not should_import(conn, args.csv_source, source_entry, args.force):
+                logging.info("Skipping already imported CSV %s", source_entry)
+                return 0
+
+            logging.info(
+                "Importing CSV %s into %s",
+                source_entry,
+                spec.dataset_key,
+            )
+            row_count = import_csv_file(
+                conn,
+                csv_path,
+                spec,
+                args.csv_source,
+                source_entry,
+            )
+            logging.info("Completed %s (%s rows)", source_entry, row_count)
+            logging.info("Import finished: 1 files, %s rows", row_count)
+            return 0
+
+        zip_files = discover_zip_files(args.stock_dir, args.zip_pattern)
+        if args.limit_zips is not None:
+            zip_files = zip_files[: args.limit_zips]
 
         for zip_path in zip_files:
             logging.info("Scanning %s", zip_path.name)
