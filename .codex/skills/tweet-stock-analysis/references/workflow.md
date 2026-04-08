@@ -2,6 +2,15 @@
 
 ## Commands
 
+Confirm whether an existing DB container should be reused before starting anything:
+
+```powershell
+docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+docker inspect stock-analytics-db
+```
+
+If `stock-analytics-db` is already running against the intended checkout's `pgdata`, reuse it. Avoid recreating the DB from another worktree unless you explicitly intend to switch databases.
+
 Ensure the monitored tweet set is fresh enough before analyzing recent dates:
 
 ```powershell
@@ -30,6 +39,8 @@ docker compose run --rm analysis persist-tweet-analysis --input-file /workspace/
 
 Before `prepare-tweet-analysis`:
 
+- Reuse the already-running `stock-analytics-db` when it has the intended monitored accounts and tweet history.
+- If there are multiple repository checkouts, confirm the running DB container's bind mounts before issuing any `docker compose up -d db`.
 - If the requested range includes today or otherwise depends on recent tweets, run `xcollector ensure-current`.
 - Treat tweets as current when the target's last successful incremental poll is within the last 60 minutes.
 - If `ensure-current` decides the account is stale, let it perform the incremental fetch before continuing.

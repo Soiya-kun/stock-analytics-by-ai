@@ -12,18 +12,22 @@ Use this skill when the user wants tweet data already stored in PostgreSQL to be
 ## Workflow
 
 1. Read [workflow.md](references/workflow.md) before starting.
-2. Before analyzing recent dates, run `docker compose run --rm xcollector ensure-current --target-username USERNAME`.
-3. Treat the tweet set as current when the target's `last_success_at` is within the last 60 minutes. If it is older or missing, let `ensure-current` fetch only the incremental gap.
-4. Prepare a range-scoped analysis template with `docker compose run --rm analysis prepare-tweet-analysis ...`.
-5. Work from `research/tweet-stock-analysis/<run-id>/analysis_template.yaml`.
-6. For each tweet, identify only Japanese listed companies and stock codes. Leave `mentions: []` when no listed company is relevant.
-7. Record `match_confidence` as `high`, `medium`, or `low`, plus `extraction_rationale`.
-8. Run `docker compose run --rm analysis enrich-tweet-analysis --input-file ...` to add price and volume context.
-9. Review `enriched_analysis.yaml`, set `volume_spike_flag`, `price_jump_flag`, their rationale fields, and `analysis_summary`.
-10. Persist with `docker compose run --rm analysis persist-tweet-analysis --input-file ...`.
+2. Before starting containers, check whether the repository already has a running PostgreSQL container with the expected data. Prefer reusing that DB instead of recreating it.
+3. If `stock-analytics-db` is already running and mounted to the intended checkout, use it as-is. Do not run `docker compose up -d db` from another checkout just to "be safe", because that can point you at a different `pgdata` directory and hide the real monitored accounts / tweet history.
+4. Before analyzing recent dates, run `docker compose run --rm xcollector ensure-current --target-username USERNAME`.
+5. Treat the tweet set as current when the target's `last_success_at` is within the last 60 minutes. If it is older or missing, let `ensure-current` fetch only the incremental gap.
+6. Prepare a range-scoped analysis template with `docker compose run --rm analysis prepare-tweet-analysis ...`.
+7. Work from `research/tweet-stock-analysis/<run-id>/analysis_template.yaml`.
+8. For each tweet, identify only Japanese listed companies and stock codes. Leave `mentions: []` when no listed company is relevant.
+9. Record `match_confidence` as `high`, `medium`, or `low`, plus `extraction_rationale`.
+10. Run `docker compose run --rm analysis enrich-tweet-analysis --input-file ...` to add price and volume context.
+11. Review `enriched_analysis.yaml`, set `volume_spike_flag`, `price_jump_flag`, their rationale fields, and `analysis_summary`.
+12. Persist with `docker compose run --rm analysis persist-tweet-analysis --input-file ...`.
 
 ## Rules
 
+- If multiple checkouts of the repository exist, prefer the checkout that owns the already-running `stock-analytics-db` container and has the live `.env` / `pgdata`.
+- When in doubt, verify the active DB with `docker inspect stock-analytics-db` and confirm the bind mount for `/var/lib/postgresql/data` before running collector or analysis commands.
 - Use `analytics.listed_companies_latest` as the company-code lookup source unless the user explicitly asks for another universe.
 - Keep one persisted row per `tweet x listed-company code`.
 - Preserve the original tweet URL and text exactly as exported from the template.
