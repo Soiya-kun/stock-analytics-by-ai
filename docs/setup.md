@@ -4,7 +4,11 @@
 
 - `db`: PostgreSQL 16. Data is persisted in `./pgdata`.
 - `importer`: Python container that mounts the repository and imports ZIP files or a direct CSV file from `./stock`.
+- `xcollector`: Python container that monitors configured X accounts and stores posts into PostgreSQL.
 - `raw.kabuplus_records`: immutable raw layer stored as `jsonb`.
+- `raw.x_posts`: one row per collected X post. Re-fetches update the latest payload and public metrics.
+- `ingest.x_*`: monitored-account config, timeline checkpoint state, poll run audit log, and optional usage snapshots.
+- `research.tweet_*`: durable tweet-to-stock analysis runs and `tweet x company-code` mention rows.
 - `analytics.inferred_price_actions`: inferred split / reverse-split events derived from one-day integer OHLC jumps.
 - `analytics.stock_prices_adjusted_daily`: non-destructive adjusted OHLCV view with raw and adjusted columns.
 - `research.*`: durable breakout study runs, cases, and hypothesis records.
@@ -32,6 +36,98 @@ docker compose run --rm importer
 ```
 
 The full import is long-running because the yearly ZIP files contain many CSV files. Use `--limit-files` or `--dataset` first, then run the full load when you are ready.
+
+## X Monitoring Flow
+
+1. Add your X credentials to `.env`.
+
+```powershell
+X_API_KEY=...
+X_API_KEY_SECRET=...
+X_ACCESS_TOKEN=...
+X_ACCESS_TOKEN_SECRET=...
+X_BEARER_TOKEN=...
+X_COLLECT_INTERVAL_SECONDS=3600
+```
+
+2. If `pgdata` already exists, apply the incremental migration for the X collector objects.
+
+```powershell
+docker compose exec -T db psql -U stock -d stock_analytics -f /workspace/sql/migrations/20260407_x_collector_setup.sql
+```
+
+3. Insert the fixed monitored usernames.
+
+```powershell
+docker compose exec db psql -U stock -d stock_analytics -c "insert into ingest.x_monitored_accounts (target_username) values ('example_user') on conflict do nothing;"
+```
+
+4. Resolve usernames to user IDs and verify access through the authenticated X account.
+
+```powershell
+docker compose run --rm xcollector sync-targets
+```
+
+5. Run a one-shot poll to capture only the current JST day's posts on first load.
+
+```powershell
+docker compose run --rm xcollector poll-once
+```
+
+6. Start the long-running collector. It polls immediately on startup, then aligns later polls to the next hourly JST boundary.
+
+```powershell
+docker compose up -d xcollector
+docker compose logs -f xcollector
+```
+
+7. Optionally store usage snapshots when `X_BEARER_TOKEN` is configured.
+
+```powershell
+docker compose run --rm xcollector usage
+```
+
+Collector state lives in:
+
+- `ingest.x_monitored_accounts`: configured usernames and latest resolution/access state
+- `ingest.x_timeline_state`: `since_id` checkpoint and per-target polling status
+- `ingest.x_poll_runs`: aggregate audit rows for each polling run
+- `ingest.x_usage_daily`: optional usage snapshots from `/2/usage/tweets`
+- `analytics.monitored_x_posts`: typed query view for collected posts
+
+## Tweet Stock Analysis Flow
+
+1. If `pgdata` already exists, apply the incremental migration for the tweet-analysis objects.
+
+```powershell
+docker compose exec -T db psql -U stock -d stock_analytics -f /workspace/sql/migrations/20260407_tweet_stock_analysis_setup.sql
+```
+
+2. Prepare the durable tweet-analysis template for a date range.
+
+```powershell
+docker compose run --rm analysis prepare-tweet-analysis --start-date 2026-04-07 --end-date 2026-04-07 --target-username 4th_skywalker
+```
+
+3. Open `research/tweet-stock-analysis/<run-id>/analysis_template.yaml`, identify Japanese listed companies and codes for each tweet, and fill `mentions`.
+
+4. Enrich the annotated file with stock price / volume context.
+
+```powershell
+docker compose run --rm analysis enrich-tweet-analysis --input-file /workspace/research/tweet-stock-analysis/<run-id>/analysis_template.yaml
+```
+
+5. Review `enriched_analysis.yaml`, set `volume_spike_flag`, `price_jump_flag`, and the rationale fields, then persist the result.
+
+```powershell
+docker compose run --rm analysis persist-tweet-analysis --input-file /workspace/research/tweet-stock-analysis/<run-id>/enriched_analysis.yaml
+```
+
+6. Query the saved rows.
+
+```powershell
+docker compose exec db psql -U stock -d stock_analytics -c "select run_id, sc, company_name, volume_spike_flag, price_jump_flag from research.tweet_stock_mentions order by created_at desc limit 20;"
+```
 
 ## Daily CSV Flow
 
@@ -160,3 +256,4 @@ docker compose run --rm importer
 - CSVs are decoded as `cp932`.
 - Initial SQL in `sql/init` is applied when PostgreSQL starts with an empty `./pgdata`.
 - Existing `./pgdata` does not replay `sql/init`; use `sql/migrations/20260404_entry_breakout_setup.sql` to add the research objects to an already-populated DB.
+- Existing `./pgdata` does not replay `sql/init`; use the dated migration files such as `sql/migrations/20260404_entry_breakout_setup.sql` and `sql/migrations/20260407_x_collector_setup.sql` to add new objects to an already-populated DB.

@@ -4,16 +4,20 @@
 
 - Project skill: `.codex/skills/stock-analysis-workflow`
 - Project skill: `.codex/skills/kabuplus-daily-fetch`
+- Project skill: `.codex/skills/tweet-stock-analysis`
 
 This repository keeps one project skill that explains how to turn user-provided stock analysis principles into durable code and documentation.
 This repository also keeps one project skill for listing-first download and import of KABU+ daily stock price CSV files.
+This repository also keeps one project skill for turning collected X posts into durable tweet-to-stock reaction rows.
 
 ## Source of Truth
 
 - Workflow and trigger definition: `.codex/skills/stock-analysis-workflow/SKILL.md`
 - Workflow and trigger definition: `.codex/skills/kabuplus-daily-fetch/SKILL.md`
+- Workflow and trigger definition: `.codex/skills/tweet-stock-analysis/SKILL.md`
 - Durable repository-specific guidance: `.codex/skills/stock-analysis-workflow/references/*`
 - Daily CSV workflow guidance: `.codex/skills/kabuplus-daily-fetch/references/*`
+- Tweet-analysis workflow guidance: `.codex/skills/tweet-stock-analysis/references/*`
 - Principle definitions: `docs/analysis-principles.md`
 - Data layout and curated SQL views: `docs/data-catalog.md`
 

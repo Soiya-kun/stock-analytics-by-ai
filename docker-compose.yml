@@ -58,3 +58,28 @@ services:
       - ./:/workspace
     entrypoint: ["python", "/workspace/scripts/analyze_range_breakout.py"]
     command: ["grid-search", "--output-dir", "/workspace/outputs/range-breakout"]
+
+  xcollector:
+    build:
+      context: .
+      dockerfile: docker/importer/Dockerfile
+    profiles: ["tools"]
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+    working_dir: /workspace
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-stock}:${POSTGRES_PASSWORD:-stock}@db:5432/${POSTGRES_DB:-stock_analytics}
+      PYTHONUNBUFFERED: "1"
+      TZ: Asia/Tokyo
+      X_API_KEY: ${X_API_KEY:-}
+      X_API_KEY_SECRET: ${X_API_KEY_SECRET:-}
+      X_ACCESS_TOKEN: ${X_ACCESS_TOKEN:-}
+      X_ACCESS_TOKEN_SECRET: ${X_ACCESS_TOKEN_SECRET:-}
+      X_BEARER_TOKEN: ${X_BEARER_TOKEN:-}
+      X_COLLECT_INTERVAL_SECONDS: ${X_COLLECT_INTERVAL_SECONDS:-3600}
+    volumes:
+      - ./:/workspace
+    entrypoint: ["python", "/workspace/scripts/x_collector.py"]
+    command: ["daemon"]

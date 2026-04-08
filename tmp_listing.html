@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="CSVEXは、株式投資関連データの活用を促進するデータ流通プラットフォームです。CSVファイル・JSONファイルのダウンロード／共有フォルダ／自動ダウンロード対応等、銘柄探索やデータ分析を強力に支援する機能を備えています。">
+		<title>CSVEX 株価一覧表（CSVファイルダウンロード可能）</title>
+		<link rel="shortcut icon" href="/img/csvex-icon.png">
+		<style type="text/css" media="screen">
+			@import "/css/base.css";
+			@import "/css/bootstrap.min.css";
+			@import "/css/datatables.min.css";
+		</style>
+		<script type="text/javascript" charset="utf8" src="/js/jquery-3.2.1.slim.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="/js/popper.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="/js/bootstrap.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="/js/datatables.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="/js/datatables-filelist.js"></script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-C3W8JY0612"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-C3W8JY0612');
+		</script>
+	</head>
+	<body style="padding-top:4rem;">
+
+<!--navbar-->
+<nav class="navbar navbar-dark fixed-top px-3 py-0" style="background-color:#013f90;">
+	<div class="navbar-brand m-1">
+		<a href="/" class="white-link"><span class="zb-font">CSVEX</span></a>
+	</div>
+	<div class="navbar-text m-1 mr-auto text-white">
+		 &gt; <a href="/kabu.plus/">KABU+</a> &gt; <a href="/kabu.plus/csv/">CSV</a> &gt; <a href="/kabu.plus/csv/japan-all-stock-prices/">株価一覧表</a> &gt; 日別データ
+	</div>
+	<div class="navbar-brand m-1 d-sm-none d-md-block">
+		<small>produced by </small><a href="https://zerobyte.jp/" target="_blank" class="white-link"><span class="zb-font">ZEROBYTE</span></a>
+	</div>
+</nav>
+<!--/navbar-->
+
+<!--body-->
+<div class="row m-1">
+	
+	<!--left-->
+	<div class="col-md-9 mb-3">
+
+<!--table-->
+<table id="filelist" class="display cell-border compact" cellspacing="0" width="100%">
+<thead>
+<tr align="center"><th width="42%">ファイル名・ディレクトリ名</th><th width="30%">説明</th><th width="18%">更新日時</th><th width="10%">サイズ</th></tr>
+</thead>
+<tbody>
+<tr><td>..</td><td>-</td><td>-</td><td>-</td></tr><tr><td>japan-all-stock-prices.csv</td><td>-</td><td>2026/04/03 16:30</td><td>514195</td></tr>
+<tr><td>japan-all-stock-prices_20260403.csv</td><td>-</td><td>2026/04/03 16:30</td><td>514195</td></tr>
+<tr><td>japan-all-stock-prices_20260402.csv</td><td>-</td><td>2026/04/02 16:30</td><td>519194</td></tr>
+<tr><td>japan-all-stock-prices_20260401.csv</td><td>-</td><td>2026/04/01 16:30</td><td>515965</td></tr>
+<tr><td>japan-all-stock-prices_20260331.csv</td><td>-</td><td>2026/03/31 16:30</td><td>517102</td></tr>
+<tr><td>japan-all-stock-prices_20260330.csv</td><td>-</td><td>2026/03/30 16:30</td><td>522689</td></tr>
+<tr><td>japan-all-stock-prices_20260327.csv</td><td>-</td><td>2026/03/27 16:30</td><td>518054</td></tr>
+<tr><td>japan-all-stock-prices_20260326.csv</td><td>-</td><td>2026/03/26 16:30</td><td>519839</td></tr>
+<tr><td>japan-all-stock-prices_20260325.csv</td><td>-</td><td>2026/03/25 16:30</td><td>516955</td></tr>
+<tr><td>japan-all-stock-prices_20260324.csv</td><td>-</td><td>2026/03/24 16:30</td><td>516554</td></tr>
+<tr><td>japan-all-stock-prices_20260323.csv</td><td>-</td><td>2026/03/23 16:30</td><td>525330</td></tr>
+<tr><td>japan-all-stock-prices_20260319.csv</td><td>-</td><td>2026/03/19 16:30</td><td>524273</td></tr>
+<tr><td>japan-all-stock-prices_20260318.csv</td><td>-</td><td>2026/03/18 16:30</td><td>517136</td></tr>
+<tr><td>japan-all-stock-prices_20260317.csv</td><td>-</td><td>2026/03/17 16:30</td><td>517636</td></tr>
+<tr><td>japan-all-stock-prices_20260316.csv</td><td>-</td><td>2026/03/16 16:30</td><td>519907</td></tr>
+<tr><td>japan-all-stock-prices_20260313.csv</td><td>-</td><td>2026/03/13 16:30</td><td>520234</td></tr>
+<tr><td>japan-all-stock-prices_20260312.csv</td><td>-</td><td>2026/03/12 16:30</td><td>523246</td></tr>
+<tr><td>japan-all-stock-prices_20260311.csv</td><td>-</td><td>2026/03/11 16:30</td><td>518610</td></tr>
+<tr><td>japan-all-stock-prices_20260310.csv</td><td>-</td><td>2026/03/10 16:30</td><td>518721</td></tr>
+<tr><td>japan-all-stock-prices_20260309.csv</td><td>-</td><td>2026/03/09 16:30</td><td>526691</td></tr>
+<tr><td>japan-all-stock-prices_20260306.csv</td><td>-</td><td>2026/03/06 16:30</td><td>519645</td></tr>
+<tr><td>japan-all-stock-prices_20260305.csv</td><td>-</td><td>2026/03/05 16:30</td><td>519796</td></tr>
+<tr><td>japan-all-stock-prices_20260304.csv</td><td>-</td><td>2026/03/04 16:30</td><td>527988</td></tr>
+<tr><td>japan-all-stock-prices_20260303.csv</td><td>-</td><td>2026/03/03 16:30</td><td>526828</td></tr>
+<tr><td>japan-all-stock-prices_20260302.csv</td><td>-</td><td>2026/03/02 16:30</td><td>524604</td></tr>
+<tr><td>japan-all-stock-prices_20260227.csv</td><td>-</td><td>2026/02/27 16:30</td><td>520088</td></tr>
+<tr><td>japan-all-stock-prices_20260226.csv</td><td>-</td><td>2026/02/26 16:30</td><td>520747</td></tr>
+<tr><td>japan-all-stock-prices_20260225.csv</td><td>-</td><td>2026/02/25 16:30</td><td>521027</td></tr>
+<tr><td>japan-all-stock-prices_20260224.csv</td><td>-</td><td>2026/02/24 16:30</td><td>522021</td></tr>
+<tr><td>japan-all-stock-prices_20260220.csv</td><td>-</td><td>2026/02/20 16:30</td><td>523111</td></tr>
+<tr><td>japan-all-stock-prices_20260219.csv</td><td>-</td><td>2026/02/19 16:30</td><td>520337</td></tr>
+<tr><td>japan-all-stock-prices_20260218.csv</td><td>-</td><td>2026/02/18 16:30</td><td>519972</td></tr>
+<tr><td>japan-all-stock-prices_20260217.csv</td><td>-</td><td>2026/02/17 16:30</td><td>521965</td></tr>
+<tr><td>japan-all-stock-prices_20260216.csv</td><td>-</td><td>2026/02/16 16:30</td><td>522506</td></tr>
+<tr><td>japan-all-stock-prices_20260213.csv</td><td>-</td><td>2026/02/13 16:30</td><td>525497</td></tr>
+<tr><td>japan-all-stock-prices_20260212.csv</td><td>-</td><td>2026/02/12 16:30</td><td>521923</td></tr>
+<tr><td>japan-all-stock-prices_20260210.csv</td><td>-</td><td>2026/02/10 16:30</td><td>519737</td></tr>
+<tr><td>japan-all-stock-prices_20260209.csv</td><td>-</td><td>2026/02/09 16:30</td><td>520506</td></tr>
+<tr><td>japan-all-stock-prices_20260206.csv</td><td>-</td><td>2026/02/06 16:30</td><td>520939</td></tr>
+<tr><td>japan-all-stock-prices_20260205.csv</td><td>-</td><td>2026/02/05 16:30</td><td>519249</td></tr>
+<tr><td>japan-all-stock-prices_20260204.csv</td><td>-</td><td>2026/02/04 16:30</td><td>520158</td></tr>
+<tr><td>japan-all-stock-prices_20260203.csv</td><td>-</td><td>2026/02/03 16:30</td><td>518877</td></tr>
+<tr><td>japan-all-stock-prices_20260202.csv</td><td>-</td><td>2026/02/02 16:30</td><td>521704</td></tr>
+<tr><td>japan-all-stock-prices_20260130.csv</td><td>-</td><td>2026/01/30 16:30</td><td>519322</td></tr>
+<tr><td>japan-all-stock-prices_20260129.csv</td><td>-</td><td>2026/01/29 16:30</td><td>520734</td></tr>
+<tr><td>japan-all-stock-prices_20260128.csv</td><td>-</td><td>2026/01/28 16:30</td><td>523578</td></tr>
+<tr><td>japan-all-stock-prices_20260127.csv</td><td>-</td><td>2026/01/27 16:30</td><td>520095</td></tr>
+<tr><td>japan-all-stock-prices_20260126.csv</td><td>-</td><td>2026/01/26 16:30</td><td>524453</td></tr>
+<tr><td>japan-all-stock-prices_20260123.csv</td><td>-</td><td>2026/01/23 16:30</td><td>519876</td></tr>
+<tr><td>japan-all-stock-prices_20260122.csv</td><td>-</td><td>2026/01/22 16:30</td><td>519611</td></tr>
+<tr><td>japan-all-stock-prices_20260121.csv</td><td>-</td><td>2026/01/21 16:30</td><td>523306</td></tr>
+<tr><td>japan-all-stock-prices_20260120.csv</td><td>-</td><td>2026/01/20 16:30</td><td>522808</td></tr>
+<tr><td>japan-all-stock-prices_20260119.csv</td><td>-</td><td>2026/01/19 16:30</td><td>521942</td></tr>
+<tr><td>japan-all-stock-prices_20260116.csv</td><td>-</td><td>2026/01/16 16:30</td><td>520640</td></tr>
+<tr><td>japan-all-stock-prices_20260115.csv</td><td>-</td><td>2026/01/15 16:30</td><td>520314</td></tr>
+<tr><td>japan-all-stock-prices_20260114.csv</td><td>-</td><td>2026/01/14 16:30</td><td>521076</td></tr>
+<tr><td>japan-all-stock-prices_20260113.csv</td><td>-</td><td>2026/01/13 16:30</td><td>521908</td></tr>
+<tr><td>japan-all-stock-prices_20260109.csv</td><td>-</td><td>2026/01/09 16:30</td><td>519991</td></tr>
+<tr><td>japan-all-stock-prices_20260108.csv</td><td>-</td><td>2026/01/08 16:30</td><td>521482</td></tr>
+<tr><td>japan-all-stock-prices_20260107.csv</td><td>-</td><td>2026/01/07 16:30</td><td>521178</td></tr>
+<tr><td>japan-all-stock-prices_20260106.csv</td><td>-</td><td>2026/01/06 16:30</td><td>520298</td></tr>
+<tr><td>japan-all-stock-prices_20260105.csv</td><td>-</td><td>2026/01/05 16:30</td><td>521363</td></tr>
+<tr><td>japan-all-stock-prices_20251230.csv</td><td>-</td><td>2025/12/30 16:30</td><td>522143</td></tr>
+<tr><td>japan-all-stock-prices_20251229.csv</td><td>-</td><td>2025/12/29 16:30</td><td>521532</td></tr>
+<tr><td>japan-all-stock-prices_20251226.csv</td><td>-</td><td>2025/12/26 16:30</td><td>521588</td></tr>
+<tr><td>japan-all-stock-prices_20251225.csv</td><td>-</td><td>2025/12/25 16:30</td><td>519942</td></tr>
+<tr><td>japan-all-stock-prices_20251224.csv</td><td>-</td><td>2025/12/24 16:30</td><td>521527</td></tr>
+<tr><td>japan-all-stock-prices_20251223.csv</td><td>-</td><td>2025/12/23 16:30</td><td>519569</td></tr>
+<tr><td>japan-all-stock-prices_20251222.csv</td><td>-</td><td>2025/12/22 16:30</td><td>521577</td></tr>
+<tr><td>japan-all-stock-prices_20251219.csv</td><td>-</td><td>2025/12/19 16:30</td><td>519684</td></tr>
+<tr><td>japan-all-stock-prices_20251218.csv</td><td>-</td><td>2025/12/18 16:30</td><td>519710</td></tr>
+<tr><td>japan-all-stock-prices_20251217.csv</td><td>-</td><td>2025/12/17 16:30</td><td>520352</td></tr>
+<tr><td>japan-all-stock-prices_20251216.csv</td><td>-</td><td>2025/12/16 16:30</td><td>522857</td></tr>
+<tr><td>japan-all-stock-prices_20251215.csv</td><td>-</td><td>2025/12/15 16:30</td><td>519722</td></tr>
+<tr><td>japan-all-stock-prices_20251212.csv</td><td>-</td><td>2025/12/12 16:30</td><td>519279</td></tr>
+<tr><td>japan-all-stock-prices_20251211.csv</td><td>-</td><td>2025/12/11 16:30</td><td>522719</td></tr>
+<tr><td>japan-all-stock-prices_20251210.csv</td><td>-</td><td>2025/12/10 16:30</td><td>519231</td></tr>
+<tr><td>japan-all-stock-prices_20251209.csv</td><td>-</td><td>2025/12/09 16:30</td><td>520694</td></tr>
+<tr><td>japan-all-stock-prices_20251208.csv</td><td>-</td><td>2025/12/08 16:30</td><td>519445</td></tr>
+<tr><td>japan-all-stock-prices_20251205.csv</td><td>-</td><td>2025/12/05 16:30</td><td>521666</td></tr>
+<tr><td>japan-all-stock-prices_20251204.csv</td><td>-</td><td>2025/12/04 16:30</td><td>518726</td></tr>
+<tr><td>japan-all-stock-prices_20251203.csv</td><td>-</td><td>2025/12/03 16:30</td><td>521423</td></tr>
+<tr><td>japan-all-stock-prices_20251202.csv</td><td>-</td><td>2025/12/02 16:30</td><td>521950</td></tr>
+<tr><td>japan-all-stock-prices_20251201.csv</td><td>-</td><td>2025/12/01 16:30</td><td>523566</td></tr>
+<tr><td>japan-all-stock-prices_20251128.csv</td><td>-</td><td>2025/11/28 16:30</td><td>518894</td></tr>
+<tr><td>japan-all-stock-prices_20251127.csv</td><td>-</td><td>2025/11/27 16:30</td><td>519161</td></tr>
+<tr><td>japan-all-stock-prices_20251126.csv</td><td>-</td><td>2025/11/26 16:30</td><td>519117</td></tr>
+<tr><td>japan-all-stock-prices_20251125.csv</td><td>-</td><td>2025/11/25 16:30</td><td>521487</td></tr>
+<tr><td>japan-all-stock-prices_20251121.csv</td><td>-</td><td>2025/11/21 16:30</td><td>520366</td></tr>
+<tr><td>japan-all-stock-prices_20251120.csv</td><td>-</td><td>2025/11/20 16:30</td><td>519775</td></tr>
+<tr><td>japan-all-stock-prices_20251119.csv</td><td>-</td><td>2025/11/19 16:30</td><td>521474</td></tr>
+<tr><td>japan-all-stock-prices_20251118.csv</td><td>-</td><td>2025/11/18 16:30</td><td>525146</td></tr>
+<tr><td>japan-all-stock-prices_20251117.csv</td><td>-</td><td>2025/11/17 16:30</td><td>523696</td></tr>
+<tr><td>japan-all-stock-prices_20251114.csv</td><td>-</td><td>2025/11/14 16:30</td><td>523216</td></tr>
+<tr><td>japan-all-stock-prices_20251113.csv</td><td>-</td><td>2025/11/13 16:30</td><td>521435</td></tr>
+<tr><td>japan-all-stock-prices_20251112.csv</td><td>-</td><td>2025/11/12 16:30</td><td>520295</td></tr>
+<tr><td>japan-all-stock-prices_20251111.csv</td><td>-</td><td>2025/11/11 16:30</td><td>521061</td></tr>
+<tr><td>japan-all-stock-prices_20251110.csv</td><td>-</td><td>2025/11/10 16:30</td><td>519971</td></tr>
+<tr><td>japan-all-stock-prices_20251107.csv</td><td>-</td><td>2025/11/07 16:30</td><td>520643</td></tr>
+<tr><td>japan-all-stock-prices_20251106.csv</td><td>-</td><td>2025/11/06 16:30</td><td>520000</td></tr>
+<tr><td>japan-all-stock-prices_20251105.csv</td><td>-</td><td>2025/11/05 16:30</td><td>524400</td></tr>
+<tr><td>japan-all-stock-prices_20251104.csv</td><td>-</td><td>2025/11/04 16:30</td><td>522340</td></tr>
+<tr><td>japan-all-stock-prices_20251031.csv</td><td>-</td><td>2025/10/31 16:30</td><td>521230</td></tr>
+<tr><td>japan-all-stock-prices_20251030.csv</td><td>-</td><td>2025/10/30 16:30</td><td>521108</td></tr>
+<tr><td>japan-all-stock-prices_20251029.csv</td><td>-</td><td>2025/10/29 16:30</td><td>525820</td></tr>
+<tr><td>japan-all-stock-prices_20251028.csv</td><td>-</td><td>2025/10/28 16:30</td><td>525522</td></tr>
+<tr><td>japan-all-stock-prices_20251027.csv</td><td>-</td><td>2025/10/27 16:30</td><td>520868</td></tr>
+<tr><td>japan-all-stock-prices_20251024.csv</td><td>-</td><td>2025/10/24 16:30</td><td>521596</td></tr>
+<tr><td>japan-all-stock-prices_20251023.csv</td><td>-</td><td>2025/10/23 16:30</td><td>520597</td></tr>
+<tr><td>japan-all-stock-prices_20251022.csv</td><td>-</td><td>2025/10/22 16:30</td><td>519530</td></tr>
+<tr><td>japan-all-stock-prices_20251021.csv</td><td>-</td><td>2025/10/21 16:30</td><td>520824</td></tr>
+<tr><td>japan-all-stock-prices_20251020.csv</td><td>-</td><td>2025/10/20 16:30</td><td>519552</td></tr>
+<tr><td>japan-all-stock-prices_20251017.csv</td><td>-</td><td>2025/10/17 16:30</td><td>522553</td></tr>
+<tr><td>japan-all-stock-prices_20251016.csv</td><td>-</td><td>2025/10/16 16:30</td><td>520217</td></tr>
+<tr><td>japan-all-stock-prices_20251015.csv</td><td>-</td><td>2025/10/15 16:30</td><td>519762</td></tr>
+<tr><td>japan-all-stock-prices_20251014.csv</td><td>-</td><td>2025/10/14 16:30</td><td>527161</td></tr>
+<tr><td>japan-all-stock-prices_20251010.csv</td><td>-</td><td>2025/10/10 16:30</td><td>525744</td></tr>
+<tr><td>japan-all-stock-prices_20251009.csv</td><td>-</td><td>2025/10/09 16:30</td><td>521518</td></tr>
+<tr><td>japan-all-stock-prices_20251008.csv</td><td>-</td><td>2025/10/08 16:30</td><td>521959</td></tr>
+<tr><td>japan-all-stock-prices_20251007.csv</td><td>-</td><td>2025/10/07 16:30</td><td>521739</td></tr>
+<tr><td>japan-all-stock-prices_20251006.csv</td><td>-</td><td>2025/10/06 16:30</td><td>521757</td></tr>
+<tr><td>japan-all-stock-prices_20251003.csv</td><td>-</td><td>2025/10/03 16:30</td><td>519738</td></tr>
+<tr><td>japan-all-stock-prices_20251002.csv</td><td>-</td><td>2025/10/02 16:30</td><td>522574</td></tr>
+<tr><td>japan-all-stock-prices_20251001.csv</td><td>-</td><td>2025/10/01 16:30</td><td>527692</td></tr>
+<tr><td>japan-all-stock-prices_20250930.csv</td><td>-</td><td>2025/09/30 16:30</td><td>522995</td></tr>
+<tr><td>japan-all-stock-prices_20250929.csv</td><td>-</td><td>2025/09/29 16:30</td><td>525013</td></tr>
+<tr><td>japan-all-stock-prices_20250926.csv</td><td>-</td><td>2025/09/26 16:30</td><td>522561</td></tr>
+<tr><td>japan-all-stock-prices_20250925.csv</td><td>-</td><td>2025/09/25 16:30</td><td>522363</td></tr>
+<tr><td>japan-all-stock-prices_20250924.csv</td><td>-</td><td>2025/09/24 16:30</td><td>523235</td></tr>
+<tr><td>japan-all-stock-prices_20250922.csv</td><td>-</td><td>2025/09/22 16:30</td><td>522117</td></tr>
+<tr><td>japan-all-stock-prices_20250919.csv</td><td>-</td><td>2025/09/19 16:30</td><td>524468</td></tr>
+<tr><td>japan-all-stock-prices_20250918.csv</td><td>-</td><td>2025/09/18 16:30</td><td>522485</td></tr>
+<tr><td>japan-all-stock-prices_20250917.csv</td><td>-</td><td>2025/09/17 16:30</td><td>524638</td></tr>
+<tr><td>japan-all-stock-prices_20250916.csv</td><td>-</td><td>2025/09/16 16:30</td><td>522612</td></tr>
+<tr><td>japan-all-stock-prices_20250912.csv</td><td>-</td><td>2025/09/12 16:30</td><td>522792</td></tr>
+<tr><td>japan-all-stock-prices_20250911.csv</td><td>-</td><td>2025/09/11 16:30</td><td>523383</td></tr>
+<tr><td>japan-all-stock-prices_20250910.csv</td><td>-</td><td>2025/09/10 16:30</td><td>522093</td></tr>
+<tr><td>japan-all-stock-prices_20250909.csv</td><td>-</td><td>2025/09/09 16:30</td><td>524086</td></tr>
+<tr><td>japan-all-stock-prices_20250908.csv</td><td>-</td><td>2025/09/08 16:30</td><td>521654</td></tr>
+<tr><td>japan-all-stock-prices_20250905.csv</td><td>-</td><td>2025/09/05 16:30</td><td>521738</td></tr>
+<tr><td>japan-all-stock-prices_20250904.csv</td><td>-</td><td>2025/09/04 16:30</td><td>521452</td></tr>
+<tr><td>japan-all-stock-prices_20250903.csv</td><td>-</td><td>2025/09/03 16:30</td><td>524430</td></tr>
+<tr><td>japan-all-stock-prices_20250902.csv</td><td>-</td><td>2025/09/02 16:30</td><td>522267</td></tr>
+<tr><td>japan-all-stock-prices_20250901.csv</td><td>-</td><td>2025/09/01 16:30</td><td>523573</td></tr>
+<tr><td>japan-all-stock-prices_20250829.csv</td><td>-</td><td>2025/08/29 16:30</td><td>522998</td></tr>
+<tr><td>japan-all-stock-prices_20250828.csv</td><td>-</td><td>2025/08/28 16:30</td><td>522792</td></tr>
+<tr><td>japan-all-stock-prices_20250827.csv</td><td>-</td><td>2025/08/27 16:30</td><td>523668</td></tr>
+<tr><td>japan-all-stock-prices_20250826.csv</td><td>-</td><td>2025/08/26 16:30</td><td>525283</td></tr>
+<tr><td>japan-all-stock-prices_20250825.csv</td><td>-</td><td>2025/08/25 16:30</td><td>523946</td></tr>
+<tr><td>japan-all-stock-prices_20250822.csv</td><td>-</td><td>2025/08/22 16:30</td><td>522933</td></tr>
+<tr><td>japan-all-stock-prices_20250821.csv</td><td>-</td><td>2025/08/21 16:30</td><td>523216</td></tr>
+<tr><td>japan-all-stock-prices_20250820.csv</td><td>-</td><td>2025/08/20 16:30</td><td>524357</td></tr>
+<tr><td>japan-all-stock-prices_20250819.csv</td><td>-</td><td>2025/08/19 16:30</td><td>523091</td></tr>
+<tr><td>japan-all-stock-prices_20250818.csv</td><td>-</td><td>2025/08/18 16:30</td><td>523175</td></tr>
+<tr><td>japan-all-stock-prices_20250815.csv</td><td>-</td><td>2025/08/15 16:30</td><td>524467</td></tr>
+<tr><td>japan-all-stock-prices_20250814.csv</td><td>-</td><td>2025/08/14 16:30</td><td>525194</td></tr>
+<tr><td>japan-all-stock-prices_20250813.csv</td><td>-</td><td>2025/08/13 16:30</td><td>524356</td></tr>
+<tr><td>japan-all-stock-prices_20250812.csv</td><td>-</td><td>2025/08/12 16:30</td><td>525286</td></tr>
+<tr><td>japan-all-stock-prices_20250808.csv</td><td>-</td><td>2025/08/08 16:30</td><td>524238</td></tr>
+<tr><td>japan-all-stock-prices_20250807.csv</td><td>-</td><td>2025/08/07 16:30</td><td>522858</td></tr>
+<tr><td>japan-all-stock-prices_20250806.csv</td><td>-</td><td>2025/08/06 16:30</td><td>521976</td></tr>
+<tr><td>japan-all-stock-prices_20250805.csv</td><td>-</td><td>2025/08/05 16:30</td><td>521777</td></tr>
+<tr><td>japan-all-stock-prices_20250804.csv</td><td>-</td><td>2025/08/04 16:30</td><td>524105</td></tr>
+<tr><td>japan-all-stock-prices_20250801.csv</td><td>-</td><td>2025/08/01 16:30</td><td>522212</td></tr>
+<tr><td>japan-all-stock-prices_20250731.csv</td><td>-</td><td>2025/07/31 16:30</td><td>521466</td></tr>
+<tr><td>japan-all-stock-prices_20250730.csv</td><td>-</td><td>2025/07/30 16:30</td><td>521551</td></tr>
+<tr><td>japan-all-stock-prices_20250729.csv</td><td>-</td><td>2025/07/29 16:30</td><td>523172</td></tr>
+<tr><td>japan-all-stock-prices_20250728.csv</td><td>-</td><td>2025/07/28 16:30</td><td>522756</td></tr>
+<tr><td>japan-all-stock-prices_20250725.csv</td><td>-</td><td>2025/07/25 16:30</td><td>522905</td></tr>
+<tr><td>japan-all-stock-prices_20250724.csv</td><td>-</td><td>2025/07/24 16:30</td><td>522184</td></tr>
+<tr><td>japan-all-stock-prices_20250723.csv</td><td>-</td><td>2025/07/23 16:30</td><td>522785</td></tr>
+<tr><td>japan-all-stock-prices_20250722.csv</td><td>-</td><td>2025/07/22 16:30</td><td>522815</td></tr>
+<tr><td>japan-all-stock-prices_20250718.csv</td><td>-</td><td>2025/07/18 16:30</td><td>523607</td></tr>
+<tr><td>japan-all-stock-prices_20250717.csv</td><td>-</td><td>2025/07/17 16:30</td><td>520500</td></tr>
+<tr><td>japan-all-stock-prices_20250716.csv</td><td>-</td><td>2025/07/16 16:30</td><td>522681</td></tr>
+<tr><td>japan-all-stock-prices_20250715.csv</td><td>-</td><td>2025/07/15 16:30</td><td>523837</td></tr>
+<tr><td>japan-all-stock-prices_20250714.csv</td><td>-</td><td>2025/07/14 16:30</td><td>522706</td></tr>
+<tr><td>japan-all-stock-prices_20250711.csv</td><td>-</td><td>2025/07/11 16:30</td><td>521969</td></tr>
+<tr><td>japan-all-stock-prices_20250710.csv</td><td>-</td><td>2025/07/10 16:30</td><td>523354</td></tr>
+<tr><td>japan-all-stock-prices_20250709.csv</td><td>-</td><td>2025/07/09 16:30</td><td>521233</td></tr>
+<tr><td>japan-all-stock-prices_20250708.csv</td><td>-</td><td>2025/07/08 16:30</td><td>521305</td></tr>
+<tr><td>japan-all-stock-prices_20250707.csv</td><td>-</td><td>2025/07/07 16:30</td><td>522515</td></tr>
+<tr><td>japan-all-stock-prices_20250704.csv</td><td>-</td><td>2025/07/04 16:30</td><td>521624</td></tr>
+<tr><td>japan-all-stock-prices_20250703.csv</td><td>-</td><td>2025/07/03 16:30</td><td>522458</td></tr>
+<tr><td>japan-all-stock-prices_20250702.csv</td><td>-</td><td>2025/07/02 16:30</td><td>523382</td></tr>
+<tr><td>japan-all-stock-prices_20250701.csv</td><td>-</td><td>2025/07/01 16:30</td><td>524327</td></tr>
+<tr><td>japan-all-stock-prices_20250630.csv</td><td>-</td><td>2025/06/30 16:30</td><td>523195</td></tr>
+<tr><td>japan-all-stock-prices_20250627.csv</td><td>-</td><td>2025/06/27 16:30</td><td>522835</td></tr>
+<tr><td>japan-all-stock-prices_20250626.csv</td><td>-</td><td>2025/06/26 16:30</td><td>522379</td></tr>
+<tr><td>japan-all-stock-prices_20250625.csv</td><td>-</td><td>2025/06/25 16:30</td><td>522827</td></tr>
+<tr><td>japan-all-stock-prices_20250624.csv</td><td>-</td><td>2025/06/24 16:30</td><td>520858</td></tr>
+<tr><td>japan-all-stock-prices_20250623.csv</td><td>-</td><td>2025/06/23 16:30</td><td>523338</td></tr>
+<tr><td>japan-all-stock-prices_20250620.csv</td><td>-</td><td>2025/06/20 16:30</td><td>523931</td></tr>
+<tr><td>japan-all-stock-prices_20250619.csv</td><td>-</td><td>2025/06/19 16:30</td><td>521647</td></tr>
+<tr><td>japan-all-stock-prices_20250618.csv</td><td>-</td><td>2025/06/18 16:30</td><td>521543</td></tr>
+<tr><td>japan-all-stock-prices_20250617.csv</td><td>-</td><td>2025/06/17 16:30</td><td>521139</td></tr>
+<tr><td>japan-all-stock-prices_20250616.csv</td><td>-</td><td>2025/06/16 16:30</td><td>521524</td></tr>
+<tr><td>japan-all-stock-prices_20250613.csv</td><td>-</td><td>2025/06/13 16:30</td><td>526089</td></tr>
+<tr><td>japan-all-stock-prices_20250612.csv</td><td>-</td><td>2025/06/12 16:30</td><td>522793</td></tr>
+<tr><td>japan-all-stock-prices_20250611.csv</td><td>-</td><td>2025/06/11 16:30</td><td>521610</td></tr>
+<tr><td>japan-all-stock-prices_20250610.csv</td><td>-</td><td>2025/06/10 16:30</td><td>522500</td></tr>
+<tr><td>japan-all-stock-prices_20250609.csv</td><td>-</td><td>2025/06/09 16:30</td><td>522154</td></tr>
+<tr><td>japan-all-stock-prices_20250606.csv</td><td>-</td><td>2025/06/06 16:30</td><td>522231</td></tr>
+<tr><td>japan-all-stock-prices_20250605.csv</td><td>-</td><td>2025/06/05 16:30</td><td>523548</td></tr>
+<tr><td>japan-all-stock-prices_20250604.csv</td><td>-</td><td>2025/06/04 16:30</td><td>522134</td></tr>
+<tr><td>japan-all-stock-prices_20250603.csv</td><td>-</td><td>2025/06/03 16:30</td><td>523468</td></tr>
+<tr><td>japan-all-stock-prices_20250602.csv</td><td>-</td><td>2025/06/02 16:30</td><td>524139</td></tr>
+<tr><td>japan-all-stock-prices_20250530.csv</td><td>-</td><td>2025/05/30 16:30</td><td>523012</td></tr>
+<tr><td>japan-all-stock-prices_20250529.csv</td><td>-</td><td>2025/05/29 16:30</td><td>522288</td></tr>
+<tr><td>japan-all-stock-prices_20250528.csv</td><td>-</td><td>2025/05/28 16:30</td><td>523501</td></tr>
+<tr><td>japan-all-stock-prices_20250527.csv</td><td>-</td><td>2025/05/27 16:30</td><td>521712</td></tr>
+<tr><td>japan-all-stock-prices_20250526.csv</td><td>-</td><td>2025/05/26 16:30</td><td>522339</td></tr>
+<tr><td>japan-all-stock-prices_20250523.csv</td><td>-</td><td>2025/05/23 16:30</td><td>522832</td></tr>
+<tr><td>japan-all-stock-prices_20250522.csv</td><td>-</td><td>2025/05/22 16:30</td><td>524739</td></tr>
+<tr><td>japan-all-stock-prices_20250521.csv</td><td>-</td><td>2025/05/21 16:30</td><td>524125</td></tr>
+<tr><td>japan-all-stock-prices_20250520.csv</td><td>-</td><td>2025/05/20 16:30</td><td>526049</td></tr>
+<tr><td>japan-all-stock-prices_20250519.csv</td><td>-</td><td>2025/05/19 16:30</td><td>524702</td></tr>
+<tr><td>japan-all-stock-prices_20250516.csv</td><td>-</td><td>2025/05/16 16:30</td><td>524927</td></tr>
+<tr><td>japan-all-stock-prices_20250515.csv</td><td>-</td><td>2025/05/15 16:30</td><td>526643</td></tr>
+<tr><td>japan-all-stock-prices_20250514.csv</td><td>-</td><td>2025/05/14 16:30</td><td>526246</td></tr>
+<tr><td>japan-all-stock-prices_20250513.csv</td><td>-</td><td>2025/05/13 16:30</td><td>525522</td></tr>
+<tr><td>japan-all-stock-prices_20250512.csv</td><td>-</td><td>2025/05/12 16:30</td><td>524688</td></tr>
+<tr><td>japan-all-stock-prices_20250509.csv</td><td>-</td><td>2025/05/09 16:30</td><td>523782</td></tr>
+<tr><td>japan-all-stock-prices_20250508.csv</td><td>-</td><td>2025/05/08 16:30</td><td>523502</td></tr>
+<tr><td>japan-all-stock-prices_20250507.csv</td><td>-</td><td>2025/05/07 16:30</td><td>524100</td></tr>
+<tr><td>japan-all-stock-prices_20250502.csv</td><td>-</td><td>2025/05/02 16:30</td><td>524620</td></tr>
+<tr><td>japan-all-stock-prices_20250501.csv</td><td>-</td><td>2025/05/01 16:30</td><td>525188</td></tr>
+<tr><td>japan-all-stock-prices_20250430.csv</td><td>-</td><td>2025/04/30 16:30</td><td>524227</td></tr>
+<tr><td>japan-all-stock-prices_20250428.csv</td><td>-</td><td>2025/04/28 16:30</td><td>524504</td></tr>
+<tr><td>japan-all-stock-prices_20250425.csv</td><td>-</td><td>2025/04/25 16:30</td><td>523845</td></tr>
+<tr><td>japan-all-stock-prices_20250424.csv</td><td>-</td><td>2025/04/24 16:30</td><td>524737</td></tr>
+<tr><td>japan-all-stock-prices_20250423.csv</td><td>-</td><td>2025/04/23 16:30</td><td>522994</td></tr>
+<tr><td>japan-all-stock-prices_20250422.csv</td><td>-</td><td>2025/04/22 16:30</td><td>523751</td></tr>
+<tr><td>japan-all-stock-prices_20250421.csv</td><td>-</td><td>2025/04/21 16:30</td><td>524990</td></tr>
+<tr><td>japan-all-stock-prices_20250418.csv</td><td>-</td><td>2025/04/18 16:30</td><td>522406</td></tr>
+<tr><td>japan-all-stock-prices_20250417.csv</td><td>-</td><td>2025/04/17 16:30</td><td>521363</td></tr>
+<tr><td>japan-all-stock-prices_20250416.csv</td><td>-</td><td>2025/04/16 16:30</td><td>525096</td></tr>
+<tr><td>japan-all-stock-prices_20250415.csv</td><td>-</td><td>2025/04/15 16:30</td><td>523206</td></tr>
+<tr><td>japan-all-stock-prices_20250414.csv</td><td>-</td><td>2025/04/14 16:30</td><td>523576</td></tr>
+<tr><td>japan-all-stock-prices_20250411.csv</td><td>-</td><td>2025/04/11 16:30</td><td>525366</td></tr>
+<tr><td>japan-all-stock-prices_20250410.csv</td><td>-</td><td>2025/04/10 16:30</td><td>525242</td></tr>
+<tr><td>japan-all-stock-prices_20250409.csv</td><td>-</td><td>2025/04/09 16:30</td><td>529636</td></tr>
+<tr><td>japan-all-stock-prices_20250408.csv</td><td>-</td><td>2025/04/08 16:30</td><td>526232</td></tr>
+<tr><td>japan-all-stock-prices_20250407.csv</td><td>-</td><td>2025/04/07 16:30</td><td>536194</td></tr>
+<tr><td>japan-all-stock-prices_20250404.csv</td><td>-</td><td>2025/04/04 16:30</td><td>533699</td></tr>
+<tr><td>japan-all-stock-prices_20250403.csv</td><td>-</td><td>2025/04/03 16:30</td><td>530970</td></tr>
+<tr><td>japan-all-stock-prices_20250402.csv</td><td>-</td><td>2025/04/02 16:30</td><td>526644</td></tr>
+<tr><td>japan-all-stock-prices_20250401.csv</td><td>-</td><td>2025/04/01 16:30</td><td>525495</td></tr>
+</tbody>
+</table>
+<!--/table-->
+
+	</div>
+	<!--/left-->
+	
+	<!--right-->
+	<div class="col-md-3">
+		<div class="card border-secondary mb-2">
+			<div class="card-header"><strong>KABU+</strong></div>
+			<div class="card-body px-3 py-2">
+				<a href="/kabu.plus/csv/japan-all-stock-prices/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">株価一覧表</a>
+				<a href="/kabu.plus/csv/japan-all-stock-prices-2/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">株価一覧表（詳細）</a>
+				<a href="/kabu.plus/csv/tosho-stock-ohlc/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">株価四本値</a>
+				<a href="/kabu.plus/csv/japan-all-stock-data/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">投資指標データ</a>
+				<a href="/kabu.plus/csv/japan-all-stock-financial-results/monthly/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">決算・財務・業績</a>
+				<a href="/kabu.plus/csv/japan-all-stock-margin-transactions/weekly/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">信用取引残高</a>
+				<a href="/kabu.plus/csv/tosho-stock-margin-transactions-2/weekly/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">信用取引残高明細</a>
+				<a href="/kabu.plus/csv/jsf-balance-data/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">日証金 融資・貸株残高</a>
+				<a href="/kabu.plus/csv/jsf-gyakuhibu-data/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">日証金 逆日歩銘柄一覧</a>
+				<a href="/kabu.plus/csv/japan-all-stock-information/monthly/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">銘柄基本データ</a>
+				<a href="/kabu.plus/csv/corporate-action/monthly/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">CAデータ</a>
+				<a href="/kabu.plus/csv/tosho-etf-stock-prices/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">ETF 株価一覧表</a>
+				<a href="/kabu.plus/csv/tosho-etf-ohlc/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">ETF 株価四本値</a>
+				<a href="/kabu.plus/csv/tosho-etf-margin-transactions/weekly/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">ETF 信用取引残高</a>
+				<a href="/kabu.plus/csv/tosho-etf-margin-transactions-2/weekly/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">ETF 信用取引残高明細</a>
+				<a href="/kabu.plus/csv/tosho-reit-stock-prices/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">REIT 株価一覧表</a>
+				<a href="/kabu.plus/csv/tosho-reit-ohlc/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">REIT 株価四本値</a>
+				<a href="/kabu.plus/csv/tosho-reit-margin-transactions/weekly/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">REIT 信用取引残高</a>
+				<a href="/kabu.plus/csv/tosho-reit-margin-transactions-2/weekly/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">REIT 信用取引残高明細</a>
+				<a href="/kabu.plus/csv/tosho-fund-and-others-stock-prices/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">FUND 株価一覧表</a>
+				<a href="/kabu.plus/csv/tosho-fund-and-others-ohlc/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">FUND 株価四本値</a>
+				<a href="/kabu.plus/csv/tosho-fund-and-others-margin-transactions/weekly/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">FUND 信用取引残高</a>
+				<a href="/kabu.plus/csv/tosho-fund-and-others-margin-transactions-2/weekly/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">FUND 信用取引残高明細</a>
+				<a href="/kabu.plus/csv/tosho-index-data/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">株価指数データ</a>
+				<a href="/kabu.plus/csv/trademark-publication/daily/" class="btn btn-secondary btn-sm my-1 ml-1 mr-0">商標出願データ</a>
+				<a href="/document/directory.pdf" target="_blank" class="btn btn-info btn-sm my-1 ml-1 mr-0">ディレクトリ構成</a>
+			</div>
+		</div>
+		<div class="card border-secondary mb-2">
+			<div class="card-header"><strong>About CSVEX</strong></div>
+			<div class="card-body px-3 py-2">
+				CSVEXは、株式投資関連データの活用を促進するデータ流通プラットフォームです。CSVファイル・JSONファイルのダウンロード／共有フォルダ／自動ダウンロード対応等、銘柄探索やデータ分析を強力に支援する機能を備えています。<br>
+				<br>
+				<a href="https://kabu.plus/" target="_blank" class="zb-link">KABU+会員制サービス</a>のスタンダードプラン以上の会員が利用できます。ファイルのダウンロード時には、KABU+のID・パスワードを入力してください。<br>
+				<br>
+				1年分のヒストリカルデータ（過去データ）をダウンロードできます。それ以前のデータ（2018～2025年分）は、<a href="https://kabu.plus/member/shop" target="_blank" class="zb-link">「KABU+会員専用ショップ」</a>で販売しています。
+			</div>
+		</div>
+	</div>
+	<!--/right-->
+
+</div>
+<!--/body-->
+
+	</body>
+</html>

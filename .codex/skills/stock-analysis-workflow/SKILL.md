@@ -7,7 +7,7 @@ description: Repository workflow for stock-analytics-by-ai. Use when Codex is as
 
 ## Overview
 
-Use this skill to keep the repository in a stable shape while stock analysis rules evolve. The repo is organized so that raw Kabuplus ingestion stays generic, typed SQL access lives in `analytics.*`, durable research outputs live in `research.*`, and user-provided analysis principles can be added later without reworking the base pipeline.
+Use this skill to keep the repository in a stable shape while stock analysis rules evolve. The repo is organized so that raw Kabuplus ingestion stays generic, fixed X monitoring state lives in `ingest.x_*` / `raw.x_*`, durable tweet/company analysis and other research outputs live in `research.*`, typed SQL access lives in `analytics.*`, and user-provided analysis principles can be added later without reworking the base pipeline.
 
 ## Workflow
 
@@ -23,6 +23,7 @@ Use this skill to keep the repository in a stable shape while stock analysis rul
 
 - Use `scripts/import_kabuplus.py` for data loading instead of ad hoc import scripts.
 - Use `docker compose run --rm analysis ...` for reusable analysis runs instead of local-only one-off commands.
+- Before tweet analysis on recent dates, use `docker compose run --rm xcollector ensure-current ...` so X API calls only happen when the 60-minute freshness window has expired.
 - Keep SQL-queryable entities split into `ingest`, `raw`, and `analytics` layers.
 - Persist durable case datasets and hypothesis outputs into `research.*` tables and matching md/yaml/csv artifacts.
 - Update `docs/data-catalog.md` whenever a new curated view is added.

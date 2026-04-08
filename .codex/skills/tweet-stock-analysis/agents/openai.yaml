@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tweet Stock Analysis"
+  short_description: "Turn stored X posts into stock reaction rows"
+  default_prompt: "Use $tweet-stock-analysis to freshness-check monitored X posts, analyze them over a date range, map them to Japanese listed companies, and persist the reaction rows."

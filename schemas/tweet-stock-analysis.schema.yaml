@@ -1,0 +1,128 @@
+title: tweet-stock-analysis
+type: object
+required:
+  - type
+  - version
+  - run
+  - tweets
+properties:
+  type:
+    const: tweet_stock_analysis
+  version:
+    type: integer
+  run:
+    type: object
+    required:
+      - run_id
+      - source_relation
+      - company_relation
+      - start_date
+      - end_date
+      - parameters
+    properties:
+      run_id:
+        type: string
+      source_relation:
+        type: string
+      company_relation:
+        type: string
+      start_date:
+        type: string
+        format: date
+      end_date:
+        type: string
+        format: date
+      target_username:
+        type:
+          - string
+          - "null"
+      generated_at:
+        type: string
+      parameters:
+        type: object
+        required:
+          - volume_lookback_days
+          - forward_return_days
+        properties:
+          volume_lookback_days:
+            type: integer
+          forward_return_days:
+            type: array
+            items:
+              type: integer
+  tweets:
+    type: array
+    items:
+      type: object
+      required:
+        - post_id
+        - author_username
+        - created_at_jst
+        - tweet_url
+        - text
+        - mentions
+      properties:
+        post_id:
+          type: string
+        target_username:
+          type: string
+        author_user_id:
+          type: string
+        author_username:
+          type: string
+        author_name:
+          type:
+            - string
+            - "null"
+        created_at:
+          type: string
+        created_at_jst:
+          type: string
+        post_date_jst:
+          type: string
+          format: date
+        tweet_url:
+          type: string
+        text:
+          type: string
+        metrics:
+          type: object
+        mentions:
+          type: array
+          items:
+            type: object
+            required:
+              - sc
+              - company_name
+              - match_confidence
+              - extraction_rationale
+            properties:
+              mention_id:
+                type: string
+              sc:
+                type: string
+              company_name:
+                type: string
+              match_confidence:
+                enum:
+                  - high
+                  - medium
+                  - low
+              extraction_rationale:
+                type: string
+              market_context:
+                type: object
+              volume_spike_flag:
+                type: boolean
+              volume_spike_reason:
+                type: string
+              price_jump_flag:
+                type: boolean
+              price_jump_reason:
+                type: string
+              analysis_summary:
+                type: string
+  notes:
+    type:
+      - string
+      - "null"

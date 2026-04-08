@@ -15,6 +15,8 @@ from typing import Iterable, Sequence
 
 from entry_breakout_research import handle_command as handle_research_command
 from entry_breakout_research import register_subcommands as register_research_subcommands
+from tweet_stock_research import handle_command as handle_tweet_stock_command
+from tweet_stock_research import register_subcommands as register_tweet_stock_subcommands
 
 try:
     import psycopg
@@ -166,6 +168,7 @@ def parse_args() -> argparse.Namespace:
     )
     add_label_study_args(study)
     register_research_subcommands(subparsers)
+    register_tweet_stock_subcommands(subparsers)
 
     return parser.parse_args()
 
@@ -1406,6 +1409,9 @@ def main() -> int:
         return run_label_study(args, dsn)
 
     handled = handle_research_command(args, dsn)
+    if handled is not None:
+        return handled
+    handled = handle_tweet_stock_command(args, dsn)
     if handled is not None:
         return handled
 

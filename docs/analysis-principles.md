@@ -128,6 +128,37 @@ This file is the source of truth for analysis logic that must survive across fut
   - Whether the wick and volume thresholds should be normalized by price level or volatility regime.
   - Whether the next phase should optimize `sell / hold` policy with post-entry path rules instead of fixed label thresholds.
 
+## Principle 004 - Tweet To Listed-Company Market Reaction
+
+- Intent: Pull monitored X posts for a requested date range, identify Japanese listed companies mentioned in each tweet, and persist an LLM-reviewed reaction dataset that links tweet text to stock price and volume context.
+- Universe: `analytics.monitored_x_posts` posts inside the requested date range plus `analytics.listed_companies_latest` / `analytics.stock_prices_adjusted_daily` for company lookup and market context.
+- Base dataset/view: `analytics.monitored_x_posts`
+- Required filters:
+  - Use only collected monitored posts that already passed the collector's reply / repost exclusions.
+  - Restrict the source tweets to the requested date range and optional `target_username`.
+  - Persist one row per `tweet x listed-company code` mention. Tweets with no Japanese listed-company mention may remain unpersisted in the mention table.
+- Parameters and defaults:
+  - `source_relation`: `analytics.monitored_x_posts`
+  - `company_relation`: `analytics.listed_companies_latest`
+  - `target_username`: optional
+  - `volume_lookback_days`: `20`
+  - `forward_return_days`: `5,20`
+  - `market_close_cutoff_jst`: `15:30`
+  - `match_confidence`: `high / medium / low`
+- Signal or scoring logic:
+  - Export the requested tweets and the latest listed-company snapshot into a durable analysis template.
+  - Use LLM judgment to identify the mentioned Japanese listed company names and stock codes, and record an extraction rationale for each mention.
+  - Enrich each mention with the first trading session that can react to the tweet, along with previous close, event-day OHLCV, 20-day average volume, and forward close-return context.
+  - Use LLM judgment to set `volume_spike_flag` and `price_jump_flag`, and persist both flags with rationale text and a compact summary.
+- Validation query or backtest method:
+  - Prepare template: `docker compose run --rm analysis prepare-tweet-analysis --start-date YYYY-MM-DD --end-date YYYY-MM-DD`
+  - Add market context: `docker compose run --rm analysis enrich-tweet-analysis --input-file research/tweet-stock-analysis/<run-id>/analysis_template.yaml`
+  - Persist final judgments: `docker compose run --rm analysis persist-tweet-analysis --input-file research/tweet-stock-analysis/<run-id>/enriched_analysis.yaml`
+- Open questions:
+  - Whether ETFs, mutual funds, and unlisted private companies should stay out of scope or move into a separate classification.
+  - Whether the price reaction should later be split into intraday and overnight cases more explicitly.
+  - Whether a future phase should automate first-pass company extraction before the final LLM review.
+
 ## Principle Template
 
 Use the following template for each principle:

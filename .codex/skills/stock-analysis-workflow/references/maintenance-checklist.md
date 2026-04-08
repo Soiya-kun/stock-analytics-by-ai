@@ -4,6 +4,8 @@
 
 - Update `docker-compose.yml` if service startup or runtime arguments change.
 - Update `scripts/import_kabuplus.py` if file discovery, metadata extraction, or import semantics change.
+- Update `scripts/x_collector.py` if monitored-account polling, auth, or checkpoint semantics change.
+- Update `scripts/tweet_stock_research.py` if tweet-analysis export, enrichment, or persistence semantics change.
 - Update `sql/init/*` if new raw tables, helper functions, or curated views are introduced.
 - Update `docs/setup.md` and `docs/data-catalog.md`.
 

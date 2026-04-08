@@ -3,7 +3,13 @@
 ## Storage Layers
 
 - `raw.kabuplus_records`: one row per CSV row. Original Japanese headers and values are stored in `payload jsonb`.
+- `raw.x_users`: latest profile snapshot for each monitored X account.
+- `raw.x_posts`: one row per collected X post. Latest payload and public metrics overwrite on re-fetch.
 - `ingest.kabuplus_files`: one row per imported CSV file with status, row counts, and failure message.
+- `ingest.x_monitored_accounts`: fixed monitored usernames and their resolved X user IDs.
+- `ingest.x_timeline_state`: per-target polling checkpoint and failure state.
+- `ingest.x_poll_runs`: aggregate poll-run audit log.
+- `ingest.x_usage_daily`: optional snapshots from `GET /2/usage/tweets`.
 - `analytics.inferred_price_actions`: inferred split / reverse-split events detected from one-day integer OHLC jumps.
 - `research.*`: durable study runs, breakout cases, and hypothesis records.
 - `analytics.*`: typed views for datasets that are likely to be queried first.
@@ -22,6 +28,8 @@
 | `analytics.margin_transactions_weekly` | `japan-all-stock-margin-transactions/weekly` | Weekly | Margin buy/sell balances |
 | `analytics.corporate_actions_monthly` | `corporate-action/monthly` | Monthly | Split and reverse split events |
 | `analytics.import_status` | `ingest.kabuplus_files` | Derived | Import coverage and status |
+| `analytics.monitored_x_posts` | `raw.x_posts` + `ingest.x_monitored_accounts` | Near real-time | Fixed monitored X accounts with JST timestamps and public metrics |
+| `analytics.listed_companies_latest` | `analytics.stock_prices_daily` | Latest market day | Listed-company snapshot for LLM company-code lookup |
 
 ## Research Tables
 
@@ -30,6 +38,8 @@
 | `research.entry_study_runs` | One row per durable 6-month breakout study run |
 | `research.entry_cases` | Wide case table for breakout-point features and trend labels |
 | `research.entry_hypotheses` | Interpretable threshold rules stored for train / validation stages |
+| `research.tweet_analysis_runs` | One row per tweet-analysis run over a requested date range |
+| `research.tweet_stock_mentions` | One row per `tweet x listed-company` mention with reaction flags and rationale |
 
 ## Dataset Families Observed in `stock/kabuplus-2025.zip`
 
