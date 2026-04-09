@@ -11,7 +11,7 @@
 Fetch a CSV only after confirming the date exists on the daily listing page:
 
 ```powershell
-python scripts/fetch_kabuplus_daily_csv.py --date today --output-dir stock/kabuplus-2026
+docker compose run --rm -e CSVEX_BASIC_USER -e CSVEX_BASIC_PASSWORD --entrypoint python importer /workspace/scripts/fetch_kabuplus_daily_csv.py --date today --output-dir /workspace/stock/kabuplus-2026
 ```
 
 Import a saved CSV into PostgreSQL:
@@ -31,6 +31,7 @@ docker compose exec db psql -U stock -d stock_analytics -c "select count(*) from
 
 - Always check the listing page before downloading any CSV.
 - Treat `today` as JST.
+- Run the downloader through `docker compose` with `CSVEX_BASIC_USER` and `CSVEX_BASIC_PASSWORD` passed into the container.
 - If the target date is not on the listing page, stop without downloading.
 - Save files under `stock/kabuplus-2026/`.
 - Use `--overwrite` only when replacing an existing local CSV is intentional.
