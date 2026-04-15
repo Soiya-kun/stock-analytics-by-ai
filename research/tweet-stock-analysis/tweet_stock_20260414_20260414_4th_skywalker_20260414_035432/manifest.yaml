@@ -1,0 +1,25 @@
+type: tweet_stock_analysis_prepare
+version: 1
+run_id: tweet_stock_20260414_20260414_4th_skywalker_20260414_035432
+generated_at: '2026-04-14T03:54:33.077267'
+source_relation: analytics.monitored_x_posts
+company_relation: analytics.listed_companies_latest
+date_range:
+  start_date: '2026-04-14'
+  end_date: '2026-04-14'
+target_username: 4th_skywalker
+parameters:
+  volume_lookback_days: 20
+  forward_return_days:
+  - 5
+  - 20
+  limit: null
+counts:
+  tweet_count: 160
+  company_snapshot_count: 3755
+files:
+  tweets_csv: research/tweet-stock-analysis/tweet_stock_20260414_20260414_4th_skywalker_20260414_035432/tweets.csv
+  company_snapshot_csv: research/tweet-stock-analysis/tweet_stock_20260414_20260414_4th_skywalker_20260414_035432/company_snapshot.csv
+  analysis_template_yaml: research/tweet-stock-analysis/tweet_stock_20260414_20260414_4th_skywalker_20260414_035432/analysis_template.yaml
+  analysis_template_json: research/tweet-stock-analysis/tweet_stock_20260414_20260414_4th_skywalker_20260414_035432/analysis_template.json
+  manifest_yaml: research/tweet-stock-analysis/tweet_stock_20260414_20260414_4th_skywalker_20260414_035432/manifest.yaml

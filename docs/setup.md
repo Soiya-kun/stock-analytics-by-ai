@@ -9,8 +9,11 @@
 - `raw.x_posts`: one row per collected X post. Re-fetches update the latest payload and public metrics.
 - `ingest.x_*`: monitored-account config, timeline checkpoint state, poll run audit log, and optional usage snapshots.
 - `research.tweet_*`: durable tweet-to-stock analysis runs and `tweet x company-code` mention rows.
+- `research.x_*`: canonical `post x stock-code` signal rows, review state, and account trust scores.
 - `analytics.inferred_price_actions`: inferred split / reverse-split events derived from one-day integer OHLC jumps.
 - `analytics.stock_prices_adjusted_daily`: non-destructive adjusted OHLCV view with raw and adjusted columns.
+- `analytics.x_bullish_stock_signals`: canonical bullish `post x stock-code` signal view.
+- `analytics.x_account_trust_latest`: latest trust score per candidate account.
 - `research.*`: durable breakout study runs, cases, and hypothesis records.
 - `analytics.*`: typed SQL views for the main daily, weekly, and monthly datasets.
 
@@ -56,16 +59,34 @@ X_COLLECT_INTERVAL_SECONDS=3600
 docker compose exec -T db psql -U stock -d stock_analytics -f /workspace/sql/migrations/20260407_x_collector_setup.sql
 ```
 
+If `pgdata` already exists and you want benchmark / candidate trust scoring, also apply:
+
+```powershell
+docker compose exec -T db psql -U stock -d stock_analytics -f /workspace/sql/migrations/20260412_x_account_trust_setup.sql
+```
+
 3. Insert the fixed monitored usernames.
 
 ```powershell
 docker compose exec db psql -U stock -d stock_analytics -c "insert into ingest.x_monitored_accounts (target_username) values ('example_user') on conflict do nothing;"
 ```
 
+Candidate evaluation uses the same table with `account_role='candidate'`.
+
+```powershell
+docker compose exec db psql -U stock -d stock_analytics -c "insert into ingest.x_monitored_accounts (target_username, account_role) values ('yuzz__', 'candidate') on conflict (target_username) do update set account_role = excluded.account_role;"
+```
+
 4. Resolve usernames to user IDs and verify access through the authenticated X account.
 
 ```powershell
 docker compose run --rm xcollector sync-targets
+```
+
+Candidate only:
+
+```powershell
+docker compose run --rm xcollector sync-targets --account-role candidate
 ```
 
 5. Run a one-shot poll to capture only the current JST day's posts on first load.
@@ -90,6 +111,7 @@ docker compose run --rm xcollector usage
 Collector state lives in:
 
 - `ingest.x_monitored_accounts`: configured usernames and latest resolution/access state
+- `ingest.x_monitored_accounts.account_role`: `benchmark` / `candidate`
 - `ingest.x_timeline_state`: `since_id` checkpoint and per-target polling status
 - `ingest.x_poll_runs`: aggregate audit rows for each polling run
 - `ingest.x_usage_daily`: optional usage snapshots from `/2/usage/tweets`
@@ -127,6 +149,34 @@ docker compose run --rm analysis persist-tweet-analysis --input-file /workspace/
 
 ```powershell
 docker compose exec db psql -U stock -d stock_analytics -c "select run_id, sc, company_name, volume_spike_flag, price_jump_flag from research.tweet_stock_mentions order by created_at desc limit 20;"
+```
+
+## X Account Trust Flow
+
+1. Prepare a review batch for unanalyzed posts.
+
+```powershell
+docker compose run --rm analysis prepare-x-signal-analysis --start-date 2026-01-13 --end-date 2026-04-12 --account-role all
+```
+
+2. Open `research/x-signal-analysis/<run-id>/analysis_template.yaml` and fill `signals` for each post.
+
+3. Add market context.
+
+```powershell
+docker compose run --rm analysis enrich-x-signal-analysis --input-file /workspace/research/x-signal-analysis/<run-id>/analysis_template.yaml
+```
+
+4. Persist canonical signals and review state.
+
+```powershell
+docker compose run --rm analysis persist-x-signal-analysis --input-file /workspace/research/x-signal-analysis/<run-id>/enriched_analysis.yaml
+```
+
+5. Evaluate a candidate account against benchmark clusters.
+
+```powershell
+docker compose run --rm analysis evaluate-x-account-trust --candidate-username yuzz__ --start-date 2026-01-13 --end-date 2026-04-12
 ```
 
 ## Daily CSV Flow

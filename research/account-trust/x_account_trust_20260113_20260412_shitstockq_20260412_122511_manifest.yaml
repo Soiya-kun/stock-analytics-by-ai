@@ -1,0 +1,32 @@
+type: x_account_trust_evaluation
+version: 1
+run_id: x_account_trust_20260113_20260412_shitstockq_20260412_122511
+generated_at: '2026-04-12T12:25:11.245086'
+source_relation: analytics.x_bullish_stock_signals
+date_range:
+  start_date: '2026-01-13'
+  end_date: '2026-04-12'
+candidate_username: ShitStockQ
+candidate_usernames:
+- ShitStockQ
+parameters:
+  cluster_window_days: 30
+  unique_success_horizon_days: 20
+  unique_success_return_pct: 0.1
+  overlap_weight: 0.35
+  early_weight: 0.35
+  unique_weight: 0.3
+  insufficient_min_clusters: 15
+  insufficient_min_unique_picks: 5
+  trusted_score_threshold: 0.6
+  watch_score_threshold: 0.35
+  analysis_version: x-account-trust-v1
+counts:
+  candidate_count: 1
+  score_count: 1
+  cluster_count: 6
+files:
+  scores_csv: research/account-trust/x_account_trust_20260113_20260412_shitstockq_20260412_122511_scores.csv
+  clusters_csv: research/account-trust/x_account_trust_20260113_20260412_shitstockq_20260412_122511_clusters.csv
+  manifest_yaml: research/account-trust/x_account_trust_20260113_20260412_shitstockq_20260412_122511_manifest.yaml
+  report_md: research/account-trust/x_account_trust_20260113_20260412_shitstockq_20260412_122511_report.md

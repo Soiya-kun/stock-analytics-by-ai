@@ -7,10 +7,14 @@
 - `raw.x_posts`: one row per collected X post. Latest payload and public metrics overwrite on re-fetch.
 - `ingest.kabuplus_files`: one row per imported CSV file with status, row counts, and failure message.
 - `ingest.x_monitored_accounts`: fixed monitored usernames and their resolved X user IDs.
+- `ingest.x_monitored_accounts.account_role`: `benchmark` / `candidate` role attached to each monitored username.
 - `ingest.x_timeline_state`: per-target polling checkpoint and failure state.
 - `ingest.x_poll_runs`: aggregate poll-run audit log.
 - `ingest.x_usage_daily`: optional snapshots from `GET /2/usage/tweets`.
 - `analytics.inferred_price_actions`: inferred split / reverse-split events detected from one-day integer OHLC jumps.
+- `research.x_signal_analysis_post_reviews`: one row per reviewed X post, including zero-signal reviews.
+- `research.x_post_stock_signals`: canonical one row per `post x listed-company code` signal.
+- `research.x_account_trust_*`: durable candidate trust runs, clusters, and scores.
 - `research.*`: durable study runs, breakout cases, and hypothesis records.
 - `analytics.*`: typed views for datasets that are likely to be queried first.
 
@@ -30,6 +34,8 @@
 | `analytics.import_status` | `ingest.kabuplus_files` | Derived | Import coverage and status |
 | `analytics.monitored_x_posts` | `raw.x_posts` + `ingest.x_monitored_accounts` | Near real-time | Fixed monitored X accounts with JST timestamps and public metrics |
 | `analytics.listed_companies_latest` | `analytics.stock_prices_daily` | Latest market day | Listed-company snapshot for LLM company-code lookup |
+| `analytics.x_bullish_stock_signals` | `research.x_post_stock_signals` | Derived | Bullish-only canonical signal rows used for trust scoring |
+| `analytics.x_account_trust_latest` | `research.x_account_trust_scores` | Derived | Latest trust score and verdict for each candidate account |
 
 ## Research Tables
 
@@ -40,6 +46,12 @@
 | `research.entry_hypotheses` | Interpretable threshold rules stored for train / validation stages |
 | `research.tweet_analysis_runs` | One row per tweet-analysis run over a requested date range |
 | `research.tweet_stock_mentions` | One row per `tweet x listed-company` mention with reaction flags and rationale |
+| `research.x_signal_analysis_runs` | One row per canonical X signal review batch |
+| `research.x_signal_analysis_post_reviews` | One row per reviewed post, including posts with zero relevant stock signals |
+| `research.x_post_stock_signals` | Canonical one row per `post x listed-company code` with bullish / non-bullish / irrelevant signal labels |
+| `research.x_account_trust_runs` | One row per candidate trust evaluation run |
+| `research.x_account_trust_clusters` | One row per `run x candidate x symbol-cluster` comparison result |
+| `research.x_account_trust_scores` | One row per `run x candidate` trust score and verdict |
 
 ## Dataset Families Observed in `stock/kabuplus-2025.zip`
 

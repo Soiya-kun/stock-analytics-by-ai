@@ -1,0 +1,729 @@
+type: tweet_stock_analysis
+version: 1
+run:
+  run_id: tweet_stock_20260413_20260413_7y8k3d17sozce0w_20260413_102649
+  source_relation: analytics.monitored_x_posts
+  company_relation: analytics.listed_companies_latest
+  start_date: '2026-04-13'
+  end_date: '2026-04-13'
+  target_username: 7Y8k3d17SozCE0w
+  generated_at: '2026-04-13T10:27:04.579264'
+  parameters:
+    volume_lookback_days: 20
+    forward_return_days:
+    - 5
+    - 20
+    limit: null
+tweets:
+- post_id: '2043439144022774170'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T06:20:31+09:00'
+  created_at_jst: '2026-04-13T06:20:31'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043439144022774170
+  text: 'おはようございます
+
+
+    先週末の日経先物は、SOX高を受けて上昇、しかし週末の米国イラン協議は合意に至らず
+
+    その後の米国ホルムズ海峡閉鎖など
+
+    複雑な状況
+
+    サンデーダウナスは下落だが、サンデーオイルは98.89程度
+
+    まずは寄り付き一巡後をみてみましょう https://t.co/SpXsbWXzAJ'
+  metrics:
+    like_count: 44
+    reply_count: 2
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 4212
+  mentions: []
+- post_id: '2043457266037444781'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T07:32:32+09:00'
+  created_at_jst: '2026-04-13T07:32:32'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043457266037444781
+  text: 'あほだよな
+
+    1回の協議で合意するわけないし
+
+    決裂で最攻撃でもないのに
+
+    まぁ寄ってからの動きで地合い判断 https://t.co/bTWTnmMMxs'
+  metrics:
+    like_count: 62
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 3944
+  mentions: []
+- post_id: '2043481038274560381'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T09:07:00+09:00'
+  created_at_jst: '2026-04-13T09:07:00'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043481038274560381
+  text: 'PFは、プラスで推移
+
+    半導体関連強い'
+  metrics:
+    like_count: 13
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2078
+  mentions: []
+- post_id: '2043481373344923812'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T09:08:20+09:00'
+  created_at_jst: '2026-04-13T09:08:20'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043481373344923812
+  text: テラドローン特買気配 https://t.co/Y08M1N3RT0
+  metrics:
+    like_count: 13
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2688
+  mentions:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????/Terra_Drone.
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: Terra_Drone
+      market: 東証GR
+      industry: 精密機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: Terra_Drone was mentioned, but no usable market context was available at review time.
+- post_id: '2043482020438040659'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T09:10:54+09:00'
+  created_at_jst: '2026-04-13T09:10:54'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043482020438040659
+  text: テラドローンきょ〜れつ https://t.co/R4xCDJOdUX
+  metrics:
+    like_count: 28
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2839
+  mentions:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????/Terra_Drone.
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: Terra_Drone
+      market: 東証GR
+      industry: 精密機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: Terra_Drone was mentioned, but no usable market context was available at review time.
+- post_id: '2043484701193850990'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T09:21:33+09:00'
+  created_at_jst: '2026-04-13T09:21:33'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043484701193850990
+  text: 北川精機高値アタック https://t.co/RSen4sR5kG
+  metrics:
+    like_count: 16
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 2800
+  mentions:
+  - sc: '6327'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: 北川精機
+      market: 東証ST
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ???? was mentioned, but no usable market context was available at review time.
+- post_id: '2043484867904856489'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T09:22:13+09:00'
+  created_at_jst: '2026-04-13T09:22:13'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043484867904856489
+  text: テラドローンザラバすとぽ32号 https://t.co/eQ54Gb77gq
+  metrics:
+    like_count: 18
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 2775
+  mentions:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????/Terra_Drone.
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: Terra_Drone
+      market: 東証GR
+      industry: 精密機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: Terra_Drone was mentioned, but no usable market context was available at review time.
+- post_id: '2043488257821032735'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T09:35:41+09:00'
+  created_at_jst: '2026-04-13T09:35:41'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043488257821032735
+  text: AIメカテック https://t.co/SDJheHjXJA
+  metrics:
+    like_count: 10
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 2886
+  mentions:
+  - sc: '6227'
+    company_name: AI?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names AI?????.
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: AIメカテック
+      market: 東証ST
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: AI????? was mentioned, but no usable market context was available at review time.
+- post_id: '2043508846363394559'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T10:57:30+09:00'
+  created_at_jst: '2026-04-13T10:57:30'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043508846363394559
+  text: 'もしかしてだけど♪もしかしてだけど♪
+
+    やっぱトランプ♪ディールがヘタクソじゃないのー♪ https://t.co/XdBzxF4ILr https://t.co/CWM5gOCOEy'
+  metrics:
+    like_count: 18
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5269
+  mentions: []
+- post_id: '2043510879950676354'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T11:05:35+09:00'
+  created_at_jst: '2026-04-13T11:05:35'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043510879950676354
+  text: 'イランに閉鎖を解放させなければ
+
+    ならないのは、サウジを外した中東諸国なんやろな https://t.co/EweL65H9Sp'
+  metrics:
+    like_count: 21
+    reply_count: 0
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5332
+  mentions: []
+- post_id: '2043511141356421292'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T11:06:37+09:00'
+  created_at_jst: '2026-04-13T11:06:37'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043511141356421292
+  text: らいとにんぐペット らぶりぃ♥ https://t.co/biTuOe9J8D
+  metrics:
+    like_count: 4
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5195
+  mentions: []
+- post_id: '2043511462539513896'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T11:07:53+09:00'
+  created_at_jst: '2026-04-13T11:07:53'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043511462539513896
+  text: ウルトラマン80？ https://t.co/P3ufz8sEck https://t.co/Z4DjicMtV8
+  metrics:
+    like_count: 5
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 6511
+  mentions: []
+- post_id: '2043512500814246260'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T11:12:01+09:00'
+  created_at_jst: '2026-04-13T11:12:01'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043512500814246260
+  text: ケツなのか、腹なのか、、、、 https://t.co/vyUBilkPDq
+  metrics:
+    like_count: 5
+    reply_count: 0
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 8665
+  mentions: []
+- post_id: '2043549016135549116'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T13:37:07+09:00'
+  created_at_jst: '2026-04-13T13:37:07'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043549016135549116
+  text: オプトラン https://t.co/YV2DKhW8Cn
+  metrics:
+    like_count: 9
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2752
+  mentions:
+  - sc: '6235'
+    company_name: ?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: オプトラン
+      market: 東証PR
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ????? was mentioned, but no usable market context was available at review time.
+- post_id: '2043578637107310781'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T15:34:49+09:00'
+  created_at_jst: '2026-04-13T15:34:49'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043578637107310781
+  text: 'おつおつ
+
+
+    日経先物230安
+
+    誰だよ？マンデーってさ？
+
+    テラドローンすとぽ
+
+    ハイテク半導体関連強し
+
+    AIメカテック爆
+
+    オプトラン爆
+
+    太陽誘電爆
+
+    地合いそんなに悪くなし
+
+    SQで流れ変わるのは嫌だと思ってたけど、そんなことないね
+
+    良い週初め https://t.co/AKlV0yfYcz'
+  metrics:
+    like_count: 40
+    reply_count: 2
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2528
+  mentions:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????/Terra_Drone.
+    market_context:
+      tweet_session: after_market
+      company_snapshot_name: Terra_Drone
+      market: 東証GR
+      industry: 精密機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: Terra_Drone was mentioned, but no usable market context was available at review time.
+  - sc: '6227'
+    company_name: AI?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names AI?????.
+    market_context:
+      tweet_session: after_market
+      company_snapshot_name: AIメカテック
+      market: 東証ST
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: AI????? was mentioned, but no usable market context was available at review time.
+  - sc: '6235'
+    company_name: ?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+    market_context:
+      tweet_session: after_market
+      company_snapshot_name: オプトラン
+      market: 東証PR
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ????? was mentioned, but no usable market context was available at review time.
+  - sc: '6976'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+    market_context:
+      tweet_session: after_market
+      company_snapshot_name: 太陽誘電
+      market: 東証PR
+      industry: 電気機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ???? was mentioned, but no usable market context was available at review time.
+- post_id: '2043586603172663806'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T16:06:28+09:00'
+  created_at_jst: '2026-04-13T16:06:28'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043586603172663806
+  text: '戸川純タイムライン出てきたけどTOTOの影響？
+
+    好きだったなぁ
+
+    TVで「よく.純ちゃんクスリやってる？と言われるけど、やってませんから」と言ってたのが印象的ww https://t.co/Tw5yBXM3ge'
+  metrics:
+    like_count: 10
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4784
+  mentions: []
+- post_id: '2043601439524815137'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T17:05:26+09:00'
+  created_at_jst: '2026-04-13T17:05:26'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043601439524815137
+  text: '漫画家たがみよしひさ
+
+
+    キャラデザしたガルビオンの映像で思い出す
+
+    まだ週刊化してないビッグコミックスピリッツに軽井沢シンドロームを連載 第1巻のペン捌きは圧巻だったが、怠けグセ酷くダメダメに
+
+    途中コマ割同じページが続いたりして手抜きでスピリッツで見なくなった
+
+    漫画家小山田いくの弟 https://t.co/fmuqmF6HFh'
+  metrics:
+    like_count: 8
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2301
+  mentions: []
+- post_id: '2043625081738559588'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-13T18:39:22+09:00'
+  created_at_jst: '2026-04-13T18:39:22'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043625081738559588
+  text: テラドローンPTS https://t.co/uIiw68A4fg
+  metrics:
+    like_count: 6
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 1515
+  mentions:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????/Terra_Drone.
+    market_context:
+      tweet_session: after_market
+      company_snapshot_name: Terra_Drone
+      market: 東証GR
+      industry: 精密機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: Terra_Drone was mentioned, but no usable market context was available at review time.
+notes: ''

@@ -1,0 +1,25 @@
+{
+  "type": "x_signal_analysis",
+  "version": 1,
+  "run": {
+    "run_id": "x_signal_20260410_20260412_candidate_yuzz___20260412_115946",
+    "source_relation": "analytics.monitored_x_posts",
+    "company_relation": "analytics.listed_companies_latest",
+    "start_date": "2026-04-10",
+    "end_date": "2026-04-12",
+    "target_username": "yuzz__",
+    "account_role": "candidate",
+    "generated_at": "2026-04-12T11:59:46.744481",
+    "parameters": {
+      "batch_size": 20,
+      "volume_lookback_days": 20,
+      "forward_return_days": [
+        5,
+        20
+      ],
+      "analysis_version": "x-signal-v1"
+    }
+  },
+  "posts": [],
+  "notes": ""
+}

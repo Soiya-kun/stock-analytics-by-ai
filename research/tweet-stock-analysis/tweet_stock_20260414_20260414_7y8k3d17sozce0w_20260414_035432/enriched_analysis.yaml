@@ -1,0 +1,958 @@
+type: tweet_stock_analysis
+version: 1
+run:
+  run_id: tweet_stock_20260414_20260414_7y8k3d17sozce0w_20260414_035432
+  source_relation: analytics.monitored_x_posts
+  company_relation: analytics.listed_companies_latest
+  start_date: '2026-04-14'
+  end_date: '2026-04-14'
+  target_username: 7Y8k3d17SozCE0w
+  generated_at: '2026-04-14T03:54:33.075741'
+  parameters:
+    volume_lookback_days: 20
+    forward_return_days:
+    - 5
+    - 20
+    limit: null
+tweets:
+- post_id: '2043802951312126392'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T06:26:10+09:00'
+  created_at_jst: '2026-04-14T06:26:10'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043802951312126392
+  text: 'おはようございます
+
+
+    NYダウ301高
+
+    日経先物1034高
+
+    ナス280高
+
+    SOX149高
+
+    米国債4.29
+
+    原油98.01
+
+    米国イラン交渉進展の兆しで大幅上昇 SOX半導体強し
+
+    合意できずで急落し、交渉進展で急上昇のメンヘラボラ相場 ゼロデイオプションの影響も大きいか https://t.co/FJomus97H3'
+  metrics:
+    like_count: 47
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3515
+  mentions: []
+- post_id: '2043835095568785873'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T08:33:54+09:00'
+  created_at_jst: '2026-04-14T08:33:54'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043835095568785873
+  text: 相場は、イラン協議と半導体相場が混在した状況
+  metrics:
+    like_count: 20
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 3546
+  mentions: []
+- post_id: '2043840487891841205'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T08:55:19+09:00'
+  created_at_jst: '2026-04-14T08:55:19'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043840487891841205
+  text: '狙ったのはハイテク半導体AI
+
+    指数の上下よりSOXの高値更新をみるべき
+
+    こんな時に新興や需給仕手株やってる場合ではない
+
+    デカい資金についていく相場'
+  metrics:
+    like_count: 13
+    reply_count: 1
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 2
+    impression_count: 2219
+  mentions: []
+- post_id: '2043842733681631234'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T09:04:15+09:00'
+  created_at_jst: '2026-04-14T09:04:15'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043842733681631234
+  text: 北川精機上場来高値更新 https://t.co/pcy4LRBWJI
+  metrics:
+    like_count: 14
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 1991
+  mentions:
+  - sc: '6327'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: 北川精機
+      market: 東証ST
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ???? was mentioned, but no usable market context was available at review time.
+- post_id: '2043842901789290785'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T09:04:55+09:00'
+  created_at_jst: '2026-04-14T09:04:55'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043842901789290785
+  text: オプトラン高値更新へ向けて https://t.co/CsrFj9puUn
+  metrics:
+    like_count: 9
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 1961
+  mentions:
+  - sc: '6235'
+    company_name: ?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: オプトラン
+      market: 東証PR
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ????? was mentioned, but no usable market context was available at review time.
+- post_id: '2043859042049851896'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T10:09:03+09:00'
+  created_at_jst: '2026-04-14T10:09:03'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043859042049851896
+  text: AIメカテック34号すとぽ https://t.co/MWG1GkrRLt
+  metrics:
+    like_count: 9
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 2269
+  mentions:
+  - sc: '6227'
+    company_name: AI?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names AI?????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: AIメカテック
+      market: 東証ST
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: AI????? was mentioned, but no usable market context was available at review time.
+- post_id: '2043865805096661489'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T10:35:55+09:00'
+  created_at_jst: '2026-04-14T10:35:55'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043865805096661489
+  text: 北川精機ギュンギュン https://t.co/eqDZc3ABl2
+  metrics:
+    like_count: 6
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 1814
+  mentions:
+  - sc: '6327'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: 北川精機
+      market: 東証ST
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ???? was mentioned, but no usable market context was available at review time.
+- post_id: '2043865982956122588'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T10:36:38+09:00'
+  created_at_jst: '2026-04-14T10:36:38'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043865982956122588
+  text: オプトラン上ヒゲ抜いてこい https://t.co/jKEOH91DjM
+  metrics:
+    like_count: 10
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 1940
+  mentions:
+  - sc: '6235'
+    company_name: ?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: オプトラン
+      market: 東証PR
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ????? was mentioned, but no usable market context was available at review time.
+- post_id: '2043866144612999356'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T10:37:16+09:00'
+  created_at_jst: '2026-04-14T10:37:16'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043866144612999356
+  text: 太陽誘電年高アタック https://t.co/WoEOB5drxW
+  metrics:
+    like_count: 7
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 2179
+  mentions:
+  - sc: '6976'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: 太陽誘電
+      market: 東証PR
+      industry: 電気機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ???? was mentioned, but no usable market context was available at review time.
+- post_id: '2043868717411696936'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T10:47:30+09:00'
+  created_at_jst: '2026-04-14T10:47:30'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043868717411696936
+  text: 出家して岐阜県に謝ってください https://t.co/RD6Tg8DyCl
+  metrics:
+    like_count: 8
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3101
+  mentions: []
+- post_id: '2043886371325260014'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T11:57:39+09:00'
+  created_at_jst: '2026-04-14T11:57:39'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043886371325260014
+  text: 'オプトラン
+
+
+    11.24の成り行き買い
+
+    凄まじい https://t.co/gWU76M8Ajs'
+  metrics:
+    like_count: 3
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 1991
+  mentions:
+  - sc: '6235'
+    company_name: ?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: オプトラン
+      market: 東証PR
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ????? was mentioned, but no usable market context was available at review time.
+- post_id: '2043886859378659334'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T11:59:35+09:00'
+  created_at_jst: '2026-04-14T11:59:35'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043886859378659334
+  text: 昨日、オプトランと北川精機と太陽誘電買い増ししたのは、ぴーかんぴーかんだよ https://t.co/W5DkSYrxE7
+  metrics:
+    like_count: 7
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 1856
+  mentions:
+  - sc: '6235'
+    company_name: ?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: オプトラン
+      market: 東証PR
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ????? was mentioned, but no usable market context was available at review time.
+  - sc: '6327'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: 北川精機
+      market: 東証ST
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ???? was mentioned, but no usable market context was available at review time.
+  - sc: '6976'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: 太陽誘電
+      market: 東証PR
+      industry: 電気機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ???? was mentioned, but no usable market context was available at review time.
+- post_id: '2043888970074030132'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T12:07:58+09:00'
+  created_at_jst: '2026-04-14T12:07:58'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043888970074030132
+  text: 'アンソロピックの台頭で、自立型AIの利便性と人類を脅かす存在にまで
+
+    AIは、進化
+
+    オープン型にすると暴走した時に個人情報やセキュリティを全て打ち破り危険性が高い
+
+    そのためアンソロピックの利用は、数少ないユーザーに限定されている
+
+    オープンにならない中でのAI進化で
+
+    市場は急激な膨張へ https://t.co/McZ5YQV00s'
+  metrics:
+    like_count: 3
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 1874
+  mentions: []
+- post_id: '2043889734276264174'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T12:11:00+09:00'
+  created_at_jst: '2026-04-14T12:11:00'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043889734276264174
+  text: 'いらかの波かぁ
+
+    懐かしいなぁ お姉が持ってたの読んだことある
+
+    大工の話だよな https://t.co/3HJmZnZ1eb'
+  metrics:
+    like_count: 1
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3236
+  mentions: []
+- post_id: '2043890815240679746'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T12:15:18+09:00'
+  created_at_jst: '2026-04-14T12:15:18'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043890815240679746
+  text: '（私見）哀しいよなぁ 親の都合は子には関係ないのに
+
+    まだ半月なのに性別わからないほど腐食進んでいたと言うことは、普通で推測して小学校に送って行った段階では死んでたんかなぁ
+
+    哀しいね 母親は何を想う？
+
+    ＃あくまで私見の推測 https://t.co/JWYWltxLJY'
+  metrics:
+    like_count: 13
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5605
+  mentions: []
+- post_id: '2043893481408770444'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T12:25:54+09:00'
+  created_at_jst: '2026-04-14T12:25:54'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043893481408770444
+  text: '昔、山一に入ったばかりの時に
+
+    先輩顧客から
+
+    「リストラは、わかるけどクチャリングって何？」と質問受けてプリーズしたことがある https://t.co/Xw5G0NYxkW'
+  metrics:
+    like_count: 2
+    reply_count: 0
+    quote_count: 1
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 3956
+  mentions: []
+- post_id: '2043895025348866188'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T12:32:02+09:00'
+  created_at_jst: '2026-04-14T12:32:02'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043895025348866188
+  text: パワーエックスりばりば https://t.co/feI15hEUPE
+  metrics:
+    like_count: 8
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 1476
+  mentions:
+  - sc: 485A
+    company_name: ???????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: パワーエックス
+      market: 東証GR
+      industry: 電気機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ??????? was mentioned, but no usable market context was available at review time.
+- post_id: '2043896528398647387'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T12:38:00+09:00'
+  created_at_jst: '2026-04-14T12:38:00'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043896528398647387
+  text: パワーエックス➡️テラドローン➡️AIメカテックと連チャンすとぽしたけど、次が北川精機かオプトランならうれちい https://t.co/5TkJPHD8nh
+  metrics:
+    like_count: 2
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 1457
+  mentions:
+  - sc: 485A
+    company_name: ???????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: パワーエックス
+      market: 東証GR
+      industry: 電気機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ??????? was mentioned, but no usable market context was available at review time.
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????/Terra_Drone.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: Terra_Drone
+      market: 東証GR
+      industry: 精密機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: Terra_Drone was mentioned, but no usable market context was available at review time.
+  - sc: '6227'
+    company_name: AI?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names AI?????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: AIメカテック
+      market: 東証ST
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: AI????? was mentioned, but no usable market context was available at review time.
+  - sc: '6327'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: 北川精機
+      market: 東証ST
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ???? was mentioned, but no usable market context was available at review time.
+  - sc: '6235'
+    company_name: ?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: オプトラン
+      market: 東証PR
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ????? was mentioned, but no usable market context was available at review time.
+- post_id: '2043898643619656062'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T12:46:25+09:00'
+  created_at_jst: '2026-04-14T12:46:25'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043898643619656062
+  text: YHまでｷﾀ━━━━(ﾟ∀ﾟ)━━━━!!
+  metrics:
+    like_count: 5
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 903
+  mentions: []
+- post_id: '2043899797795680444'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T12:51:00+09:00'
+  created_at_jst: '2026-04-14T12:51:00'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043899797795680444
+  text: オプトラン https://t.co/e5oQvyWV1B
+  metrics:
+    like_count: 0
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 472
+  mentions:
+  - sc: '6235'
+    company_name: ?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: オプトラン
+      market: 東証PR
+      industry: 機械
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ????? was mentioned, but no usable market context was available at review time.
+- post_id: '2043900070534492265'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-14T12:52:05+09:00'
+  created_at_jst: '2026-04-14T12:52:05'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043900070534492265
+  text: なんで親の映像ないんや？ https://t.co/k4W9Tk0fbF
+  metrics:
+    like_count: 2
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 464
+  mentions: []
+notes: ''

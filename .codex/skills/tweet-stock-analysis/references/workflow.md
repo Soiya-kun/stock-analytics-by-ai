@@ -55,9 +55,17 @@ When filling `analysis_template.yaml`:
 When reviewing `enriched_analysis.yaml`:
 
 - Read `market_context.event_trade_date`, `event_day_return_pct`, `max_close_return_5d_pct`, `max_close_return_20d_pct`, and `volume_ratio_20d`.
+- If the tweet landed on a non-trading day or before the next trade row exists, use the latest available `market_context.event_trade_date` for that symbol instead of treating market context as unavailable.
 - Set `volume_spike_flag` and `price_jump_flag` as booleans.
 - Explain both flags in plain Japanese or English with evidence from the market context.
 - Fill `analysis_summary` with a short conclusion suitable for later SQL querying.
+
+When preparing the final report:
+
+- Aggregate the persisted rows by `sc` and compute `count(distinct target_username)`.
+- Treat any symbol with `count(distinct target_username) >= 2` as a cross-user confirmation candidate.
+- Surface cross-user confirmation candidates prominently even when their total mention count is low.
+- Name the participating monitored users explicitly so the report makes the independent confirmations obvious.
 
 ## Verification Queries
 
@@ -88,4 +96,20 @@ select
 from research.tweet_analysis_runs
 order by created_at desc
 limit 20;
+```
+
+Cross-user confirmation candidates:
+
+```sql
+select
+    sc,
+    company_name,
+    count(*) as mention_rows,
+    count(distinct target_username) as distinct_users,
+    array_agg(distinct target_username order by target_username) as mentioned_by
+from research.tweet_stock_mentions
+where post_date_jst between date 'YYYY-MM-DD' and date 'YYYY-MM-DD'
+group by sc, company_name
+having count(distinct target_username) >= 2
+order by distinct_users desc, mention_rows desc, sc;
 ```

@@ -1,0 +1,517 @@
+type: tweet_stock_analysis
+version: 1
+run:
+  run_id: tweet_stock_20260414_20260414_not_zerosumgame_20260414_035432
+  source_relation: analytics.monitored_x_posts
+  company_relation: analytics.listed_companies_latest
+  start_date: '2026-04-14'
+  end_date: '2026-04-14'
+  target_username: not_zerosumgame
+  generated_at: '2026-04-14T03:54:33.073777'
+  parameters:
+    volume_lookback_days: 20
+    forward_return_days:
+    - 5
+    - 20
+    limit: null
+tweets:
+- post_id: '2043839113590452567'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T08:49:52+09:00'
+  created_at_jst: '2026-04-14T08:49:52'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043839113590452567
+  text: 「エネルギー施設復旧に2年」　IEA事務局長、中東巡り（共同通信） - Yahoo!ニュース https://t.co/YbK336tORg
+  metrics:
+    like_count: 28
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 9543
+  mentions: []
+- post_id: '2043849573756723317'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T09:31:25+09:00'
+  created_at_jst: '2026-04-14T09:31:25'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043849573756723317
+  text: パナソニックのユニットバスも上位モデルは受注制限かかりましたー
+  metrics:
+    like_count: 51
+    reply_count: 2
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 6
+    impression_count: 14177
+  mentions: []
+- post_id: '2043849898760753310'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T09:32:43+09:00'
+  created_at_jst: '2026-04-14T09:32:43'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043849898760753310
+  text: 実業ダメージ受けている方だらけで、投資家しか豊かになってない
+  metrics:
+    like_count: 73
+    reply_count: 2
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 4973
+  mentions: []
+- post_id: '2043851844796199323'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T09:40:27+09:00'
+  created_at_jst: '2026-04-14T09:40:27'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043851844796199323
+  text: '日本では歴史上最大のコストアップが今年きてるので、原価高騰影響は本当にやばい。
+
+    そもそも、何故あんなにも安く建物を建てられたのだろうか状態ではある
+
+
+    非リゾート離島やインフラの乏しいエリアは地元の工事もなくなるかと思う。
+
+
+    それと対になる都心部では賃料大幅上昇させるオーナーが急増する https://t.co/0Q8xveHp6V'
+  metrics:
+    like_count: 74
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 15
+    impression_count: 13684
+  mentions: []
+- post_id: '2043853924114030716'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T09:48:43+09:00'
+  created_at_jst: '2026-04-14T09:48:43'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043853924114030716
+  text: レバ掛けて調整局面のドン底で売るしか無くなった人がまた無闇にレバ掛けていたりしないかな。初めての経験じゃないはずなのに、同じ失敗を繰り返していないだろうか
+  metrics:
+    like_count: 104
+    reply_count: 3
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 5
+    impression_count: 8767
+  mentions: []
+- post_id: '2043854866351829433'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T09:52:27+09:00'
+  created_at_jst: '2026-04-14T09:52:27'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043854866351829433
+  text: 普段から取れてない人が不利な立ち回りになっているのに次は取れると思ってしまうのは考えてなさすぎる https://t.co/dLXQgnFsDs
+  metrics:
+    like_count: 30
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 8335
+  mentions: []
+- post_id: '2043856723237318947'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T09:59:50+09:00'
+  created_at_jst: '2026-04-14T09:59:50'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043856723237318947
+  text: ユニチカ株でCF改善の事業者 https://t.co/29cb7jgUgI https://t.co/2MOliXOlEw
+  metrics:
+    like_count: 24
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 7327
+  mentions: []
+- post_id: '2043859170424959451'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T10:09:33+09:00'
+  created_at_jst: '2026-04-14T10:09:33'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043859170424959451
+  text: 究極のエコカー｢燃料電池車｣はオワコンなのか？ ｢水素の社会実装をリードする｣と言うトヨタの戦略 | 桃田健史の「クルマとエネルギー」の未来 | 東洋経済オンライン https://t.co/XqK3uicn6d
+  metrics:
+    like_count: 11
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 4654
+  mentions:
+  - sc: '7203'
+    company_name: ??????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly references ????s fuel-cell vehicle strategy article, so ?????? is the listed-company target.
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: トヨタ自動車
+      market: 東証PR
+      industry: 輸送用機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ?????? was mentioned, but no usable market context was available at review time.
+- post_id: '2043861705470685645'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T10:19:38+09:00'
+  created_at_jst: '2026-04-14T10:19:38'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043861705470685645
+  text: 高市首相と片山財務相が赤沢経産相に金融政策の発言を控えるよう注意 - Bloomberg https://t.co/vHeGrbAqTX
+  metrics:
+    like_count: 22
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 4654
+  mentions: []
+- post_id: '2043861845149397049'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T10:20:11+09:00'
+  created_at_jst: '2026-04-14T10:20:11'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043861845149397049
+  text: 政府の円安是正ネタバレをするなと怒られた赤沢さん https://t.co/1om8r8drVE
+  metrics:
+    like_count: 36
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 5
+    impression_count: 6602
+  mentions: []
+- post_id: '2043862739647660112'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T10:23:44+09:00'
+  created_at_jst: '2026-04-14T10:23:44'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043862739647660112
+  text: 築浅物件を一棟区分関係なく、下限からそこそこな数同時に買付入れていくことにした
+  metrics:
+    like_count: 31
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 4633
+  mentions: []
+- post_id: '2043867791426760737'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T10:43:49+09:00'
+  created_at_jst: '2026-04-14T10:43:49'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043867791426760737
+  text: '大阪市中心6区はそもそも実需の供給がかなり少ないのと新築も15F建板状で次から450万円前後〜の世界なので、中古の築浅ファミリータイプの400万円以下根こそぎ買ったらいきなり相場が上がってしまいます。
+
+    それを、今ファンドとデベロッパー本体+子会社がやってます'
+  metrics:
+    like_count: 19
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 4071
+  mentions: []
+- post_id: '2043869456309596213'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T10:50:26+09:00'
+  created_at_jst: '2026-04-14T10:50:26'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043869456309596213
+  text: 代理店が一気に注文しすぎです https://t.co/8eZ8NZsjrN
+  metrics:
+    like_count: 30
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 7602
+  mentions: []
+- post_id: '2043871498545590656'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T10:58:33+09:00'
+  created_at_jst: '2026-04-14T10:58:33'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043871498545590656
+  text: 'ユニットバス問題なんかでパニックになる日本てちょっとおかしいと思う。
+
+
+    紐解いていけば想像できる話なのに、メディアやSNSで目立ってから表面的に捉えてパニックになる人が多すぎるじゃ効かないくらいいる https://t.co/PaKgvbHpF9'
+  metrics:
+    like_count: 46
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 7761
+  mentions: []
+- post_id: '2043874796237431190'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T11:11:39+09:00'
+  created_at_jst: '2026-04-14T11:11:39'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043874796237431190
+  text: 大阪市内ならどこでもいいねん。とりあえずマンション買えたらいいねん。という人は、安治川口か我孫子の駅徒歩10分以上とか安いし、競争少ないから全然買えるよ。旭区も竣工在庫なると思うから価格は上げてこないはず
+  metrics:
+    like_count: 29
+    reply_count: 3
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 4
+    impression_count: 5573
+  mentions: []
+- post_id: '2043875694653124727'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T11:15:13+09:00'
+  created_at_jst: '2026-04-14T11:15:13'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043875694653124727
+  text: 都心選択肢を捨てるだけで新築でも中古でも全然買える https://t.co/ttO5ZDxorA
+  metrics:
+    like_count: 9
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 5060
+  mentions: []
+- post_id: '2043878488139292775'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T11:26:19+09:00'
+  created_at_jst: '2026-04-14T11:26:19'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043878488139292775
+  text: 江戸バース臭漂うプロジェクトきた https://t.co/6pGivmdtcI
+  metrics:
+    like_count: 30
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 7048
+  mentions: []
+- post_id: '2043881061768409179'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T11:36:33+09:00'
+  created_at_jst: '2026-04-14T11:36:33'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043881061768409179
+  text: ノーチラス50周年どうしましょうか？って電話かかってきたけど、2000本て作りすぎじゃない？被りそう
+  metrics:
+    like_count: 16
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4412
+  mentions: []
+- post_id: '2043882734809165957'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T11:43:12+09:00'
+  created_at_jst: '2026-04-14T11:43:12'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043882734809165957
+  text: '先日のAPの新作お披露目会で実物見て刺さったのは、このエクストラシンとcode
+
+
+    しかし、とんでもないロイヤルオークコンセプトのレインボーゴリ押しされた
+
+
+    ターコイズのcodeはパーペが世界30本とかだったよね？ https://t.co/0K9ZV77TYo'
+  metrics:
+    like_count: 49
+    reply_count: 2
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5518
+  mentions: []
+- post_id: '2043885349588611413'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T11:53:35+09:00'
+  created_at_jst: '2026-04-14T11:53:35'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043885349588611413
+  text: 定期借地権マンション供給2.7倍　「残り35年で価値ピーク」説も：日本経済新聞 https://t.co/oWHz4GMIWM
+  metrics:
+    like_count: 13
+    reply_count: 0
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 9884
+  mentions: []
+- post_id: '2043886202034761816'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T11:56:58+09:00'
+  created_at_jst: '2026-04-14T11:56:58'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043886202034761816
+  text: 「残存35年になったあたりで価格が下落傾向になるようだ」と指摘する。残存35年を切ると35年の住宅ローンを組んでの購入がしづらくなるため、新たな買い手がつきにくくなることが背景にあるとみられる。 https://t.co/2AG5OWbJPy
+  metrics:
+    like_count: 18
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 5
+    impression_count: 6824
+  mentions: []
+- post_id: '2043886703396733092'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T11:58:58+09:00'
+  created_at_jst: '2026-04-14T11:58:58'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043886703396733092
+  text: おい。これ半値に見えるけど価格改定後で仕入れ価格の倍だぞ。 https://t.co/CM7XusVo9x
+  metrics:
+    like_count: 22
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 10479
+  mentions: []
+- post_id: '2043888518548906373'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T12:06:11+09:00'
+  created_at_jst: '2026-04-14T12:06:11'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043888518548906373
+  text: 偽の情報流していることをリークされてるんだから、情報漏洩者川上だろ https://t.co/KBl3J1plTb
+  metrics:
+    like_count: 30
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 8237
+  mentions: []
+- post_id: '2043893952093532512'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T12:27:46+09:00'
+  created_at_jst: '2026-04-14T12:27:46'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043893952093532512
+  text: 気が付いたら今日全然アイコス吸ってなかった。吸わないと
+  metrics:
+    like_count: 17
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3036
+  mentions: []
+- post_id: '2043894541049311740'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-14T12:30:06+09:00'
+  created_at_jst: '2026-04-14T12:30:06'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/not_zerosumgame/status/2043894541049311740
+  text: 今年初めて日興証券見たら、なぜか湖北工業あった
+  metrics:
+    like_count: 18
+    reply_count: 2
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 2945
+  mentions: []
+notes: ''

@@ -1,0 +1,17 @@
+run_id: tweet_stock_20260410_20260411_7y8k3d17sozce0w_20260411_070052
+tweet_count: 30
+mention_count: 19
+unique_symbols: 5
+volume_spike_count: 6
+price_jump_count: 6
+top_symbols:
+- sc: 278A
+  count: 7
+- sc: 485A
+  count: 2
+- sc: '5915'
+  count: 1
+- sc: '6327'
+  count: 6
+- sc: '6366'
+  count: 3

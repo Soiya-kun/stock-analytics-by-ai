@@ -1,0 +1,2011 @@
+type: x_signal_analysis
+version: 1
+run:
+  run_id: x_signal_20260113_20260412_all_shitstockq_20260412_122133
+  source_relation: analytics.monitored_x_posts
+  company_relation: analytics.listed_companies_latest
+  start_date: '2026-01-13'
+  end_date: '2026-04-12'
+  target_username: ShitStockQ
+  account_role: all
+  generated_at: '2026-04-12T12:21:34.267569'
+  parameters:
+    batch_size: 80
+    volume_lookback_days: 20
+    forward_return_days:
+    - 5
+    - 20
+    analysis_version: x-signal-v1
+posts:
+- post_id: '2035298180523528690'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-21T19:11:14+09:00'
+  created_at_jst: '2026-03-21T19:11:14'
+  post_date_jst: '2026-03-21'
+  tweet_url: https://x.com/ShitStockQ/status/2035298180523528690
+  text: '何も思わずに乗り込む
+
+    なぜなら当然の対価を払ってるから
+
+
+    わいっておかしいのかな？ https://t.co/ZCCJAiOl4d'
+  metrics:
+    like_count: 144
+    reply_count: 15
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 44895
+  signals: []
+  review_notes: ''
+- post_id: '2035328957059657863'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-21T21:13:32+09:00'
+  created_at_jst: '2026-03-21T21:13:32'
+  post_date_jst: '2026-03-21'
+  tweet_url: https://x.com/ShitStockQ/status/2035328957059657863
+  text: だっさ https://t.co/bVbrZBVAEX
+  metrics:
+    like_count: 32
+    reply_count: 2
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 22887
+  signals: []
+  review_notes: ''
+- post_id: '2035343908155388405'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-21T22:12:57+09:00'
+  created_at_jst: '2026-03-21T22:12:57'
+  post_date_jst: '2026-03-21'
+  tweet_url: https://x.com/ShitStockQ/status/2035343908155388405
+  text: 'イラン、ホルムズ海峡の日本船舶の航行を許可する用意があると表明
+
+
+    イランでは一休さんが国民的アニメです。もしかしたらとんちを利かせたのかもしれません。 https://t.co/uf1F5Ly726 https://t.co/HsFdyjIl7C'
+  metrics:
+    like_count: 198
+    reply_count: 12
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 1
+    impression_count: 27158
+  signals: []
+  review_notes: ''
+- post_id: '2035349852549476400'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-21T22:36:34+09:00'
+  created_at_jst: '2026-03-21T22:36:34'
+  post_date_jst: '2026-03-21'
+  tweet_url: https://x.com/ShitStockQ/status/2035349852549476400
+  text: F1ドライバーの車両感覚すごすぎ https://t.co/4RPIflG1jj
+  metrics:
+    like_count: 53
+    reply_count: 5
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 24798
+  signals: []
+  review_notes: ''
+- post_id: '2035362591317643434'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-21T23:27:11+09:00'
+  created_at_jst: '2026-03-21T23:27:11'
+  post_date_jst: '2026-03-21'
+  tweet_url: https://x.com/ShitStockQ/status/2035362591317643434
+  text: '投資って自分が行けると思った会社にお金を突っ込むことだから、値動きで文句言う感覚が私には理解できない。
+
+
+    Xのインフルエンサーは値動きしか見てない人が多すぎるんよね。
+
+
+    その点シットさんはずーっと同じ銘柄推してる。
+
+    勿論、高くなりすぎたり、自分の思いと違うことが起きたら売るけどね。'
+  metrics:
+    like_count: 422
+    reply_count: 14
+    quote_count: 3
+    repost_count: 12
+    bookmark_count: 5
+    impression_count: 23927
+  signals: []
+  review_notes: ''
+- post_id: '2035507175414796655'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T09:01:43+09:00'
+  created_at_jst: '2026-03-22T09:01:43'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035507175414796655
+  text: 'なんかあったな
+
+    サンデーダウ急落'
+  metrics:
+    like_count: 290
+    reply_count: 11
+    quote_count: 1
+    repost_count: 2
+    bookmark_count: 4
+    impression_count: 65265
+  signals: []
+  review_notes: ''
+- post_id: '2035508188133650866'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T09:05:44+09:00'
+  created_at_jst: '2026-03-22T09:05:44'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035508188133650866
+  text: これか https://t.co/nR7QWzHvlT
+  metrics:
+    like_count: 127
+    reply_count: 8
+    quote_count: 2
+    repost_count: 5
+    bookmark_count: 1
+    impression_count: 46097
+  signals: []
+  review_notes: ''
+- post_id: '2035510017840066596'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T09:13:00+09:00'
+  created_at_jst: '2026-03-22T09:13:00'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035510017840066596
+  text: '原油はマイニングコストに跳ね返るからね
+
+    データセンターの再エネ化は進んでるけど少なからず影響あります https://t.co/rhqg6O6aR0'
+  metrics:
+    like_count: 82
+    reply_count: 4
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 2
+    impression_count: 20705
+  signals: []
+  review_notes: ''
+- post_id: '2035510892423733503'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T09:16:29+09:00'
+  created_at_jst: '2026-03-22T09:16:29'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035510892423733503
+  text: 初心者弁護士ってことか https://t.co/yYk6FcNHfG
+  metrics:
+    like_count: 78
+    reply_count: 4
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 28758
+  signals: []
+  review_notes: ''
+- post_id: '2035675916299608107'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T20:12:14+09:00'
+  created_at_jst: '2026-03-22T20:12:14'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035675916299608107
+  text: ホンダっていつからバイクのエンジン水冷になったんですか？ https://t.co/VPalKX87LQ
+  metrics:
+    like_count: 59
+    reply_count: 12
+    quote_count: 2
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 28581
+  signals: []
+  review_notes: ''
+- post_id: '2035677557627216346'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T20:18:45+09:00'
+  created_at_jst: '2026-03-22T20:18:45'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035677557627216346
+  text: '是非読んでみてください
+
+
+    日米における暗号資産法制の動きとサナエトークンの罪｜ShitStock @ShitStockQ https://t.co/0woIClppqA'
+  metrics:
+    like_count: 98
+    reply_count: 4
+    quote_count: 1
+    repost_count: 1
+    bookmark_count: 2
+    impression_count: 22574
+  signals: []
+  review_notes: ''
+- post_id: '2035686485740155355'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T20:54:14+09:00'
+  created_at_jst: '2026-03-22T20:54:14'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035686485740155355
+  text: 本田宗一郎さんって空冷にこだわりあるって読んでたので水冷になってるなんて知りませんでした https://t.co/YJ5Gz88z4m
+  metrics:
+    like_count: 48
+    reply_count: 7
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 16009
+  signals: []
+  review_notes: ''
+- post_id: '2035691392203358715'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T21:13:43+09:00'
+  created_at_jst: '2026-03-22T21:13:43'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035691392203358715
+  text: 'メタルギアの世界が来そうで怖い
+
+    わいがトライアンフ好きになったのメタルギアの影響です
+
+
+    ＃AI
+
+    ＃戦争経済
+
+    ＃代理戦争
+
+    ＃愛国者達 https://t.co/bvPN1trP35'
+  metrics:
+    like_count: 88
+    reply_count: 11
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 14687
+  signals: []
+  review_notes: ''
+- post_id: '2035692223422197791'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T21:17:02+09:00'
+  created_at_jst: '2026-03-22T21:17:02'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035692223422197791
+  text: 肉吸い初めて作ったんだけど、胃もたれしちゃった。和牛で作ったらだめなやつ。
+  metrics:
+    like_count: 136
+    reply_count: 13
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 12808
+  signals: []
+  review_notes: ''
+- post_id: '2035697047240941937'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T21:36:12+09:00'
+  created_at_jst: '2026-03-22T21:36:12'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035697047240941937
+  text: 君たち他にやることないの？ https://t.co/ZebniO7vVU
+  metrics:
+    like_count: 88
+    reply_count: 5
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 1
+    impression_count: 16704
+  signals: []
+  review_notes: ''
+- post_id: '2035700809770676476'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T21:51:09+09:00'
+  created_at_jst: '2026-03-22T21:51:09'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035700809770676476
+  text: 'あら！
+
+    賭博疑惑の林さんまたやらかしたの？ https://t.co/YvGFq1qpPX'
+  metrics:
+    like_count: 94
+    reply_count: 3
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 32692
+  signals: []
+  review_notes: ''
+- post_id: '2035702107681235447'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T21:56:18+09:00'
+  created_at_jst: '2026-03-22T21:56:18'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035702107681235447
+  text: おわた https://t.co/IxNL7RhZ0t
+  metrics:
+    like_count: 141
+    reply_count: 6
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 0
+    impression_count: 26955
+  signals: []
+  review_notes: ''
+- post_id: '2035706370356617391'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T22:13:14+09:00'
+  created_at_jst: '2026-03-22T22:13:14'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035706370356617391
+  text: クソワロタ https://t.co/llWLQlkXOA
+  metrics:
+    like_count: 39
+    reply_count: 3
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 17166
+  signals: []
+  review_notes: ''
+- post_id: '2035707495206048008'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T22:17:43+09:00'
+  created_at_jst: '2026-03-22T22:17:43'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035707495206048008
+  text: 'ユニクロを着こなす経営者がかっこいいと思いますよ。
+
+
+    ブランドに囚われてる人はプライドだけ高くなる傾向があります。
+
+
+    そうすると失敗を認められなくなり、素直に謝ることも出来なくなり、数年後にいなくなります。'
+  metrics:
+    like_count: 331
+    reply_count: 13
+    quote_count: 3
+    repost_count: 5
+    bookmark_count: 3
+    impression_count: 19301
+  signals: []
+  review_notes: ''
+- post_id: '2035708039404437813'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T22:19:52+09:00'
+  created_at_jst: '2026-03-22T22:19:52'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035708039404437813
+  text: 恥ずかしいと思わないのかな？ https://t.co/B72jkledtp
+  metrics:
+    like_count: 122
+    reply_count: 8
+    quote_count: 1
+    repost_count: 2
+    bookmark_count: 1
+    impression_count: 71295
+  signals: []
+  review_notes: ''
+- post_id: '2035708460520927488'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T22:21:33+09:00'
+  created_at_jst: '2026-03-22T22:21:33'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035708460520927488
+  text: 肉吸い https://t.co/TUtxKPnYZF
+  metrics:
+    like_count: 151
+    reply_count: 4
+    quote_count: 1
+    repost_count: 4
+    bookmark_count: 0
+    impression_count: 47759
+  signals: []
+  review_notes: ''
+- post_id: '2035710559765852355'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T22:29:53+09:00'
+  created_at_jst: '2026-03-22T22:29:53'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035710559765852355
+  text: Xの事ツイッターって言ってる人、未だにメタプラネットのことレッドプラネットって言ってそう
+  metrics:
+    like_count: 122
+    reply_count: 8
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 30876
+  signals: []
+  review_notes: ''
+- post_id: '2035711656513388776'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T22:34:15+09:00'
+  created_at_jst: '2026-03-22T22:34:15'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035711656513388776
+  text: ね笑 https://t.co/azfCJLsu1f https://t.co/fQqw7zsfTF
+  metrics:
+    like_count: 114
+    reply_count: 9
+    quote_count: 1
+    repost_count: 1
+    bookmark_count: 5
+    impression_count: 44544
+  signals: []
+  review_notes: ''
+- post_id: '2035713040403030262'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T22:39:45+09:00'
+  created_at_jst: '2026-03-22T22:39:45'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035713040403030262
+  text: 'あのね
+
+    イーロン・マスクやスティーブジョブズが質素な生活してるのにお前らみたいな弱小経営者が見栄張ってどうするの？
+
+
+    一流の経営者は見栄という贅肉を嫌うんですよ https://t.co/nDXGcQ45LS'
+  metrics:
+    like_count: 356
+    reply_count: 11
+    quote_count: 5
+    repost_count: 21
+    bookmark_count: 33
+    impression_count: 45972
+  signals: []
+  review_notes: ''
+- post_id: '2035715116390576170'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T22:48:00+09:00'
+  created_at_jst: '2026-03-22T22:48:00'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035715116390576170
+  text: ハゲは遊べません https://t.co/iA8dktnH5X
+  metrics:
+    like_count: 67
+    reply_count: 3
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 21663
+  signals: []
+  review_notes: ''
+- post_id: '2035715835835437403'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T22:50:51+09:00'
+  created_at_jst: '2026-03-22T22:50:51'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035715835835437403
+  text: '原油がここまで高くなるのわいの想定外なんだよ
+
+
+    戦争ほんと嫌い'
+  metrics:
+    like_count: 372
+    reply_count: 6
+    quote_count: 2
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 57081
+  signals: []
+  review_notes: ''
+- post_id: '2035716420198371713'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T22:53:11+09:00'
+  created_at_jst: '2026-03-22T22:53:11'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035716420198371713
+  text: このポストすごい伸びてて日本まだまだ捨てたもんじゃないと思いました https://t.co/GT2zK6F18H
+  metrics:
+    like_count: 275
+    reply_count: 3
+    quote_count: 0
+    repost_count: 7
+    bookmark_count: 0
+    impression_count: 27762
+  signals: []
+  review_notes: ''
+- post_id: '2035716667385487829'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T22:54:09+09:00'
+  created_at_jst: '2026-03-22T22:54:09'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035716667385487829
+  text: 何なら年始は景気悪化に伴い原油下がると思ってました https://t.co/o9jY5hqWQ5
+  metrics:
+    like_count: 179
+    reply_count: 7
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 29813
+  signals: []
+  review_notes: ''
+- post_id: '2035720818777579682'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-22T23:10:39+09:00'
+  created_at_jst: '2026-03-22T23:10:39'
+  post_date_jst: '2026-03-22'
+  tweet_url: https://x.com/ShitStockQ/status/2035720818777579682
+  text: このくらいの余裕が必要 https://t.co/Bj4LSDv6TD
+  metrics:
+    like_count: 219
+    reply_count: 6
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 30963
+  signals: []
+  review_notes: ''
+- post_id: '2035745279467798562'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T00:47:51+09:00'
+  created_at_jst: '2026-03-23T00:47:51'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035745279467798562
+  text: '左翼活動家ってなんでこんなに頭の悪いタグ作るの？
+
+    #オタクによる反戦デモ'
+  metrics:
+    like_count: 101
+    reply_count: 7
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 13831
+  signals: []
+  review_notes: ''
+- post_id: '2035746376869691599'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T00:52:13+09:00'
+  created_at_jst: '2026-03-23T00:52:13'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035746376869691599
+  text: 再エネ賦課金廃止 https://t.co/RnfGPtRXtF
+  metrics:
+    like_count: 174
+    reply_count: 1
+    quote_count: 0
+    repost_count: 5
+    bookmark_count: 1
+    impression_count: 27512
+  signals: []
+  review_notes: ''
+- post_id: '2035746502187123159'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T00:52:43+09:00'
+  created_at_jst: '2026-03-23T00:52:43'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035746502187123159
+  text: 再エネ賦課金払って私たちの生活が何か良くなりましたか？
+  metrics:
+    like_count: 208
+    reply_count: 8
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 1
+    impression_count: 19146
+  signals: []
+  review_notes: ''
+- post_id: '2035862211500056713'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T08:32:30+09:00'
+  created_at_jst: '2026-03-23T08:32:30'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035862211500056713
+  text: 株つらネット
+  metrics:
+    like_count: 353
+    reply_count: 18
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 20667
+  signals: []
+  review_notes: ''
+- post_id: '2035867943335309484'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T08:55:16+09:00'
+  created_at_jst: '2026-03-23T08:55:16'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035867943335309484
+  text: 信越化学だけSQですか？
+  metrics:
+    like_count: 73
+    reply_count: 3
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 22259
+  signals: []
+  review_notes: ''
+- post_id: '2035877960260136977'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T09:35:05+09:00'
+  created_at_jst: '2026-03-23T09:35:05'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035877960260136977
+  text: 'ふぅ
+
+    致命傷'
+  metrics:
+    like_count: 382
+    reply_count: 12
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 32584
+  signals: []
+  review_notes: ''
+- post_id: '2035881139622318429'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T09:47:43+09:00'
+  created_at_jst: '2026-03-23T09:47:43'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035881139622318429
+  text: 'とりあえず中外鉱業は全うり
+
+    余力確保'
+  metrics:
+    like_count: 160
+    reply_count: 5
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 25376
+  signals:
+  - sc: '1491'
+    company_name: 中外鉱業
+    match_confidence: high
+    signal_label: non_bullish
+    signal_confidence: high
+    extraction_rationale: 中外鉱業と明記している。
+    signal_rationale: 「全うり」と明言しており、明確に弱気の反応。
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: 中外鉱業
+      market: 東証ST
+      industry: 非鉄金属
+      event_trade_date: '2026-03-23'
+      previous_trade_date: '2026-03-19'
+      next_trade_date: '2026-03-24'
+      previous_close_price: 1058.0
+      event_open_price: 1010.0
+      event_high_price: 1010.0
+      event_low_price: 960.0
+      event_close_price: 962.0
+      next_close_price: 988.0
+      event_volume: 168100.0
+      avg_volume_20d: 203195.0
+      volume_ratio_20d: 0.8272841359285416
+      event_day_return_pct: -0.09073724007561434
+      intraday_peak_return_pct: -0.04536862003780717
+      max_close_return_5d_pct: -0.04064272211720232
+      max_close_return_20d_pct: -0.03497164461247637
+  review_notes: ''
+- post_id: '2035881946199568803'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T09:50:55+09:00'
+  created_at_jst: '2026-03-23T09:50:55'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035881946199568803
+  text: 'うまくいかないもんだよ
+
+    投資ってやつは'
+  metrics:
+    like_count: 312
+    reply_count: 5
+    quote_count: 0
+    repost_count: 6
+    bookmark_count: 0
+    impression_count: 18269
+  signals: []
+  review_notes: ''
+- post_id: '2035882089443434753'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T09:51:29+09:00'
+  created_at_jst: '2026-03-23T09:51:29'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035882089443434753
+  text: ゴールド雪崩
+  metrics:
+    like_count: 170
+    reply_count: 3
+    quote_count: 1
+    repost_count: 2
+    bookmark_count: 0
+    impression_count: 16944
+  signals: []
+  review_notes: ''
+- post_id: '2035883157439078538'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T09:55:44+09:00'
+  created_at_jst: '2026-03-23T09:55:44'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035883157439078538
+  text: 買うなら午後だな
+  metrics:
+    like_count: 302
+    reply_count: 9
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 31113
+  signals: []
+  review_notes: ''
+- post_id: '2035883759862727028'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T09:58:07+09:00'
+  created_at_jst: '2026-03-23T09:58:07'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035883759862727028
+  text: ୧(^p^)୨ https://t.co/B9QKf0lv5V
+  metrics:
+    like_count: 146
+    reply_count: 6
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 0
+    impression_count: 26077
+  signals: []
+  review_notes: ''
+- post_id: '2035896800683704357'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T10:49:57+09:00'
+  created_at_jst: '2026-03-23T10:49:57'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035896800683704357
+  text: これまではゴールドのヘッジだったからね。あとは業績も悪くないと見てたから。 https://t.co/heAjsTRxrb
+  metrics:
+    like_count: 111
+    reply_count: 3
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 41023
+  signals: []
+  review_notes: ''
+- post_id: '2035899408651608263'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T11:00:18+09:00'
+  created_at_jst: '2026-03-23T11:00:18'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035899408651608263
+  text: 北海道底堅い
+  metrics:
+    like_count: 110
+    reply_count: 5
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 15422
+  signals: []
+  review_notes: ''
+- post_id: '2035924720210825310'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T12:40:53+09:00'
+  created_at_jst: '2026-03-23T12:40:53'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035924720210825310
+  text: ビットコイン頑張ってる
+  metrics:
+    like_count: 267
+    reply_count: 10
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 17851
+  signals: []
+  review_notes: ''
+- post_id: '2035937474065907795'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T13:31:34+09:00'
+  created_at_jst: '2026-03-23T13:31:34'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035937474065907795
+  text: 混浴なら絶対行かんやろ https://t.co/FJgRO3yrtI
+  metrics:
+    like_count: 63
+    reply_count: 4
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 27574
+  signals: []
+  review_notes: ''
+- post_id: '2035938250565833020'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T13:34:39+09:00'
+  created_at_jst: '2026-03-23T13:34:39'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035938250565833020
+  text: イランが拗らせ女子みたいになってる
+  metrics:
+    like_count: 142
+    reply_count: 5
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 17901
+  signals: []
+  review_notes: ''
+- post_id: '2035938539389808753'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T13:35:48+09:00'
+  created_at_jst: '2026-03-23T13:35:48'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035938539389808753
+  text: ほんと宗教絡むと行くとこまで行きそうで怖いんよ
+  metrics:
+    like_count: 229
+    reply_count: 6
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 2
+    impression_count: 26153
+  signals: []
+  review_notes: ''
+- post_id: '2035967613222945082'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T15:31:20+09:00'
+  created_at_jst: '2026-03-23T15:31:20'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035967613222945082
+  text: 'はい
+
+    引けで買いたかったの買えました(^q^)
+
+
+    引け乙'
+  metrics:
+    like_count: 242
+    reply_count: 10
+    quote_count: 1
+    repost_count: 2
+    bookmark_count: 0
+    impression_count: 77995
+  signals: []
+  review_notes: ''
+- post_id: '2035969650350285006'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T15:39:25+09:00'
+  created_at_jst: '2026-03-23T15:39:25'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035969650350285006
+  text: 明日も下がったらイライラする https://t.co/7lGzQsG9YI
+  metrics:
+    like_count: 205
+    reply_count: 5
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 27559
+  signals: []
+  review_notes: ''
+- post_id: '2035970398966440425'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T15:42:24+09:00'
+  created_at_jst: '2026-03-23T15:42:24'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035970398966440425
+  text: ゴールドやばいね
+  metrics:
+    like_count: 229
+    reply_count: 10
+    quote_count: 0
+    repost_count: 4
+    bookmark_count: 2
+    impression_count: 21787
+  signals: []
+  review_notes: ''
+- post_id: '2035978980193669207'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T16:16:30+09:00'
+  created_at_jst: '2026-03-23T16:16:30'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035978980193669207
+  text: 'ゴールド逝ったーーー
+
+    安産資産ってなんですか？ https://t.co/rQceUSADYE'
+  metrics:
+    like_count: 871
+    reply_count: 54
+    quote_count: 13
+    repost_count: 58
+    bookmark_count: 30
+    impression_count: 121396
+  signals: []
+  review_notes: ''
+- post_id: '2035979381731205522'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T16:18:05+09:00'
+  created_at_jst: '2026-03-23T16:18:05'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2035979381731205522
+  text: いくらゴールドでもこういう落ち方するとこれまでみたいな買われ方はしなくなる
+  metrics:
+    like_count: 575
+    reply_count: 14
+    quote_count: 1
+    repost_count: 11
+    bookmark_count: 13
+    impression_count: 76573
+  signals: []
+  review_notes: ''
+- post_id: '2036002044671398207'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T17:48:09+09:00'
+  created_at_jst: '2026-03-23T17:48:09'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2036002044671398207
+  text: バカはお前だろ(^q^) https://t.co/Ebxxj6Dp1k
+  metrics:
+    like_count: 94
+    reply_count: 1
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 23134
+  signals: []
+  review_notes: ''
+- post_id: '2036003358960689176'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T17:53:22+09:00'
+  created_at_jst: '2026-03-23T17:53:22'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2036003358960689176
+  text: '資金移動の準備は整った
+
+
+    とわいの友達のアラブの王様が言ってました'
+  metrics:
+    like_count: 429
+    reply_count: 20
+    quote_count: 2
+    repost_count: 6
+    bookmark_count: 7
+    impression_count: 38714
+  signals: []
+  review_notes: ''
+- post_id: '2036007055413395967'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T18:08:03+09:00'
+  created_at_jst: '2026-03-23T18:08:03'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2036007055413395967
+  text: 北海道熱いぜー(^q^) https://t.co/f3h1NqnRT9
+  metrics:
+    like_count: 243
+    reply_count: 3
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 9
+    impression_count: 25235
+  signals: []
+  review_notes: ''
+- post_id: '2036036666595705223'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T20:05:43+09:00'
+  created_at_jst: '2026-03-23T20:05:43'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2036036666595705223
+  text: '今ゴールド買うのはだめですよ(^q^)
+
+
+    安値で仕込んだ人達のために火中の栗を拾うようなものです'
+  metrics:
+    like_count: 396
+    reply_count: 15
+    quote_count: 1
+    repost_count: 2
+    bookmark_count: 12
+    impression_count: 73439
+  signals: []
+  review_notes: ''
+- post_id: '2036039087422067064'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T20:15:20+09:00'
+  created_at_jst: '2026-03-23T20:15:20'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2036039087422067064
+  text: 'さぁ
+
+    灼熱の春の息吹が聞こえてきたよ(^q^)'
+  metrics:
+    like_count: 530
+    reply_count: 15
+    quote_count: 3
+    repost_count: 19
+    bookmark_count: 1
+    impression_count: 33078
+  signals: []
+  review_notes: ''
+- post_id: '2036039377500185039'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T20:16:30+09:00'
+  created_at_jst: '2026-03-23T20:16:30'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2036039377500185039
+  text: まぁしっとさんは買っちゃうんです https://t.co/7lGzQsG9YI
+  metrics:
+    like_count: 176
+    reply_count: 2
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 31237
+  signals: []
+  review_notes: ''
+- post_id: '2036041408973521332'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T20:24:34+09:00'
+  created_at_jst: '2026-03-23T20:24:34'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2036041408973521332
+  text: ちなみにしっとさんが買ったのはデーセクと千代田化工
+  metrics:
+    like_count: 383
+    reply_count: 19
+    quote_count: 2
+    repost_count: 5
+    bookmark_count: 13
+    impression_count: 45752
+  signals:
+  - sc: '3905'
+    company_name: データセクション
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: high
+    extraction_rationale: デーセクはデータセクションの略称として自然で、同文脈の買い銘柄列挙に含まれている。
+    signal_rationale: 「買った」と明示しており、明確に強気のエントリー反応。
+    market_context:
+      tweet_session: after_market
+      company_snapshot_name: データセクション
+      market: 東証GR
+      industry: 情報通信
+      event_trade_date: '2026-03-24'
+      previous_trade_date: '2026-03-23'
+      next_trade_date: '2026-03-25'
+      previous_close_price: 1292.0
+      event_open_price: 1337.0
+      event_high_price: 1349.0
+      event_low_price: 1298.0
+      event_close_price: 1322.0
+      next_close_price: 1430.0
+      event_volume: 490200.0
+      avg_volume_20d: 546465.0
+      volume_ratio_20d: 0.8970382366665751
+      event_day_return_pct: 0.023219814241486114
+      intraday_peak_return_pct: 0.044117647058823595
+      max_close_return_5d_pct: 0.10681114551083581
+      max_close_return_20d_pct: 0.10681114551083581
+  - sc: '6366'
+    company_name: 千代田化工建設
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: high
+    extraction_rationale: 千代田化工と明記しており、上場銘柄として千代田化工建設に対応する。
+    signal_rationale: 「買った」と明示しており、明確に強気のエントリー反応。
+    market_context:
+      tweet_session: after_market
+      company_snapshot_name: 千代田化工建設
+      market: 東証ST
+      industry: 建設
+      event_trade_date: '2026-03-24'
+      previous_trade_date: '2026-03-23'
+      next_trade_date: '2026-03-25'
+      previous_close_price: 1005.0
+      event_open_price: 1057.0
+      event_high_price: 1071.0
+      event_low_price: 1004.0
+      event_close_price: 1056.0
+      next_close_price: 1046.0
+      event_volume: 7380800.0
+      avg_volume_20d: 6845435.0
+      volume_ratio_20d: 1.078207593819823
+      event_day_return_pct: 0.05074626865671639
+      intraday_peak_return_pct: 0.06567164179104479
+      max_close_return_5d_pct: 0.05074626865671639
+      max_close_return_20d_pct: 0.2079601990049751
+  review_notes: ''
+- post_id: '2036045696965726479'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T20:41:36+09:00'
+  created_at_jst: '2026-03-23T20:41:36'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2036045696965726479
+  text: ゴールドが地合いで動くようになったらおしまいよ(^q^)
+  metrics:
+    like_count: 288
+    reply_count: 5
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 7
+    impression_count: 29633
+  signals: []
+  review_notes: ''
+- post_id: '2036062006911103427'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T21:46:25+09:00'
+  created_at_jst: '2026-03-23T21:46:25'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2036062006911103427
+  text: '何書いてんのかと思ったらwww
+
+    安産wwwww https://t.co/UW9PoEZQUs'
+  metrics:
+    like_count: 113
+    reply_count: 6
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 0
+    impression_count: 34802
+  signals: []
+  review_notes: ''
+- post_id: '2036076715647324364'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T22:44:52+09:00'
+  created_at_jst: '2026-03-23T22:44:52'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2036076715647324364
+  text: 何よりもつよいビットコイン
+  metrics:
+    like_count: 403
+    reply_count: 11
+    quote_count: 1
+    repost_count: 5
+    bookmark_count: 2
+    impression_count: 24319
+  signals: []
+  review_notes: ''
+- post_id: '2036080646649733405'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-23T23:00:29+09:00'
+  created_at_jst: '2026-03-23T23:00:29'
+  post_date_jst: '2026-03-23'
+  tweet_url: https://x.com/ShitStockQ/status/2036080646649733405
+  text: そういえば桜咲いてました https://t.co/AjVyPfvCgK
+  metrics:
+    like_count: 433
+    reply_count: 15
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 0
+    impression_count: 16875
+  signals: []
+  review_notes: ''
+- post_id: '2036097233805029796'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T00:06:24+09:00'
+  created_at_jst: '2026-03-24T00:06:24'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036097233805029796
+  text: 地合いが悪い時は買いに向かいましょう(^q^)
+  metrics:
+    like_count: 340
+    reply_count: 7
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 25493
+  signals: []
+  review_notes: ''
+- post_id: '2036098395992187023'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T00:11:01+09:00'
+  created_at_jst: '2026-03-24T00:11:01'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036098395992187023
+  text: 'さっさと憲法改正しましょう
+
+    いつまで引っ張ってんだよ'
+  metrics:
+    like_count: 220
+    reply_count: 4
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 21715
+  signals: []
+  review_notes: ''
+- post_id: '2036226331088953622'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T08:39:23+09:00'
+  created_at_jst: '2026-03-24T08:39:23'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036226331088953622
+  text: '千代千代すごい！
+
+    おはプラネット(^q^)'
+  metrics:
+    like_count: 281
+    reply_count: 28
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 24380
+  signals:
+  - sc: '6366'
+    company_name: 千代田化工建設
+    match_confidence: medium
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: 「千代千代」は前日の千代田化工建設買い投稿と整合する略称表現。
+    signal_rationale: 「すごい」と勢いよく称賛しており、上昇に対する前向きな反応。
+    market_context:
+      tweet_session: pre_market
+      company_snapshot_name: 千代田化工建設
+      market: 東証ST
+      industry: 建設
+      event_trade_date: '2026-03-24'
+      previous_trade_date: '2026-03-23'
+      next_trade_date: '2026-03-25'
+      previous_close_price: 1005.0
+      event_open_price: 1057.0
+      event_high_price: 1071.0
+      event_low_price: 1004.0
+      event_close_price: 1056.0
+      next_close_price: 1046.0
+      event_volume: 7380800.0
+      avg_volume_20d: 6845435.0
+      volume_ratio_20d: 1.078207593819823
+      event_day_return_pct: 0.05074626865671639
+      intraday_peak_return_pct: 0.06567164179104479
+      max_close_return_5d_pct: 0.05074626865671639
+      max_close_return_20d_pct: 0.2079601990049751
+  review_notes: ''
+- post_id: '2036240413766590688'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T09:35:20+09:00'
+  created_at_jst: '2026-03-24T09:35:20'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036240413766590688
+  text: '名村とかマイ転するんだ
+
+
+    なんか違和感だなぁ
+
+
+    どこかで買いたいんだよねー'
+  metrics:
+    like_count: 108
+    reply_count: 6
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 3
+    impression_count: 20459
+  signals:
+  - sc: '7014'
+    company_name: 名村造船所
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: 名村は上場銘柄では名村造船所を指すのが自然。
+    signal_rationale: 下げに違和感を示しつつ「どこかで買いたい」と述べており、押し目買い意識の強気反応。
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: 名村造船所
+      market: 東証ST
+      industry: 輸送用機器
+      event_trade_date: '2026-03-24'
+      previous_trade_date: '2026-03-23'
+      next_trade_date: '2026-03-25'
+      previous_close_price: 4485.0
+      event_open_price: 4695.0
+      event_high_price: 4695.0
+      event_low_price: 4265.0
+      event_close_price: 4320.0
+      next_close_price: 4500.0
+      event_volume: 1442100.0
+      avg_volume_20d: 1273515.0
+      volume_ratio_20d: 1.132377710509888
+      event_day_return_pct: -0.03678929765886285
+      intraday_peak_return_pct: 0.04682274247491636
+      max_close_return_5d_pct: 0.027870680044593144
+      max_close_return_20d_pct: 0.02898550724637672
+  review_notes: ''
+- post_id: '2036252252139299093'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T10:22:23+09:00'
+  created_at_jst: '2026-03-24T10:22:23'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036252252139299093
+  text: 'この並び
+
+    XのAIは優秀 https://t.co/ERidWhRkqL'
+  metrics:
+    like_count: 52
+    reply_count: 7
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 27857
+  signals: []
+  review_notes: ''
+- post_id: '2036259975572627761'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T10:53:04+09:00'
+  created_at_jst: '2026-03-24T10:53:04'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036259975572627761
+  text: パワーエックスとか東洋エンジエグい値動きやなwww
+  metrics:
+    like_count: 100
+    reply_count: 6
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 4
+    impression_count: 24128
+  signals:
+  - sc: 485A
+    company_name: パワーエックス
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: low
+    extraction_rationale: パワーエックスと明記している。
+    signal_rationale: 値動きの大きさに注目しており、文面は観察寄りだが上昇銘柄への前向きな反応として読める。
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: パワーエックス
+      market: 東証GR
+      industry: 電気機器
+      event_trade_date: '2026-03-24'
+      previous_trade_date: '2026-03-23'
+      next_trade_date: '2026-03-25'
+      previous_close_price: 5330.0
+      event_open_price: 5800.0
+      event_high_price: 5900.0
+      event_low_price: 4730.0
+      event_close_price: 4880.0
+      next_close_price: 4180.0
+      event_volume: 2112400.0
+      avg_volume_20d: 2204145.0
+      volume_ratio_20d: 0.95837615038938
+      event_day_return_pct: -0.08442776735459667
+      intraday_peak_return_pct: 0.10694183864915563
+      max_close_return_5d_pct: -0.08442776735459667
+      max_close_return_20d_pct: 0.425891181988743
+  - sc: '6330'
+    company_name: 東洋エンジニアリング
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: low
+    extraction_rationale: 東洋エンジは東洋エンジニアリングの略称として自然。
+    signal_rationale: 値動きの大きさに注目しており、文面は観察寄りだが上昇銘柄への前向きな反応として読める。
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: 東洋エンジニアリング
+      market: 東証PR
+      industry: 建設
+      event_trade_date: '2026-03-24'
+      previous_trade_date: '2026-03-23'
+      next_trade_date: '2026-03-25'
+      previous_close_price: 2910.0
+      event_open_price: 2985.0
+      event_high_price: 3000.0
+      event_low_price: 2450.0
+      event_close_price: 2523.0
+      next_close_price: 2704.0
+      event_volume: 10872700.0
+      avg_volume_20d: 3973625.0
+      volume_ratio_20d: 2.736216930384724
+      event_day_return_pct: -0.13298969072164946
+      intraday_peak_return_pct: 0.030927835051546282
+      max_close_return_5d_pct: -0.051890034364261206
+      max_close_return_20d_pct: -0.051890034364261206
+  review_notes: ''
+- post_id: '2036289705470546235'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T12:51:12+09:00'
+  created_at_jst: '2026-03-24T12:51:12'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036289705470546235
+  text: がんばれーー！ https://t.co/whjSs8lVLk
+  metrics:
+    like_count: 209
+    reply_count: 3
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 0
+    impression_count: 24429
+  signals: []
+  review_notes: ''
+- post_id: '2036301529540599991'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T13:38:11+09:00'
+  created_at_jst: '2026-03-24T13:38:11'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036301529540599991
+  text: 任天堂何かあったの？
+  metrics:
+    like_count: 132
+    reply_count: 9
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 66635
+  signals: []
+  review_notes: ''
+- post_id: '2036301854930509997'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T13:39:29+09:00'
+  created_at_jst: '2026-03-24T13:39:29'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036301854930509997
+  text: これはランボルギーニですね https://t.co/Kgp8vvvxge
+  metrics:
+    like_count: 80
+    reply_count: 3
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 22700
+  signals: []
+  review_notes: ''
+- post_id: '2036304525070573802'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T13:50:06+09:00'
+  created_at_jst: '2026-03-24T13:50:06'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036304525070573802
+  text: かわいいー https://t.co/3LMXC4uUN6
+  metrics:
+    like_count: 97
+    reply_count: 4
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 20773
+  signals: []
+  review_notes: ''
+- post_id: '2036306148354302354'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T13:56:33+09:00'
+  created_at_jst: '2026-03-24T13:56:33'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036306148354302354
+  text: 寄り天やめろぉぉぉ https://t.co/X8YqaWQnzC
+  metrics:
+    like_count: 153
+    reply_count: 3
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 21723
+  signals: []
+  review_notes: ''
+- post_id: '2036321646978748570'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T14:58:08+09:00'
+  created_at_jst: '2026-03-24T14:58:08'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036321646978748570
+  text: いい写真だ https://t.co/VJOm0XDPkU
+  metrics:
+    like_count: 65
+    reply_count: 9
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 37959
+  signals: []
+  review_notes: ''
+- post_id: '2036409063236575596'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T20:45:29+09:00'
+  created_at_jst: '2026-03-24T20:45:29'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036409063236575596
+  text: 人がAIに騙されないために自分のAIエージェーントを立ててAI同士で会話させるって面白いな
+  metrics:
+    like_count: 127
+    reply_count: 6
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 14331
+  signals: []
+  review_notes: ''
+- post_id: '2036414984327164024'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T21:09:01+09:00'
+  created_at_jst: '2026-03-24T21:09:01'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036414984327164024
+  text: SNSで株などの資産公開してる人は基本気持ち悪いですよ(^q^) https://t.co/MkPXKnfQPG
+  metrics:
+    like_count: 172
+    reply_count: 10
+    quote_count: 2
+    repost_count: 2
+    bookmark_count: 1
+    impression_count: 40776
+  signals: []
+  review_notes: ''
+- post_id: '2036418201702302105'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T21:21:48+09:00'
+  created_at_jst: '2026-03-24T21:21:48'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036418201702302105
+  text: ないた https://t.co/ctz4fFj3bT
+  metrics:
+    like_count: 105
+    reply_count: 8
+    quote_count: 1
+    repost_count: 3
+    bookmark_count: 0
+    impression_count: 42734
+  signals: []
+  review_notes: ''
+- post_id: '2036423015001629172'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T21:40:56+09:00'
+  created_at_jst: '2026-03-24T21:40:56'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036423015001629172
+  text: 北海道電力が見えます https://t.co/rtb4ISPbQf
+  metrics:
+    like_count: 91
+    reply_count: 5
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 22458
+  signals:
+  - sc: '9509'
+    company_name: 北海道電力
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: 北海道電力と明記している。
+    signal_rationale: 「見えます」という言い回しで今後の上方向を示唆しており、前向きな見立て。
+    market_context:
+      tweet_session: after_market
+      company_snapshot_name: 北海道電力
+      market: 東証PR
+      industry: 電気・ガス
+      event_trade_date: '2026-03-25'
+      previous_trade_date: '2026-03-24'
+      next_trade_date: '2026-03-26'
+      previous_close_price: 1049.5
+      event_open_price: 1075.0
+      event_high_price: 1096.5
+      event_low_price: 1064.0
+      event_close_price: 1091.0
+      next_close_price: 1080.0
+      event_volume: 3518600.0
+      avg_volume_20d: 4032105.0
+      volume_ratio_20d: 0.8726459256393373
+      event_day_return_pct: 0.03954263935207236
+      intraday_peak_return_pct: 0.04478323010957608
+      max_close_return_5d_pct: 0.053835159599809446
+      max_close_return_20d_pct: 0.07670319199618869
+  review_notes: ''
+- post_id: '2036425179606511760'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T21:49:32+09:00'
+  created_at_jst: '2026-03-24T21:49:32'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036425179606511760
+  text: バイク怖い https://t.co/MmqcQeDlRq
+  metrics:
+    like_count: 100
+    reply_count: 7
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 6
+    impression_count: 40390
+  signals: []
+  review_notes: ''
+- post_id: '2036444185935618496'
+  target_username: ShitStockQ
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '1536978148000399360'
+  author_username: ShitStockQ
+  author_name: ShitStock(株式評論家/Deepmining)
+  created_at: '2026-03-24T23:05:03+09:00'
+  created_at_jst: '2026-03-24T23:05:03'
+  post_date_jst: '2026-03-24'
+  tweet_url: https://x.com/ShitStockQ/status/2036444185935618496
+  text: むしろ出来るんだ https://t.co/Cx6foLGorn
+  metrics:
+    like_count: 45
+    reply_count: 3
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 26475
+  signals: []
+  review_notes: ''
+notes: ''

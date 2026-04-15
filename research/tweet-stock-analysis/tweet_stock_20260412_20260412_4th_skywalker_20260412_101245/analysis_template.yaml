@@ -1,0 +1,771 @@
+type: tweet_stock_analysis
+version: 1
+run:
+  run_id: tweet_stock_20260412_20260412_4th_skywalker_20260412_101245
+  source_relation: analytics.monitored_x_posts
+  company_relation: analytics.listed_companies_latest
+  start_date: '2026-04-12'
+  end_date: '2026-04-12'
+  target_username: 4th_skywalker
+  generated_at: '2026-04-12T10:12:45.939711'
+  parameters:
+    volume_lookback_days: 20
+    forward_return_days:
+    - 5
+    - 20
+    limit: null
+tweets:
+- post_id: '2043014154609709202'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T02:11:46+09:00'
+  created_at_jst: '2026-04-12T02:11:46'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043014154609709202
+  text: '銀河系時代→×
+
+    銀河系内恒星間航行時代→〇🍵ﾋﾏｶﾖｗ https://t.co/svHIcBB7s8'
+  metrics:
+    like_count: 44
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 3
+    impression_count: 7544
+  mentions: []
+- post_id: '2043014859638607941'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T02:14:34+09:00'
+  created_at_jst: '2026-04-12T02:14:34'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043014859638607941
+  text: 'そうですねｗ
+
+    そのくらい前ならちょいちょいショーツもやってました
+
+    小型でもカカツ落としたりとかｗ
+
+    ほぼNKショーツですけどね
+
+    今の時代にショーツは不利×２倍です
+
+    ただでさえ制度上不利なので普段から狙うには効率は最悪ですね
+
+    最高の場面だけ待ち
+
+    一撃必殺のショーツ https://t.co/PfsewgNQ7X'
+  metrics:
+    like_count: 101
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 17
+    impression_count: 16643
+  mentions: []
+- post_id: '2043015472715829472'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T02:17:00+09:00'
+  created_at_jst: '2026-04-12T02:17:00'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043015472715829472
+  text: 'そうはいっても
+
+    最高の場面ってこないんですよね
+
+    何故こないのかというと
+
+    日本株は特にですが
+
+    全体のトレンズが圧倒的なUPトレンズの中にあるからです
+
+    全体のトレンズが圧倒的に上なので
+
+    どうしても個別要因だけで狙うことになり
+
+    難易度はさらに高くなっています
+
+    全体売りという援軍が来ないので'
+  metrics:
+    like_count: 102
+    reply_count: 0
+    quote_count: 2
+    repost_count: 1
+    bookmark_count: 10
+    impression_count: 14971
+  mentions: []
+- post_id: '2043016779870671003'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T02:22:12+09:00'
+  created_at_jst: '2026-04-12T02:22:12'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043016779870671003
+  text: '全体のトレンズが圧倒的に上の中
+
+    ショーツするというのは
+
+    すんごい急流をみんなが川下りして楽しんでいるのに
+
+    独りで川登りしようとしている状態なわけですよ
+
+    たまたま流れの緩やかな場所があったとしても
+
+    その距離は短く
+
+    上流まではたどり着けないのです
+
+    流れに逆らうよりも https://t.co/aPDGK3fcFg'
+  metrics:
+    like_count: 101
+    reply_count: 0
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 15
+    impression_count: 9068
+  mentions: []
+- post_id: '2043018363635708320'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T02:28:29+09:00'
+  created_at_jst: '2026-04-12T02:28:29'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043018363635708320
+  text: 'この圧倒的な株高トレンズの時代にあって
+
+    個別でショーツなんて言っているようでは
+
+    自分に相場観などは無く
+
+    そもそも自分はトレーズのセンスがないと宣言しているようなものでしょう
+
+    相場観もトレーズセンスもないのですから
+
+    そのような人がショーツなど触らないほうがよいのですよ'
+  metrics:
+    like_count: 114
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 11
+    impression_count: 7011
+  mentions: []
+- post_id: '2043018888951283934'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T02:30:35+09:00'
+  created_at_jst: '2026-04-12T02:30:35'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043018888951283934
+  text: 'たとえば
+
+    １年前に戻れたとして
+
+    その時に何をしますか
+
+    またショーツしますか？
+
+    それとも電線買いますか？
+
+    ということなのです
+
+    電線買っといたほうがよかったじゃろ
+
+    それが答えのすべて
+
+    じゃあ何故ショーツするのか
+
+    君が
+
+    負け犬だからですよ
+
+    現実'
+  metrics:
+    like_count: 148
+    reply_count: 0
+    quote_count: 1
+    repost_count: 3
+    bookmark_count: 9
+    impression_count: 9008
+  mentions: []
+- post_id: '2043019893981999141'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T02:34:34+09:00'
+  created_at_jst: '2026-04-12T02:34:34'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043019893981999141
+  text: '人はの
+
+    その内面を言葉にしなくとも
+
+    ある行動のベクトルや思考の流れだけをみれば
+
+    それらがどのような要因に対して起こった事象なのか
+
+    だいたい見当はつくものなのである
+
+    現在の相場の上でショーツと言っているのは
+
+    敗北したからなんです
+
+    何も聞かなくとも全て理解できる
+
+    負けたのよ
+
+    自分にな'
+  metrics:
+    like_count: 106
+    reply_count: 0
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 10
+    impression_count: 6232
+  mentions: []
+- post_id: '2043020503011725388'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T02:37:00+09:00'
+  created_at_jst: '2026-04-12T02:37:00'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043020503011725388
+  text: 'じゃがの
+
+    いちおうアドバイシュだけしておいてあげますが
+
+    いまからでも遅くはないです
+
+    ショーツはやめて
+
+    上を向くことです
+
+    今から上だけをみること
+
+    なんどでも言うけど
+
+    投資するのに遅いということはありません
+
+    何歳からでもモノホンのトレーダーになれます
+
+    そのかわり
+
+    上を向くことです
+
+    今日から'
+  metrics:
+    like_count: 342
+    reply_count: 0
+    quote_count: 0
+    repost_count: 6
+    bookmark_count: 43
+    impression_count: 12427
+  mentions: []
+- post_id: '2043021130139865503'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T02:39:29+09:00'
+  created_at_jst: '2026-04-12T02:39:29'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043021130139865503
+  text: '俺は絶対に上しかみねえ
+
+    ぜってえ上
+
+    という気持ちだけを持って
+
+    今からやり直してみてください
+
+    きっと素晴らしい未来が待っているとおもいます
+
+    下を向いているうちは
+
+    あなたに未来はありません
+
+    これは精神論なんかじゃない
+
+    現実の
+
+    実現可能な未来のお話なのです
+
+    いいね
+
+    以上だ🍵ﾋﾏﾀﾞﾛｗ'
+  metrics:
+    like_count: 274
+    reply_count: 0
+    quote_count: 3
+    repost_count: 7
+    bookmark_count: 31
+    impression_count: 10911
+  mentions: []
+- post_id: '2043023654381064258'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T02:49:31+09:00'
+  created_at_jst: '2026-04-12T02:49:31'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043023654381064258
+  text: '縛りはほぼ設けておりませんので
+
+    直接的な宇宙関連ではなくとも
+
+    宇宙時代へつながるような技術や製品やサービスの視点からでもなんでも構いません
+
+    お気軽にポスツしてくださいまし
+
+    連投も全然オケです🍵ｿﾉﾎｳｶﾞｲｲﾈｗ'
+  metrics:
+    like_count: 180
+    reply_count: 1
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 7
+    impression_count: 15075
+  mentions: []
+- post_id: '2043260815374193111'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T18:31:54+09:00'
+  created_at_jst: '2026-04-12T18:31:54'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043260815374193111
+  text: 📝🍵 https://t.co/pvabJf3P5i
+  metrics:
+    like_count: 13
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3451
+  mentions: []
+- post_id: '2043261370901381610'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T18:34:07+09:00'
+  created_at_jst: '2026-04-12T18:34:07'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043261370901381610
+  text: 'いずれは
+
+
+    光の時代がくる https://t.co/gXuTs0wPww'
+  metrics:
+    like_count: 24
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 3053
+  mentions: []
+- post_id: '2043261595946791407'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T18:35:01+09:00'
+  created_at_jst: '2026-04-12T18:35:01'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043261595946791407
+  text: '重要なのは
+
+
+    光の時代に
+
+
+    乗っているか https://t.co/CvlfcYBQwH'
+  metrics:
+    like_count: 16
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 2
+    impression_count: 2798
+  mentions: []
+- post_id: '2043261659062686011'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T18:35:16+09:00'
+  created_at_jst: '2026-04-12T18:35:16'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043261659062686011
+  text: '光の時代がくると
+
+
+    まだ理解していない https://t.co/d1cfuyCz5O'
+  metrics:
+    like_count: 14
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3342
+  mentions: []
+- post_id: '2043261776616415270'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T18:35:44+09:00'
+  created_at_jst: '2026-04-12T18:35:44'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043261776616415270
+  text: '半導体も
+
+
+    全部光の時代が
+
+
+    やってきます https://t.co/ip8ljwxQ68'
+  metrics:
+    like_count: 31
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 4
+    impression_count: 3768
+  mentions: []
+- post_id: '2043261962088509495'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T18:36:28+09:00'
+  created_at_jst: '2026-04-12T18:36:28'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043261962088509495
+  text: '光の時代になるから
+
+
+    光に投資している https://t.co/9hLvT9TMDr'
+  metrics:
+    like_count: 20
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 2981
+  mentions: []
+- post_id: '2043262577489391917'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T18:38:55+09:00'
+  created_at_jst: '2026-04-12T18:38:55'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043262577489391917
+  text: 'トヨタさんはルナクルーザーも核融合もありますね
+
+    目先は地球上の車事情だけで動くので
+
+    その他の分野でどれだけ伸びるのかだけをみております
+
+    農業とか含めて🍵ﾃﾞｽﾈｴｗ https://t.co/yAZOKnzxCJ'
+  metrics:
+    like_count: 31
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3127
+  mentions:
+  - sc: '7203'
+    company_name: ??????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???, referring to ?????? (7203).
+- post_id: '2043263664598503591'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T18:43:14+09:00'
+  created_at_jst: '2026-04-12T18:43:14'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043263664598503591
+  text: 'トヨタさんはマーズクルーザーが火星でベスツセラーになるとおもうので
+
+    その頃に株価１００倍くらいになってたら
+
+    まぁいいかなってとこですね🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 34
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 3
+    impression_count: 1965
+  mentions:
+  - sc: '7203'
+    company_name: ??????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???, referring to ?????? (7203).
+- post_id: '2043264407724278125'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T18:46:11+09:00'
+  created_at_jst: '2026-04-12T18:46:11'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043264407724278125
+  text: '過酷な環境で走る車なら
+
+    日本車は最強になるでしょう
+
+    それが日本車の期待値なのである
+
+    日本車の期待値は
+
+    地球上ではアフリカなど新興国
+
+    その後は宇宙である🍵ﾃﾞｽﾈｴｗ'
+  metrics:
+    like_count: 22
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 1496
+  mentions: []
+- post_id: '2043264973426852158'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T18:48:26+09:00'
+  created_at_jst: '2026-04-12T18:48:26'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043264973426852158
+  text: 'でもまぁ
+
+    火星時代だともう
+
+    車は地表を走らず
+
+    飛んでいるやもしれませんが
+
+    そうすると日本企業なら重工かホンダかしらｗ🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 18
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 1370
+  mentions:
+  - sc: '7267'
+    company_name: ??????
+    match_confidence: medium
+    extraction_rationale: Tweet says '???', which refers to ?????? (7267). '??' is too ambiguous to map safely.
+- post_id: '2043265745090658323'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T18:51:30+09:00'
+  created_at_jst: '2026-04-12T18:51:30'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043265745090658323
+  text: '火星に地球と同じような大気を生成する事業なんかも
+
+    壮大な事業になりそうだよな
+
+    地下の氷を溶かしてオアシスをつくりだすのもアリだな
+
+    やることは無限にある
+
+    たのしみですね🍵ﾅｶﾞｲｷｼﾛｗ'
+  metrics:
+    like_count: 15
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 1313
+  mentions: []
+- post_id: '2043266467316355453'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T18:54:22+09:00'
+  created_at_jst: '2026-04-12T18:54:22'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043266467316355453
+  text: 'だいたいが
+
+    あれだけドローンが安定して飛べるんじゃから
+
+    ドローンが大きくなった乗り物が次世代バッテリーを積んだら
+
+    車不要になっちゃうもんな
+
+    ENERGY問題のみですね🍵ﾏｼﾞｿﾚｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 18
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 1272
+  mentions: []
+- post_id: '2043267849544941615'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T18:59:52+09:00'
+  created_at_jst: '2026-04-12T18:59:52'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043267849544941615
+  text: 'このあたりの企業はすでに
+
+    海外企業はだいぶ先行しておりますので
+
+    エンジンで強さを発揮する日本企業はだいぶ遅れをとっておりますね
+
+    バッテリーとモーラーで動く製品は日本企業にとっては不利の連続である
+
+    その下請けならば強いが'
+  metrics:
+    like_count: 12
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 921
+  mentions: []
+- post_id: '2043268773952790988'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T19:03:32+09:00'
+  created_at_jst: '2026-04-12T19:03:32'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043268773952790988
+  text: 'これはロボッツでも同じことが言える
+
+    ロボッツメーカーとしての日本企業は全然ダメです
+
+    ロボッツを構成するパーツやそれら製造装置や検査装置や洗浄装置であれば日本企業は強い
+
+    半導体を考えると全部わかりやすい
+
+    トヨタやホンダがロボッツなんか出したって世界じゃ売れませんね'
+  metrics:
+    like_count: 19
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 859
+  mentions:
+  - sc: '7203'
+    company_name: ??????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???, referring to ?????? (7203).
+  - sc: '7267'
+    company_name: ??????
+    match_confidence: medium
+    extraction_rationale: Tweet says '???', which refers to ?????? (7267).
+- post_id: '2043269425202352616'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T19:06:07+09:00'
+  created_at_jst: '2026-04-12T19:06:07'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043269425202352616
+  text: 'テスラがロボッツを出せば売れるし
+
+    Appleが出しても売れるし
+
+    ググるさんが出しても売れるじゃろ
+
+    ソフバンGが出しても売れないわな
+
+    日本の情弱なら買うじゃろけど
+
+    世界じゃ売れない
+
+    NECさんや富士通さんが出すなら
+
+    医療や介護の現場専用みたいなもんだけじゃろ
+
+    一般のご家庭用は出してもムリ'
+  metrics:
+    like_count: 15
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 645
+  mentions:
+  - sc: '9984'
+    company_name: ??????????
+    match_confidence: medium
+    extraction_rationale: Tweet says '????G', a common abbreviation for ?????????? (9984).
+  - sc: '6701'
+    company_name: ????
+    match_confidence: medium
+    extraction_rationale: Tweet says 'NEC??', referring to ???? (6701).
+  - sc: '6702'
+    company_name: ???
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???.
+- post_id: '2043270041316327466'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-12T19:08:34+09:00'
+  created_at_jst: '2026-04-12T19:08:34'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/4th_skywalker/status/2043270041316327466
+  text: 'メーカーは基本アメリカ企業
+
+    激安ジャングルはチャイナ企業
+
+    半導体は世界のトップランカー
+
+    宇宙は断トツでアメリカ企業
+
+    その全ての下請けは日本企業の精度'
+  metrics:
+    like_count: 13
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 4
+    impression_count: 414
+  mentions: []
+notes: ''

@@ -37,6 +37,7 @@ DEFAULT_TIMEOUT_SECONDS = 30
 DEFAULT_INTERVAL_SECONDS = 3600
 DEFAULT_FRESHNESS_MINUTES = 60
 MAX_RATE_LIMIT_RETRIES = 2
+ACCOUNT_ROLE_CHOICES = ("benchmark", "candidate", "all")
 
 
 @dataclass(frozen=True)
@@ -44,6 +45,7 @@ class MonitoredAccount:
     target_username: str
     target_user_id: str | None
     is_active: bool
+    account_role: str
 
 
 @dataclass(frozen=True)
@@ -272,10 +274,11 @@ def parse_args() -> argparse.Namespace:
     )
 
     subparsers = parser.add_subparsers(dest="command", required=True)
-    subparsers.add_parser(
+    sync_targets = subparsers.add_parser(
         "sync-targets",
         help="Resolve configured target usernames and verify timeline access.",
     )
+    add_account_role_argument(sync_targets)
     poll_once = subparsers.add_parser(
         "poll-once",
         help="Fetch new posts once for all resolved monitored accounts.",
@@ -285,6 +288,7 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Optional monitored username filter.",
     )
+    add_account_role_argument(poll_once)
     daemon = subparsers.add_parser(
         "daemon",
         help="Run one poll immediately, then continue on a fixed interval.",
@@ -314,6 +318,7 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_FRESHNESS_MINUTES,
         help="Treat the account as current when the last successful poll is within this many minutes.",
     )
+    add_account_role_argument(ensure_current)
     backfill = subparsers.add_parser(
         "backfill",
         help="Fetch a historical date range without changing the incremental since_id checkpoint.",
@@ -335,7 +340,17 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Optional monitored username filter.",
     )
+    add_account_role_argument(backfill)
     return parser.parse_args()
+
+
+def add_account_role_argument(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
+        "--account-role",
+        default="all",
+        choices=ACCOUNT_ROLE_CHOICES,
+        help="Limit the command to monitored accounts in the selected role.",
+    )
 
 
 def configure_logging(level: str) -> None:
@@ -461,25 +476,34 @@ def fetch_monitored_accounts(
     conn: psycopg.Connection[Any],
     *,
     resolved_only: bool,
+    account_role: str = "all",
 ) -> list[MonitoredAccount]:
+    if account_role not in ACCOUNT_ROLE_CHOICES:
+        raise RuntimeError(f"Unsupported account role filter: {account_role}")
+
     clauses = ["is_active"]
     if resolved_only:
         clauses.append("target_user_id is not null")
+    query_args: list[object] = []
+    if account_role != "all":
+        clauses.append("account_role = %s")
+        query_args.append(account_role)
 
     query = f"""
-        select target_username, target_user_id, is_active
+        select target_username, target_user_id, is_active, account_role
         from ingest.x_monitored_accounts
         where {' and '.join(clauses)}
         order by target_username
     """
     with conn.cursor() as cur:
-        cur.execute(query)
+        cur.execute(query, query_args)
         rows = cur.fetchall()
     return [
         MonitoredAccount(
             target_username=row["target_username"],
             target_user_id=row["target_user_id"],
             is_active=row["is_active"],
+            account_role=row["account_role"],
         )
         for row in rows
     ]
@@ -939,8 +963,14 @@ def finish_poll_run(
 def sync_targets(
     conn: psycopg.Connection[Any],
     client: XCollectorClient,
+    *,
+    account_role: str = "all",
 ) -> int:
-    targets = fetch_monitored_accounts(conn, resolved_only=False)
+    targets = fetch_monitored_accounts(
+        conn,
+        resolved_only=False,
+        account_role=account_role,
+    )
     if not targets:
         logging.info(
             "No monitored X accounts are configured in ingest.x_monitored_accounts."
@@ -1079,10 +1109,15 @@ def execute_poll_once(
     *,
     run_mode: str,
     target_username: str | None = None,
+    account_role: str = "all",
     accounts: list[MonitoredAccount] | None = None,
 ) -> int:
     if accounts is None:
-        resolved_accounts = fetch_monitored_accounts(conn, resolved_only=True)
+        resolved_accounts = fetch_monitored_accounts(
+            conn,
+            resolved_only=True,
+            account_role=account_role,
+        )
         accounts = filter_accounts_by_username(resolved_accounts, target_username)
     if not accounts:
         logging.info(
@@ -1200,11 +1235,16 @@ def execute_ensure_current(
     *,
     target_username: str | None,
     freshness_minutes: int,
+    account_role: str = "all",
 ) -> int:
     if freshness_minutes <= 0:
         raise RuntimeError("--freshness-minutes must be positive.")
 
-    resolved_accounts = fetch_monitored_accounts(conn, resolved_only=True)
+    resolved_accounts = fetch_monitored_accounts(
+        conn,
+        resolved_only=True,
+        account_role=account_role,
+    )
     accounts = filter_accounts_by_username(resolved_accounts, target_username)
     if not accounts:
         logging.info(
@@ -1273,11 +1313,16 @@ def execute_backfill(
     target_username: str | None,
     days: int,
     end_date: date | None,
+    account_role: str = "all",
 ) -> int:
     if days <= 0:
         raise RuntimeError("--days must be positive.")
 
-    resolved_accounts = fetch_monitored_accounts(conn, resolved_only=True)
+    resolved_accounts = fetch_monitored_accounts(
+        conn,
+        resolved_only=True,
+        account_role=account_role,
+    )
     accounts = filter_accounts_by_username(resolved_accounts, target_username)
     if not accounts:
         logging.info(
@@ -1493,7 +1538,7 @@ def main() -> int:
     try:
         with connect_db(dsn) as conn:
             if args.command == "sync-targets":
-                sync_targets(conn, client)
+                sync_targets(conn, client, account_role=args.account_role)
                 return 0
             if args.command == "poll-once":
                 return execute_poll_once(
@@ -1501,6 +1546,7 @@ def main() -> int:
                     client,
                     run_mode="poll_once",
                     target_username=args.target_username,
+                    account_role=args.account_role,
                 )
             if args.command == "ensure-current":
                 return execute_ensure_current(
@@ -1508,6 +1554,7 @@ def main() -> int:
                     client,
                     target_username=args.target_username,
                     freshness_minutes=args.freshness_minutes,
+                    account_role=args.account_role,
                 )
             if args.command == "backfill":
                 return execute_backfill(
@@ -1516,6 +1563,7 @@ def main() -> int:
                     target_username=args.target_username,
                     days=args.days,
                     end_date=args.end_date,
+                    account_role=args.account_role,
                 )
             if args.command == "usage":
                 return run_usage(conn, client)

@@ -1,0 +1,267 @@
+type: tweet_stock_analysis
+version: 1
+run:
+  run_id: tweet_stock_20260412_20260412_7y8k3d17sozce0w_20260412_101245
+  source_relation: analytics.monitored_x_posts
+  company_relation: analytics.listed_companies_latest
+  start_date: '2026-04-12'
+  end_date: '2026-04-12'
+  target_username: 7Y8k3d17SozCE0w
+  generated_at: '2026-04-12T10:12:45.940615'
+  parameters:
+    volume_lookback_days: 20
+    forward_return_days:
+    - 5
+    - 20
+    limit: null
+tweets:
+- post_id: '2043121932711968790'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-12T09:20:02+09:00'
+  created_at_jst: '2026-04-12T09:20:02'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043121932711968790
+  text: お母さんは、ピカチュウ https://t.co/lllA3eTy9W
+  metrics:
+    like_count: 10
+    reply_count: 0
+    quote_count: 1
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 7030
+  mentions: []
+- post_id: '2043151875739103740'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-12T11:19:01+09:00'
+  created_at_jst: '2026-04-12T11:19:01'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043151875739103740
+  text: そりゃそうだろ https://t.co/QJtoTQmIBi
+  metrics:
+    like_count: 16
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5350
+  mentions: []
+- post_id: '2043185993130635725'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-12T13:34:35+09:00'
+  created_at_jst: '2026-04-12T13:34:35'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043185993130635725
+  text: バンス https://t.co/aVmEubLR5h
+  metrics:
+    like_count: 13
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2707
+  mentions: []
+- post_id: '2043187479793303728'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-12T13:40:30+09:00'
+  created_at_jst: '2026-04-12T13:40:30'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043187479793303728
+  text: 'どうなんだろね
+
+    初回の協議で合意とは思ってなかったけど
+
+    お互い言いたい主張のジャブ連打して相手を知る回のような
+
+    金曜の日経先物もSOX高を受けての上昇でダウ自体は安かった
+
+    交渉断念で攻撃再開でもないんやろ https://t.co/dzmoysXPEI https://t.co/JEIFu0mG78'
+  metrics:
+    like_count: 23
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 6142
+  mentions: []
+- post_id: '2043245014554468575'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-12T17:29:07+09:00'
+  created_at_jst: '2026-04-12T17:29:07'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043245014554468575
+  text: 'やるっつぇのいつものやつぅ
+
+
+    米国イラン合意できずでまんで？
+
+
+    正直、あんま影響ないとみてる
+
+    米国イラン戦争の脇で、アンソロピック台頭によるAI通信拡大とTSMCの好決算で半導体が強く、SOX指数が最高値更新してる
+
+    こちらのほうが日本株には影響強い
+
+    サンデーダウナスは下落してるが大したことなく'
+  metrics:
+    like_count: 30
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 3140
+  mentions: []
+- post_id: '2043246187655164135'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-12T17:33:47+09:00'
+  created_at_jst: '2026-04-12T17:33:47'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043246187655164135
+  text: 'さらにサンデーオイルは95.39と落ち着いてる
+
+    そもそも1回で合意できるならこんなにイランは対抗しないだろう
+
+    現在も休みなく動くビットコも17万安と小動き
+
+    完全決裂でも攻撃再開でもないから
+
+    順当なんやろ
+
+    半導体相場強く、日経先物弱くともそれなりに強いセクターはありそう https://t.co/EFiW5FW4Mm'
+  metrics:
+    like_count: 10
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2109
+  mentions: []
+- post_id: '2043247803728806388'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-12T17:40:12+09:00'
+  created_at_jst: '2026-04-12T17:40:12'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043247803728806388
+  text: '正直日本の道路狭すぎて、自転車やキックボードが車道走るのは非常に危ない
+
+    車は避けないと追い抜けないが、避けると中央線越えてしまい危ない
+
+    非常に迷惑 https://t.co/qkSWCdYQHA'
+  metrics:
+    like_count: 15
+    reply_count: 0
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3361
+  mentions: []
+- post_id: '2043249350135165322'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-12T17:46:21+09:00'
+  created_at_jst: '2026-04-12T17:46:21'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043249350135165322
+  text: 'やるっつぇのいつものやつぅ2
+
+
+    米国イラン協議
+
+    米国のレッドラインが明確になった
+
+    後はイランが持帰り、飲むかわりに何を譲歩させるかだろう
+
+    米国は、イラン核開発とホルムズ海峡解放を勝ち取り、イランはそのかわりに現体制の安全保障と制裁解除を譲歩させれば、形的には相手に勝利したメンツは保つ https://t.co/wDghlm1thB'
+  metrics:
+    like_count: 19
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 2242
+  mentions: []
+- post_id: '2043251622281900449'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-12T17:55:23+09:00'
+  created_at_jst: '2026-04-12T17:55:23'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043251622281900449
+  text: '実際、国民年金自体総額300万しか払ってない奴が年間80万位年金貰う方がおかしい、生活できないなら自営業者は、国民年金の月掛を3倍にしたら良い
+
+    掛金払ってないのに生活できないもない https://t.co/XUYxUkMKKf'
+  metrics:
+    like_count: 21
+    reply_count: 0
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 1
+    impression_count: 3194
+  mentions: []
+- post_id: '2043254058526577027'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-12T18:05:04+09:00'
+  created_at_jst: '2026-04-12T18:05:04'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043254058526577027
+  text: 実際問題、青切符切っても本人確認とれるもの持ってなかったら、偽名書いたり、振り込まなかったりしないの？ https://t.co/w6SpxVj9oY
+  metrics:
+    like_count: 6
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 2676
+  mentions: []
+- post_id: '2043261279234896125'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-12T18:33:45+09:00'
+  created_at_jst: '2026-04-12T18:33:45'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2043261279234896125
+  text: '脂太りと炭水化物や甘い物などスイーツ太りがある
+
+    日本人は、江戸時代まで肉を食べないで雑穀を食べていたため、腸が長くインスリンの出が悪い
+
+    だから西洋人よりも脂に弱く生活習慣病になりやすい
+
+    反対に西洋人みたいに巨大な尻など、極端な肥満にもなりにくい https://t.co/KNhQBBdovw'
+  metrics:
+    like_count: 10
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 1989
+  mentions: []
+notes: ''

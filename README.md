@@ -1,6 +1,6 @@
 # stock-analytics-by-ai
 
-Kabuplus の年次 ZIP と日次 CSV を PostgreSQL に取り込み、SQL で株価分析を進めるための初期基盤です。`docker compose` で DB を起動し、ZIP または CSV を `raw` レイヤへ投入し、`analytics` レイヤの typed view から分析を始めます。株式分割・併合は raw 価格を壊さず、`analytics.inferred_price_actions` と `analytics.stock_prices_adjusted_daily` で非破壊に扱います。加えて、固定の X 監視対象アカウントについては専用 collector で当日投稿を PostgreSQL へ蓄積できます。
+Kabuplus の年次 ZIP と日次 CSV を PostgreSQL に取り込み、SQL で株価分析を進めるための初期基盤です。`docker compose` で DB を起動し、ZIP または CSV を `raw` レイヤへ投入し、`analytics` レイヤの typed view から分析を始めます。株式分割・併合は raw 価格を壊さず、`analytics.inferred_price_actions` と `analytics.stock_prices_adjusted_daily` で非破壊に扱います。加えて、固定の X 監視対象アカウントについては専用 collector で投稿を PostgreSQL へ蓄積し、benchmark / candidate の役割を分けた trust evaluation まで進められます。
 
 ## Quick Start
 
@@ -39,18 +39,21 @@ docker compose run --rm importer --csv-file /workspace/stock/kabuplus-2026/japan
 - `scripts/fetch_kabuplus_daily_csv.py`: 一覧ページ確認後に日次 CSV を保存する downloader
 - `scripts/analyze_range_breakout.py`: Docker 内で実行する分析 entrypoint
 - `scripts/tweet_stock_research.py`: tweet 範囲抽出、株価文脈 enrich、DB 保存を行う tweet-stock analysis helper
+- `scripts/x_account_trust_research.py`: X signal canonicalization と candidate trust scoring helper
 - `scripts/x_collector.py`: X API v2 で固定監視対象の当日投稿を収集する collector
 - `scripts/entry_breakout_research.py`: split 推定、補正価格監査、6か月 breakout dataset / hypothesis pipeline
 - `sql/init`: スキーマ、テーブル、helper 関数、typed view
 - `sql/migrations/20260404_entry_breakout_setup.sql`: 既存 `pgdata` へ研究用オブジェクトを追い適用する migration
 - `sql/migrations/20260407_x_collector_setup.sql`: 既存 `pgdata` へ X collector 用オブジェクトを追い適用する migration
 - `sql/migrations/20260407_tweet_stock_analysis_setup.sql`: 既存 `pgdata` へ tweet-stock analysis 用オブジェクトを追い適用する migration
+- `sql/migrations/20260412_x_account_trust_setup.sql`: 既存 `pgdata` へ benchmark / candidate 管理と account trust 用オブジェクトを追い適用する migration
 - `sql/queries/sample_queries.sql`: すぐ叩ける SQL 例
 - `docs/setup.md`: 起動とリセット手順
 - `docs/data-catalog.md`: データ種別と curated view
 - `docs/analysis-principles.md`: 今後の分析原則の保管場所
 - `docs/skills/README.md`: project skill の運用ルール
 - `.codex/skills/stock-analysis-workflow`: このリポジトリ専用の skill
+- `.codex/skills/x-account-trust-evaluation`: X account trust evaluation 用の project skill
 
 ## Data Model
 
@@ -61,6 +64,7 @@ docker compose run --rm importer --csv-file /workspace/stock/kabuplus-2026/japan
 - `research.*`: 6か月 breakout の run / case / hypothesis を永続化する研究レイヤ
 - `ingest.x_*` / `raw.x_*`: 固定監視対象アカウントと X 投稿収集の運用レイヤ
 - `research.tweet_*`: tweet と日本株コードの紐付け、および価格反応の durable 分析レイヤ
+- `research.x_*`: canonical signal review と account trust evaluation の durable レイヤ
 
 初期の分析原則として「数年レンジ相場の上抜け」と「6か月レンジ上抜け entry study」を追加済みです。今後は `docs/analysis-principles.md` に原則を明文化し、その内容に合わせて SQL やスクリプトを追加していきます。
 
@@ -112,6 +116,21 @@ docker compose run --rm analysis enrich-tweet-analysis --input-file /workspace/r
 docker compose run --rm analysis persist-tweet-analysis --input-file /workspace/research/tweet-stock-analysis/<run-id>/enriched_analysis.yaml
 ```
 
+## X Account Trust Evaluation
+
+candidate を benchmark と比較しながら評価する継続フローも追加しました。`ingest.x_monitored_accounts.account_role` で `benchmark` / `candidate` を分け、canonical signal と trust score は `research.x_*` に保存します。
+
+```powershell
+docker compose exec -T db psql -U stock -d stock_analytics -f /workspace/sql/migrations/20260412_x_account_trust_setup.sql
+docker compose exec db psql -U stock -d stock_analytics -c "insert into ingest.x_monitored_accounts (target_username, account_role) values ('yuzz__', 'candidate') on conflict (target_username) do update set account_role = excluded.account_role;"
+docker compose run --rm xcollector sync-targets --account-role candidate
+docker compose run --rm xcollector backfill --account-role all --days 90
+docker compose run --rm analysis prepare-x-signal-analysis --start-date 2026-01-13 --end-date 2026-04-12 --account-role all
+docker compose run --rm analysis enrich-x-signal-analysis --input-file /workspace/research/x-signal-analysis/<run-id>/analysis_template.yaml
+docker compose run --rm analysis persist-x-signal-analysis --input-file /workspace/research/x-signal-analysis/<run-id>/enriched_analysis.yaml
+docker compose run --rm analysis evaluate-x-account-trust --candidate-username yuzz__ --start-date 2026-01-13 --end-date 2026-04-12
+```
+
 ## Analysis
 
 分析スクリプトも Docker 内で実行します。
@@ -125,6 +144,10 @@ docker compose run --rm analysis prepare-adjusted-prices
 docker compose run --rm analysis build-entry-dataset
 docker compose run --rm analysis mine-entry-hypotheses
 docker compose run --rm analysis evaluate-entry-hypotheses
+docker compose run --rm analysis prepare-x-signal-analysis --start-date 2026-01-13 --end-date 2026-04-12 --account-role all
+docker compose run --rm analysis enrich-x-signal-analysis --input-file /workspace/research/x-signal-analysis/<run-id>/analysis_template.yaml
+docker compose run --rm analysis persist-x-signal-analysis --input-file /workspace/research/x-signal-analysis/<run-id>/enriched_analysis.yaml
+docker compose run --rm analysis evaluate-x-account-trust --candidate-username yuzz__ --start-date 2026-01-13 --end-date 2026-04-12
 ```
 
 6か月 breakout 研究の標準順は次です。

@@ -1,0 +1,29 @@
+type: x_signal_analysis_prepare
+version: 1
+run_id: x_signal_20260410_20260412_candidate_yuzz___20260412_115542
+generated_at: '2026-04-12T11:55:43.208882'
+source_relation: analytics.monitored_x_posts
+company_relation: analytics.listed_companies_latest
+date_range:
+  start_date: '2026-04-10'
+  end_date: '2026-04-12'
+target_username: yuzz__
+account_role: candidate
+parameters:
+  batch_size: 20
+  volume_lookback_days: 20
+  forward_return_days:
+  - 5
+  - 20
+  analysis_version: x-signal-v1
+counts:
+  post_count: 18
+  company_snapshot_count: 3756
+  posts_by_role:
+    candidate: 18
+files:
+  posts_csv: research/x-signal-analysis/x_signal_20260410_20260412_candidate_yuzz___20260412_115542/posts.csv
+  company_snapshot_csv: research/x-signal-analysis/x_signal_20260410_20260412_candidate_yuzz___20260412_115542/company_snapshot.csv
+  analysis_template_yaml: research/x-signal-analysis/x_signal_20260410_20260412_candidate_yuzz___20260412_115542/analysis_template.yaml
+  analysis_template_json: research/x-signal-analysis/x_signal_20260410_20260412_candidate_yuzz___20260412_115542/analysis_template.json
+  manifest_yaml: research/x-signal-analysis/x_signal_20260410_20260412_candidate_yuzz___20260412_115542/manifest.yaml

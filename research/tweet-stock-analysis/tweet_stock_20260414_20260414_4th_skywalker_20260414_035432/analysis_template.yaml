@@ -1,0 +1,3593 @@
+type: tweet_stock_analysis
+version: 1
+run:
+  run_id: tweet_stock_20260414_20260414_4th_skywalker_20260414_035432
+  source_relation: analytics.monitored_x_posts
+  company_relation: analytics.listed_companies_latest
+  start_date: '2026-04-14'
+  end_date: '2026-04-14'
+  target_username: 4th_skywalker
+  generated_at: '2026-04-14T03:54:33.074088'
+  parameters:
+    volume_lookback_days: 20
+    forward_return_days:
+    - 5
+    - 20
+    limit: null
+tweets:
+- post_id: '2043706974609752151'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:04:47+09:00'
+  created_at_jst: '2026-04-14T00:04:47'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043706974609752151
+  text: '超高級施設はホテル以上の待遇がバンバン出てきて
+
+    早期入所がさらに激流行り
+
+    ３億円～とかになるんじゃないかしら
+
+    最低３億円からですねえ
+
+    年間数千万円の諸費用は別途
+
+    有料サービスも別途ですわ
+
+    １０億円以上のトップラベルの施設も誕生するだろう'
+  metrics:
+    like_count: 59
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 6650
+  mentions: []
+- post_id: '2043707891073548597'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:08:26+09:00'
+  created_at_jst: '2026-04-14T00:08:26'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043707891073548597
+  text: '比較的温暖な気候の南国なんかじゃ
+
+    そういう超高級施設や専門的な病院がビーチ沿いにズラリと並んで
+
+    なかなか壮観なエズラになるやもしれんね
+
+    ８０代同士の再婚からの試験官ベビーを火星へ送迎サービスも出てくるんじゃないか
+
+    火星の育成施設と不動産はオプションですわ
+
+    高いで🍵ﾋﾏﾀﾞﾛｽｷﾞﾙｗ'
+  metrics:
+    like_count: 40
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 5032
+  mentions: []
+- post_id: '2043708120019698046'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:09:20+09:00'
+  created_at_jst: '2026-04-14T00:09:20'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043708120019698046
+  text: '試験官→×
+
+    試験管→〇🍵ﾋﾏﾀﾞﾈｗ'
+  metrics:
+    like_count: 25
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4825
+  mentions: []
+- post_id: '2043709745559929283'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:15:48+09:00'
+  created_at_jst: '2026-04-14T00:15:48'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043709745559929283
+  text: 'そりゃもちろん
+
+    遺伝子からクローンを作成する技術がすすんだらのことよ
+
+    さらに進んだ文明社会の中では
+
+    遺伝子の保存において
+
+    手段は択ばなくなるだろう
+
+    宇宙時代ならなおさらである
+
+    銀河へ拡がるために
+
+    セックスが必要だなんて
+
+    野蛮で非効率なのだよ
+
+    未来はもっと合理的
+
+    最も合理的になるのが未来だ'
+  metrics:
+    like_count: 43
+    reply_count: 0
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 5341
+  mentions: []
+- post_id: '2043710367185187075'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:18:16+09:00'
+  created_at_jst: '2026-04-14T00:18:16'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043710367185187075
+  text: '人類を絶滅させることなく
+
+    できるだけ長く存続させ
+
+    さらにより遠くの宇宙まで進出させようとしたら
+
+    人間を創る技術は必須である
+
+    よく倫理だの道徳だの言う馬鹿もいるが
+
+    そもそも
+
+    人類が絶滅してしまったら
+
+    倫理も道徳もクソもないのです
+
+    まぁ宗教に洗脳された馬鹿が言ってるだけじゃがの🍵ﾀﾞﾅｗ'
+  metrics:
+    like_count: 50
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 4923
+  mentions: []
+- post_id: '2043711090736181250'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:21:09+09:00'
+  created_at_jst: '2026-04-14T00:21:09'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043711090736181250
+  text: 'アメ株微塵も押しませんね
+
+    まぁどうせ茶番だからあたりまえか🍵ﾃﾞｽﾈｴｗ'
+  metrics:
+    like_count: 58
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 5162
+  mentions: []
+- post_id: '2043711410920939842'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:22:25+09:00'
+  created_at_jst: '2026-04-14T00:22:25'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043711410920939842
+  text: '３０年後に８分の１とかあり得ないとおもいます
+
+    もっとゴミになるでしょうね🍵ﾏｼﾞｿﾚｽｷﾞﾙｗｗｗ https://t.co/BiTPhWGwUh'
+  metrics:
+    like_count: 49
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 4
+    impression_count: 10896
+  mentions: []
+- post_id: '2043711835069976861'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:24:06+09:00'
+  created_at_jst: '2026-04-14T00:24:06'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043711835069976861
+  text: '宇宙といっても
+
+    それぞれの惑星に住むことになるでしょうから
+
+    環境次第ですね
+
+    重力の影響で人類のサイズは大小差が出るやもしれませんが
+
+    ３メーラーとか５メーラーとか
+
+    ５０センチとか🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ https://t.co/hPciM7LMcT'
+  metrics:
+    like_count: 48
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 9171
+  mentions: []
+- post_id: '2043712560042799210'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:26:59+09:00'
+  created_at_jst: '2026-04-14T00:26:59'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043712560042799210
+  text: '３０年後の円の価値ですか
+
+    ゼロの可能性も想定内です
+
+    そのくらいでみておいたほうがいいです
+
+    ３０年後に円の価値が残っているとおもわないこと
+
+    そのくらいのイメージでいかないと
+
+    間違えますよ
+
+    ゴミはゴミだ
+
+    残るものなんてない
+
+    現実です🍵ｹﾞﾝｼﾞﾂｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 95
+    reply_count: 0
+    quote_count: 1
+    repost_count: 3
+    bookmark_count: 3
+    impression_count: 7820
+  mentions: []
+- post_id: '2043714002078052653'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:32:43+09:00'
+  created_at_jst: '2026-04-14T00:32:43'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043714002078052653
+  text: 'でもさ
+
+    つうかさ
+
+    そもそも地球の生命や人類なんてのは
+
+    太古のどこかの銀河の生命がリスクヘッジで放った子孫の末裔なのやもしれんしの
+
+    人類という知的生命体としての形で拡がらなくとも
+
+    種の状態で拡がればいいだけやもしれんし
+
+    そうなると個々の知的生命体の役割はだいぶ限定されてくるな🍵ﾋﾏｶｗ'
+  metrics:
+    like_count: 48
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5649
+  mentions: []
+- post_id: '2043715469530816522'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:38:32+09:00'
+  created_at_jst: '2026-04-14T00:38:32'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043715469530816522
+  text: 'きさんらが買い過ぎるから
+
+    新規買付停止だってよｗ🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ https://t.co/FSx9xq5dGF'
+  metrics:
+    like_count: 145
+    reply_count: 0
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 32
+    impression_count: 17287
+  mentions: []
+- post_id: '2043715609104703733'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:39:06+09:00'
+  created_at_jst: '2026-04-14T00:39:06'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043715609104703733
+  text: 宣伝したの失敗したなｗ🍵ﾖｹｲﾅｺﾄｦｗｗｗ
+  metrics:
+    like_count: 43
+    reply_count: 0
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 5619
+  mentions: []
+- post_id: '2043715721289666622'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:39:33+09:00'
+  created_at_jst: '2026-04-14T00:39:33'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043715721289666622
+  text: '委託会社からのお知らせ
+
+    委託会社より、当ファンドの運用規模、運用効率および投資対象マーケットの流動性等を総合的に勘案した結果、適切な運用資産規模での運用を継続するために、2026年4月20日（月）以降、新規の買付けのお申込みを停止する旨の通知がございました。'
+  metrics:
+    like_count: 70
+    reply_count: 0
+    quote_count: 1
+    repost_count: 1
+    bookmark_count: 10
+    impression_count: 14180
+  mentions: []
+- post_id: '2043715923912323447'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:40:21+09:00'
+  created_at_jst: '2026-04-14T00:40:21'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043715923912323447
+  text: '投資対象が小型多めだから
+
+    影響が強く出すぎちゃうんじゃろね🍵ﾀﾞﾛｳﾈｗ'
+  metrics:
+    like_count: 44
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 5878
+  mentions: []
+- post_id: '2043716714903560229'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T00:43:29+09:00'
+  created_at_jst: '2026-04-14T00:43:29'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043716714903560229
+  text: '悪口なんて言ってませんよ
+
+    教えてあげているだけです
+
+    真理を🍵ﾃﾞｽﾖﾈｽｷﾞﾙｗｗｗ https://t.co/GuG8hXLZjn'
+  metrics:
+    like_count: 55
+    reply_count: 0
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 2
+    impression_count: 11718
+  mentions: []
+- post_id: '2043784544634188164'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:13:01+09:00'
+  created_at_jst: '2026-04-14T05:13:01'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043784544634188164
+  text: 株もってないやちゅｗｗｗ☕ｵｼﾏｲｽｷﾞﾙｗｗｗ
+  metrics:
+    like_count: 52
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3909
+  mentions: []
+- post_id: '2043785920311377982'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:18:29+09:00'
+  created_at_jst: '2026-04-14T05:18:29'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043785920311377982
+  text: '株
+
+
+    もって
+
+
+    ない
+
+
+    やちゅ
+
+
+    ｗｗｗ
+
+
+    ☕ｱｯｶﾝｽｷﾞﾙｗｗｗ https://t.co/e7793uDccb'
+  metrics:
+    like_count: 55
+    reply_count: 0
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 0
+    impression_count: 4264
+  mentions: []
+- post_id: '2043786197005480071'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:19:35+09:00'
+  created_at_jst: '2026-04-14T05:19:35'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043786197005480071
+  text: 'ノンポジ
+
+
+    の
+
+
+    やちゅ
+
+
+    ｗｗｗ
+
+
+    ☕ｱｯｶﾝｽｷﾞﾙｗｗｗ https://t.co/xIRsI32ksM'
+  metrics:
+    like_count: 64
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4266
+  mentions: []
+- post_id: '2043786518586896537'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:20:52+09:00'
+  created_at_jst: '2026-04-14T05:20:52'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043786518586896537
+  text: '株
+
+
+    もって
+
+
+    ない
+
+
+    やちゅｗｗｗｗｗ☕ｱｯｶﾝｽｷﾞﾙｗｗｗｗｗ https://t.co/AulBxwftKB'
+  metrics:
+    like_count: 72
+    reply_count: 0
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 0
+    impression_count: 7321
+  mentions: []
+- post_id: '2043786782937100793'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:21:55+09:00'
+  created_at_jst: '2026-04-14T05:21:55'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043786782937100793
+  text: '株
+
+
+    もってない
+
+
+    とかｗｗｗ☕ｱｯｶﾝｽｷﾞﾙｗｗｗ https://t.co/AMTAPHeT29'
+  metrics:
+    like_count: 54
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4309
+  mentions: []
+- post_id: '2043787068149772635'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:23:03+09:00'
+  created_at_jst: '2026-04-14T05:23:03'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043787068149772635
+  text: 'この大相場真っ只中
+
+
+    ノンポジとかｗｗｗｗｗ☕ｱｯｶﾝｽｷﾞﾙｗｗｗ https://t.co/TjbJkmulKf'
+  metrics:
+    like_count: 48
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 4424
+  mentions: []
+- post_id: '2043787537605636171'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:24:55+09:00'
+  created_at_jst: '2026-04-14T05:24:55'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043787537605636171
+  text: '株
+
+
+    もってない
+
+
+    豆腐メンタルとかｗｗｗ☕ｱｯｶﾝｽｷﾞﾙｗｗｗ https://t.co/osIa8UcGmJ'
+  metrics:
+    like_count: 59
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 4486
+  mentions: []
+- post_id: '2043787981811790193'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:26:41+09:00'
+  created_at_jst: '2026-04-14T05:26:41'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043787981811790193
+  text: '株
+
+
+    もってないやちゅとか
+
+
+    オシマイでしゅｗｗｗｗｗ☕ｱｯｶﾝｽｷﾞﾙｗｗｗ https://t.co/i0AwR4Ytn5'
+  metrics:
+    like_count: 60
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4680
+  mentions: []
+- post_id: '2043788236145996192'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:27:41+09:00'
+  created_at_jst: '2026-04-14T05:27:41'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043788236145996192
+  text: 'なんとか海峡で
+
+
+    オイルショックで
+
+
+    大恐慌とかｗｗｗｗｗ☕ｳｹﾙｽｷﾞﾙｗｗｗｗｗ https://t.co/cZFR5GKNRE'
+  metrics:
+    like_count: 82
+    reply_count: 0
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 0
+    impression_count: 5714
+  mentions: []
+- post_id: '2043789172755051005'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:31:25+09:00'
+  created_at_jst: '2026-04-14T05:31:25'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043789172755051005
+  text: '空前の次世代技術超相場
+
+
+    超射程🔥🚀🌕 https://t.co/11oxFR8eHn'
+  metrics:
+    like_count: 62
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 5143
+  mentions: []
+- post_id: '2043792472434978981'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:44:31+09:00'
+  created_at_jst: '2026-04-14T05:44:31'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043792472434978981
+  text: 'オルカン＆ニッセイSOX
+
+    最高値更新㊗ https://t.co/i2HobVO3S7'
+  metrics:
+    like_count: 56
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 5
+    impression_count: 8755
+  mentions: []
+- post_id: '2043793222892433544'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:47:30+09:00'
+  created_at_jst: '2026-04-14T05:47:30'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043793222892433544
+  text: もうすぐ３．５倍ですよ🍵ﾃﾞｽﾖﾈｽｷﾞﾙｗｗｗ https://t.co/x9cop4eOdW
+  metrics:
+    like_count: 44
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 6
+    impression_count: 8600
+  mentions: []
+- post_id: '2043793549200896174'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:48:48+09:00'
+  created_at_jst: '2026-04-14T05:48:48'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043793549200896174
+  text: '毎日買い続けていたら
+
+    凄い金額になってしまいましたＷ🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ https://t.co/aYekOhEjVN'
+  metrics:
+    like_count: 75
+    reply_count: 0
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 13
+    impression_count: 11408
+  mentions: []
+- post_id: '2043793894681510107'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:50:11+09:00'
+  created_at_jst: '2026-04-14T05:50:11'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043793894681510107
+  text: '一緒にはじめたニッセイ🍆１００は
+
+    現在２．４倍です
+
+    これも同じくスターツで一括してから毎日買っております🍵ﾃﾞｽﾈｴｗ https://t.co/MTYK7tcvPB'
+  metrics:
+    like_count: 55
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 5
+    impression_count: 9157
+  mentions: []
+- post_id: '2043794264715677720'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:51:39+09:00'
+  created_at_jst: '2026-04-14T05:51:39'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043794264715677720
+  text: 'これからも
+
+    ずっと
+
+    毎日買い続けますよ
+
+    ずっとね
+
+    あと３５年間くらいは🍵ﾃﾞｽﾈｴｗ'
+  metrics:
+    like_count: 55
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 2
+    impression_count: 5270
+  mentions: []
+- post_id: '2043795288327155739'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:55:43+09:00'
+  created_at_jst: '2026-04-14T05:55:43'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043795288327155739
+  text: 'だいたい
+
+    あと３５年後くらいには
+
+    これら投信の基準価額は
+
+    最低でも数十倍以上になっているとおもいます
+
+    NKで３５年後だと１００００００超えも想定内なので
+
+    SOXや🍆１００だとどうだろ
+
+    ５０倍から１００倍もあるかな
+
+    といったところですね
+
+    最低３０倍以上かしら
+
+    まぁだいたいそうかな
+
+    超謙虚にみて'
+  metrics:
+    like_count: 141
+    reply_count: 0
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 22
+    impression_count: 9339
+  mentions: []
+- post_id: '2043795561313411582'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T05:56:48+09:00'
+  created_at_jst: '2026-04-14T05:56:48'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043795561313411582
+  text: 'それが
+
+    未来の相場になります
+
+    まじめに計算して言ってるのよあたし
+
+    テケトーだとおもうなよ
+
+    未来はちゃんとそうなるからね
+
+    雑魚には一生理解できないだろうけどな
+
+    雑魚には🍵ﾏｼﾞｿﾚｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 64
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 5647
+  mentions: []
+- post_id: '2043805726523699256'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T06:37:11+09:00'
+  created_at_jst: '2026-04-14T06:37:11'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043805726523699256
+  text: https://t.co/vEWUORh0qh
+  metrics:
+    like_count: 41
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5121
+  mentions: []
+- post_id: '2043813710146547947'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T07:08:55+09:00'
+  created_at_jst: '2026-04-14T07:08:55'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043813710146547947
+  text: 'さて
+
+    時計の予約しなくちゃ🍵ﾋﾏﾀﾞﾛｗ'
+  metrics:
+    like_count: 43
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5037
+  mentions: []
+- post_id: '2043821222304330179'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T07:38:46+09:00'
+  created_at_jst: '2026-04-14T07:38:46'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043821222304330179
+  text: '寝ててもオキャネが増え続けていくだけの相場
+
+    人生🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 63
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 4638
+  mentions: []
+- post_id: '2043824201849811320'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T07:50:36+09:00'
+  created_at_jst: '2026-04-14T07:50:36'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043824201849811320
+  text: '株主って
+
+
+    ほんとうにたのしい
+
+
+    わかってほしい
+
+
+    ノンポジ君たちにも
+
+
+    ﾎﾟｼﾞｵ🍵ｿﾚﾊｿｳｗ https://t.co/mT7Tv0BIaR'
+  metrics:
+    like_count: 101
+    reply_count: 0
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 0
+    impression_count: 5422
+  mentions: []
+- post_id: '2043824433933234515'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T07:51:32+09:00'
+  created_at_jst: '2026-04-14T07:51:32'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043824433933234515
+  text: ～🍵 https://t.co/ll5nrFddTY
+  metrics:
+    like_count: 41
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 5212
+  mentions: []
+- post_id: '2043833929137053816'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T08:29:15+09:00'
+  created_at_jst: '2026-04-14T08:29:15'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043833929137053816
+  text: 'ふ、ふえかたが、、
+
+
+    あぶにゃい、、'
+  metrics:
+    like_count: 54
+    reply_count: 0
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 0
+    impression_count: 4354
+  mentions: []
+- post_id: '2043835984996188407'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T08:37:26+09:00'
+  created_at_jst: '2026-04-14T08:37:26'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043835984996188407
+  text: 😂 https://t.co/smbNLWvJRg
+  metrics:
+    like_count: 22
+    reply_count: 0
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 7544
+  mentions: []
+- post_id: '2043837849389412761'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T08:44:50+09:00'
+  created_at_jst: '2026-04-14T08:44:50'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043837849389412761
+  text: 何とか海峡とかｗｗｗ🍵ﾊﾗｲﾃｽｷﾞﾙｗｗｗ
+  metrics:
+    like_count: 35
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3450
+  mentions: []
+- post_id: '2043838811990569016'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T08:48:40+09:00'
+  created_at_jst: '2026-04-14T08:48:40'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043838811990569016
+  text: '良書を読むための条件は、悪書を読まぬことである。
+
+
+    Arthur Schopenhauer'
+  metrics:
+    like_count: 39
+    reply_count: 0
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 7507
+  mentions: []
+- post_id: '2043839075522883959'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T08:49:42+09:00'
+  created_at_jst: '2026-04-14T08:49:42'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043839075522883959
+  text: '投資で成功するための条件は、馬鹿の話を聞かぬことである。
+
+
+    kks🍵ﾋﾏﾀﾞﾛｗ https://t.co/IIalz7arhr'
+  metrics:
+    like_count: 48
+    reply_count: 0
+    quote_count: 1
+    repost_count: 3
+    bookmark_count: 3
+    impression_count: 10334
+  mentions: []
+- post_id: '2043839881034772745'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T08:52:55+09:00'
+  created_at_jst: '2026-04-14T08:52:55'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043839881034772745
+  text: '読書は、自分自身の頭ではなく、他人の頭で考えることである。
+
+
+    Arthur Schopenhauer'
+  metrics:
+    like_count: 30
+    reply_count: 0
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 7091
+  mentions: []
+- post_id: '2043840287978729918'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T08:54:32+09:00'
+  created_at_jst: '2026-04-14T08:54:32'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043840287978729918
+  text: '情報は、自分自身の利益ではなく、他人の利益のために流れてくる。
+
+
+    kks🍵ﾋﾏﾃﾞｼｮｗ https://t.co/E1zzxovdHo'
+  metrics:
+    like_count: 32
+    reply_count: 0
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 2
+    impression_count: 4779
+  mentions: []
+- post_id: '2043841190274183346'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T08:58:07+09:00'
+  created_at_jst: '2026-04-14T08:58:07'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043841190274183346
+  text: '天才は平均的な知性よりは、むしろ狂気に近い。
+
+
+    Arthur Schopenhauer'
+  metrics:
+    like_count: 26
+    reply_count: 0
+    quote_count: 1
+    repost_count: 1
+    bookmark_count: 3
+    impression_count: 6898
+  mentions: []
+- post_id: '2043841613911470469'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T08:59:48+09:00'
+  created_at_jst: '2026-04-14T08:59:48'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043841613911470469
+  text: '大相場は平均的な相場よりは、むしろ狂気に近い。
+
+
+    kks🍵ｿﾚﾊｿｳｗ https://t.co/AqvHsKgXwf'
+  metrics:
+    like_count: 32
+    reply_count: 0
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 2
+    impression_count: 4755
+  mentions: []
+- post_id: '2043843111890366742'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:05:45+09:00'
+  created_at_jst: '2026-04-14T09:05:45'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043843111890366742
+  text: はやくこうたほうがいいとおもいますが https://t.co/Q4WVJftBeO
+  metrics:
+    like_count: 24
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4939
+  mentions: []
+- post_id: '2043843175304102142'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:06:00+09:00'
+  created_at_jst: '2026-04-14T09:06:00'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043843175304102142
+  text: ３８３億 https://t.co/XcxQIEvfho
+  metrics:
+    like_count: 20
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5220
+  mentions: []
+- post_id: '2043843232531132726'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:06:14+09:00'
+  created_at_jst: '2026-04-14T09:06:14'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043843232531132726
+  text: 'なんどもいわないからね
+
+    もう https://t.co/H3KULxeTdm'
+  metrics:
+    like_count: 23
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 4590
+  mentions: []
+- post_id: '2043843574501126294'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:07:35+09:00'
+  created_at_jst: '2026-04-14T09:07:35'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043843574501126294
+  text: 'まだまだアホみたいにやすい
+
+    下手すりゃここから倍々も想定内 https://t.co/1WLdaRLU3m'
+  metrics:
+    like_count: 39
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 4
+    impression_count: 6550
+  mentions: []
+- post_id: '2043843631732478218'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:07:49+09:00'
+  created_at_jst: '2026-04-14T09:07:49'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043843631732478218
+  text: 光 https://t.co/cN6RGX2rVX
+  metrics:
+    like_count: 22
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4614
+  mentions: []
+- post_id: '2043843797747151354'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:08:28+09:00'
+  created_at_jst: '2026-04-14T09:08:28'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043843797747151354
+  text: ５桁㊗ https://t.co/hZp7q1DmmF
+  metrics:
+    like_count: 19
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4659
+  mentions: []
+- post_id: '2043843853657223504'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:08:42+09:00'
+  created_at_jst: '2026-04-14T09:08:42'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043843853657223504
+  text: '８４８億
+
+
+    光 https://t.co/iFF1Kp8gPE'
+  metrics:
+    like_count: 19
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5165
+  mentions: []
+- post_id: '2043843950851830101'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:09:05+09:00'
+  created_at_jst: '2026-04-14T09:09:05'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043843950851830101
+  text: 'はい
+
+    いきました
+
+    ありがとうございます
+
+    ガチもちしてます https://t.co/DLW6f5LVu3'
+  metrics:
+    like_count: 23
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5058
+  mentions: []
+- post_id: '2043844023077744680'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:09:22+09:00'
+  created_at_jst: '2026-04-14T09:09:22'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043844023077744680
+  text: '何回もいわないからね
+
+    もうね https://t.co/qe4MDzMUV5'
+  metrics:
+    like_count: 21
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 5096
+  mentions: []
+- post_id: '2043844172386632137'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:09:58+09:00'
+  created_at_jst: '2026-04-14T09:09:58'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043844172386632137
+  text: '日本電波工業くん
+
+    世界大手ですよ
+
+    ここガチやぞこれ'
+  metrics:
+    like_count: 42
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 6
+    impression_count: 3412
+  mentions:
+  - sc: '6779'
+    company_name: ??????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????.
+- post_id: '2043844383980826968'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:10:48+09:00'
+  created_at_jst: '2026-04-14T09:10:48'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043844383980826968
+  text: 'エンプラスのびのび
+
+
+    光'
+  metrics:
+    like_count: 18
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 2931
+  mentions:
+  - sc: '6961'
+    company_name: ?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+- post_id: '2043844578265247994'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:11:34+09:00'
+  created_at_jst: '2026-04-14T09:11:34'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043844578265247994
+  text: 'オプトランぐいぐい連騰
+
+
+    光'
+  metrics:
+    like_count: 20
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2999
+  mentions:
+  - sc: '6235'
+    company_name: ?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+- post_id: '2043844768850161913'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:12:20+09:00'
+  created_at_jst: '2026-04-14T09:12:20'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043844768850161913
+  text: クエストくん押し目拾い
+  metrics:
+    like_count: 14
+    reply_count: 0
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 8521
+  mentions:
+  - sc: '2332'
+    company_name: ????
+    match_confidence: medium
+    extraction_rationale: Tweet says '????', which most likely refers to ???? (2332).
+- post_id: '2043845075713822813'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:13:33+09:00'
+  created_at_jst: '2026-04-14T09:13:33'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043845075713822813
+  text: 'クエストくん初押しの足
+
+
+    キオクシア'
+  metrics:
+    like_count: 20
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 3093
+  mentions:
+  - sc: '2332'
+    company_name: ????
+    match_confidence: medium
+    extraction_rationale: Tweet says '????', which most likely refers to ???? (2332).
+  - sc: 285A
+    company_name: ?????????????
+    match_confidence: medium
+    extraction_rationale: Tweet also explicitly mentions ?????.
+- post_id: '2043845146400399802'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:13:50+09:00'
+  created_at_jst: '2026-04-14T09:13:50'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043845146400399802
+  text: クエストぶっとびそう
+  metrics:
+    like_count: 17
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2892
+  mentions:
+  - sc: '2332'
+    company_name: ????
+    match_confidence: medium
+    extraction_rationale: Tweet says '????', which most likely refers to ???? (2332).
+- post_id: '2043845524315615352'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:15:20+09:00'
+  created_at_jst: '2026-04-14T09:15:20'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043845524315615352
+  text: テラ泥連＠
+  metrics:
+    like_count: 15
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 2869
+  mentions: []
+- post_id: '2043845861466354108'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:16:40+09:00'
+  created_at_jst: '2026-04-14T09:16:40'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043845861466354108
+  text: 'テラ泥はネタが馬鹿でかいので
+
+    ５桁いくかもね'
+  metrics:
+    like_count: 18
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 2897
+  mentions: []
+- post_id: '2043845954244342127'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:17:02+09:00'
+  created_at_jst: '2026-04-14T09:17:02'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043845954244342127
+  text: 時価総額６００億だと安いイメージへと変わりました
+  metrics:
+    like_count: 19
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2899
+  mentions: []
+- post_id: '2043846225863331880'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:18:07+09:00'
+  created_at_jst: '2026-04-14T09:18:07'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043846225863331880
+  text: 'クエスト
+
+    アホみたいにやすいな'
+  metrics:
+    like_count: 15
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 2819
+  mentions:
+  - sc: '2332'
+    company_name: ????
+    match_confidence: medium
+    extraction_rationale: Tweet explicitly says '????', which most likely refers to ???? (2332).
+- post_id: '2043846393836831096'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:18:47+09:00'
+  created_at_jst: '2026-04-14T09:18:47'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043846393836831096
+  text: 'はいもうすぐ
+
+
+    光 https://t.co/mLXO9wmn0U'
+  metrics:
+    like_count: 25
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 4766
+  mentions: []
+- post_id: '2043846446705979575'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:19:00+09:00'
+  created_at_jst: '2026-04-14T09:19:00'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043846446705979575
+  text: 'いらんの
+
+
+    あそ https://t.co/fWbcfGqW5X'
+  metrics:
+    like_count: 23
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 4
+    impression_count: 6222
+  mentions: []
+- post_id: '2043846492465824037'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:19:11+09:00'
+  created_at_jst: '2026-04-14T09:19:11'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043846492465824037
+  text: 'いらんの
+
+
+    そかそか https://t.co/qiMNjzxwaI'
+  metrics:
+    like_count: 20
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 4752
+  mentions: []
+- post_id: '2043846680425181361'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:19:56+09:00'
+  created_at_jst: '2026-04-14T09:19:56'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043846680425181361
+  text: 'いらないんだったら
+
+
+    それは
+
+
+    しゃーないですねえ https://t.co/GNbWl9Ioy4'
+  metrics:
+    like_count: 22
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 6064
+  mentions: []
+- post_id: '2043846829738209492'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:20:31+09:00'
+  created_at_jst: '2026-04-14T09:20:31'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043846829738209492
+  text: KOKUSAIくん５桁射程🔥🚀🌕
+  metrics:
+    like_count: 43
+    reply_count: 0
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3060
+  mentions:
+  - sc: '6525'
+    company_name: KOKUSAI_ELECTRIC
+    match_confidence: high
+    extraction_rationale: Tweet explicitly says 'KOKUSAI', matching KOKUSAI_ELECTRIC (6525).
+- post_id: '2043848010770329900'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:25:13+09:00'
+  created_at_jst: '2026-04-14T09:25:13'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043848010770329900
+  text: 'あーあー
+
+
+    レーザーテックくんも
+
+    東京応化工業さんも
+
+    イビデンさんも'
+  metrics:
+    like_count: 23
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3351
+  mentions:
+  - sc: '6920'
+    company_name: ???????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???????.
+  - sc: '4186'
+    company_name: ??????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????.
+  - sc: '4062'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+- post_id: '2043848108032045164'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:25:36+09:00'
+  created_at_jst: '2026-04-14T09:25:36'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043848108032045164
+  text: 'エレクトロン
+
+    アド版
+
+    ディスコさん
+
+
+    ぐんぐん💖'
+  metrics:
+    like_count: 18
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3037
+  mentions:
+  - sc: '8035'
+    company_name: ????????
+    match_confidence: medium
+    extraction_rationale: Tweet says '??????', referring to ???????? (8035).
+  - sc: '6857'
+    company_name: ???????
+    match_confidence: medium
+    extraction_rationale: Tweet says '???', referring to ??????? (6857).
+  - sc: '6146'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+- post_id: '2043848430766928298'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:26:53+09:00'
+  created_at_jst: '2026-04-14T09:26:53'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043848430766928298
+  text: 光最強時代へ https://t.co/d8XZCxrM9I
+  metrics:
+    like_count: 32
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 5438
+  mentions: []
+- post_id: '2043848478280036859'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:27:04+09:00'
+  created_at_jst: '2026-04-14T09:27:04'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043848478280036859
+  text: どしたの？ https://t.co/0FZOWnudMd
+  metrics:
+    like_count: 23
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 5295
+  mentions: []
+- post_id: '2043848773269680441'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:28:15+09:00'
+  created_at_jst: '2026-04-14T09:28:15'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043848773269680441
+  text: ねとけいうとるじゃろ https://t.co/vcamVkEa6O
+  metrics:
+    like_count: 34
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4991
+  mentions: []
+- post_id: '2043848855972917705'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:28:34+09:00'
+  created_at_jst: '2026-04-14T09:28:34'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043848855972917705
+  text: 雑魚相手になんないんだからさ https://t.co/xp0FXiP3ng
+  metrics:
+    like_count: 27
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4957
+  mentions: []
+- post_id: '2043848900558426522'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:28:45+09:00'
+  created_at_jst: '2026-04-14T09:28:45'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043848900558426522
+  text: '寝るんだよ
+
+    寝るの https://t.co/NnyJ6ggx9Z'
+  metrics:
+    like_count: 32
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4873
+  mentions: []
+- post_id: '2043848963443568692'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:29:00+09:00'
+  created_at_jst: '2026-04-14T09:29:00'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043848963443568692
+  text: まだ７３００ちょい https://t.co/y8RAcisBzQ
+  metrics:
+    like_count: 25
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5127
+  mentions: []
+- post_id: '2043849012403720560'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:29:12+09:00'
+  created_at_jst: '2026-04-14T09:29:12'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043849012403720560
+  text: 馬鹿おおいね https://t.co/7TkH7QqNVB
+  metrics:
+    like_count: 31
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 7052
+  mentions: []
+- post_id: '2043849113016643632'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:29:36+09:00'
+  created_at_jst: '2026-04-14T09:29:36'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043849113016643632
+  text: 日東紡からの富士紡HD https://t.co/qJwzDKqJpw
+  metrics:
+    like_count: 28
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 4
+    impression_count: 6934
+  mentions: []
+- post_id: '2043849231329570897'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:30:04+09:00'
+  created_at_jst: '2026-04-14T09:30:04'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043849231329570897
+  text: 'はい
+
+
+    青天井㊗ https://t.co/STikns8LSZ'
+  metrics:
+    like_count: 36
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 6116
+  mentions: []
+- post_id: '2043849389551313156'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:30:42+09:00'
+  created_at_jst: '2026-04-14T09:30:42'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043849389551313156
+  text: ソフバンＧは３８００台だけは買っておきました🍵ﾃﾞｽﾈｴｗ
+  metrics:
+    like_count: 23
+    reply_count: 0
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3757
+  mentions: []
+- post_id: '2043849792716189943'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:32:18+09:00'
+  created_at_jst: '2026-04-14T09:32:18'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043849792716189943
+  text: 前場で売り切れかな https://t.co/mSMcGAC5IN
+  metrics:
+    like_count: 16
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 5853
+  mentions: []
+- post_id: '2043849889055158493'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:32:41+09:00'
+  created_at_jst: '2026-04-14T09:32:41'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043849889055158493
+  text: １１４億しかないぞ
+  metrics:
+    like_count: 17
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3405
+  mentions: []
+- post_id: '2043849949574771108'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:32:55+09:00'
+  created_at_jst: '2026-04-14T09:32:55'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043849949574771108
+  text: はりつくじゃろ
+  metrics:
+    like_count: 15
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3365
+  mentions: []
+- post_id: '2043850241062121986'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:34:05+09:00'
+  created_at_jst: '2026-04-14T09:34:05'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043850241062121986
+  text: マルマエくん２０００㊗
+  metrics:
+    like_count: 18
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3331
+  mentions:
+  - sc: '6264'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+- post_id: '2043850535347052968'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:35:15+09:00'
+  created_at_jst: '2026-04-14T09:35:15'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043850535347052968
+  text: 'イメージ通りです
+
+    普通に https://t.co/5wvSn7OhvR'
+  metrics:
+    like_count: 42
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 5
+    impression_count: 9453
+  mentions: []
+- post_id: '2043850699327582398'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:35:54+09:00'
+  created_at_jst: '2026-04-14T09:35:54'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043850699327582398
+  text: 'サンディスクさんがここから倍化すると
+
+    キオクシアさんは６００００オーバーになるとおもいますよ
+
+    売るのはアホだけ
+
+    俺は満タン
+
+    うけるＷＷＷ'
+  metrics:
+    like_count: 92
+    reply_count: 0
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 6
+    impression_count: 6000
+  mentions:
+  - sc: 285A
+    company_name: ?????????????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+- post_id: '2043850869226328105'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:36:34+09:00'
+  created_at_jst: '2026-04-14T09:36:34'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043850869226328105
+  text: 'そして
+
+    KOKUSAIくんは５桁になります
+
+    まず間違いなくなる'
+  metrics:
+    like_count: 101
+    reply_count: 0
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 7
+    impression_count: 5774
+  mentions:
+  - sc: '6525'
+    company_name: KOKUSAI_ELECTRIC
+    match_confidence: high
+    extraction_rationale: Tweet explicitly says 'KOKUSAI', matching KOKUSAI_ELECTRIC (6525).
+- post_id: '2043851101418754118'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:37:30+09:00'
+  created_at_jst: '2026-04-14T09:37:30'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043851101418754118
+  text: ソフトテックスくんＳ㊗ｵｲｼｲｗ
+  metrics:
+    like_count: 16
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 3725
+  mentions: []
+- post_id: '2043851566940336145'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:39:21+09:00'
+  created_at_jst: '2026-04-14T09:39:21'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043851566940336145
+  text: '売らなきゃいいだけなのに
+
+    アホだねえ
+
+    まったく
+
+    人間というやつは🍵ﾄｵﾒ'
+  metrics:
+    like_count: 35
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3733
+  mentions: []
+- post_id: '2043851764517224567'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:40:08+09:00'
+  created_at_jst: '2026-04-14T09:40:08'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043851764517224567
+  text: 'サンコールくん連騰
+
+
+    光'
+  metrics:
+    like_count: 21
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 3643
+  mentions:
+  - sc: '5985'
+    company_name: ?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+- post_id: '2043851926752923902'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:40:46+09:00'
+  created_at_jst: '2026-04-14T09:40:46'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043851926752923902
+  text: '日本電波工業くん５０００くらいいくんじゃないの
+
+    只みたいに安い
+
+    初動でしかない'
+  metrics:
+    like_count: 37
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 5
+    impression_count: 3944
+  mentions:
+  - sc: '6779'
+    company_name: ??????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????.
+- post_id: '2043852091459023011'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:41:26+09:00'
+  created_at_jst: '2026-04-14T09:41:26'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043852091459023011
+  text: ５０００に上方修正しました🍵ﾃﾞｽﾖﾈｽｷﾞﾙｗｗｗ https://t.co/H3KULxeTdm
+  metrics:
+    like_count: 36
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 7
+    impression_count: 6452
+  mentions: []
+- post_id: '2043852290613002346'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:42:13+09:00'
+  created_at_jst: '2026-04-14T09:42:13'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043852290613002346
+  text: ノンポジってなにしてんのこれｗ🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ
+  metrics:
+    like_count: 30
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3835
+  mentions: []
+- post_id: '2043852925685096588'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:44:45+09:00'
+  created_at_jst: '2026-04-14T09:44:45'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043852925685096588
+  text: 'この局面でノンポジはまじめにヤバいとおもいますが
+
+    究極の馬鹿だな
+
+    究極の馬鹿🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 33
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4060
+  mentions: []
+- post_id: '2043854321956335904'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:50:17+09:00'
+  created_at_jst: '2026-04-14T09:50:17'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043854321956335904
+  text: 'ソフバンG
+
+    トレテンサインではじめてんね'
+  metrics:
+    like_count: 34
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 3629
+  mentions: []
+- post_id: '2043854572192707050'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:51:17+09:00'
+  created_at_jst: '2026-04-14T09:51:17'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043854572192707050
+  text: 'これで
+
+    ソフバンGが伸びて５桁方向とかになってくると
+
+    いろいろと話変わってくるな
+
+    加速する'
+  metrics:
+    like_count: 52
+    reply_count: 0
+    quote_count: 1
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 4956
+  mentions: []
+- post_id: '2043855336998875173'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:54:19+09:00'
+  created_at_jst: '2026-04-14T09:54:19'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043855336998875173
+  text: '日本電波工業
+
+
+    ＡＩＤＣ向け光トランシーバー用水晶で世界首位
+
+
+    水晶振動子や水晶機器などで高技術力を有し、世界トップシェアを誇るグローバル・ニッチトップ企業。'
+  metrics:
+    like_count: 78
+    reply_count: 0
+    quote_count: 1
+    repost_count: 7
+    bookmark_count: 23
+    impression_count: 6499
+  mentions:
+  - sc: '6779'
+    company_name: ??????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????.
+- post_id: '2043855555996069923'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:55:12+09:00'
+  created_at_jst: '2026-04-14T09:55:12'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043855555996069923
+  text: '安売りしたアホは何もしらないようです
+
+    乙です🍵ﾃﾞｽﾖﾈｽｷﾞﾙｗｗｗ https://t.co/XcxQIEvfho'
+  metrics:
+    like_count: 40
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 5
+    impression_count: 7455
+  mentions: []
+- post_id: '2043855992711197017'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:56:56+09:00'
+  created_at_jst: '2026-04-14T09:56:56'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043855992711197017
+  text: '【種まき】光部品はＡＩデータセンター向けの次世代高速通信方式『光電融合』向けの関連部品開発。
+
+
+    エンプラス'
+  metrics:
+    like_count: 35
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 6
+    impression_count: 4217
+  mentions:
+  - sc: '6961'
+    company_name: ?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+- post_id: '2043856127625142474'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:57:28+09:00'
+  created_at_jst: '2026-04-14T09:57:28'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043856127625142474
+  text: 光はたくさんあるよ https://t.co/4GPc0wC59x
+  metrics:
+    like_count: 74
+    reply_count: 0
+    quote_count: 2
+    repost_count: 1
+    bookmark_count: 33
+    impression_count: 15127
+  mentions: []
+- post_id: '2043856541217099782'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T09:59:07+09:00'
+  created_at_jst: '2026-04-14T09:59:07'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043856541217099782
+  text: ここ唯一無二だから https://t.co/Lsmspj37R8
+  metrics:
+    like_count: 28
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 7
+    impression_count: 7144
+  mentions: []
+- post_id: '2043857107875966995'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:01:22+09:00'
+  created_at_jst: '2026-04-14T10:01:22'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043857107875966995
+  text: ｓ㊗ https://t.co/wvDY5QnxV7
+  metrics:
+    like_count: 28
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 4415
+  mentions: []
+- post_id: '2043857675382075882'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:03:37+09:00'
+  created_at_jst: '2026-04-14T10:03:37'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043857675382075882
+  text: '【好需要】シリコンより発光効率が高い化合物半導体を用いた光電融合デバイス向けがデータセンター需要増で伸びしろ。ＭＥＭＳ（微小電気機械システム）関連に注力。
+
+
+    サムコ'
+  metrics:
+    like_count: 29
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 4
+    impression_count: 4554
+  mentions:
+  - sc: '6387'
+    company_name: ???
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???.
+- post_id: '2043857814058348941'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:04:10+09:00'
+  created_at_jst: '2026-04-14T10:04:10'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043857814058348941
+  text: サムコ→アドプラのラインも
+  metrics:
+    like_count: 20
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 4117
+  mentions:
+  - sc: '6668'
+    company_name: ????? ???? ??????
+    match_confidence: medium
+    extraction_rationale: Tweet says '????', referring to ????? ???? ?????? (6668).
+- post_id: '2043858152920363360'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:05:31+09:00'
+  created_at_jst: '2026-04-14T10:05:31'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043858152920363360
+  text: '流れがあるので
+
+    いちおう https://t.co/oGGRGeIfD3'
+  metrics:
+    like_count: 27
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 4
+    impression_count: 7764
+  mentions: []
+- post_id: '2043858531607302357'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:07:01+09:00'
+  created_at_jst: '2026-04-14T10:07:01'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043858531607302357
+  text: 'KOKUSAIくん商い１５位
+
+    まだまだですねえ
+
+    これが５位以内に入って来たら
+
+    ５桁だな'
+  metrics:
+    like_count: 55
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 6
+    impression_count: 4560
+  mentions:
+  - sc: '6525'
+    company_name: KOKUSAI_ELECTRIC
+    match_confidence: high
+    extraction_rationale: Tweet explicitly says 'KOKUSAI', matching KOKUSAI_ELECTRIC (6525).
+- post_id: '2043859216138744297'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:09:44+09:00'
+  created_at_jst: '2026-04-14T10:09:44'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043859216138744297
+  text: '光トランシーバーはガチなので
+
+    日本電波工業くんとオプトランくんも良い'
+  metrics:
+    like_count: 50
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 10
+    impression_count: 5388
+  mentions:
+  - sc: '6779'
+    company_name: ??????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????.
+  - sc: '6235'
+    company_name: ?????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+- post_id: '2043860230031978535'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:13:46+09:00'
+  created_at_jst: '2026-04-14T10:13:46'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043860230031978535
+  text: ⚾観てるだけでオキャネ増える時代🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ
+  metrics:
+    like_count: 40
+    reply_count: 1
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4467
+  mentions: []
+- post_id: '2043860697931755935'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:15:38+09:00'
+  created_at_jst: '2026-04-14T10:15:38'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043860697931755935
+  text: 'おい
+
+    そこの雑魚
+
+    ノンポジたのしいか
+
+    よかったな🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 45
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 4464
+  mentions: []
+- post_id: '2043860841028788656'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:16:12+09:00'
+  created_at_jst: '2026-04-14T10:16:12'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043860841028788656
+  text: '雑魚は雑魚らしくしとけ
+
+    雑魚なんだから
+
+    しょうがない🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 34
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4448
+  mentions: []
+- post_id: '2043860975007453273'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:16:44+09:00'
+  created_at_jst: '2026-04-14T10:16:44'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043860975007453273
+  text: 'おいちゃんはもう
+
+    オキャネがふえすぎてしまい
+
+    あたまがおかしくなてきました
+
+    もともとおかしいが🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 78
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 4736
+  mentions: []
+- post_id: '2043862343864725988'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:22:10+09:00'
+  created_at_jst: '2026-04-14T10:22:10'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043862343864725988
+  text: リガクくん大節目戦ですねえ
+  metrics:
+    like_count: 48
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 4860
+  mentions:
+  - sc: 268A
+    company_name: ????????????
+    match_confidence: high
+    extraction_rationale: Tweet uses ?????, referring to ????????????.
+- post_id: '2043865130761646311'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:33:15+09:00'
+  created_at_jst: '2026-04-14T10:33:15'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043865130761646311
+  text: JX金属さん青天井㊗
+  metrics:
+    like_count: 44
+    reply_count: 0
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 0
+    impression_count: 4057
+  mentions:
+  - sc: '5016'
+    company_name: JX??
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names JX??.
+- post_id: '2043865386404446330'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:34:15+09:00'
+  created_at_jst: '2026-04-14T10:34:15'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043865386404446330
+  text: 'さて
+
+    そろそろsantecくんも青天井再開'
+  metrics:
+    like_count: 38
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 4267
+  mentions:
+  - sc: '6777'
+    company_name: santec_Holdings
+    match_confidence: high
+    extraction_rationale: Tweet explicitly says 'santec', matching santec_Holdings (6777).
+- post_id: '2043866979627631086'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:40:35+09:00'
+  created_at_jst: '2026-04-14T10:40:35'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043866979627631086
+  text: '三井金属さんも
+
+    レゾナックさんも
+
+    もうすぐ青天井再開💖'
+  metrics:
+    like_count: 52
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 2
+    impression_count: 4336
+  mentions:
+  - sc: '5706'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+  - sc: '4004'
+    company_name: ??????????????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+- post_id: '2043868062252970287'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:44:53+09:00'
+  created_at_jst: '2026-04-14T10:44:53'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043868062252970287
+  text: '🚨ソフバンG🚨
+
+
+    🚨トレテンサイン点灯中🚨'
+  metrics:
+    like_count: 41
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 4148
+  mentions: []
+- post_id: '2043868789058744605'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:47:47+09:00'
+  created_at_jst: '2026-04-14T10:47:47'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043868789058744605
+  text: 😂😂😂 https://t.co/2Qb5z7wLPu
+  metrics:
+    like_count: 18
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 6864
+  mentions: []
+- post_id: '2043869050963669084'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:48:49+09:00'
+  created_at_jst: '2026-04-14T10:48:49'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043869050963669084
+  text: '馬鹿が損するのみてらんないから
+
+    かわいちょうだから教えてあげてんのに
+
+    馬鹿はそれでもわからないので
+
+    しょうがないです🍵ﾏｼﾞｿﾚｗ'
+  metrics:
+    like_count: 84
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 5883
+  mentions: []
+- post_id: '2043870338262675900'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T10:53:56+09:00'
+  created_at_jst: '2026-04-14T10:53:56'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043870338262675900
+  text: 'セレンディップくんなら持ってますよ
+
+    口にするとカカツくるから言わないだけです🍵ﾏｼﾞｿﾚｗｗｗ'
+  metrics:
+    like_count: 22
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 4068
+  mentions: []
+- post_id: '2043872092169683155'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:00:54+09:00'
+  created_at_jst: '2026-04-14T11:00:54'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043872092169683155
+  text: ノンポジマンはアルバイト中か🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ
+  metrics:
+    like_count: 26
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 3841
+  mentions: []
+- post_id: '2043873997075689900'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:08:28+09:00'
+  created_at_jst: '2026-04-14T11:08:28'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043873997075689900
+  text: 全部光になる時代がやってくるから
+  metrics:
+    like_count: 30
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 3
+    impression_count: 3482
+  mentions: []
+- post_id: '2043874058966892581'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:08:43+09:00'
+  created_at_jst: '2026-04-14T11:08:43'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043874058966892581
+  text: 光の株式を保有しておけばよいだけです
+  metrics:
+    like_count: 46
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 3581
+  mentions: []
+- post_id: '2043874647981338891'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:11:04+09:00'
+  created_at_jst: '2026-04-14T11:11:04'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043874647981338891
+  text: 'キオクシアさんの売りぶーしゃんは
+
+    ６００００超えたらロスカするのかな🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 32
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3655
+  mentions:
+  - sc: 285A
+    company_name: ?????????????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+- post_id: '2043875046746403091'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:12:39+09:00'
+  created_at_jst: '2026-04-14T11:12:39'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043875046746403091
+  text: 🍵 https://t.co/bDrUutIAep
+  metrics:
+    like_count: 21
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5662
+  mentions: []
+- post_id: '2043875104539726050'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:12:52+09:00'
+  created_at_jst: '2026-04-14T11:12:52'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043875104539726050
+  text: 🍵 https://t.co/kJdtTTuxPS
+  metrics:
+    like_count: 30
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5862
+  mentions: []
+- post_id: '2043875397906173972'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:14:02+09:00'
+  created_at_jst: '2026-04-14T11:14:02'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043875397906173972
+  text: 'まだまだ修行が足りないパダワンくんが多いようです
+
+    俺みたいになるにはあと３０年はかかりそうですね
+
+    がんばってくださいね🍵ﾀﾞﾅｗ'
+  metrics:
+    like_count: 40
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 4046
+  mentions: []
+- post_id: '2043876314156069157'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:17:41+09:00'
+  created_at_jst: '2026-04-14T11:17:41'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043876314156069157
+  text: 'ソフバンGトレテンサイン出たので
+
+    けっこう吊り上げてきそうだな'
+  metrics:
+    like_count: 38
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 3703
+  mentions: []
+- post_id: '2043878274489823503'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:25:28+09:00'
+  created_at_jst: '2026-04-14T11:25:28'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043878274489823503
+  text: 'ノンポジってなにしてんの？
+
+
+    キオクシアがどんな会社なのか
+
+    今頃調べたりしてんの？
+
+    ねえ？
+
+    なにしてんの？🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 79
+    reply_count: 0
+    quote_count: 1
+    repost_count: 4
+    bookmark_count: 0
+    impression_count: 4077
+  mentions:
+  - sc: 285A
+    company_name: ?????????????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ?????.
+- post_id: '2043879874033844307'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:31:50+09:00'
+  created_at_jst: '2026-04-14T11:31:50'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043879874033844307
+  text: 'なんだ
+
+    ただのバボーか
+
+    俺が🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 42
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3447
+  mentions: []
+- post_id: '2043880427883233451'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:34:02+09:00'
+  created_at_jst: '2026-04-14T11:34:02'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043880427883233451
+  text: '投資で成功するための条件は、馬鹿の話を聞かぬことである。
+
+
+    一生暗記🍵ｼﾝﾘｽｷﾞﾙｗｗｗ https://t.co/3LJHXln5wZ'
+  metrics:
+    like_count: 52
+    reply_count: 0
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 2
+    impression_count: 5204
+  mentions: []
+- post_id: '2043881249350267132'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:37:17+09:00'
+  created_at_jst: '2026-04-14T11:37:17'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043881249350267132
+  text: '馬鹿はすぐにいなくなります
+
+    馬鹿を信じないことが最も重要です
+
+    相場では🍵ﾃﾞｽﾈｴｗ https://t.co/GLjvogZKiT'
+  metrics:
+    like_count: 32
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5328
+  mentions: []
+- post_id: '2043881405458067836'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:37:55+09:00'
+  created_at_jst: '2026-04-14T11:37:55'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043881405458067836
+  text: '馬鹿に未来はみえておりません
+
+    馬鹿だから🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ https://t.co/qoIcgglFFF'
+  metrics:
+    like_count: 20
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 5367
+  mentions: []
+- post_id: '2043881501641859090'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:38:18+09:00'
+  created_at_jst: '2026-04-14T11:38:18'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043881501641859090
+  text: 'ほんとうに
+
+    どうしようもない
+
+    馬鹿は🍵ﾃﾞｽﾈｴｗ https://t.co/1sE6oriF1Y'
+  metrics:
+    like_count: 25
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 5556
+  mentions: []
+- post_id: '2043881707435335990'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:39:07+09:00'
+  created_at_jst: '2026-04-14T11:39:07'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043881707435335990
+  text: '馬鹿は基本老害です
+
+    若い子にはあまりおりません
+
+    基本的に老害が馬鹿です https://t.co/ZLabGgdf9C'
+  metrics:
+    like_count: 44
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 2
+    impression_count: 6160
+  mentions: []
+- post_id: '2043882681541533788'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:42:59+09:00'
+  created_at_jst: '2026-04-14T11:42:59'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043882681541533788
+  text: ほんとうに https://t.co/c1MfFhFsSW
+  metrics:
+    like_count: 21
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4896
+  mentions: []
+- post_id: '2043882740274381232'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:43:13+09:00'
+  created_at_jst: '2026-04-14T11:43:13'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043882740274381232
+  text: 'どうしようもない
+
+    馬鹿は https://t.co/ObKo5tAg9t'
+  metrics:
+    like_count: 22
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 5103
+  mentions: []
+- post_id: '2043882956411023630'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:44:04+09:00'
+  created_at_jst: '2026-04-14T11:44:04'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043882956411023630
+  text: '頭が悪い馬鹿でも大学は入れたらしい
+
+    馬鹿でも入れる
+
+    大学ごとき https://t.co/INE2ngMcz3'
+  metrics:
+    like_count: 21
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5220
+  mentions: []
+- post_id: '2043883058399752655'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:44:29+09:00'
+  created_at_jst: '2026-04-14T11:44:29'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043883058399752655
+  text: '馬鹿を信じている馬鹿はさらに底辺の馬鹿なので
+
+    論外以下 https://t.co/BpoqfcBzN6'
+  metrics:
+    like_count: 25
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5183
+  mentions: []
+- post_id: '2043884075547865310'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:48:31+09:00'
+  created_at_jst: '2026-04-14T11:48:31'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043884075547865310
+  text: '馬鹿の特徴
+
+
+    ・間違いを認める柔軟性が欠如している
+
+
+    つまり老害 https://t.co/r3GHnWGm67'
+  metrics:
+    like_count: 68
+    reply_count: 0
+    quote_count: 1
+    repost_count: 5
+    bookmark_count: 2
+    impression_count: 10756
+  mentions: []
+- post_id: '2043884290921132343'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:49:23+09:00'
+  created_at_jst: '2026-04-14T11:49:23'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043884290921132343
+  text: 'デフレ乞食脳のおっさんどもは
+
+    あたまが固く 思考に柔軟性がないので
+
+    一度口にしたことを修正する能力が全くない https://t.co/XOpRVrZbW5'
+  metrics:
+    like_count: 30
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 5185
+  mentions: []
+- post_id: '2043884421892440317'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:49:54+09:00'
+  created_at_jst: '2026-04-14T11:49:54'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043884421892440317
+  text: 無限の柔軟性があるから賢くなれる https://t.co/eLReVDtMAF
+  metrics:
+    like_count: 31
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 5080
+  mentions: []
+- post_id: '2043884529044365528'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:50:19+09:00'
+  created_at_jst: '2026-04-14T11:50:19'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043884529044365528
+  text: '気が変わったら論理は変化し
+
+    知識はアップデーツされる
+
+    時代だって変わる https://t.co/ee2DYvuL7b'
+  metrics:
+    like_count: 35
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 4
+    impression_count: 5189
+  mentions: []
+- post_id: '2043884581565411535'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:50:32+09:00'
+  created_at_jst: '2026-04-14T11:50:32'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043884581565411535
+  text: 縛られない柔軟性を持っていることが重要 https://t.co/E5W2kPJSYH
+  metrics:
+    like_count: 31
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 5551
+  mentions: []
+- post_id: '2043884763463987229'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:51:15+09:00'
+  created_at_jst: '2026-04-14T11:51:15'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043884763463987229
+  text: ２年経過 https://t.co/9iHiJoCaoc
+  metrics:
+    like_count: 36
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 6319
+  mentions: []
+- post_id: '2043885034227237013'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T11:52:20+09:00'
+  created_at_jst: '2026-04-14T11:52:20'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043885034227237013
+  text: 信じ込んで疑わず柔軟性が失われる https://t.co/teCiPFqbLx
+  metrics:
+    like_count: 38
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 6561
+  mentions: []
+- post_id: '2043887979459162310'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T12:04:02+09:00'
+  created_at_jst: '2026-04-14T12:04:02'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043887979459162310
+  text: パヘズくんちゅげえなｗ🔥🚀⚾
+  metrics:
+    like_count: 19
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3333
+  mentions: []
+- post_id: '2043888885558850014'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T12:07:38+09:00'
+  created_at_jst: '2026-04-14T12:07:38'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043888885558850014
+  text: '信じられます？
+
+    つい４年ほど前までは
+
+    わたくしをフォローしておるトレーダーのほとんどは
+
+    プライム大型なんて全く呟いておりませんでしたよ
+
+    ほぼ全員小型ばかり呟いていました
+
+    重工？
+
+    なんでですか？ｗ
+
+    みたいな世界でしたここ
+
+    いやほんとにｗ🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 125
+    reply_count: 0
+    quote_count: 3
+    repost_count: 3
+    bookmark_count: 4
+    impression_count: 5908
+  mentions: []
+- post_id: '2043889319702868329'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T12:09:22+09:00'
+  created_at_jst: '2026-04-14T12:09:22'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043889319702868329
+  text: 'え？ｗ
+
+    総合商社にメガバン？ｗｗｗ
+
+    なんであんたが？ｗ
+
+    みたいな状態でした
+
+    いやまじめにそうでした
+
+    いつのまにやらみんなプライム大型ばかり呟くようになりましたな
+
+    成長したってことだ
+
+    成長しないもんは取り残されました
+
+    そこに
+
+    格差が生まれたのです🍵ﾃﾞｽﾖﾈｽｷﾞﾙｗｗｗ'
+  metrics:
+    like_count: 69
+    reply_count: 1
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 3
+    impression_count: 3915
+  mentions: []
+- post_id: '2043889742656483633'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T12:11:02+09:00'
+  created_at_jst: '2026-04-14T12:11:02'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043889742656483633
+  text: '時代の変化
+
+    環境の変化に対応できるかどうかは
+
+    人間として最大の能力である
+
+    取り残されたもんはの
+
+    人間として弱い
+
+    ということなのです
+
+    成長できなかったのです
+
+    南無です🍵ｼﾝﾘﾔﾅｗ'
+  metrics:
+    like_count: 40
+    reply_count: 0
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 5
+    impression_count: 3396
+  mentions: []
+- post_id: '2043890913257369819'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T12:15:42+09:00'
+  created_at_jst: '2026-04-14T12:15:42'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043890913257369819
+  text: '自分を変化させられる柔軟性を持つことで
+
+    時代の変化に対応していけるようになるのです
+
+    変化できない人間は
+
+    おいていかれます
+
+    どの宇宙でも一緒です
+
+    以上🍵ｼﾝﾘﾔﾅｗ https://t.co/GnWnLUkjPE'
+  metrics:
+    like_count: 44
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 5418
+  mentions: []
+- post_id: '2043895560047079655'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T12:34:09+09:00'
+  created_at_jst: '2026-04-14T12:34:09'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043895560047079655
+  text: 'あーあーあー
+
+
+    光 https://t.co/0lOi6N4yMl'
+  metrics:
+    like_count: 16
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 3823
+  mentions: []
+- post_id: '2043895691697918075'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T12:34:41+09:00'
+  created_at_jst: '2026-04-14T12:34:41'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043895691697918075
+  text: あーあーあーあーあーあーあー https://t.co/O9YGj84BVD
+  metrics:
+    like_count: 16
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4039
+  mentions: []
+- post_id: '2043896200013983865'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T12:36:42+09:00'
+  created_at_jst: '2026-04-14T12:36:42'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043896200013983865
+  text: 光しゅげえええええええええＷＷＷＷＷＷＷＷＷＷＷＷ https://t.co/o4O2wPjJ9f
+  metrics:
+    like_count: 16
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3455
+  mentions: []
+- post_id: '2043896286945128662'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T12:37:03+09:00'
+  created_at_jst: '2026-04-14T12:37:03'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043896286945128662
+  text: 光最強伝説ＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷ https://t.co/VkfthHYGMu
+  metrics:
+    like_count: 16
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3583
+  mentions: []
+- post_id: '2043896973544305006'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T12:39:46+09:00'
+  created_at_jst: '2026-04-14T12:39:46'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043896973544305006
+  text: 光しか勝たん時代にＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷＷ https://t.co/Ghx4C6XhDO
+  metrics:
+    like_count: 20
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3385
+  mentions: []
+- post_id: '2043897880608682056'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T12:43:23+09:00'
+  created_at_jst: '2026-04-14T12:43:23'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043897880608682056
+  text: 'JX金属さん５０００乗せ青天井
+
+
+    光'
+  metrics:
+    like_count: 30
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 1874
+  mentions:
+  - sc: '5016'
+    company_name: JX??
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names JX??.
+- post_id: '2043898136859685309'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T12:44:24+09:00'
+  created_at_jst: '2026-04-14T12:44:24'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043898136859685309
+  text: '商い８位
+
+    商い嘘つかない現象 https://t.co/eliUInUuYs'
+  metrics:
+    like_count: 26
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 2
+    impression_count: 2876
+  mentions: []
+- post_id: '2043900407186108723'
+  target_username: 4th_skywalker
+  author_user_id: '1263979962719072256'
+  author_username: 4th_skywalker
+  author_name: kks
+  created_at: '2026-04-14T12:53:25+09:00'
+  created_at_jst: '2026-04-14T12:53:25'
+  post_date_jst: '2026-04-14'
+  tweet_url: https://x.com/4th_skywalker/status/2043900407186108723
+  text: '全部光になるので
+
+    ずっと売らなくていいんですよ
+
+    全部光になるので'
+  metrics:
+    like_count: 7
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 297
+  mentions: []
+notes: ''

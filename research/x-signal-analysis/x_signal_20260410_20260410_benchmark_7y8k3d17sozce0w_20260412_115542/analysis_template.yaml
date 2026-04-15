@@ -1,0 +1,565 @@
+type: x_signal_analysis
+version: 1
+run:
+  run_id: x_signal_20260410_20260410_benchmark_7y8k3d17sozce0w_20260412_115542
+  source_relation: analytics.monitored_x_posts
+  company_relation: analytics.listed_companies_latest
+  start_date: '2026-04-10'
+  end_date: '2026-04-10'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  generated_at: '2026-04-12T11:55:43.206335'
+  parameters:
+    batch_size: 20
+    volume_lookback_days: 20
+    forward_return_days:
+    - 5
+    - 20
+    analysis_version: x-signal-v1
+posts:
+- post_id: '2042347301407166759'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T06:01:56+09:00'
+  created_at_jst: '2026-04-10T06:01:56'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042347301407166759
+  text: 【速報】NY原油先物102.70ドル⇒95.25ドルへ反落、イスラエルによるレバノン攻撃縮小やイランが協議に前向き https://t.co/7tVNnwLFhM
+    @ZAiFXから
+  metrics:
+    like_count: 11
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2714
+  signals: []
+  review_notes: ''
+- post_id: '2042350098265620514'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T06:13:03+09:00'
+  created_at_jst: '2026-04-10T06:13:03'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042350098265620514
+  text: "おはようございます\U0001F60A\n\nNYダウ275高\n日経先物710高\nナス187高 \nSOX178高\n米国債4.27\n原油97.9\n\
+    金先物4790\nイスラエルレバノン攻撃縮小、協議へ進展により原油下落し株価上昇\n本日オプションSQ\n\n押し目だしたりしたけど先物フル勃起です https://t.co/b8omK9O5GL"
+  metrics:
+    like_count: 45
+    reply_count: 2
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 3439
+  signals: []
+  review_notes: ''
+- post_id: '2042350408564375885'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T06:14:17+09:00'
+  created_at_jst: '2026-04-10T06:14:17'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042350408564375885
+  text: あかんてw https://t.co/hpeAiwQwm5
+  metrics:
+    like_count: 15
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 6027
+  signals: []
+  review_notes: ''
+- post_id: '2042350858063720485'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T06:16:04+09:00'
+  created_at_jst: '2026-04-10T06:16:04'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042350858063720485
+  text: 焼いてくれ！ https://t.co/laCYISoz72
+  metrics:
+    like_count: 35
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 7957
+  signals: []
+  review_notes: ''
+- post_id: '2042402173808755080'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T09:39:58+09:00'
+  created_at_jst: '2026-04-10T09:39:58'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042402173808755080
+  text: '北川精機
+
+
+    そろそろファンドの売りこなしたか https://t.co/L1CsrVU7AB'
+  metrics:
+    like_count: 10
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2864
+  signals:
+  - sc: '6327'
+    company_name: 北川精機
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: 北川精機と明記している。
+    signal_rationale: 売りをこなしたとみて上方向を期待する文脈で、前向きな反応。
+  review_notes: ''
+- post_id: '2042418003770556538'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T10:42:53+09:00'
+  created_at_jst: '2026-04-10T10:42:53'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042418003770556538
+  text: てらっぴーｷﾀ━━━━(ﾟ∀ﾟ)━━━━!! https://t.co/8qAuy8wqbl
+  metrics:
+    like_count: 7
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3637
+  signals:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: medium
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: てらっぴーは Terra_Drone を指す直前後の投稿群と整合する。
+    signal_rationale: 「キタ」という反応で、値動きに対して前向き。
+  review_notes: ''
+- post_id: '2042419364008509736'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T10:48:17+09:00'
+  created_at_jst: '2026-04-10T10:48:17'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042419364008509736
+  text: アンソロピックの台頭でサーズは、ちんでるね
+  metrics:
+    like_count: 8
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 2701
+  signals: []
+  review_notes: ''
+- post_id: '2042419906122244576'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T10:50:26+09:00'
+  created_at_jst: '2026-04-10T10:50:26'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042419906122244576
+  text: '北川精機
+
+
+    昨日の往って来いはファンドの最後っ屁か？
+
+    さてさて売り圧抜けて飛躍しろ https://t.co/C0EfzhuWOR'
+  metrics:
+    like_count: 10
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 3535
+  signals:
+  - sc: '6327'
+    company_name: 北川精機
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: high
+    extraction_rationale: 北川精機と明記している。
+    signal_rationale: 売り圧が抜けて飛躍してほしいと述べており、明確に強気。
+  review_notes: ''
+- post_id: '2042432298633871828'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T11:39:41+09:00'
+  created_at_jst: '2026-04-10T11:39:41'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042432298633871828
+  text: テラドローン https://t.co/8UOOxR1Lup
+  metrics:
+    like_count: 17
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 6975
+  signals:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: テラドローンと明記している。
+    signal_rationale: 銘柄単体を呼びかける短文で、上昇局面への注目を示している。
+  review_notes: ''
+- post_id: '2042446791132807502'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T12:37:16+09:00'
+  created_at_jst: '2026-04-10T12:37:16'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042446791132807502
+  text: 'ｷﾀ━━━━(ﾟ∀ﾟ)━━━━!!
+
+    パワーエックス32号すとぽ https://t.co/XUkqdAW73J'
+  metrics:
+    like_count: 34
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 3570
+  signals:
+  - sc: 485A
+    company_name: パワーエックス
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: パワーエックスと明記している。
+    signal_rationale: ストップ高到達を喜ぶ文脈で、明確に前向き。
+  review_notes: ''
+- post_id: '2042448315443527987'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T12:43:19+09:00'
+  created_at_jst: '2026-04-10T12:43:19'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042448315443527987
+  text: '千代田化工建設
+
+
+    出来高は正義 https://t.co/gk0DiWAumm'
+  metrics:
+    like_count: 67
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 6
+    impression_count: 6605
+  signals:
+  - sc: '6366'
+    company_name: 千代田化工建設
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: high
+    extraction_rationale: 千代田化工建設と明記している。
+    signal_rationale: 出来高を強材料として評価しており、強気の反応。
+  review_notes: ''
+- post_id: '2042449779524014379'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T12:49:08+09:00'
+  created_at_jst: '2026-04-10T12:49:08'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042449779524014379
+  text: 千代田化工建設出来高1160万 https://t.co/6iAnBQRRfZ
+  metrics:
+    like_count: 18
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 3568
+  signals:
+  - sc: '6366'
+    company_name: 千代田化工建設
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: 千代田化工建設と明記している。
+    signal_rationale: 出来高増加をポジティブ材料として取り上げている。
+  review_notes: ''
+- post_id: '2042452976238018680'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T13:01:51+09:00'
+  created_at_jst: '2026-04-10T13:01:51'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042452976238018680
+  text: 北川精機、千代田、駒井
+  metrics:
+    like_count: 18
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 3464
+  signals:
+  - sc: '6327'
+    company_name: 北川精機
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: 北川精機と明記している。
+    signal_rationale: 当日の注目銘柄として前向きに列挙している。
+  - sc: '6366'
+    company_name: 千代田化工建設
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: 千代田は同日の千代田化工建設の連投と整合する。
+    signal_rationale: 当日の注目銘柄として前向きに列挙している。
+  - sc: '5915'
+    company_name: 駒井ハルテック
+    match_confidence: medium
+    signal_label: bullish
+    signal_confidence: low
+    extraction_rationale: 駒井は上場銘柄では駒井ハルテックが最有力。
+    signal_rationale: 当日の注目銘柄として前向きに列挙しているが、文脈は短い。
+  review_notes: ''
+- post_id: '2042453527919005743'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T13:04:02+09:00'
+  created_at_jst: '2026-04-10T13:04:02'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042453527919005743
+  text: 北川精機 https://t.co/aB67sY6A9T
+  metrics:
+    like_count: 5
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2644
+  signals:
+  - sc: '6327'
+    company_name: 北川精機
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: 北川精機と明記している。
+    signal_rationale: 銘柄単体を再掲し、継続して強気に注目している。
+  review_notes: ''
+- post_id: '2042454064202727863'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T13:06:10+09:00'
+  created_at_jst: '2026-04-10T13:06:10'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042454064202727863
+  text: てらど〜ん https://t.co/YY4xOv0xbt
+  metrics:
+    like_count: 5
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2898
+  signals:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: medium
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: てらど〜んは Terra_Drone を指す直前後の投稿群と整合する。
+    signal_rationale: 銘柄を勢いよく再掲しており、前向きな反応。
+  review_notes: ''
+- post_id: '2042458904320491662'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T13:25:24+09:00'
+  created_at_jst: '2026-04-10T13:25:24'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042458904320491662
+  text: こいつのせいですね https://t.co/IDjInUrk4C https://t.co/mqzl1Q3aHl
+  metrics:
+    like_count: 14
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 6282
+  signals: []
+  review_notes: ''
+- post_id: '2042459076874158376'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T13:26:05+09:00'
+  created_at_jst: '2026-04-10T13:26:05'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042459076874158376
+  text: 北川精機高根アタック行けや https://t.co/BQzVkbOu05
+  metrics:
+    like_count: 7
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 2798
+  signals:
+  - sc: '6327'
+    company_name: 北川精機
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: high
+    extraction_rationale: 北川精機と明記している。
+    signal_rationale: 高値アタックを期待しており、明確な強気。
+  review_notes: ''
+- post_id: '2042460706898133080'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T13:32:34+09:00'
+  created_at_jst: '2026-04-10T13:32:34'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042460706898133080
+  text: テラドローンいちまんまだぁ？ https://t.co/BJe5YNFDVV
+  metrics:
+    like_count: 16
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 3304
+  signals:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: テラドローンと明記している。
+    signal_rationale: 1万円到達を期待する文脈で、明確に上昇を見ている。
+  review_notes: ''
+- post_id: '2042480643968487788'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T14:51:47+09:00'
+  created_at_jst: '2026-04-10T14:51:47'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042480643968487788
+  text: ぎょう虫検査シール https://t.co/wWBJenhocY
+  metrics:
+    like_count: 23
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 5807
+  signals: []
+  review_notes: ''
+- post_id: '2042490210425147465'
+  target_username: 7Y8k3d17SozCE0w
+  account_role: benchmark
+  benchmark_weight: 1.0
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T15:29:48+09:00'
+  created_at_jst: '2026-04-10T15:29:48'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042490210425147465
+  text: 'テラドローン
+
+
+    迎撃ドローン月産1000台×12ヶ月×40万（1台）
+
+    で48億の売上狙えるね https://t.co/CxrnpV6eO2'
+  metrics:
+    like_count: 57
+    reply_count: 0
+    quote_count: 1
+    repost_count: 1
+    bookmark_count: 9
+    impression_count: 10593
+  signals:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: high
+    extraction_rationale: テラドローンと明記している。
+    signal_rationale: 売上試算を示して上値余地を語っており、強い前向きシグナル。
+  review_notes: ''
+notes: ''

@@ -1,0 +1,139 @@
+type: tweet_stock_analysis
+version: 1
+run:
+  run_id: tweet_stock_20260415_20260415_not_zerosumgame_20260415_095013
+  source_relation: analytics.monitored_x_posts
+  company_relation: analytics.listed_companies_latest
+  start_date: '2026-04-15'
+  end_date: '2026-04-15'
+  target_username: not_zerosumgame
+  generated_at: '2026-04-15T09:50:14.085819'
+  parameters:
+    volume_lookback_days: 20
+    forward_return_days:
+    - 5
+    - 20
+    limit: null
+tweets:
+- post_id: '2044200559356588428'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-15T08:46:07+09:00'
+  created_at_jst: '2026-04-15T08:46:07'
+  post_date_jst: '2026-04-15'
+  tweet_url: https://x.com/not_zerosumgame/status/2044200559356588428
+  text: 4時間前くらいまで仕事をしていたのにもう仕事をしている燃えている
+  metrics:
+    like_count: 140
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 10601
+  mentions: []
+- post_id: '2044217918469353935'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-15T09:55:06+09:00'
+  created_at_jst: '2026-04-15T09:55:06'
+  post_date_jst: '2026-04-15'
+  tweet_url: https://x.com/not_zerosumgame/status/2044217918469353935
+  text: 午前業務完了☑️
+  metrics:
+    like_count: 38
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 8146
+  mentions: []
+- post_id: '2044283349603389767'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-15T14:15:06+09:00'
+  created_at_jst: '2026-04-15T14:15:06'
+  post_date_jst: '2026-04-15'
+  tweet_url: https://x.com/not_zerosumgame/status/2044283349603389767
+  text: いすゞとトヨタ、次世代小型燃料電池トラック共同開発へ…2027年度の生産開始めざす | レスポンス（https://t.co/VdD1nDLJZF） https://t.co/NQy5h4NTJU
+  metrics:
+    like_count: 23
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 5988
+  mentions:
+  - sc: '7202'
+    company_name: ??????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???.
+  - sc: '7203'
+    company_name: ??????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???.
+- post_id: '2044284703197540565'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-15T14:20:28+09:00'
+  created_at_jst: '2026-04-15T14:20:28'
+  post_date_jst: '2026-04-15'
+  tweet_url: https://x.com/not_zerosumgame/status/2044284703197540565
+  text: '5月6月生産分は原価高いです
+
+    7月以降生産分は受注できません
+
+
+    これが正解 https://t.co/gyqjdCfuPY'
+  metrics:
+    like_count: 66
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 11
+    impression_count: 11434
+  mentions: []
+- post_id: '2044344414747992321'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-15T18:17:45+09:00'
+  created_at_jst: '2026-04-15T18:17:45'
+  post_date_jst: '2026-04-15'
+  tweet_url: https://x.com/not_zerosumgame/status/2044344414747992321
+  text: ん！？？？ https://t.co/HQ62tD1UXm
+  metrics:
+    like_count: 9
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5064
+  mentions: []
+- post_id: '2044345815335051322'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-15T18:23:19+09:00'
+  created_at_jst: '2026-04-15T18:23:19'
+  post_date_jst: '2026-04-15'
+  tweet_url: https://x.com/not_zerosumgame/status/2044345815335051322
+  text: ユニットバス以外は多少納期遅れようが問題ないのだがユニットバスだけは絶対に先に入れたい https://t.co/VpDiOQd8ko
+  metrics:
+    like_count: 3
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2771
+  mentions: []
+notes: ''

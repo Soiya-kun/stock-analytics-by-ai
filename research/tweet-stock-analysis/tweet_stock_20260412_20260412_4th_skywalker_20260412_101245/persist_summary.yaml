@@ -1,0 +1,17 @@
+run_id: tweet_stock_20260412_20260412_4th_skywalker_20260412_101245
+tweet_count: 26
+mention_count: 8
+unique_symbols: 5
+volume_spike_count: 0
+price_jump_count: 0
+top_symbols:
+- sc: '6701'
+  count: 1
+- sc: '6702'
+  count: 1
+- sc: '7203'
+  count: 3
+- sc: '7267'
+  count: 2
+- sc: '9984'
+  count: 1

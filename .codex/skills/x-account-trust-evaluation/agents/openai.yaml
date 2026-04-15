@@ -1,0 +1,4 @@
+interface:
+  display_name: "X Account Trust Evaluation"
+  short_description: "Evaluate X accounts against benchmark stock signals"
+  default_prompt: "Use $x-account-trust-evaluation to refresh benchmark and candidate X data, annotate bullish stock signals, and score whether a candidate account is trustworthy."

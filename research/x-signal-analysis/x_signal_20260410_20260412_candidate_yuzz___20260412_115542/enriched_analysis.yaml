@@ -1,0 +1,630 @@
+type: x_signal_analysis
+version: 1
+run:
+  run_id: x_signal_20260410_20260412_candidate_yuzz___20260412_115542
+  source_relation: analytics.monitored_x_posts
+  company_relation: analytics.listed_companies_latest
+  start_date: '2026-04-10'
+  end_date: '2026-04-12'
+  target_username: yuzz__
+  account_role: candidate
+  generated_at: '2026-04-12T11:55:43.206979'
+  parameters:
+    batch_size: 20
+    volume_lookback_days: 20
+    forward_return_days:
+    - 5
+    - 20
+    analysis_version: x-signal-v1
+posts:
+- post_id: '2042362938745635242'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-10T07:04:04+09:00'
+  created_at_jst: '2026-04-10T07:04:04'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/yuzz__/status/2042362938745635242
+  text: 'アンソロピック、作業自動化AI「Cowork」一般提供開始　ソフト株下落
+
+    https://t.co/Ov26ITWcDO'
+  metrics:
+    like_count: 17
+    reply_count: 0
+    quote_count: 3
+    repost_count: 0
+    bookmark_count: 5
+    impression_count: 12760
+  signals:
+  - sc: '6701'
+    company_name: 日本電気
+    match_confidence: high
+    signal_label: non_bullish
+    signal_confidence: medium
+    extraction_rationale: NEC と明記している。
+    signal_rationale: アンソロピックの影響でソフト株が下落すると述べており、前向きではない。
+    market_context:
+      tweet_session: pre_market
+      company_snapshot_name: 日本電気
+      market: 東証PR
+      industry: 電気機器
+      event_trade_date: '2026-04-10'
+      previous_trade_date: '2026-04-09'
+      next_trade_date: null
+      previous_close_price: 4048.0
+      event_open_price: 3978.0
+      event_high_price: 3981.0
+      event_low_price: 3860.0
+      event_close_price: 3860.0
+      next_close_price: null
+      event_volume: 10911300.0
+      avg_volume_20d: 6368270.0
+      volume_ratio_20d: 1.713385267898503
+      event_day_return_pct: -0.04644268774703553
+      intraday_peak_return_pct: -0.016551383399209474
+      max_close_return_5d_pct: -0.04644268774703553
+      max_close_return_20d_pct: -0.04644268774703553
+  review_notes: ''
+- post_id: '2042398803047899583'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-10T09:26:35+09:00'
+  created_at_jst: '2026-04-10T09:26:35'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/yuzz__/status/2042398803047899583
+  text: 年初と同じ。アンソロピックのCoworkでNECなどのソフトウェア関連や、ゲーム関連銘柄の株価は軟調。 https://t.co/lFOB8f21k3
+  metrics:
+    like_count: 34
+    reply_count: 0
+    quote_count: 1
+    repost_count: 3
+    bookmark_count: 3
+    impression_count: 8783
+  signals:
+  - sc: '6701'
+    company_name: 日本電気
+    match_confidence: high
+    signal_label: non_bullish
+    signal_confidence: medium
+    extraction_rationale: NEC と明記している。
+    signal_rationale: NEC などのソフトウェア関連が軟調だと述べており、前向きではない。
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: 日本電気
+      market: 東証PR
+      industry: 電気機器
+      event_trade_date: '2026-04-10'
+      previous_trade_date: '2026-04-09'
+      next_trade_date: null
+      previous_close_price: 4048.0
+      event_open_price: 3978.0
+      event_high_price: 3981.0
+      event_low_price: 3860.0
+      event_close_price: 3860.0
+      next_close_price: null
+      event_volume: 10911300.0
+      avg_volume_20d: 6368270.0
+      volume_ratio_20d: 1.713385267898503
+      event_day_return_pct: -0.04644268774703553
+      intraday_peak_return_pct: -0.016551383399209474
+      max_close_return_5d_pct: -0.04644268774703553
+      max_close_return_20d_pct: -0.04644268774703553
+  review_notes: ''
+- post_id: '2042431912007156070'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-10T11:38:09+09:00'
+  created_at_jst: '2026-04-10T11:38:09'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/yuzz__/status/2042431912007156070
+  text: "ゲーム関連株 \n\nソニーグループ-1.54%\n任天堂-2.04%\nバンナムHD-1.50%\nコナミグループ+1.43%\nカプコン-1.14%\n\
+    スクエニHD-1.22%\nセガサミーHD-2.27%\nコーエーテクモHD-0.69%\n\n4/10 11時30分現在\n\n任天堂は『ぽこあ ポケモン』の盛り上がりで10,000円回復したけど、再び年初来安値水準まで下がってきた。\
+    \ https://t.co/VfYdmFErlx"
+  metrics:
+    like_count: 266
+    reply_count: 39
+    quote_count: 9
+    repost_count: 32
+    bookmark_count: 21
+    impression_count: 54745
+  signals: []
+  review_notes: ''
+- post_id: '2042457273713508796'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-10T13:18:55+09:00'
+  created_at_jst: '2026-04-10T13:18:55'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/yuzz__/status/2042457273713508796
+  text: 日経平均株価+1,018円。東証プライム値上がり31%、値下がり64%。過去1くらい株高の恩恵を感じてない人が多そうな日。 https://t.co/4vqaNlcZpc
+  metrics:
+    like_count: 101
+    reply_count: 2
+    quote_count: 1
+    repost_count: 8
+    bookmark_count: 7
+    impression_count: 8906
+  signals: []
+  review_notes: ''
+- post_id: '2042459864052744436'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-10T13:29:13+09:00'
+  created_at_jst: '2026-04-10T13:29:13'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/yuzz__/status/2042459864052744436
+  text: '任天堂、年初来安値更新。
+
+
+    最近の任天堂には正直思うことはある。
+
+    好きな企業ではあるけど。 https://t.co/LzmshI9zbp https://t.co/xbkHZOpuna'
+  metrics:
+    like_count: 135
+    reply_count: 12
+    quote_count: 1
+    repost_count: 3
+    bookmark_count: 8
+    impression_count: 27178
+  signals:
+  - sc: '7974'
+    company_name: 任天堂
+    match_confidence: high
+    signal_label: non_bullish
+    signal_confidence: medium
+    extraction_rationale: 任天堂と明記している。
+    signal_rationale: 年初来安値更新と問題意識を述べており、前向きではない。
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: 任天堂
+      market: 東証PR
+      industry: その他製品
+      event_trade_date: '2026-04-10'
+      previous_trade_date: '2026-04-09'
+      next_trade_date: null
+      previous_close_price: 8531.0
+      event_open_price: 8400.0
+      event_high_price: 8471.0
+      event_low_price: 8290.0
+      event_close_price: 8300.0
+      next_close_price: null
+      event_volume: 12823300.0
+      avg_volume_20d: 10281435.0
+      volume_ratio_20d: 1.2472286212965409
+      event_day_return_pct: -0.027077716563122745
+      intraday_peak_return_pct: -0.0070331731332786696
+      max_close_return_5d_pct: -0.027077716563122745
+      max_close_return_20d_pct: -0.027077716563122745
+  review_notes: ''
+- post_id: '2042755210934931862'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-11T09:02:49+09:00'
+  created_at_jst: '2026-04-11T09:02:49'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/yuzz__/status/2042755210934931862
+  text: '【ゲーム関連株】2026年3月期、通期本決算発表予定日
+
+    ソニーグループ：5/8(金)
+
+    任天堂：5/8(金)
+
+    コナミグループ：5/8(金)
+
+    バンダイナムコHD：5/13(水)
+
+    カプコン：5/13(水)
+
+    スクエニHD：5/14(木)
+
+    コーエーテクモHD：4/27(月)
+
+    セガサミーHD：5/12(火)
+
+
+    任天堂とソニーグループが同じ日なのは珍しい。'
+  metrics:
+    like_count: 130
+    reply_count: 2
+    quote_count: 0
+    repost_count: 14
+    bookmark_count: 28
+    impression_count: 10478
+  signals: []
+  review_notes: ''
+- post_id: '2042774179213369729'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-11T10:18:11+09:00'
+  created_at_jst: '2026-04-11T10:18:11'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/yuzz__/status/2042774179213369729
+  text: '【任天堂】【コーエーテクモHD】
+
+    ■『ぽこあ ポケモン』発売から3月31日までの販売数予測。
+
+
+    ・結論：販売数の予測は約330万本。
+
+    ※315万～340万本のレンジ予想。
+
+    ・発売日:2026/3/5(木)
+
+
+    ■参照データ、計算
+
+    ・任天堂公式、発売後4日間で220万本販売。
+
+    https://t.co/uqxHfBd3L4 https://t.co/k4vHvTtU8L'
+  metrics:
+    like_count: 86
+    reply_count: 1
+    quote_count: 2
+    repost_count: 6
+    bookmark_count: 16
+    impression_count: 13939
+  signals:
+  - sc: '7974'
+    company_name: 任天堂
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: high
+    extraction_rationale: 任天堂と明記しており、販売本数予測の主対象になっている。
+    signal_rationale: 330万本前後の販売予測を提示しており、業績への前向きな見立て。
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: 任天堂
+      market: 東証PR
+      industry: その他製品
+      event_trade_date: '2026-04-10'
+      previous_trade_date: '2026-04-09'
+      next_trade_date: null
+      previous_close_price: 8531.0
+      event_open_price: 8400.0
+      event_high_price: 8471.0
+      event_low_price: 8290.0
+      event_close_price: 8300.0
+      next_close_price: null
+      event_volume: 12823300.0
+      avg_volume_20d: 10281435.0
+      volume_ratio_20d: 1.2472286212965409
+      event_day_return_pct: -0.027077716563122745
+      intraday_peak_return_pct: -0.0070331731332786696
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+  review_notes: ''
+- post_id: '2042783640430800954'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-11T10:55:47+09:00'
+  created_at_jst: '2026-04-11T10:55:47'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/yuzz__/status/2042783640430800954
+  text: '【任天堂】2026年3月期本決算 Nintendo Swith2 販売数予測。(セルスルーベース)
+
+
+    ■結論
+
+    ・2,200万台前後
+
+    (※2,100万台～2,300万台のレンジ予想)
+
+    ・任天堂 通期販売計画1,900万台に対し、300万台は超過と予想。 https://t.co/hBbGqA266O'
+  metrics:
+    like_count: 177
+    reply_count: 3
+    quote_count: 2
+    repost_count: 12
+    bookmark_count: 41
+    impression_count: 41557
+  signals:
+  - sc: '7974'
+    company_name: 任天堂
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: high
+    extraction_rationale: 任天堂と明記しており、Switch2 販売計画の上振れ予測を述べている。
+    signal_rationale: 通期計画を300万台上回ると予測しており、明確に強気。
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: 任天堂
+      market: 東証PR
+      industry: その他製品
+      event_trade_date: '2026-04-10'
+      previous_trade_date: '2026-04-09'
+      next_trade_date: null
+      previous_close_price: 8531.0
+      event_open_price: 8400.0
+      event_high_price: 8471.0
+      event_low_price: 8290.0
+      event_close_price: 8300.0
+      next_close_price: null
+      event_volume: 12823300.0
+      avg_volume_20d: 10281435.0
+      volume_ratio_20d: 1.2472286212965409
+      event_day_return_pct: -0.027077716563122745
+      intraday_peak_return_pct: -0.0070331731332786696
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+  review_notes: ''
+- post_id: '2042784260281766136'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-11T10:58:15+09:00'
+  created_at_jst: '2026-04-11T10:58:15'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/yuzz__/status/2042784260281766136
+  text: 決算に向けて、ゲーム関連株の情報を整理しているので、ついでにシェアしておきます。いつもこんな感じで計算したり、事前にどういう決算が出るのか予測してます。情報をシェアしているだけで、買いや売りを促しているわけではないので、読むときにそこは気をつけてくださいね。
+  metrics:
+    like_count: 84
+    reply_count: 1
+    quote_count: 0
+    repost_count: 2
+    bookmark_count: 4
+    impression_count: 9218
+  signals: []
+  review_notes: ''
+- post_id: '2042806596728996066'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-11T12:27:00+09:00'
+  created_at_jst: '2026-04-11T12:27:00'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/yuzz__/status/2042806596728996066
+  text: 'この数字の結論はセルインベースでした。
+
+    Nintendo Switch2、2,200万台前後予測は変わらずです。 https://t.co/fyb84VxfQ4'
+  metrics:
+    like_count: 36
+    reply_count: 1
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 10806
+  signals:
+  - sc: '7974'
+    company_name: 任天堂
+    match_confidence: high
+    signal_label: bullish
+    signal_confidence: medium
+    extraction_rationale: Nintendo Switch2 の販売数予測として任天堂に言及している。
+    signal_rationale: 2200万台前後予測を維持すると述べており、前向きな継続見解。
+    market_context:
+      tweet_session: non_trading_day
+      company_snapshot_name: 任天堂
+      market: 東証PR
+      industry: その他製品
+      event_trade_date: '2026-04-10'
+      previous_trade_date: '2026-04-09'
+      next_trade_date: null
+      previous_close_price: 8531.0
+      event_open_price: 8400.0
+      event_high_price: 8471.0
+      event_low_price: 8290.0
+      event_close_price: 8300.0
+      next_close_price: null
+      event_volume: 12823300.0
+      avg_volume_20d: 10281435.0
+      volume_ratio_20d: 1.2472286212965409
+      event_day_return_pct: -0.027077716563122745
+      intraday_peak_return_pct: -0.0070331731332786696
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+  review_notes: ''
+- post_id: '2042875530253603223'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-11T17:00:55+09:00'
+  created_at_jst: '2026-04-11T17:00:55'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/yuzz__/status/2042875530253603223
+  text: 月曜はホワイトマンデーきますか？😙 https://t.co/lj53FlNIRv
+  metrics:
+    like_count: 81
+    reply_count: 6
+    quote_count: 1
+    repost_count: 4
+    bookmark_count: 3
+    impression_count: 23155
+  signals: []
+  review_notes: ''
+- post_id: '2042896578558726492'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-11T18:24:34+09:00'
+  created_at_jst: '2026-04-11T18:24:34'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/yuzz__/status/2042896578558726492
+  text: '渋谷TSUTAYA見てきた！
+
+    #乃木坂46 #シブツタ
+
+    #最後に階段を駆け上がったのはいつだ https://t.co/nN07QaoBBJ'
+  metrics:
+    like_count: 12
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3978
+  signals: []
+  review_notes: ''
+- post_id: '2042953286802903433'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-11T22:09:54+09:00'
+  created_at_jst: '2026-04-11T22:09:54'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/yuzz__/status/2042953286802903433
+  text: '台湾の本店で食べて以来。鼎泰豊のファン。
+
+    美味しいよね。 https://t.co/4hrxOpGc1Q'
+  metrics:
+    like_count: 63
+    reply_count: 1
+    quote_count: 1
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 4953
+  signals: []
+  review_notes: ''
+- post_id: '2042954185159905658'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-11T22:13:28+09:00'
+  created_at_jst: '2026-04-11T22:13:28'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/yuzz__/status/2042954185159905658
+  text: 月曜は超ホワイトマンデーでもいいですよ😙こいこい！ https://t.co/xhQbVPt3tC https://t.co/kOQBxLjcap
+  metrics:
+    like_count: 66
+    reply_count: 4
+    quote_count: 1
+    repost_count: 2
+    bookmark_count: 2
+    impression_count: 19299
+  signals: []
+  review_notes: ''
+- post_id: '2042963031064453366'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-11T22:48:37+09:00'
+  created_at_jst: '2026-04-11T22:48:37'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/yuzz__/status/2042963031064453366
+  text: 僕の認識だと、小型のゲーム株はソシャゲがレッドオーシャンになった2017年から投資価値は1ミリもない。短期で鞘を取りに行くなら、大ヒットゲームと市場が認識してから株を買いに行っても間に合う。注目度が低い業種だから、ヒットしてからでも初動でS高にならない。そして実績が分かる決算前に降りる
+    https://t.co/l7JIg5S2mY
+  metrics:
+    like_count: 86
+    reply_count: 1
+    quote_count: 2
+    repost_count: 3
+    bookmark_count: 25
+    impression_count: 35893
+  signals: []
+  review_notes: ''
+- post_id: '2043149978399588846'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-12T11:11:29+09:00'
+  created_at_jst: '2026-04-12T11:11:29'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/yuzz__/status/2043149978399588846
+  text: またか、またマンデーなのか！？😡 https://t.co/2FFD0vDxFJ https://t.co/ReIPbmZVYH
+  metrics:
+    like_count: 69
+    reply_count: 6
+    quote_count: 0
+    repost_count: 5
+    bookmark_count: 0
+    impression_count: 7082
+  signals: []
+  review_notes: ''
+- post_id: '2043169542000775193'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-12T12:29:13+09:00'
+  created_at_jst: '2026-04-12T12:29:13'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/yuzz__/status/2043169542000775193
+  text: 'ソフトバンク、NEC、ホンダ、ソニーグループの4社が、人工知能（AI）を開発する新会社を設立。米中がAI開発で大きく先行している状況に対し、政府の支援を活用して国産AIの基盤モデルを構築し、巻き返しを図ることを目指す。
+
+    https://t.co/xqThHjmcnb'
+  metrics:
+    like_count: 73
+    reply_count: 4
+    quote_count: 6
+    repost_count: 4
+    bookmark_count: 9
+    impression_count: 21284
+  signals: []
+  review_notes: ''
+- post_id: '2043274331594330279'
+  target_username: yuzz__
+  account_role: candidate
+  benchmark_weight: 1.0
+  author_user_id: '773555984673406977'
+  author_username: yuzz__
+  author_name: ゆず
+  created_at: '2026-04-12T19:25:37+09:00'
+  created_at_jst: '2026-04-12T19:25:37'
+  post_date_jst: '2026-04-12'
+  tweet_url: https://x.com/yuzz__/status/2043274331594330279
+  text: サンデーダウと過去の月曜の日経平均実績を見て、明日はヤバいみたいなコメントを書いてるのネタだよね？と思ったんだけど、有名な方もコメントを書いていた。これには日経平均時間外の数字を考慮することが最も大事だし、テクニカルも加味しなければいけないんだけど、こういうの難しいんですかね。
+  metrics:
+    like_count: 28
+    reply_count: 5
+    quote_count: 1
+    repost_count: 2
+    bookmark_count: 0
+    impression_count: 9145
+  signals: []
+  review_notes: ''
+notes: ''

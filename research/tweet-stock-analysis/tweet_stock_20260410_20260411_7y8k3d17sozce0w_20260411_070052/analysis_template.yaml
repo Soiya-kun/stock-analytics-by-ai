@@ -1,0 +1,687 @@
+type: tweet_stock_analysis
+version: 1
+run:
+  run_id: tweet_stock_20260410_20260411_7y8k3d17sozce0w_20260411_070052
+  source_relation: analytics.monitored_x_posts
+  company_relation: analytics.listed_companies_latest
+  start_date: '2026-04-10'
+  end_date: '2026-04-11'
+  target_username: 7Y8k3d17SozCE0w
+  generated_at: '2026-04-11T07:00:53.202408'
+  parameters:
+    volume_lookback_days: 20
+    forward_return_days:
+    - 5
+    - 20
+    limit: null
+tweets:
+- post_id: '2042347301407166759'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T06:01:56+09:00'
+  created_at_jst: '2026-04-10T06:01:56'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042347301407166759
+  text: 【速報】NY原油先物102.70ドル⇒95.25ドルへ反落、イスラエルによるレバノン攻撃縮小やイランが協議に前向き https://t.co/7tVNnwLFhM @ZAiFXから
+  metrics:
+    like_count: 11
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2693
+  mentions: []
+- post_id: '2042350098265620514'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T06:13:03+09:00'
+  created_at_jst: '2026-04-10T06:13:03'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042350098265620514
+  text: "おはようございます\U0001F60A\n\nNYダウ275高\n日経先物710高\nナス187高 \nSOX178高\n米国債4.27\n原油97.9\n金先物4790\nイスラエルレバノン攻撃縮小、協議へ進展により原油下落し株価上昇\n本日オプションSQ\n\n押し目だしたりしたけど先物フル勃起です https://t.co/b8omK9O5GL"
+  metrics:
+    like_count: 44
+    reply_count: 2
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 3407
+  mentions: []
+- post_id: '2042350408564375885'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T06:14:17+09:00'
+  created_at_jst: '2026-04-10T06:14:17'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042350408564375885
+  text: あかんてw https://t.co/hpeAiwQwm5
+  metrics:
+    like_count: 15
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 5962
+  mentions: []
+- post_id: '2042350858063720485'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T06:16:04+09:00'
+  created_at_jst: '2026-04-10T06:16:04'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042350858063720485
+  text: 焼いてくれ！ https://t.co/laCYISoz72
+  metrics:
+    like_count: 34
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 7813
+  mentions: []
+- post_id: '2042402173808755080'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T09:39:58+09:00'
+  created_at_jst: '2026-04-10T09:39:58'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042402173808755080
+  text: '北川精機
+
+
+    そろそろファンドの売りこなしたか https://t.co/L1CsrVU7AB'
+  metrics:
+    like_count: 10
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2798
+  mentions:
+  - sc: '6327'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+- post_id: '2042418003770556538'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T10:42:53+09:00'
+  created_at_jst: '2026-04-10T10:42:53'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042418003770556538
+  text: てらっぴーｷﾀ━━━━(ﾟ∀ﾟ)━━━━!! https://t.co/8qAuy8wqbl
+  metrics:
+    like_count: 7
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3565
+  mentions:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: medium
+    extraction_rationale: '''?????'' appears in the same posting run as explicit Terra_Drone mentions and most likely refers to Terra_Drone (278A).'
+- post_id: '2042419364008509736'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T10:48:17+09:00'
+  created_at_jst: '2026-04-10T10:48:17'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042419364008509736
+  text: アンソロピックの台頭でサーズは、ちんでるね
+  metrics:
+    like_count: 8
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 2639
+  mentions: []
+- post_id: '2042419906122244576'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T10:50:26+09:00'
+  created_at_jst: '2026-04-10T10:50:26'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042419906122244576
+  text: '北川精機
+
+
+    昨日の往って来いはファンドの最後っ屁か？
+
+    さてさて売り圧抜けて飛躍しろ https://t.co/C0EfzhuWOR'
+  metrics:
+    like_count: 10
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 3457
+  mentions:
+  - sc: '6327'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+- post_id: '2042432298633871828'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T11:39:41+09:00'
+  created_at_jst: '2026-04-10T11:39:41'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042432298633871828
+  text: テラドローン https://t.co/8UOOxR1Lup
+  metrics:
+    like_count: 17
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 1
+    impression_count: 6847
+  mentions:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????/Terra_Drone.
+- post_id: '2042446791132807502'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T12:37:16+09:00'
+  created_at_jst: '2026-04-10T12:37:16'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042446791132807502
+  text: 'ｷﾀ━━━━(ﾟ∀ﾟ)━━━━!!
+
+    パワーエックス32号すとぽ https://t.co/XUkqdAW73J'
+  metrics:
+    like_count: 34
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 3492
+  mentions:
+  - sc: 485A
+    company_name: ???????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???????.
+- post_id: '2042448315443527987'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T12:43:19+09:00'
+  created_at_jst: '2026-04-10T12:43:19'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042448315443527987
+  text: '千代田化工建設
+
+
+    出来高は正義 https://t.co/gk0DiWAumm'
+  metrics:
+    like_count: 64
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 6
+    impression_count: 6374
+  mentions:
+  - sc: '6366'
+    company_name: ???????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???????.
+- post_id: '2042449779524014379'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T12:49:08+09:00'
+  created_at_jst: '2026-04-10T12:49:08'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042449779524014379
+  text: 千代田化工建設出来高1160万 https://t.co/6iAnBQRRfZ
+  metrics:
+    like_count: 18
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 3420
+  mentions:
+  - sc: '6366'
+    company_name: ???????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???????.
+- post_id: '2042452976238018680'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T13:01:51+09:00'
+  created_at_jst: '2026-04-10T13:01:51'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042452976238018680
+  text: 北川精機、千代田、駒井
+  metrics:
+    like_count: 15
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 3339
+  mentions:
+  - sc: '6327'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+  - sc: '6366'
+    company_name: ???????
+    match_confidence: medium
+    extraction_rationale: Tweet says '???', which in this stock-list context refers to ??????? (6366).
+  - sc: '5915'
+    company_name: ???????
+    match_confidence: medium
+    extraction_rationale: Tweet says '??', which most likely refers to ??????? (5915).
+- post_id: '2042453527919005743'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T13:04:02+09:00'
+  created_at_jst: '2026-04-10T13:04:02'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042453527919005743
+  text: 北川精機 https://t.co/aB67sY6A9T
+  metrics:
+    like_count: 5
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2560
+  mentions:
+  - sc: '6327'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+- post_id: '2042454064202727863'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T13:06:10+09:00'
+  created_at_jst: '2026-04-10T13:06:10'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042454064202727863
+  text: てらど〜ん https://t.co/YY4xOv0xbt
+  metrics:
+    like_count: 5
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2809
+  mentions:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: medium
+    extraction_rationale: '''?????'' is a stylized spelling of ??????/Terra_Drone.'
+- post_id: '2042458904320491662'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T13:25:24+09:00'
+  created_at_jst: '2026-04-10T13:25:24'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042458904320491662
+  text: こいつのせいですね https://t.co/IDjInUrk4C https://t.co/mqzl1Q3aHl
+  metrics:
+    like_count: 14
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 6077
+  mentions: []
+- post_id: '2042459076874158376'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T13:26:05+09:00'
+  created_at_jst: '2026-04-10T13:26:05'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042459076874158376
+  text: 北川精機高根アタック行けや https://t.co/BQzVkbOu05
+  metrics:
+    like_count: 7
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 2686
+  mentions:
+  - sc: '6327'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+- post_id: '2042460706898133080'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T13:32:34+09:00'
+  created_at_jst: '2026-04-10T13:32:34'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042460706898133080
+  text: テラドローンいちまんまだぁ？ https://t.co/BJe5YNFDVV
+  metrics:
+    like_count: 16
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 3162
+  mentions:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????/Terra_Drone.
+- post_id: '2042480643968487788'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T14:51:47+09:00'
+  created_at_jst: '2026-04-10T14:51:47'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042480643968487788
+  text: ぎょう虫検査シール https://t.co/wWBJenhocY
+  metrics:
+    like_count: 23
+    reply_count: 0
+    quote_count: 0
+    repost_count: 1
+    bookmark_count: 0
+    impression_count: 5664
+  mentions: []
+- post_id: '2042490210425147465'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T15:29:48+09:00'
+  created_at_jst: '2026-04-10T15:29:48'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042490210425147465
+  text: 'テラドローン
+
+
+    迎撃ドローン月産1000台×12ヶ月×40万（1台）
+
+    で48億の売上狙えるね https://t.co/CxrnpV6eO2'
+  metrics:
+    like_count: 56
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 9
+    impression_count: 8603
+  mentions:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????/Terra_Drone.
+- post_id: '2042491494624604598'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T15:34:54+09:00'
+  created_at_jst: '2026-04-10T15:34:54'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042491494624604598
+  text: 'サイコー♪サイコー♪東証サイコー♪最高さぁ♪
+
+    byエレカシ
+
+    おつおつ週乙SQ乙トランプタコ乙
+
+    日経先物670円高
+
+    一部アンソロピックの影響でサーズ系売られてた
+
+    PFは絶好調
+
+    テラドローン、北川精機、パワーエックスなどなど
+
+    珍しく良い週末に
+
+    これでマンデーは無しよトランプさん https://t.co/BJh7yhTjr2'
+  metrics:
+    like_count: 25
+    reply_count: 3
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3187
+  mentions:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????/Terra_Drone.
+  - sc: '6327'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+  - sc: 485A
+    company_name: ???????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???????.
+- post_id: '2042491944358855031'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T15:36:41+09:00'
+  created_at_jst: '2026-04-10T15:36:41'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042491944358855031
+  text: 皮剥いで剥製にして東証の便所に飾っとけ https://t.co/EKwkAuKF4b https://t.co/Fz1N8pWmXH
+  metrics:
+    like_count: 15
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4732
+  mentions: []
+- post_id: '2042513808552530183'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T17:03:34+09:00'
+  created_at_jst: '2026-04-10T17:03:34'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042513808552530183
+  text: 'テラドローン ロイターに取り上げられる
+
+    恐らく本日の上昇の元だろう
+
+
+    https://t.co/HeO5mrYLUs'
+  metrics:
+    like_count: 26
+    reply_count: 1
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 7097
+  mentions:
+  - sc: 278A
+    company_name: Terra_Drone
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ??????/Terra_Drone.
+- post_id: '2042593772060709225'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-10T22:21:19+09:00'
+  created_at_jst: '2026-04-10T22:21:19'
+  post_date_jst: '2026-04-10'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042593772060709225
+  text: 【市場反応】米3月コア消費者物価指数（CPI）は予想下回る、ドル売り https://t.co/4NNTT7k1J6 @ZAiFXから
+  metrics:
+    like_count: 8
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3330
+  mentions: []
+- post_id: '2042703967894053081'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-11T05:39:12+09:00'
+  created_at_jst: '2026-04-11T05:39:12'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042703967894053081
+  text: 【速報】NY原油下落に転じる、「イスラエルはベイルート時間の午前4時に停戦公約を発表」 https://t.co/PNOuLhmkS8 @ZAiFXから
+  metrics:
+    like_count: 16
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3031
+  mentions: []
+- post_id: '2042739882133721108'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-11T08:01:54+09:00'
+  created_at_jst: '2026-04-11T08:01:54'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042739882133721108
+  text: "【[CFD] 日経225】57,407.10 [04/10] 日経比:+482.99(△0.85%)\nhttps://t.co/zFkL38TOUa\n\n  https://t.co/cQ60dXLREs"
+  metrics:
+    like_count: 9
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2492
+  mentions: []
+- post_id: '2042739965222883710'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-11T08:02:14+09:00'
+  created_at_jst: '2026-04-11T08:02:14'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042739965222883710
+  text: "【NY WTI原油先物】96.57 ▼1.33% -1.30 [07:05]\nhttps://t.co/zFkL38TOUa\n\n  https://t.co/K8elf4JzJl"
+  metrics:
+    like_count: 12
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2815
+  mentions: []
+- post_id: '2042764959063642228'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-11T09:41:33+09:00'
+  created_at_jst: '2026-04-11T09:41:33'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042764959063642228
+  text: おはよう☀らいとにん具さん https://t.co/ECMmfP0PS1
+  metrics:
+    like_count: 6
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 4371
+  mentions: []
+- post_id: '2042781500136133107'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-11T10:47:17+09:00'
+  created_at_jst: '2026-04-11T10:47:17'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042781500136133107
+  text: 'ザ・ノンフィクションの
+
+    今どきじゃない会社の回で
+
+    Tverから引用コメント書いたら
+
+    危うくアカロックされかかった
+
+    なんじゃそれ
+
+    たぶん悪評酷すぎて消してまわってるんやろな
+
+    アホちゃうか
+
+    ならTverも共有ボタン無くせばよいのに https://t.co/6KPAnjulc8'
+  metrics:
+    like_count: 9
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 2541
+  mentions: []
+- post_id: '2042812850880811107'
+  target_username: 7Y8k3d17SozCE0w
+  author_user_id: '1043754233231634434'
+  author_username: 7Y8k3d17SozCE0w
+  author_name: やるっつえぶらっきん
+  created_at: '2026-04-11T12:51:51+09:00'
+  created_at_jst: '2026-04-11T12:51:51'
+  post_date_jst: '2026-04-11'
+  tweet_url: https://x.com/7Y8k3d17SozCE0w/status/2042812850880811107
+  text: 昨夜SOXと日経先物上昇のもと https://t.co/Y4g1gvPpn3
+  metrics:
+    like_count: 17
+    reply_count: 0
+    quote_count: 0
+    repost_count: 3
+    bookmark_count: 0
+    impression_count: 4356
+  mentions: []
+notes: ''

@@ -1,0 +1,25 @@
+type: tweet_stock_analysis_prepare
+version: 1
+run_id: tweet_stock_20260413_20260413_7y8k3d17sozce0w_20260413_102649
+generated_at: '2026-04-13T10:27:04.582232'
+source_relation: analytics.monitored_x_posts
+company_relation: analytics.listed_companies_latest
+date_range:
+  start_date: '2026-04-13'
+  end_date: '2026-04-13'
+target_username: 7Y8k3d17SozCE0w
+parameters:
+  volume_lookback_days: 20
+  forward_return_days:
+  - 5
+  - 20
+  limit: null
+counts:
+  tweet_count: 18
+  company_snapshot_count: 3755
+files:
+  tweets_csv: research/tweet-stock-analysis/tweet_stock_20260413_20260413_7y8k3d17sozce0w_20260413_102649/tweets.csv
+  company_snapshot_csv: research/tweet-stock-analysis/tweet_stock_20260413_20260413_7y8k3d17sozce0w_20260413_102649/company_snapshot.csv
+  analysis_template_yaml: research/tweet-stock-analysis/tweet_stock_20260413_20260413_7y8k3d17sozce0w_20260413_102649/analysis_template.yaml
+  analysis_template_json: research/tweet-stock-analysis/tweet_stock_20260413_20260413_7y8k3d17sozce0w_20260413_102649/analysis_template.json
+  manifest_yaml: research/tweet-stock-analysis/tweet_stock_20260413_20260413_7y8k3d17sozce0w_20260413_102649/manifest.yaml

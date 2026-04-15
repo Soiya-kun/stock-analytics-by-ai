@@ -1,0 +1,276 @@
+{
+  "type": "tweet_stock_analysis",
+  "version": 1,
+  "run": {
+    "run_id": "tweet_stock_20260415_20260415_7y8k3d17sozce0w_20260415_095013",
+    "source_relation": "analytics.monitored_x_posts",
+    "company_relation": "analytics.listed_companies_latest",
+    "start_date": "2026-04-15",
+    "end_date": "2026-04-15",
+    "target_username": "7Y8k3d17SozCE0w",
+    "generated_at": "2026-04-15T09:50:14.087255",
+    "parameters": {
+      "volume_lookback_days": 20,
+      "forward_return_days": [
+        5,
+        20
+      ],
+      "limit": null
+    }
+  },
+  "tweets": [
+    {
+      "post_id": "2044161645308719242",
+      "target_username": "7Y8k3d17SozCE0w",
+      "author_user_id": "1043754233231634434",
+      "author_username": "7Y8k3d17SozCE0w",
+      "author_name": "やるっつえぶらっきん",
+      "created_at": "2026-04-15T06:11:29+09:00",
+      "created_at_jst": "2026-04-15T06:11:29",
+      "post_date_jst": "2026-04-15",
+      "tweet_url": "https://x.com/7Y8k3d17SozCE0w/status/2044161645308719242",
+      "text": "おはようございます\n\nNYダウ317高\n日経先物877高\nナス455高\nSOX184高\n為替158.78\n米国債4.24\n原油92\n金4864\nイラン再協議期待で続伸\n日経先物58700台へ\nSOX最高値更新で日経先物大幅高\n本日は本業内勤でたぶん午前中は不参加かな？\nでは頼んますね https://t.co/0GCLOrvnqz",
+      "metrics": {
+        "like_count": 37,
+        "reply_count": 2,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 3293
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2044172944080031769",
+      "target_username": "7Y8k3d17SozCE0w",
+      "author_user_id": "1043754233231634434",
+      "author_username": "7Y8k3d17SozCE0w",
+      "author_name": "やるっつえぶらっきん",
+      "created_at": "2026-04-15T06:56:23+09:00",
+      "created_at_jst": "2026-04-15T06:56:23",
+      "post_date_jst": "2026-04-15",
+      "tweet_url": "https://x.com/7Y8k3d17SozCE0w/status/2044172944080031769",
+      "text": "いつまでたっても https://t.co/nRSUcBZp5Q https://t.co/6sNZ8ittzY",
+      "metrics": {
+        "like_count": 6,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 1,
+        "impression_count": 5069
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2044173719661359507",
+      "target_username": "7Y8k3d17SozCE0w",
+      "author_user_id": "1043754233231634434",
+      "author_username": "7Y8k3d17SozCE0w",
+      "author_name": "やるっつえぶらっきん",
+      "created_at": "2026-04-15T06:59:28+09:00",
+      "created_at_jst": "2026-04-15T06:59:28",
+      "post_date_jst": "2026-04-15",
+      "tweet_url": "https://x.com/7Y8k3d17SozCE0w/status/2044173719661359507",
+      "text": "バチカンを怒らせるバカチン https://t.co/1dLkoSIdCG",
+      "metrics": {
+        "like_count": 14,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 5602
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2044174029364572541",
+      "target_username": "7Y8k3d17SozCE0w",
+      "author_user_id": "1043754233231634434",
+      "author_username": "7Y8k3d17SozCE0w",
+      "author_name": "やるっつえぶらっきん",
+      "created_at": "2026-04-15T07:00:42+09:00",
+      "created_at_jst": "2026-04-15T07:00:42",
+      "post_date_jst": "2026-04-15",
+      "tweet_url": "https://x.com/7Y8k3d17SozCE0w/status/2044174029364572541",
+      "text": "ワイか？ https://t.co/xVAPXruXKq",
+      "metrics": {
+        "like_count": 10,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 8253
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2044175538496077884",
+      "target_username": "7Y8k3d17SozCE0w",
+      "author_user_id": "1043754233231634434",
+      "author_username": "7Y8k3d17SozCE0w",
+      "author_name": "やるっつえぶらっきん",
+      "created_at": "2026-04-15T07:06:41+09:00",
+      "created_at_jst": "2026-04-15T07:06:41",
+      "post_date_jst": "2026-04-15",
+      "tweet_url": "https://x.com/7Y8k3d17SozCE0w/status/2044175538496077884",
+      "text": "泣いてまうやろ https://t.co/3vyNxcqaFm",
+      "metrics": {
+        "like_count": 35,
+        "reply_count": 1,
+        "quote_count": 0,
+        "repost_count": 3,
+        "bookmark_count": 8,
+        "impression_count": 10433
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2044230032898568655",
+      "target_username": "7Y8k3d17SozCE0w",
+      "author_user_id": "1043754233231634434",
+      "author_username": "7Y8k3d17SozCE0w",
+      "author_name": "やるっつえぶらっきん",
+      "created_at": "2026-04-15T10:43:14+09:00",
+      "created_at_jst": "2026-04-15T10:43:14",
+      "post_date_jst": "2026-04-15",
+      "tweet_url": "https://x.com/7Y8k3d17SozCE0w/status/2044230032898568655",
+      "text": "内勤脱出\n\n太陽誘電、AIメカテック.エイピアGo",
+      "metrics": {
+        "like_count": 11,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 3725
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2044261273043677605",
+      "target_username": "7Y8k3d17SozCE0w",
+      "author_user_id": "1043754233231634434",
+      "author_username": "7Y8k3d17SozCE0w",
+      "author_name": "やるっつえぶらっきん",
+      "created_at": "2026-04-15T12:47:22+09:00",
+      "created_at_jst": "2026-04-15T12:47:22",
+      "post_date_jst": "2026-04-15",
+      "tweet_url": "https://x.com/7Y8k3d17SozCE0w/status/2044261273043677605",
+      "text": "AIメカテック連チャンまだですか https://t.co/VOr2zSs0wI",
+      "metrics": {
+        "like_count": 5,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 3198
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2044261601621188967",
+      "target_username": "7Y8k3d17SozCE0w",
+      "author_user_id": "1043754233231634434",
+      "author_username": "7Y8k3d17SozCE0w",
+      "author_name": "やるっつえぶらっきん",
+      "created_at": "2026-04-15T12:48:41+09:00",
+      "created_at_jst": "2026-04-15T12:48:41",
+      "post_date_jst": "2026-04-15",
+      "tweet_url": "https://x.com/7Y8k3d17SozCE0w/status/2044261601621188967",
+      "text": "きたか https://t.co/cbntn1rIo5",
+      "metrics": {
+        "like_count": 10,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 1,
+        "bookmark_count": 0,
+        "impression_count": 6508
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2044273608336519435",
+      "target_username": "7Y8k3d17SozCE0w",
+      "author_user_id": "1043754233231634434",
+      "author_username": "7Y8k3d17SozCE0w",
+      "author_name": "やるっつえぶらっきん",
+      "created_at": "2026-04-15T13:36:23+09:00",
+      "created_at_jst": "2026-04-15T13:36:23",
+      "post_date_jst": "2026-04-15",
+      "tweet_url": "https://x.com/7Y8k3d17SozCE0w/status/2044273608336519435",
+      "text": "AIメカテック https://t.co/0lQ5yXd3AQ",
+      "metrics": {
+        "like_count": 5,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 3098
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2044297549851640128",
+      "target_username": "7Y8k3d17SozCE0w",
+      "author_user_id": "1043754233231634434",
+      "author_username": "7Y8k3d17SozCE0w",
+      "author_name": "やるっつえぶらっきん",
+      "created_at": "2026-04-15T15:11:31+09:00",
+      "created_at_jst": "2026-04-15T15:11:31",
+      "post_date_jst": "2026-04-15",
+      "tweet_url": "https://x.com/7Y8k3d17SozCE0w/status/2044297549851640128",
+      "text": "いいね(≧∇≦)b https://t.co/QyuA7gBucW",
+      "metrics": {
+        "like_count": 7,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 5164
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2044303728615076332",
+      "target_username": "7Y8k3d17SozCE0w",
+      "author_user_id": "1043754233231634434",
+      "author_username": "7Y8k3d17SozCE0w",
+      "author_name": "やるっつえぶらっきん",
+      "created_at": "2026-04-15T15:36:04+09:00",
+      "created_at_jst": "2026-04-15T15:36:04",
+      "post_date_jst": "2026-04-15",
+      "tweet_url": "https://x.com/7Y8k3d17SozCE0w/status/2044303728615076332",
+      "text": "おつおつ\n\n何も足さない\n何も引かない\nそんなノートレ日\n相場良いねー♥とりまアンソロピック様々な半導体AIバボ相場\n戦争落ち着いたら、原油の下落とともに金相場来るのに備えマッスル https://t.co/mQIxtv9gAf",
+      "metrics": {
+        "like_count": 24,
+        "reply_count": 1,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 2,
+        "impression_count": 2454
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2044326047429341438",
+      "target_username": "7Y8k3d17SozCE0w",
+      "author_user_id": "1043754233231634434",
+      "author_username": "7Y8k3d17SozCE0w",
+      "author_name": "やるっつえぶらっきん",
+      "created_at": "2026-04-15T17:04:46+09:00",
+      "created_at_jst": "2026-04-15T17:04:46",
+      "post_date_jst": "2026-04-15",
+      "tweet_url": "https://x.com/7Y8k3d17SozCE0w/status/2044326047429341438",
+      "text": "ラブホの前で「さきっぽだけ！さきっぽだけだから」と言って土下座してる男と変わらんw https://t.co/AO8bzYSgX8",
+      "metrics": {
+        "like_count": 8,
+        "reply_count": 2,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 2,
+        "impression_count": 5285
+      },
+      "mentions": []
+    }
+  ],
+  "notes": ""
+}

@@ -1,0 +1,635 @@
+type: tweet_stock_analysis
+version: 1
+run:
+  run_id: tweet_stock_20260413_20260413_not_zerosumgame_20260413_102650
+  source_relation: analytics.monitored_x_posts
+  company_relation: analytics.listed_companies_latest
+  start_date: '2026-04-13'
+  end_date: '2026-04-13'
+  target_username: not_zerosumgame
+  generated_at: '2026-04-13T10:27:04.638268'
+  parameters:
+    volume_lookback_days: 20
+    forward_return_days:
+    - 5
+    - 20
+    limit: null
+tweets:
+- post_id: '2043531401203679274'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T12:27:07+09:00'
+  created_at_jst: '2026-04-13T12:27:07'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043531401203679274
+  text: '東京の地縁ない人が急に集まったエリアに関しては分からないけど、その他の実需物件は中古マンション、戸建共に一斉に在庫減ります。
+
+
+    新築供給できないので、事業者が買い始めました。
+
+    マンデベが他社分譲のマンションを仕入れたりもしています。
+
+
+    ただし築古戸建はリノベもできないので注意です。'
+  metrics:
+    like_count: 73
+    reply_count: 2
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 7
+    impression_count: 8804
+  mentions: []
+- post_id: '2043533885376725234'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T12:36:59+09:00'
+  created_at_jst: '2026-04-13T12:36:59'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043533885376725234
+  text: 次はキッチンの天板が生産止まります
+  metrics:
+    like_count: 80
+    reply_count: 3
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 9
+    impression_count: 11031
+  mentions: []
+- post_id: '2043534001345032592'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T12:37:27+09:00'
+  created_at_jst: '2026-04-13T12:37:27'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043534001345032592
+  text: 御影石ならまだいけるかなと思う
+  metrics:
+    like_count: 24
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 5983
+  mentions: []
+- post_id: '2043537576045519301'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T12:51:39+09:00'
+  created_at_jst: '2026-04-13T12:51:39'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043537576045519301
+  text: お金の都合で早く自宅買った方がいいと思い始めている人は、都心にしがみつくことを先ずは諦めて、不人気エリアとか人口減の地方に移住することで急がなくても全然買えると思うから、購入を検討していた人以外はその選択肢があるし動く必要ない。
+  metrics:
+    like_count: 98
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 8741
+  mentions: []
+- post_id: '2043538803424743845'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T12:56:32+09:00'
+  created_at_jst: '2026-04-13T12:56:32'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043538803424743845
+  text: 次は何が生産できなくなるかくらい考えておかないとまずいと思うけど
+  metrics:
+    like_count: 47
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 5781
+  mentions: []
+- post_id: '2043539337774862600'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T12:58:39+09:00'
+  created_at_jst: '2026-04-13T12:58:39'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043539337774862600
+  text: '住宅設備くらいなくても大丈夫と思うでしょう。でも、住設一部でも入ってなけりゃ検査受けれないから登記もできない＝引き渡し受けれない。
+
+    多分仮置き用でキッチン使い回しとか流行ると思う'
+  metrics:
+    like_count: 60
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 4
+    impression_count: 6173
+  mentions: []
+- post_id: '2043541820710543749'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T13:08:31+09:00'
+  created_at_jst: '2026-04-13T13:08:31'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043541820710543749
+  text: '新興デベロッパーがそこそこいた時代は安く無くなるまで待つが通用したかもしれないけど、今はもう体力あるデベロッパーしか市場にいないので、安くなるように待つは通用しない。
+
+    なんなら、安くならないように売り出さないができるデベロッパーばかりの市場で安くなることを祈ることは本末転倒'
+  metrics:
+    like_count: 37
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 5994
+  mentions: []
+- post_id: '2043546365532450961'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T13:26:35+09:00'
+  created_at_jst: '2026-04-13T13:26:35'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043546365532450961
+  text: トイレは大丈夫って思ってたら、本体は陶器だから作れるけど、便座作れませんってのは出てくるかもね
+  metrics:
+    like_count: 57
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 5766
+  mentions: []
+- post_id: '2043546789312450687'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T13:28:16+09:00'
+  created_at_jst: '2026-04-13T13:28:16'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043546789312450687
+  text: タカラもこの後発表あり https://t.co/nEFCAcMmWY
+  metrics:
+    like_count: 33
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 2
+    impression_count: 12302
+  mentions:
+  - sc: '7981'
+    company_name: ?????????
+    match_confidence: medium
+    extraction_rationale: Tweet says '???' in a housing-equipment context, which most likely refers to ????????? (7981).
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: タカラスタンダード
+      market: 東証PR
+      industry: その他製品
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ????????? was mentioned, but no usable market context was available at review time.
+- post_id: '2043546894153265262'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T13:28:41+09:00'
+  created_at_jst: '2026-04-13T13:28:41'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043546894153265262
+  text: てか、エアコン作れんのかな
+  metrics:
+    like_count: 26
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5234
+  mentions: []
+- post_id: '2043548241887912377'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T13:34:02+09:00'
+  created_at_jst: '2026-04-13T13:34:02'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043548241887912377
+  text: アスクル、アサヒ、アドバンテスト、イビデンって順番にサイバー攻撃されてるけど、あいうえお順で攻撃してるの？
+  metrics:
+    like_count: 64
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5831
+  mentions:
+  - sc: '2678'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: アスクル
+      market: 東証PR
+      industry: 小売
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ???? was mentioned, but no usable market context was available at review time.
+  - sc: '6857'
+    company_name: ???????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ???????.
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: アドバンテスト
+      market: 東証PR
+      industry: 電気機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ??????? was mentioned, but no usable market context was available at review time.
+  - sc: '4062'
+    company_name: ????
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names ????.
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: イビデン
+      market: 東証PR
+      industry: 電気機器
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: ???? was mentioned, but no usable market context was available at review time.
+- post_id: '2043550855199412715'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T13:44:25+09:00'
+  created_at_jst: '2026-04-13T13:44:25'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043550855199412715
+  text: え、今更？？ https://t.co/YmLOQ3bzUm
+  metrics:
+    like_count: 202
+    reply_count: 5
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 22
+    impression_count: 25968
+  mentions: []
+- post_id: '2043551972314534077'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T13:48:52+09:00'
+  created_at_jst: '2026-04-13T13:48:52'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043551972314534077
+  text: 今月このままだと黒字倒産確定がちょこちょこ https://t.co/kMYImU9jUj
+  metrics:
+    like_count: 44
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 4
+    impression_count: 10127
+  mentions: []
+- post_id: '2043552614525325538'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T13:51:25+09:00'
+  created_at_jst: '2026-04-13T13:51:25'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043552614525325538
+  text: TOTOよりLIXILの方が樹脂商材多いからキツそうだけどな
+  metrics:
+    like_count: 35
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 5
+    impression_count: 6127
+  mentions:
+  - sc: '5332'
+    company_name: TOTO
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names TOTO.
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: TOTO
+      market: 東証PR
+      industry: ガラス土石
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: TOTO was mentioned, but no usable market context was available at review time.
+  - sc: '5938'
+    company_name: LIXIL
+    match_confidence: high
+    extraction_rationale: Tweet explicitly names LIXIL.
+    market_context:
+      tweet_session: intraday
+      company_snapshot_name: LIXIL
+      market: 東証PR
+      industry: 金属製品
+      event_trade_date: '2026-04-13'
+      previous_trade_date: '2026-04-10'
+      next_trade_date: null
+      previous_close_price: null
+      event_open_price: null
+      event_high_price: null
+      event_low_price: null
+      event_close_price: null
+      next_close_price: null
+      event_volume: null
+      avg_volume_20d: null
+      volume_ratio_20d: null
+      event_day_return_pct: null
+      intraday_peak_return_pct: null
+      max_close_return_5d_pct: null
+      max_close_return_20d_pct: null
+    volume_spike_flag: false
+    price_jump_flag: false
+    volume_spike_reason: Market context is unavailable for this symbol, so volume confirmation cannot be judged yet.
+    price_jump_reason: Market context is unavailable for this symbol, so price-jump confirmation cannot be judged yet.
+    analysis_summary: LIXIL was mentioned, but no usable market context was available at review time.
+- post_id: '2043553130105979100'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T13:53:28+09:00'
+  created_at_jst: '2026-04-13T13:53:28'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043553130105979100
+  text: エネルギープラント工事の人らは今年から暫く大忙しだとさ
+  metrics:
+    like_count: 99
+    reply_count: 2
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 12
+    impression_count: 13348
+  mentions: []
+- post_id: '2043553800116711507'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T13:56:07+09:00'
+  created_at_jst: '2026-04-13T13:56:07'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043553800116711507
+  text: ところで、電線の被覆材はまだあるのですか？
+  metrics:
+    like_count: 46
+    reply_count: 2
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 3
+    impression_count: 10832
+  mentions: []
+- post_id: '2043555850107896107'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T14:04:16+09:00'
+  created_at_jst: '2026-04-13T14:04:16'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043555850107896107
+  text: 4月に入ってから、三井住友銀行のウェルスマネジメントバンカーがめちゃくちゃ鼻息荒いんだけど力入れてるの？
+  metrics:
+    like_count: 20
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 6573
+  mentions: []
+- post_id: '2043585924085485717'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T16:03:46+09:00'
+  created_at_jst: '2026-04-13T16:03:46'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043585924085485717
+  text: '防水工事が止まりました。
+
+    来月も納品ないので来月はもっと止まります。
+
+
+    防水工事できないと色んな工事が連動して止まります'
+  metrics:
+    like_count: 16
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 3631
+  mentions: []
+- post_id: '2043586592280056087'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T16:06:26+09:00'
+  created_at_jst: '2026-04-13T16:06:26'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043586592280056087
+  text: UBはコロナの時のミーレが止まってるからボッシュになります。みたいな感じにはならなくて全部止まるはず
+  metrics:
+    like_count: 20
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 5514
+  mentions: []
+- post_id: '2043592512468881710'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T16:29:57+09:00'
+  created_at_jst: '2026-04-13T16:29:57'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043592512468881710
+  text: '新築マンション建設でユニットバス納期遅くなるのはけっこうダメージが大きい。
+
+
+    基本的には工場組み立て後のモノを玄関枠取り付け前かサッシュ枠取り付け前に設置するんだけど、設置が遅くなる＝開口部の工事を後回しにするか、現場組み立てになるかなので、工数が増える分のコストアップになる。'
+  metrics:
+    like_count: 64
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 4
+    impression_count: 6210
+  mentions: []
+- post_id: '2043630012939874591'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T18:58:58+09:00'
+  created_at_jst: '2026-04-13T18:58:58'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043630012939874591
+  text: '仕事無くなれば、職人は違う業種に流れたりするし、その職人は殆ど戻ってこない。
+
+
+    職人不足が今年加速すると思う'
+  metrics:
+    like_count: 34
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 2135
+  mentions: []
+- post_id: '2043631014208295204'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T19:02:57+09:00'
+  created_at_jst: '2026-04-13T19:02:57'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043631014208295204
+  text: 該当フロア着工の45〜75日前とかですね。今は45日前は減ってますね https://t.co/hFqYrQzFlU
+  metrics:
+    like_count: 12
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 0
+    impression_count: 3420
+  mentions: []
+- post_id: '2043631609811996762'
+  target_username: not_zerosumgame
+  author_user_id: '1356253262370930688'
+  author_username: not_zerosumgame
+  author_name: おお
+  created_at: '2026-04-13T19:05:19+09:00'
+  created_at_jst: '2026-04-13T19:05:19'
+  post_date_jst: '2026-04-13'
+  tweet_url: https://x.com/not_zerosumgame/status/2043631609811996762
+  text: 一棟収益は着工時に全発注しますが、区分マンションはオプションがあるので発注は顧客提示のオプション期限から30日くらいが多いかなと思います。施工会社によりますね。
+  metrics:
+    like_count: 12
+    reply_count: 0
+    quote_count: 0
+    repost_count: 0
+    bookmark_count: 1
+    impression_count: 2236
+  mentions: []
+notes: ''

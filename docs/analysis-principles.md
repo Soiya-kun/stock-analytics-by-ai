@@ -159,6 +159,51 @@ This file is the source of truth for analysis logic that must survive across fut
   - Whether the price reaction should later be split into intraday and overnight cases more explicitly.
   - Whether a future phase should automate first-pass company extraction before the final LLM review.
 
+## Principle 005 - X Account Trust Evaluation
+
+- Intent: Judge whether a candidate X account is worth following by comparing its bullish stock signals against trusted benchmark accounts and by measuring whether its unique bullish picks actually worked.
+- Universe: Collected monitored X posts in `analytics.monitored_x_posts`, canonical `post x stock-code` signal rows in `research.x_post_stock_signals`, and adjusted market context from `analytics.stock_prices_adjusted_daily`.
+- Base dataset/view:
+  - `analytics.monitored_x_posts`
+  - `analytics.x_bullish_stock_signals`
+- Required filters:
+  - Use only monitored accounts with `account_role in ('benchmark', 'candidate')`.
+  - Treat `bullish` as the source-of-truth signal label for trust scoring.
+  - Group same-symbol bullish signals into fixed 30-day clusters.
+  - Use only price and volume context already derived from adjusted prices.
+  - Mark a post as reviewed even when it has zero listed-company signals, so later exports can skip it.
+- Parameters and defaults:
+  - `evaluation_days`: `90`
+  - `cluster_window_days`: `30`
+  - `unique_success_horizon_days`: `20`
+  - `unique_success_return_pct`: `0.10`
+  - `overlap_weight`: `0.35`
+  - `early_weight`: `0.35`
+  - `unique_weight`: `0.30`
+  - `insufficient_min_clusters`: `15`
+  - `insufficient_min_unique_picks`: `5`
+  - `trusted_score_threshold`: `0.60`
+  - `watch_score_threshold`: `0.35`
+  - `signal_analysis_version`: `x-signal-v1`
+  - `trust_analysis_version`: `x-account-trust-v1`
+- Signal or scoring logic:
+  - Prepare unanalyzed posts into a durable template and review each `post x stock-code` signal with LLM judgment.
+  - Persist canonical signal rows with `signal_label`, confidence, rationale, and enriched market context.
+  - Build 30-day symbol clusters from bullish signals.
+  - Compute `benchmark_overlap_rate`, `early_overlap_rate`, and `unique_pick_success_rate` for each candidate.
+  - Compute `trust_score = 0.35 * overlap + 0.35 * early + 0.30 * unique`.
+  - Return `insufficient_data`, `trusted_candidate`, `watch`, or `low_confidence`.
+- Validation query or backtest method:
+  - Prepare batch: `docker compose run --rm analysis prepare-x-signal-analysis --start-date YYYY-MM-DD --end-date YYYY-MM-DD --account-role all`
+  - Enrich batch: `docker compose run --rm analysis enrich-x-signal-analysis --input-file research/x-signal-analysis/<run-id>/analysis_template.yaml`
+  - Persist canonical signals: `docker compose run --rm analysis persist-x-signal-analysis --input-file research/x-signal-analysis/<run-id>/enriched_analysis.yaml`
+  - Evaluate trust: `docker compose run --rm analysis evaluate-x-account-trust --candidate-username USERNAME --start-date YYYY-MM-DD --end-date YYYY-MM-DD`
+  - Method document: `docs/research/x-account-trust-methodology.md`
+- Open questions:
+  - Whether benchmark overlap should later be weighted by benchmark-specific trust or recent hit rate.
+  - Whether candidate timing should use first post only or also repeated reinforcement inside the same cluster.
+  - Whether unique-pick success should later include downside filters, not only `20-day max return`.
+
 ## Principle Template
 
 Use the following template for each principle:

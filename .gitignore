@@ -7,3 +7,6 @@
 __pycache__/
 .pytest_cache/
 *.pyc
+/.tmp-wheels/
+/research/
+/.venv/

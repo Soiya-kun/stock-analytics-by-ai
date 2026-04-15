@@ -432,9 +432,15 @@ def determine_search_date(tweet_created_at_jst: datetime) -> date:
 def classify_tweet_session(
     tweet_created_at_jst: datetime,
     event_trade_date: date | None,
+    search_date: date | None = None,
 ) -> str:
     if event_trade_date is None:
         return "unknown"
+    reference_date = search_date or tweet_created_at_jst.date()
+    if event_trade_date < reference_date:
+        if tweet_created_at_jst.time() >= MARKET_CLOSE_CUTOFF_JST:
+            return "after_market"
+        return "non_trading_day"
     if event_trade_date > tweet_created_at_jst.date():
         if tweet_created_at_jst.time() >= MARKET_CLOSE_CUTOFF_JST:
             return "after_market"
@@ -522,6 +528,35 @@ def fetch_price_rows_before(
         return list(cur.fetchall())
 
 
+def fetch_latest_price_row_on_or_before(
+    conn: psycopg.Connection[Any],
+    sc: str,
+    on_or_before_date: date,
+) -> dict[str, Any] | None:
+    with conn.cursor() as cur:
+        cur.execute(
+            """
+            select
+                trade_date,
+                open_price,
+                high_price,
+                low_price,
+                close_price,
+                volume,
+                name,
+                market,
+                industry
+            from analytics.stock_prices_adjusted_daily
+            where sc = %s
+              and trade_date <= %s
+            order by trade_date desc
+            limit 1
+            """,
+            (sc, on_or_before_date),
+        )
+        return cur.fetchone()
+
+
 def build_market_context(
     conn: psycopg.Connection[Any],
     sc: str,
@@ -536,30 +571,36 @@ def build_market_context(
     forward_rows = fetch_price_rows_after(conn, sc, search_date, forward_limit)
 
     if not forward_rows:
-        return {
-            "tweet_session": classify_tweet_session(tweet_created_at_jst, None),
-            "company_snapshot_name": company_row["name"] if company_row else None,
-            "market": company_row["market"] if company_row else None,
-            "industry": company_row["industry"] if company_row else None,
-            "event_trade_date": None,
-            "previous_trade_date": None,
-            "next_trade_date": None,
-            "previous_close_price": None,
-            "event_open_price": None,
-            "event_high_price": None,
-            "event_low_price": None,
-            "event_close_price": None,
-            "next_close_price": None,
-            "event_volume": None,
-            "avg_volume_20d": None,
-            "volume_ratio_20d": None,
-            "event_day_return_pct": None,
-            "intraday_peak_return_pct": None,
-            "max_close_return_5d_pct": None,
-            "max_close_return_20d_pct": None,
-        }
+        fallback_row = fetch_latest_price_row_on_or_before(conn, sc, search_date)
+        if fallback_row is None:
+            return {
+                "tweet_session": classify_tweet_session(tweet_created_at_jst, None, search_date),
+                "company_snapshot_name": company_row["name"] if company_row else None,
+                "market": company_row["market"] if company_row else None,
+                "industry": company_row["industry"] if company_row else None,
+                "event_trade_date": None,
+                "previous_trade_date": None,
+                "next_trade_date": None,
+                "previous_close_price": None,
+                "event_open_price": None,
+                "event_high_price": None,
+                "event_low_price": None,
+                "event_close_price": None,
+                "next_close_price": None,
+                "event_volume": None,
+                "avg_volume_20d": None,
+                "volume_ratio_20d": None,
+                "event_day_return_pct": None,
+                "intraday_peak_return_pct": None,
+                "max_close_return_5d_pct": None,
+                "max_close_return_20d_pct": None,
+            }
+        event_row = fallback_row
+        next_row = None
+    else:
+        event_row = forward_rows[0]
+        next_row = forward_rows[1] if len(forward_rows) > 1 else None
 
-    event_row = forward_rows[0]
     history_rows = fetch_price_rows_before(
         conn,
         sc,
@@ -567,7 +608,6 @@ def build_market_context(
         max(volume_lookback_days, 1),
     )
     previous_row = history_rows[0] if history_rows else None
-    next_row = forward_rows[1] if len(forward_rows) > 1 else None
 
     average_volume = None
     volumes = [to_float(row["volume"]) for row in history_rows if row.get("volume") is not None]
@@ -593,7 +633,11 @@ def build_market_context(
         return max((price / previous_close) - 1 for price in subset if price is not None)
 
     return {
-        "tweet_session": classify_tweet_session(tweet_created_at_jst, event_row["trade_date"]),
+        "tweet_session": classify_tweet_session(
+            tweet_created_at_jst,
+            event_row["trade_date"],
+            search_date,
+        ),
         "company_snapshot_name": (
             company_row["name"] if company_row else event_row.get("name")
         ),

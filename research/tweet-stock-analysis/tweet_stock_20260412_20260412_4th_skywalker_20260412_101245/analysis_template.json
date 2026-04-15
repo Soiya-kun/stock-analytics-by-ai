@@ -1,0 +1,570 @@
+{
+  "type": "tweet_stock_analysis",
+  "version": 1,
+  "run": {
+    "run_id": "tweet_stock_20260412_20260412_4th_skywalker_20260412_101245",
+    "source_relation": "analytics.monitored_x_posts",
+    "company_relation": "analytics.listed_companies_latest",
+    "start_date": "2026-04-12",
+    "end_date": "2026-04-12",
+    "target_username": "4th_skywalker",
+    "generated_at": "2026-04-12T10:12:45.939711",
+    "parameters": {
+      "volume_lookback_days": 20,
+      "forward_return_days": [
+        5,
+        20
+      ],
+      "limit": null
+    }
+  },
+  "tweets": [
+    {
+      "post_id": "2043014154609709202",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T02:11:46+09:00",
+      "created_at_jst": "2026-04-12T02:11:46",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043014154609709202",
+      "text": "銀河系時代→×\n銀河系内恒星間航行時代→〇🍵ﾋﾏｶﾖｗ https://t.co/svHIcBB7s8",
+      "metrics": {
+        "like_count": 44,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 1,
+        "bookmark_count": 3,
+        "impression_count": 7544
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043014859638607941",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T02:14:34+09:00",
+      "created_at_jst": "2026-04-12T02:14:34",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043014859638607941",
+      "text": "そうですねｗ\nそのくらい前ならちょいちょいショーツもやってました\n小型でもカカツ落としたりとかｗ\nほぼNKショーツですけどね\n今の時代にショーツは不利×２倍です\nただでさえ制度上不利なので普段から狙うには効率は最悪ですね\n最高の場面だけ待ち\n一撃必殺のショーツ https://t.co/PfsewgNQ7X",
+      "metrics": {
+        "like_count": 101,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 1,
+        "bookmark_count": 17,
+        "impression_count": 16643
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043015472715829472",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T02:17:00+09:00",
+      "created_at_jst": "2026-04-12T02:17:00",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043015472715829472",
+      "text": "そうはいっても\n最高の場面ってこないんですよね\n何故こないのかというと\n日本株は特にですが\n全体のトレンズが圧倒的なUPトレンズの中にあるからです\n全体のトレンズが圧倒的に上なので\nどうしても個別要因だけで狙うことになり\n難易度はさらに高くなっています\n全体売りという援軍が来ないので",
+      "metrics": {
+        "like_count": 102,
+        "reply_count": 0,
+        "quote_count": 2,
+        "repost_count": 1,
+        "bookmark_count": 10,
+        "impression_count": 14971
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043016779870671003",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T02:22:12+09:00",
+      "created_at_jst": "2026-04-12T02:22:12",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043016779870671003",
+      "text": "全体のトレンズが圧倒的に上の中\nショーツするというのは\nすんごい急流をみんなが川下りして楽しんでいるのに\n独りで川登りしようとしている状態なわけですよ\nたまたま流れの緩やかな場所があったとしても\nその距離は短く\n上流まではたどり着けないのです\n流れに逆らうよりも https://t.co/aPDGK3fcFg",
+      "metrics": {
+        "like_count": 101,
+        "reply_count": 0,
+        "quote_count": 1,
+        "repost_count": 0,
+        "bookmark_count": 15,
+        "impression_count": 9068
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043018363635708320",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T02:28:29+09:00",
+      "created_at_jst": "2026-04-12T02:28:29",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043018363635708320",
+      "text": "この圧倒的な株高トレンズの時代にあって\n個別でショーツなんて言っているようでは\n自分に相場観などは無く\nそもそも自分はトレーズのセンスがないと宣言しているようなものでしょう\n相場観もトレーズセンスもないのですから\nそのような人がショーツなど触らないほうがよいのですよ",
+      "metrics": {
+        "like_count": 114,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 1,
+        "bookmark_count": 11,
+        "impression_count": 7011
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043018888951283934",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T02:30:35+09:00",
+      "created_at_jst": "2026-04-12T02:30:35",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043018888951283934",
+      "text": "たとえば\n１年前に戻れたとして\nその時に何をしますか\nまたショーツしますか？\nそれとも電線買いますか？\nということなのです\n電線買っといたほうがよかったじゃろ\nそれが答えのすべて\nじゃあ何故ショーツするのか\n君が\n負け犬だからですよ\n現実",
+      "metrics": {
+        "like_count": 148,
+        "reply_count": 0,
+        "quote_count": 1,
+        "repost_count": 3,
+        "bookmark_count": 9,
+        "impression_count": 9008
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043019893981999141",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T02:34:34+09:00",
+      "created_at_jst": "2026-04-12T02:34:34",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043019893981999141",
+      "text": "人はの\nその内面を言葉にしなくとも\nある行動のベクトルや思考の流れだけをみれば\nそれらがどのような要因に対して起こった事象なのか\nだいたい見当はつくものなのである\n現在の相場の上でショーツと言っているのは\n敗北したからなんです\n何も聞かなくとも全て理解できる\n負けたのよ\n自分にな",
+      "metrics": {
+        "like_count": 106,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 3,
+        "bookmark_count": 10,
+        "impression_count": 6232
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043020503011725388",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T02:37:00+09:00",
+      "created_at_jst": "2026-04-12T02:37:00",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043020503011725388",
+      "text": "じゃがの\nいちおうアドバイシュだけしておいてあげますが\nいまからでも遅くはないです\nショーツはやめて\n上を向くことです\n今から上だけをみること\nなんどでも言うけど\n投資するのに遅いということはありません\n何歳からでもモノホンのトレーダーになれます\nそのかわり\n上を向くことです\n今日から",
+      "metrics": {
+        "like_count": 342,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 6,
+        "bookmark_count": 43,
+        "impression_count": 12427
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043021130139865503",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T02:39:29+09:00",
+      "created_at_jst": "2026-04-12T02:39:29",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043021130139865503",
+      "text": "俺は絶対に上しかみねえ\nぜってえ上\nという気持ちだけを持って\n今からやり直してみてください\nきっと素晴らしい未来が待っているとおもいます\n下を向いているうちは\nあなたに未来はありません\nこれは精神論なんかじゃない\n現実の\n実現可能な未来のお話なのです\nいいね\n以上だ🍵ﾋﾏﾀﾞﾛｗ",
+      "metrics": {
+        "like_count": 274,
+        "reply_count": 0,
+        "quote_count": 3,
+        "repost_count": 7,
+        "bookmark_count": 31,
+        "impression_count": 10911
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043023654381064258",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T02:49:31+09:00",
+      "created_at_jst": "2026-04-12T02:49:31",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043023654381064258",
+      "text": "縛りはほぼ設けておりませんので\n直接的な宇宙関連ではなくとも\n宇宙時代へつながるような技術や製品やサービスの視点からでもなんでも構いません\nお気軽にポスツしてくださいまし\n連投も全然オケです🍵ｿﾉﾎｳｶﾞｲｲﾈｗ",
+      "metrics": {
+        "like_count": 180,
+        "reply_count": 1,
+        "quote_count": 0,
+        "repost_count": 2,
+        "bookmark_count": 7,
+        "impression_count": 15075
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043260815374193111",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T18:31:54+09:00",
+      "created_at_jst": "2026-04-12T18:31:54",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043260815374193111",
+      "text": "📝🍵 https://t.co/pvabJf3P5i",
+      "metrics": {
+        "like_count": 13,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 3451
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043261370901381610",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T18:34:07+09:00",
+      "created_at_jst": "2026-04-12T18:34:07",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043261370901381610",
+      "text": "いずれは\n\n光の時代がくる https://t.co/gXuTs0wPww",
+      "metrics": {
+        "like_count": 24,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 1,
+        "impression_count": 3053
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043261595946791407",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T18:35:01+09:00",
+      "created_at_jst": "2026-04-12T18:35:01",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043261595946791407",
+      "text": "重要なのは\n\n光の時代に\n\n乗っているか https://t.co/CvlfcYBQwH",
+      "metrics": {
+        "like_count": 16,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 1,
+        "bookmark_count": 2,
+        "impression_count": 2798
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043261659062686011",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T18:35:16+09:00",
+      "created_at_jst": "2026-04-12T18:35:16",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043261659062686011",
+      "text": "光の時代がくると\n\nまだ理解していない https://t.co/d1cfuyCz5O",
+      "metrics": {
+        "like_count": 14,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 3342
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043261776616415270",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T18:35:44+09:00",
+      "created_at_jst": "2026-04-12T18:35:44",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043261776616415270",
+      "text": "半導体も\n\n全部光の時代が\n\nやってきます https://t.co/ip8ljwxQ68",
+      "metrics": {
+        "like_count": 31,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 1,
+        "bookmark_count": 4,
+        "impression_count": 3768
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043261962088509495",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T18:36:28+09:00",
+      "created_at_jst": "2026-04-12T18:36:28",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043261962088509495",
+      "text": "光の時代になるから\n\n光に投資している https://t.co/9hLvT9TMDr",
+      "metrics": {
+        "like_count": 20,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 1,
+        "impression_count": 2981
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043262577489391917",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T18:38:55+09:00",
+      "created_at_jst": "2026-04-12T18:38:55",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043262577489391917",
+      "text": "トヨタさんはルナクルーザーも核融合もありますね\n目先は地球上の車事情だけで動くので\nその他の分野でどれだけ伸びるのかだけをみております\n農業とか含めて🍵ﾃﾞｽﾈｴｗ https://t.co/yAZOKnzxCJ",
+      "metrics": {
+        "like_count": 31,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 3127
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043263664598503591",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T18:43:14+09:00",
+      "created_at_jst": "2026-04-12T18:43:14",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043263664598503591",
+      "text": "トヨタさんはマーズクルーザーが火星でベスツセラーになるとおもうので\nその頃に株価１００倍くらいになってたら\nまぁいいかなってとこですね🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ",
+      "metrics": {
+        "like_count": 34,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 1,
+        "bookmark_count": 3,
+        "impression_count": 1965
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043264407724278125",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T18:46:11+09:00",
+      "created_at_jst": "2026-04-12T18:46:11",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043264407724278125",
+      "text": "過酷な環境で走る車なら\n日本車は最強になるでしょう\nそれが日本車の期待値なのである\n日本車の期待値は\n地球上ではアフリカなど新興国\nその後は宇宙である🍵ﾃﾞｽﾈｴｗ",
+      "metrics": {
+        "like_count": 22,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 1496
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043264973426852158",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T18:48:26+09:00",
+      "created_at_jst": "2026-04-12T18:48:26",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043264973426852158",
+      "text": "でもまぁ\n火星時代だともう\n車は地表を走らず\n飛んでいるやもしれませんが\nそうすると日本企業なら重工かホンダかしらｗ🍵ｱｯｶﾝｽｷﾞﾙｗｗｗ",
+      "metrics": {
+        "like_count": 18,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 1,
+        "impression_count": 1370
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043265745090658323",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T18:51:30+09:00",
+      "created_at_jst": "2026-04-12T18:51:30",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043265745090658323",
+      "text": "火星に地球と同じような大気を生成する事業なんかも\n壮大な事業になりそうだよな\n地下の氷を溶かしてオアシスをつくりだすのもアリだな\nやることは無限にある\nたのしみですね🍵ﾅｶﾞｲｷｼﾛｗ",
+      "metrics": {
+        "like_count": 15,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 0,
+        "impression_count": 1313
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043266467316355453",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T18:54:22+09:00",
+      "created_at_jst": "2026-04-12T18:54:22",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043266467316355453",
+      "text": "だいたいが\nあれだけドローンが安定して飛べるんじゃから\nドローンが大きくなった乗り物が次世代バッテリーを積んだら\n車不要になっちゃうもんな\nENERGY問題のみですね🍵ﾏｼﾞｿﾚｽｷﾞﾙｗｗｗ",
+      "metrics": {
+        "like_count": 18,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 2,
+        "impression_count": 1272
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043267849544941615",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T18:59:52+09:00",
+      "created_at_jst": "2026-04-12T18:59:52",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043267849544941615",
+      "text": "このあたりの企業はすでに\n海外企業はだいぶ先行しておりますので\nエンジンで強さを発揮する日本企業はだいぶ遅れをとっておりますね\nバッテリーとモーラーで動く製品は日本企業にとっては不利の連続である\nその下請けならば強いが",
+      "metrics": {
+        "like_count": 12,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 1,
+        "impression_count": 921
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043268773952790988",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T19:03:32+09:00",
+      "created_at_jst": "2026-04-12T19:03:32",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043268773952790988",
+      "text": "これはロボッツでも同じことが言える\nロボッツメーカーとしての日本企業は全然ダメです\nロボッツを構成するパーツやそれら製造装置や検査装置や洗浄装置であれば日本企業は強い\n半導体を考えると全部わかりやすい\nトヨタやホンダがロボッツなんか出したって世界じゃ売れませんね",
+      "metrics": {
+        "like_count": 19,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 3,
+        "impression_count": 859
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043269425202352616",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T19:06:07+09:00",
+      "created_at_jst": "2026-04-12T19:06:07",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043269425202352616",
+      "text": "テスラがロボッツを出せば売れるし\nAppleが出しても売れるし\nググるさんが出しても売れるじゃろ\nソフバンGが出しても売れないわな\n日本の情弱なら買うじゃろけど\n世界じゃ売れない\nNECさんや富士通さんが出すなら\n医療や介護の現場専用みたいなもんだけじゃろ\n一般のご家庭用は出してもムリ",
+      "metrics": {
+        "like_count": 15,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 0,
+        "bookmark_count": 2,
+        "impression_count": 645
+      },
+      "mentions": []
+    },
+    {
+      "post_id": "2043270041316327466",
+      "target_username": "4th_skywalker",
+      "author_user_id": "1263979962719072256",
+      "author_username": "4th_skywalker",
+      "author_name": "kks",
+      "created_at": "2026-04-12T19:08:34+09:00",
+      "created_at_jst": "2026-04-12T19:08:34",
+      "post_date_jst": "2026-04-12",
+      "tweet_url": "https://x.com/4th_skywalker/status/2043270041316327466",
+      "text": "メーカーは基本アメリカ企業\n激安ジャングルはチャイナ企業\n半導体は世界のトップランカー\n宇宙は断トツでアメリカ企業\nその全ての下請けは日本企業の精度",
+      "metrics": {
+        "like_count": 13,
+        "reply_count": 0,
+        "quote_count": 0,
+        "repost_count": 1,
+        "bookmark_count": 4,
+        "impression_count": 414
+      },
+      "mentions": []
+    }
+  ],
+  "notes": ""
+}

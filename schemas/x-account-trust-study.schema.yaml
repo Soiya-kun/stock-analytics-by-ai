@@ -1,0 +1,54 @@
+type: object
+required:
+  - type
+  - version
+  - run_id
+  - source_relation
+  - date_range
+  - parameters
+  - counts
+  - files
+properties:
+  type:
+    const: x_account_trust_evaluation
+  version:
+    type: integer
+  run_id:
+    type: string
+  source_relation:
+    const: analytics.x_bullish_stock_signals
+  date_range:
+    type: object
+    required:
+      - start_date
+      - end_date
+  candidate_username:
+    type:
+      - string
+      - "null"
+  candidate_usernames:
+    type: array
+    items:
+      type: string
+  parameters:
+    type: object
+    required:
+      - cluster_window_days
+      - unique_success_horizon_days
+      - unique_success_return_pct
+      - overlap_weight
+      - early_weight
+      - unique_weight
+  counts:
+    type: object
+    required:
+      - candidate_count
+      - score_count
+      - cluster_count
+  files:
+    type: object
+    required:
+      - scores_csv
+      - clusters_csv
+      - manifest_yaml
+      - report_md

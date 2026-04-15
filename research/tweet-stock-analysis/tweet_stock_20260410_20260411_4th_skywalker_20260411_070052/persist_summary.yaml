@@ -1,0 +1,47 @@
+run_id: tweet_stock_20260410_20260411_4th_skywalker_20260411_070052
+tweet_count: 209
+mention_count: 76
+unique_symbols: 40
+volume_spike_count: 28
+price_jump_count: 32
+top_symbols:
+- sc: 268A
+  count: 2
+- sc: 278A
+  count: 1
+- sc: 281A
+  count: 3
+- sc: 285A
+  count: 8
+- sc: '3110'
+  count: 1
+- sc: '3443'
+  count: 1
+- sc: '3444'
+  count: 1
+- sc: '3626'
+  count: 1
+- sc: '4004'
+  count: 1
+- sc: '4186'
+  count: 1
+- sc: 464A
+  count: 1
+- sc: 485A
+  count: 2
+- sc: '5016'
+  count: 1
+- sc: '5803'
+  count: 6
+- sc: '5817'
+  count: 1
+- sc: '6104'
+  count: 1
+- sc: '6141'
+  count: 1
+- sc: '6146'
+  count: 1
+- sc: '6258'
+  count: 2
+- sc: '6264'
+  count: 2

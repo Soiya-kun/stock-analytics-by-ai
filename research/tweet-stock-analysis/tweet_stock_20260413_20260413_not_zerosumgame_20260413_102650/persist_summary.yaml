@@ -1,0 +1,19 @@
+run_id: tweet_stock_20260413_20260413_not_zerosumgame_20260413_102650
+tweet_count: 23
+mention_count: 6
+unique_symbols: 6
+volume_spike_count: 0
+price_jump_count: 0
+top_symbols:
+- sc: '2678'
+  count: 1
+- sc: '4062'
+  count: 1
+- sc: '5332'
+  count: 1
+- sc: '5938'
+  count: 1
+- sc: '6857'
+  count: 1
+- sc: '7981'
+  count: 1
