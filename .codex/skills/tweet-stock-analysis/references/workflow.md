@@ -11,16 +11,22 @@ docker inspect stock-analytics-db
 
 If `stock-analytics-db` is already running against the intended checkout's `pgdata`, reuse it. Avoid recreating the DB from another worktree unless you explicitly intend to switch databases.
 
-Ensure the monitored tweet set is fresh enough before analyzing recent dates:
+Ensure the monitored tweet set is fresh enough before analyzing recent dates. Omit `--target-username` by default so all active DB-monitored accounts are checked; add it only when the user explicitly asks for one account:
 
 ```powershell
-docker compose run --rm xcollector ensure-current --target-username USERNAME
+docker compose run --rm xcollector ensure-current
 ```
 
 Prepare the analysis template:
 
 ```powershell
 docker compose run --rm analysis prepare-tweet-analysis --start-date YYYY-MM-DD --end-date YYYY-MM-DD --target-username USERNAME
+```
+
+For the default all-account analysis, omit `--target-username`:
+
+```powershell
+docker compose run --rm analysis prepare-tweet-analysis --start-date YYYY-MM-DD --end-date YYYY-MM-DD
 ```
 
 Enrich the annotated file with market context:
@@ -41,7 +47,7 @@ Before `prepare-tweet-analysis`:
 
 - Reuse the already-running `stock-analytics-db` when it has the intended monitored accounts and tweet history.
 - If there are multiple repository checkouts, confirm the running DB container's bind mounts before issuing any `docker compose up -d db`.
-- If the requested range includes today or otherwise depends on recent tweets, run `xcollector ensure-current`.
+- If the requested range includes today or otherwise depends on recent tweets, run `xcollector ensure-current` across all active DB-monitored accounts unless the user requested a single target.
 - Treat tweets as current when the target's last successful incremental poll is within the last 60 minutes.
 - If `ensure-current` decides the account is stale, let it perform the incremental fetch before continuing.
 
@@ -66,6 +72,14 @@ When preparing the final report:
 - Treat any symbol with `count(distinct target_username) >= 2` as a cross-user confirmation candidate.
 - Surface cross-user confirmation candidates prominently even when their total mention count is low.
 - Name the participating monitored users explicitly so the report makes the independent confirmations obvious.
+- Unless the user asks for exhaustive output, focus the write-up on roughly 5-10 stocks.
+- For each highlighted stock, state:
+  - which monitored users mentioned it,
+  - how they framed it (for example: breakout,‰Ÿ‚µ–Ú”ƒ‚¢, ŒˆZŠú‘Ò, Ş—¿v˜f, valuation, watchlist),
+  - whether `volume_spike_flag` or `price_jump_flag` supported the narrative,
+  - whether the market context came from the same day or the latest fallback trade date.
+- If a stock has few total mentions but multiple users independently mentioned it, rank it above a noisier single-user idea unless the single-user idea has much stronger market confirmation.
+- Use `analysis_summary` as the seed for the user-facing explanation, but rewrite it into clear prose instead of dumping raw DB text.
 
 ## Verification Queries
 

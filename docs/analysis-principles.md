@@ -204,6 +204,43 @@ This file is the source of truth for analysis logic that must survive across fut
   - Whether candidate timing should use first post only or also repeated reinforcement inside the same cluster.
   - Whether unique-pick success should later include downside filters, not only `20-day max return`.
 
+## Principle 006 - X Bullish Account Discovery
+
+- Intent: Discover X accounts that made high-conviction bullish posts about a specified Japanese listed stock during the month leading into a user-specified date, while minimizing paid X API usage.
+- Universe: Existing local X data first, then X search results scoped to the target stock, target date, and lookback window only when local data is insufficient.
+- Base dataset/view:
+  - `analytics.monitored_x_posts`
+  - `research.tweet_stock_mentions`
+  - `research.x_post_stock_signals`
+  - `analytics.x_bullish_stock_signals`
+- Required filters:
+  - Use a JST date window from `target_date - lookback_days` through `target_date`.
+  - Search local data before any external X API call.
+  - Use counts requests before post reads when external X search is needed.
+  - Resolve user profiles only after post text passes bullish-conviction review.
+  - Treat the output as candidate discovery, not trust scoring.
+- Parameters and defaults:
+  - `lookback_days`: `35`
+  - `max_posts_to_fetch`: `200`
+  - `estimated_authors_to_resolve`: `50`
+  - `strictness`: `high`
+  - `positive_labels`: `high_conviction_bullish`, `medium_bullish`
+  - `discovery_skill`: `x-bullish-account-discovery`
+- Signal or scoring logic:
+  - Generate stock-code, company-name, alias, and bullish-phrase query families.
+  - Prune query families with counts before fetching posts.
+  - Classify each post as high-conviction bullish, medium bullish, weak/neutral, or excluded.
+  - Rank accounts by high-conviction post count, unique bullish days, earliest timing, and spam/list penalties.
+  - Hand worthwhile accounts to `x-account-trust-evaluation` only after discovery.
+- Validation query or backtest method:
+  - Plan the search: `python .codex/skills/x-bullish-account-discovery/scripts/plan_discovery.py --target-date YYYY-MM-DD --stock-code CODE --company-name NAME`
+  - Inspect local data using the SQL examples in `.codex/skills/x-bullish-account-discovery/references/workflow.md`.
+  - Validate the skill: `python C:\Users\djmaa\.codex\skills\.system\skill-creator\scripts\quick_validate.py .codex\skills\x-bullish-account-discovery`
+- Open questions:
+  - Whether to persist discovery runs in dedicated `research.x_account_discovery_*` tables after the manual workflow stabilizes.
+  - Whether account ranking should later incorporate follower count, engagement quality, or historical forward returns during discovery.
+  - Whether image posts should be OCR-reviewed when text-only search misses chart-heavy accounts.
+
 ## Principle Template
 
 Use the following template for each principle:

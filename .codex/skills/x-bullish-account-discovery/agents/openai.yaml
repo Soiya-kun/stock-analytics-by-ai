@@ -1,0 +1,4 @@
+interface:
+  display_name: "X Bullish Account Discovery"
+  short_description: "Find bullish X account candidates cheaply"
+  default_prompt: "Use $x-bullish-account-discovery to find X accounts that made high-conviction bullish posts about a stock before a target date while minimizing X API cost."
