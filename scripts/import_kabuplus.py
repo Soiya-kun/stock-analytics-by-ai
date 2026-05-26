@@ -450,33 +450,6 @@ def import_csv_file(
     source_entry: str,
 ) -> int:
     imported_rows = 0
-    pending_rows: list[tuple[object, ...]] = []
-
-    def flush_rows(cur: psycopg.Cursor[object]) -> None:
-        nonlocal imported_rows, pending_rows
-        if not pending_rows:
-            return
-        cur.executemany(
-            """
-            insert into raw.kabuplus_records (
-                dataset_key,
-                dataset_name,
-                frequency,
-                source_zip,
-                source_entry,
-                source_file_name,
-                file_date,
-                record_date,
-                security_code,
-                row_number,
-                payload
-            )
-            values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-            """,
-            pending_rows,
-        )
-        imported_rows += len(pending_rows)
-        pending_rows = []
 
     with conn.transaction():
         with conn.cursor() as cur:
@@ -542,27 +515,42 @@ def import_csv_file(
                 if not reader.fieldnames:
                     raise ValueError(f"CSV header not found: {csv_path}")
 
-                for row_number, row in enumerate(reader, start=1):
-                    payload = normalize_row(row)
-                    pending_rows.append(
-                        (
-                            spec.dataset_key,
-                            spec.dataset_name,
-                            spec.frequency,
-                            source_zip,
-                            source_entry,
-                            spec.file_name,
-                            spec.file_date,
-                            extract_record_date(payload, spec.file_date),
-                            extract_security_code(payload),
-                            row_number,
-                            Jsonb(payload),
-                        )
+                with cur.copy(
+                    """
+                    copy raw.kabuplus_records (
+                        dataset_key,
+                        dataset_name,
+                        frequency,
+                        source_zip,
+                        source_entry,
+                        source_file_name,
+                        file_date,
+                        record_date,
+                        security_code,
+                        row_number,
+                        payload
                     )
-                    if len(pending_rows) >= 500:
-                        flush_rows(cur)
-
-                flush_rows(cur)
+                    from stdin
+                    """
+                ) as copy:
+                    for row_number, row in enumerate(reader, start=1):
+                        payload = normalize_row(row)
+                        copy.write_row(
+                            (
+                                spec.dataset_key,
+                                spec.dataset_name,
+                                spec.frequency,
+                                source_zip,
+                                source_entry,
+                                spec.file_name,
+                                spec.file_date,
+                                extract_record_date(payload, spec.file_date),
+                                extract_security_code(payload),
+                                row_number,
+                                Jsonb(payload),
+                            )
+                        )
+                        imported_rows += 1
 
             cur.execute(
                 """

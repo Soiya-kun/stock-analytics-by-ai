@@ -18,30 +18,30 @@ Use a JST date window of `[target_date - lookback_days, target_date]`. For X API
 Before using X API search, inspect already collected data. Useful patterns:
 
 ```sql
-select target_username, posted_at_jst, post_id, tweet_url, text
+select target_username, created_at_jst, post_id, tweet_url, text
 from analytics.monitored_x_posts
-where posted_at_jst::date between :start_date and :target_date
+where post_date_jst between :start_date and :target_date
   and (
     text ilike '%' || :stock_code || '%'
     or text ilike '%' || :company_name || '%'
   )
-order by posted_at_jst;
+order by created_at_jst;
 ```
 
 ```sql
-select target_username, sc, company_name, tweet_url, post_created_at_jst, extraction_rationale
+select target_username, sc, company_name, tweet_url, post_created_at, extraction_rationale
 from research.tweet_stock_mentions
-where post_created_at_jst::date between :start_date and :target_date
+where post_date_jst between :start_date and :target_date
+  and (sc = :stock_code or company_name ilike '%' || :company_name || '%')
+order by post_created_at;
+```
+
+```sql
+select target_username, sc, company_name, post_created_at_jst, tweet_url, signal_confidence, signal_rationale
+from analytics.x_bullish_stock_signals
+where post_date_jst between :start_date and :target_date
   and (sc = :stock_code or company_name ilike '%' || :company_name || '%')
 order by post_created_at_jst;
-```
-
-```sql
-select target_username, sc, company_name, posted_at_jst, tweet_url, signal_confidence, signal_rationale
-from analytics.x_bullish_stock_signals
-where posted_at_jst::date between :start_date and :target_date
-  and (sc = :stock_code or company_name ilike '%' || :company_name || '%')
-order by posted_at_jst;
 ```
 
 If local results already include multiple high-conviction posts from accounts not yet trusted, stop external discovery and recommend trust evaluation.

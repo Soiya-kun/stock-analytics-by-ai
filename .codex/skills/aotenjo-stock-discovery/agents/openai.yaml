@@ -1,0 +1,4 @@
+interface:
+  display_name: "Aotenjo Stock Discovery"
+  short_description: "Find stocks entering all-time-high territory"
+  default_prompt: "Use $aotenjo-stock-discovery to scan Japanese stocks that just entered all-time-high blue-sky territory on a target date."

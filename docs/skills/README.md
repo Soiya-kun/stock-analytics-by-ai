@@ -7,12 +7,14 @@
 - Project skill: `.codex/skills/tweet-stock-analysis`
 - Project skill: `.codex/skills/x-account-trust-evaluation`
 - Project skill: `.codex/skills/x-bullish-account-discovery`
+- Project skill: `.codex/skills/aotenjo-stock-discovery`
 
 This repository keeps one project skill that explains how to turn user-provided stock analysis principles into durable code and documentation.
 This repository also keeps one project skill for listing-first download and import of KABU+ daily stock price CSV files.
 This repository also keeps one project skill for turning collected X posts into durable tweet-to-stock reaction rows.
 This repository also keeps one project skill for evaluating candidate X accounts against trusted benchmark signal history.
 This repository also keeps one project skill for discovering X accounts that made high-conviction bullish stock posts before a target date while minimizing paid X API usage.
+This repository also keeps one project skill for finding stocks that just entered adjusted all-time-high 青天井 territory.
 
 ## Source of Truth
 
@@ -21,11 +23,13 @@ This repository also keeps one project skill for discovering X accounts that mad
 - Workflow and trigger definition: `.codex/skills/tweet-stock-analysis/SKILL.md`
 - Workflow and trigger definition: `.codex/skills/x-account-trust-evaluation/SKILL.md`
 - Workflow and trigger definition: `.codex/skills/x-bullish-account-discovery/SKILL.md`
+- Workflow and trigger definition: `.codex/skills/aotenjo-stock-discovery/SKILL.md`
 - Durable repository-specific guidance: `.codex/skills/stock-analysis-workflow/references/*`
 - Daily CSV workflow guidance: `.codex/skills/kabuplus-daily-fetch/references/*`
 - Tweet-analysis workflow guidance: `.codex/skills/tweet-stock-analysis/references/*`
 - X account trust workflow guidance: `.codex/skills/x-account-trust-evaluation/references/*`
 - X bullish account discovery guidance: `.codex/skills/x-bullish-account-discovery/references/*`
+- Aotenjo discovery workflow guidance: `.codex/skills/aotenjo-stock-discovery/references/*`
 - Principle definitions: `docs/analysis-principles.md`
 - Data layout and curated SQL views: `docs/data-catalog.md`
 

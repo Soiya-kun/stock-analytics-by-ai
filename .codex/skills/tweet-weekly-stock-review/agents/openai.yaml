@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tweet Weekly Stock Review"
+  short_description: "Review the current 7-day X stock picks"
+  default_prompt: "Use $tweet-weekly-stock-review to freshness-check monitored X posts, summarize the exact trailing seven JST dates including today, compute outcome statistics, and highlight which monitored X stock mentions worked or failed."

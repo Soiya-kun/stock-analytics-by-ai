@@ -241,6 +241,39 @@ This file is the source of truth for analysis logic that must survive across fut
   - Whether account ranking should later incorporate follower count, engagement quality, or historical forward returns during discovery.
   - Whether image posts should be OCR-reviewed when text-only search misses chart-heavy accounts.
 
+## Principle 007 - Aotenjo All-Time-High Discovery
+
+- Intent: Discover stocks at the moment they enter adjusted all-time-high "青天井" territory.
+- Universe: Listed stocks with enough daily adjusted OHLCV history.
+- Base dataset/view: `analytics.stock_prices_adjusted_daily`
+- Required filters:
+  - Use adjusted prices to avoid split and reverse-split false positives.
+  - Compute the prior all-time high only from trading days before the target day.
+  - Require enough prior history so new listings are not treated as mature blue-sky breakouts.
+  - Optionally require volume confirmation and turnover liquidity.
+- Parameters and defaults:
+  - `as_of_date`: latest imported trading day on or before the requested date
+  - `breakout_basis`: `high`
+  - `breakout_buffer_pct`: `0.00`
+  - `min_history_bars`: `500`
+  - `volume_lookback_bars`: `20`
+  - `min_volume_ratio`: `1.00`
+  - `min_turnover_thousand_yen`: `0`
+  - `limit`: `50`
+- Signal or scoring logic:
+  - For each code and target day, compute `prior_all_time_high` from the selected basis over all earlier trading days.
+  - Treat the stock as entering 青天井 when target-day basis price exceeds `prior_all_time_high * (1 + breakout_buffer_pct)`.
+  - Rank candidates by target-day volume ratio, breakout margin, and turnover unless the user asks for another sort.
+  - Distinguish intraday-high signals from close-confirmed signals by the `breakout_basis` parameter.
+- Validation query or backtest method:
+  - Latest candidate scan: `docker compose run --rm --entrypoint python analysis /workspace/.codex/skills/aotenjo-stock-discovery/scripts/scan_aotenjo.py --output-dir /workspace/outputs/aotenjo`
+  - Close-confirmed scan: `docker compose run --rm --entrypoint python analysis /workspace/.codex/skills/aotenjo-stock-discovery/scripts/scan_aotenjo.py --breakout-basis close --output-dir /workspace/outputs/aotenjo`
+  - Output directory: `outputs/aotenjo/`
+- Open questions:
+  - Whether `high` should remain the default or whether close-confirmed signals should be preferred for execution decisions.
+  - Whether IPO age should be handled by bars only or by listed-month data.
+  - Whether future versions should persist durable 青天井 runs under `research.*` tables.
+
 ## Principle Template
 
 Use the following template for each principle:
