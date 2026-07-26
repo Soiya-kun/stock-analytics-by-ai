@@ -10,3 +10,4 @@ __pycache__/
 /.tmp-wheels/
 /research/
 /.venv/
+/site/
