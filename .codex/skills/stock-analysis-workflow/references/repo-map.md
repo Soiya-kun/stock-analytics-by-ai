@@ -1,5 +1,8 @@
 # Repo Map
 
+- `scripts/daily_stock_cloud.py`: independent daily Lambda: listing-first KABU+ acquisition, private S3 SQLite history, raw CSV archive, shared chart generation, single-object public upload, CloudFront invalidation and HTTPS SHA-256 verification. Execution-role auth, no PC/PostgreSQL/SSO/X/Jev. Weekdays16:40/17:10/18:10 JST via `infra/static-site/bin/daily-review.ts` / `lib/daily-review-stack.ts`. `export_daily_stock_seed.py` creates a read-only PostgreSQL seed; `deploy_daily_stock_cloud.py` deploys disabled, registers credentials privately, seeds, verifies live, then enables. `stock_review_page.py` shares payload/HTML/validation with local generation.
+- `scripts/daily_stock_review.py`: local import/preview only. Existing weekday16:40 JST `kabuplus-daily-import` calls `import --date today` to keep Docker PostgreSQL ingestion. No AWS auth/publication. Default run also generates a local chart; `--skip-fetch` requires the exact date to exist. `generate_turnover_chart_viewer.py` retains the local verified-precedence action source through the display date.
+
 ## Data Stack
 
 - `docker-compose.yml`: PostgreSQL and importer services.

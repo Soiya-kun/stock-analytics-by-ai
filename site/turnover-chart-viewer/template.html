@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>売買代金チャート一覧</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f3f5f7;
+      --panel: #fff;
+      --ink: #17212b;
+      --muted: #6b7785;
+      --line: #dce2e8;
+      --up: #d4483b;
+      --down: #2570c4;
+      --accent: #1d5c46;
+      --shadow: 0 1px 2px rgba(17, 31, 44, .06);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      position: sticky;
+      z-index: 10;
+      top: 0;
+      padding: max(10px, env(safe-area-inset-top)) 12px 10px;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(12px);
+    }
+    .bar { display: flex; align-items: center; gap: 8px; max-width: 1800px; margin: auto; }
+    .range-dock {
+      position: fixed;
+      z-index: 20;
+      right: 50%;
+      bottom: calc(10px + env(safe-area-inset-bottom));
+      width: min(920px, calc(100% - 24px));
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: color-mix(in srgb, var(--panel) 92%, transparent);
+      box-shadow: 0 8px 28px rgba(17, 31, 44, .18);
+      backdrop-filter: blur(14px);
+      transform: translateX(50%);
+    }
+    .range-bar {
+      display: grid;
+      grid-template-columns: auto auto minmax(160px, 1fr) auto auto;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+    }
+    .range-label, .range-date { color: var(--muted); font-size: 11px; white-space: nowrap; }
+    .range-date { min-width: 68px; font-variant-numeric: tabular-nums; }
+    .range-end { text-align: right; }
+    .range-reset { min-height: 30px; padding: 0 9px; font-size: 11px; }
+    .range-slider {
+      --range-left: 0%;
+      --range-right: 100%;
+      position: relative;
+      height: 32px;
+    }
+    .range-slider::before {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(to right,
+        var(--line) 0 var(--range-left),
+        var(--accent) var(--range-left) var(--range-right),
+        var(--line) var(--range-right) 100%);
+      content: "";
+      transform: translateY(-50%);
+    }
+    .range-input {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      min-height: 32px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      pointer-events: none;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .range-input::-webkit-slider-runnable-track { height: 4px; background: transparent; }
+    .range-input::-moz-range-track { height: 4px; background: transparent; }
+    .range-input::-webkit-slider-thumb {
+      width: 22px;
+      height: 22px;
+      margin-top: -9px;
+      border: 2px solid var(--panel);
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent);
+      pointer-events: auto;
+      cursor: grab;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .range-input::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--panel);
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent);
+      pointer-events: auto;
+      cursor: grab;
+    }
+    .range-input:focus-visible::-webkit-slider-thumb { outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent); outline-offset: 2px; }
+    .range-input:focus-visible::-moz-range-thumb { outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent); outline-offset: 2px; }
+    .title { margin-right: auto; min-width: 0; }
+    h1 { margin: 0; font-size: 16px; line-height: 1.25; }
+    .summary { margin-top: 2px; color: var(--muted); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    input, select, button {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--ink);
+      font: inherit;
+    }
+    input { width: 150px; padding: 0 10px; }
+    select { padding: 0 28px 0 9px; }
+    button { padding: 0 11px; cursor: pointer; }
+    button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+    main { max-width: 1800px; margin: auto; padding: 12px; }
+    #grid { display: grid; grid-template-columns: repeat(var(--columns, 3), minmax(0, 1fr)); gap: 10px; }
+    .card {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      content-visibility: auto;
+      contain-intrinsic-size: 390px;
+    }
+    .card-head { display: flex; align-items: flex-start; gap: 8px; padding: 10px 11px 3px; }
+    .identity { min-width: 0; margin-right: auto; }
+    .stock-name { font-size: 14px; font-weight: 750; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .stock-meta { margin-top: 2px; color: var(--muted); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .numbers { text-align: right; white-space: nowrap; }
+    .price { font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .turnover { margin-top: 2px; color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+    .up { color: var(--up); }
+    .down { color: var(--down); }
+    canvas { display: block; width: 100%; height: 300px; touch-action: pan-y; cursor: grab; }
+    canvas.dragging { cursor: grabbing; }
+    .empty { padding: 70px 16px; text-align: center; color: var(--muted); }
+    footer { padding: 18px 12px calc(88px + env(safe-area-inset-bottom)); text-align: center; color: var(--muted); font-size: 11px; }
+    @media (max-width: 900px) {
+      #grid { grid-template-columns: repeat(min(var(--columns, 2), 2), minmax(0, 1fr)); }
+      .wide-only { display: none; }
+    }
+    @media (max-width: 620px) {
+      header { padding-left: 9px; padding-right: 9px; }
+      .bar { flex-wrap: wrap; }
+      .title { width: 100%; }
+      input { flex: 1; width: auto; }
+      .range-dock {
+        bottom: calc(6px + env(safe-area-inset-bottom));
+        width: calc(100% - 12px);
+        padding: 7px 9px;
+        border-radius: 12px;
+      }
+      .range-bar { grid-template-columns: auto 1fr auto auto; gap: 5px 7px; }
+      .range-slider { grid-column: 1 / -1; grid-row: 2; }
+      .range-date { min-width: 0; }
+      main { padding: 8px; }
+      #grid { grid-template-columns: 1fr; gap: 8px; }
+      canvas { height: 270px; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { color-scheme: dark; --bg: #11171d; --panel: #192128; --ink: #edf2f5; --muted: #99a6b2; --line: #2b3741; --up: #ff7165; --down: #63a9f2; --accent: #70d0aa; --shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <div class="title">
+        <h1>売買代金チャート一覧</h1>
+        <div class="summary" id="summary"></div>
+      </div>
+      <input id="search" type="search" inputmode="search" placeholder="コード・銘柄名" aria-label="コード・銘柄名で絞り込み">
+      <select id="sort" aria-label="並び順">
+        <option value="turnover">売買代金順</option>
+        <option value="change-desc">上昇率順</option>
+        <option value="change-asc">下落率順</option>
+        <option value="code">コード順</option>
+      </select>
+      <button id="density" class="wide-only" type="button" aria-pressed="false">大きく</button>
+    </div>
+  </header>
+  <main>
+    <div id="grid"></div>
+    <div id="empty" class="empty" hidden>該当する銘柄がありません。</div>
+  </main>
+  <div class="range-dock" role="group" aria-label="チャートの表示期間">
+    <div class="range-bar">
+      <span class="range-label">表示期間</span>
+      <time id="range-start-date" class="range-date range-start"></time>
+      <div id="range-slider" class="range-slider">
+        <input id="range-start" class="range-input" type="range" aria-label="表示期間の開始日">
+        <input id="range-end" class="range-input" type="range" aria-label="表示期間の終了日">
+      </div>
+      <time id="range-end-date" class="range-date range-end"></time>
+      <button id="range-reset" class="range-reset" type="button">1年</button>
+    </div>
+  </div>
+  <footer id="footer"></footer>
+  <script id="viewer-data" type="application/json">__VIEWER_DATA__</script>
+  <script>
+    (() => {
+      const payload = JSON.parse(document.getElementById('viewer-data').textContent);
+      const grid = document.getElementById('grid');
+      const empty = document.getElementById('empty');
+      const search = document.getElementById('search');
+      const sort = document.getElementById('sort');
+      const density = document.getElementById('density');
+      const rangeSlider = document.getElementById('range-slider');
+      const rangeStart = document.getElementById('range-start');
+      const rangeEnd = document.getElementById('range-end');
+      const rangeStartDate = document.getElementById('range-start-date');
+      const rangeEndDate = document.getElementById('range-end-date');
+      const rangeReset = document.getElementById('range-reset');
+      const number = new Intl.NumberFormat('ja-JP', { maximumFractionDigits: 1 });
+      const priceNumber = new Intl.NumberFormat('ja-JP', { maximumFractionDigits: 2 });
+      const stockByCode = new Map(payload.stocks.map(stock => [stock.sc, stock]));
+      const timeline = payload.stocks.reduce(
+        (longest, stock) => stock.prices.length > longest.length ? stock.prices : longest,
+        []
+      ).map(row => row.date);
+      const rangeMax = Math.max(0, timeline.length - 1);
+      const minimumRange = Math.min(9, rangeMax);
+      let rangeStartIndex = 0;
+      let rangeEndIndex = rangeMax;
+      let rangeFrame = 0;
+      let visible = [...payload.stocks];
+
+      for (const input of [rangeStart, rangeEnd]) {
+        input.min = '0';
+        input.max = String(rangeMax);
+        input.step = '1';
+      }
+      rangeStart.value = '0';
+      rangeEnd.value = String(rangeMax);
+
+      document.getElementById('summary').textContent =
+        `${payload.meta.targetDate} ・ ${formatTurnover(payload.meta.minTurnoverMillionYen)}以上 ・ ${payload.meta.displayedCount}/${payload.meta.matchedCount}銘柄`;
+      document.getElementById('footer').textContent =
+        `${payload.meta.lookbackBars}営業日・調整後株価｜生成 ${new Date(payload.meta.generatedAt).toLocaleString('ja-JP')}`;
+
+      const observer = new IntersectionObserver(entries => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const canvas = entry.target.querySelector('canvas');
+          const stock = stockByCode.get(entry.target.dataset.sc);
+          draw(canvas, selectedPrices(stock));
+          observer.unobserve(entry.target);
+        }
+      }, { rootMargin: '600px 0px' });
+
+      function formatTurnover(value) {
+        if (value >= 1000000) return `${number.format(value / 1000000)}兆円`;
+        if (value >= 100) return `${number.format(value / 100)}億円`;
+        return `${number.format(value)}百万円`;
+      }
+
+      function selectedPrices(stock) {
+        if (!stock || !timeline.length) return [];
+        const startDate = timeline[rangeStartIndex];
+        const endDate = timeline[rangeEndIndex];
+        return stock.prices.filter(row => row.date >= startDate && row.date <= endDate);
+      }
+
+      function compactDate(value) {
+        return value ? value.replaceAll('-', '/') : '—';
+      }
+
+      function updateRange(changed) {
+        let start = Number(rangeStart.value);
+        let end = Number(rangeEnd.value);
+        if (end - start < minimumRange) {
+          if (changed === 'start') start = Math.max(0, end - minimumRange);
+          else end = Math.min(rangeMax, start + minimumRange);
+        }
+        rangeStartIndex = start;
+        rangeEndIndex = end;
+        rangeStart.value = String(start);
+        rangeEnd.value = String(end);
+        const left = rangeMax ? start / rangeMax * 100 : 0;
+        const right = rangeMax ? end / rangeMax * 100 : 100;
+        rangeSlider.style.setProperty('--range-left', `${left}%`);
+        rangeSlider.style.setProperty('--range-right', `${right}%`);
+        rangeStartDate.textContent = compactDate(timeline[start]);
+        rangeEndDate.textContent = compactDate(timeline[end]);
+        rangeStart.setAttribute('aria-valuetext', timeline[start] || '');
+        rangeEnd.setAttribute('aria-valuetext', timeline[end] || '');
+        rangeReset.disabled = start === 0 && end === rangeMax;
+        if (rangeFrame) cancelAnimationFrame(rangeFrame);
+        rangeFrame = requestAnimationFrame(refreshCharts);
+      }
+
+      function setRange(start, end) {
+        rangeStart.value = String(start);
+        rangeEnd.value = String(end);
+        updateRange('pan');
+      }
+
+      function enablePanning(canvas) {
+        let pan = null;
+
+        canvas.addEventListener('pointerdown', event => {
+          if (event.button !== 0) return;
+          const span = rangeEndIndex - rangeStartIndex;
+          if (span >= rangeMax) return;
+          pan = {
+            pointerId: event.pointerId,
+            clientX: event.clientX,
+            start: rangeStartIndex,
+            end: rangeEndIndex,
+            span
+          };
+          canvas.setPointerCapture(event.pointerId);
+          canvas.classList.add('dragging');
+        });
+
+        canvas.addEventListener('pointermove', event => {
+          if (!pan || event.pointerId !== pan.pointerId) return;
+          const width = Math.max(1, canvas.getBoundingClientRect().width);
+          const pixelsPerBar = width / Math.max(1, pan.span + 1);
+          const delta = Math.round((pan.clientX - event.clientX) / pixelsPerBar);
+          const start = Math.max(0, Math.min(rangeMax - pan.span, pan.start + delta));
+          if (start === rangeStartIndex) return;
+          if (event.cancelable) event.preventDefault();
+          setRange(start, start + pan.span);
+        });
+
+        const finishPan = event => {
+          if (!pan || event.pointerId !== pan.pointerId) return;
+          if (canvas.hasPointerCapture(event.pointerId)) canvas.releasePointerCapture(event.pointerId);
+          pan = null;
+          canvas.classList.remove('dragging');
+        };
+        canvas.addEventListener('pointerup', finishPan);
+        canvas.addEventListener('pointercancel', finishPan);
+      }
+
+      function refreshCharts() {
+        rangeFrame = 0;
+        observer.disconnect();
+        for (const card of grid.querySelectorAll('.card')) {
+          const rect = card.getBoundingClientRect();
+          if (rect.bottom >= -600 && rect.top <= innerHeight + 600) {
+            draw(card.querySelector('canvas'), selectedPrices(stockByCode.get(card.dataset.sc)));
+          } else {
+            observer.observe(card);
+          }
+        }
+      }
+
+      function makeCard(stock) {
+        const card = document.createElement('article');
+        card.className = 'card';
+        card.dataset.sc = stock.sc;
+
+        const head = document.createElement('div');
+        head.className = 'card-head';
+        const identity = document.createElement('div');
+        identity.className = 'identity';
+        const stockName = document.createElement('div');
+        stockName.className = 'stock-name';
+        stockName.textContent = `${stock.sc} ${stock.name}`;
+        const stockMeta = document.createElement('div');
+        stockMeta.className = 'stock-meta';
+        stockMeta.textContent = [stock.market, stock.industry].filter(Boolean).join(' ・ ');
+        identity.append(stockName, stockMeta);
+
+        const numbers = document.createElement('div');
+        numbers.className = 'numbers';
+        const price = document.createElement('div');
+        price.className = `price ${stock.changePct > 0 ? 'up' : stock.changePct < 0 ? 'down' : ''}`;
+        const sign = stock.changePct > 0 ? '+' : '';
+        price.textContent = `${priceNumber.format(stock.close)}  ${sign}${number.format(stock.changePct || 0)}%`;
+        const turnover = document.createElement('div');
+        turnover.className = 'turnover';
+        turnover.textContent = `売買代金 ${formatTurnover(stock.turnoverMillionYen)}`;
+        numbers.append(price, turnover);
+        head.append(identity, numbers);
+
+        const canvas = document.createElement('canvas');
+        canvas.setAttribute('role', 'img');
+        canvas.setAttribute('aria-label', `${stock.sc} ${stock.name}のローソク足チャート。左右にドラッグして表示期間を移動できます`);
+        canvas.title = '左右にドラッグして表示期間を移動';
+        enablePanning(canvas);
+        card.append(head, canvas);
+        return card;
+      }
+
+      function render() {
+        observer.disconnect();
+        grid.replaceChildren();
+        for (const stock of visible) {
+          const card = makeCard(stock);
+          grid.append(card);
+          observer.observe(card);
+        }
+        empty.hidden = visible.length !== 0;
+      }
+
+      function draw(canvas, prices) {
+        const rect = canvas.getBoundingClientRect();
+        const ratio = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.max(1, Math.round(rect.width * ratio));
+        canvas.height = Math.max(1, Math.round(rect.height * ratio));
+        const ctx = canvas.getContext('2d');
+        ctx.scale(ratio, ratio);
+        const width = rect.width;
+        const height = rect.height;
+        if (!prices.length) {
+          const muted = getComputedStyle(document.documentElement).getPropertyValue('--muted').trim();
+          ctx.fillStyle = muted;
+          ctx.font = '12px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText('選択期間内のデータなし', width / 2, height / 2);
+          return;
+        }
+        const margin = { top: 12, right: 48, bottom: 18, left: 8 };
+        const volumeHeight = 52;
+        const priceBottom = height - margin.bottom - volumeHeight - 9;
+        const plotWidth = width - margin.left - margin.right;
+        const highs = prices.map(row => row.high);
+        const lows = prices.map(row => row.low);
+        const rawMin = Math.min(...lows);
+        const rawMax = Math.max(...highs);
+        const pad = Math.max((rawMax - rawMin) * .06, rawMax * .004, .01);
+        const minPrice = rawMin - pad;
+        const maxPrice = rawMax + pad;
+        const maxVolume = Math.max(...prices.map(row => row.volume || 0), 1);
+        const x = index => margin.left + (index + .5) * plotWidth / prices.length;
+        const y = value => margin.top + (maxPrice - value) / (maxPrice - minPrice) * (priceBottom - margin.top);
+        const candleWidth = Math.max(1.2, Math.min(6, plotWidth / prices.length * .62));
+        const styles = getComputedStyle(document.documentElement);
+        const up = styles.getPropertyValue('--up').trim();
+        const down = styles.getPropertyValue('--down').trim();
+        const line = styles.getPropertyValue('--line').trim();
+        const muted = styles.getPropertyValue('--muted').trim();
+
+        ctx.font = '10px ui-monospace, SFMono-Regular, Menlo, monospace';
+        ctx.textAlign = 'right';
+        ctx.textBaseline = 'middle';
+        ctx.strokeStyle = line;
+        ctx.fillStyle = muted;
+        ctx.lineWidth = 1;
+        for (let i = 0; i < 4; i++) {
+          const value = minPrice + (maxPrice - minPrice) * i / 3;
+          const py = y(value);
+          ctx.beginPath(); ctx.moveTo(margin.left, py); ctx.lineTo(width - margin.right + 4, py); ctx.stroke();
+          ctx.fillText(priceNumber.format(value), width - 4, py);
+        }
+
+        prices.forEach((row, index) => {
+          const cx = x(index);
+          const color = row.close >= row.open ? up : down;
+          ctx.strokeStyle = color;
+          ctx.fillStyle = color;
+          ctx.beginPath(); ctx.moveTo(cx, y(row.high)); ctx.lineTo(cx, y(row.low)); ctx.stroke();
+          const bodyTop = Math.min(y(row.open), y(row.close));
+          const bodyHeight = Math.max(1, Math.abs(y(row.open) - y(row.close)));
+          ctx.fillRect(cx - candleWidth / 2, bodyTop, candleWidth, bodyHeight);
+          const vHeight = (row.volume || 0) / maxVolume * volumeHeight;
+          ctx.globalAlpha = .38;
+          ctx.fillRect(cx - candleWidth / 2, height - margin.bottom - vHeight, candleWidth, vHeight);
+          ctx.globalAlpha = 1;
+        });
+
+        ctx.fillStyle = muted;
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'alphabetic';
+        ctx.fillText(prices[0].date.slice(5), margin.left, height - 3);
+        ctx.textAlign = 'right';
+        ctx.fillText(prices[prices.length - 1].date.slice(5), width - margin.right, height - 3);
+      }
+
+      function applyFilters() {
+        const term = search.value.trim().toLowerCase();
+        visible = payload.stocks.filter(stock =>
+          !term || `${stock.sc} ${stock.name} ${stock.market || ''} ${stock.industry || ''}`.toLowerCase().includes(term)
+        );
+        const mode = sort.value;
+        visible.sort((a, b) => {
+          if (mode === 'change-desc') return (b.changePct || 0) - (a.changePct || 0);
+          if (mode === 'change-asc') return (a.changePct || 0) - (b.changePct || 0);
+          if (mode === 'code') return a.sc.localeCompare(b.sc, 'ja', { numeric: true });
+          return (b.turnoverMillionYen || 0) - (a.turnoverMillionYen || 0);
+        });
+        render();
+      }
+
+      search.addEventListener('input', applyFilters);
+      sort.addEventListener('change', applyFilters);
+      rangeStart.addEventListener('input', () => updateRange('start'));
+      rangeEnd.addEventListener('input', () => updateRange('end'));
+      rangeReset.addEventListener('click', () => {
+        rangeStart.value = '0';
+        rangeEnd.value = String(rangeMax);
+        updateRange('end');
+      });
+      density.addEventListener('click', () => {
+        const large = density.getAttribute('aria-pressed') !== 'true';
+        density.setAttribute('aria-pressed', String(large));
+        density.textContent = large ? '小さく' : '大きく';
+        grid.style.setProperty('--columns', large ? '2' : '3');
+        render();
+      });
+      updateRange('end');
+      render();
+    })();
+  </script>
+</body>
+</html>

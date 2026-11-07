@@ -1,5 +1,10 @@
 # Data Catalog
 
+- 日次クラウドの非公開S3データ: `state/prices.sqlite.gz` は日足OHLCV・売買代金・銘柄辞書・分割補正の作業状態。ローカルDBの全履歴やX投稿は含めない。`raw/daily/` は一覧確認後に取得したKABU+ CSV原本。`status/latest-run.json` / `status/last-published.json` / `status/runs/<ID>.json` に対象日・取得件数・段階・公開HTMLのSHA-256を保存する。公開対象は別の既存サイトバケットの `daily/index.html` だけ。
+- `control/run-lock.json`: クラウド更新の排他リース。所有request-id・失効時刻とS3 ETagの条件付き更新で多重起動を防ぐ。失効後に回復でき、データ原本ではない。
+- `outputs/daily-stock-cloud/seed-*/`: 読取専用PostgreSQLからの初期価格状態、hash付き `seed.json`、比較用HTML、実Lambda結果、`deployment.json`。秘密情報は含めない。初期データは日足約500暦日と分割補正、クラウドのローリング保存上限は1000暦日。
+- `outputs/daily-stock-review/`: ローカルDB取り込みと任意チャート生成の記録。`status=imported` はDB取り込み完了、`generated` はローカルHTML検証まで、`skipped` は未公開日、`failed` は処理失敗。公開の成否はクラウド側の記録で確認する。
+
 ## Storage Layers
 
 - `raw.kabuplus_records`: one row per CSV row. Original Japanese headers and values are stored in `payload jsonb`.
