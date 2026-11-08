@@ -212,6 +212,10 @@ When the import service exits, the load is finished. Progress can also be checke
 docker compose exec db psql -U stock -d stock_analytics -c "select * from analytics.import_status order by dataset_key;"
 ```
 
+## チャート付き相場史
+
+本文と日足がスクロールで連動するスマホ向けHTMLは、[更新手順](stock-history-reader.md) に従って生成・公開します。キオクシアは既存サイトの `market-history/kioxia/` へ配置し、日次ページや全日足HTMLとは別に管理します。
+
 ## 個別銘柄の全日足
 
 `config/stock-market-history.json` に、相場史を書く目的・長期／中期／短期の視点・ユーザー指定の分析順と記憶を保存します。`scripts/generate_stock_history.py` はローカルPostgreSQLを読取専用で参照し、銘柄の全日足を単独HTMLへ出力します。500本や1年で打ち切らず、元データと同数・同日付の足を含むことを検証します。公式確認値を優先して表示最終日までの分割を反映し、当時の未調整OHLCVも保持します。

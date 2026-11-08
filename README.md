@@ -4,7 +4,9 @@ Kabuplus の年次 ZIP と日次 CSV を PostgreSQL に取り込み、SQL で株
 
 ## 個別銘柄の相場史
 
-キオクシアの本文は [上場から2025年末までの相場史](https://chatgpt.com/space/page_4209db1a12688191816d1c17d8d03f48) に集約します。IPO時の評価・決算・業界ニュース・指定投資家の投稿と当時価格を時系列で記録し、同じ文書へ追記します。
+キオクシアの本文は [上場から2026年11月までの相場史](https://chatgpt.com/space/page_4209db1a12688191816d1c17d8d03f48) に集約します。IPO時の評価・決算・業界ニュース・指定投資家の投稿と当時価格を時系列で記録し、同じ文書へ追記します。
+
+[スマホ向けのチャート付き相場史](https://d3fvqjccwn6gec.cloudfront.net/market-history/kioxia/) は、画面上部に日足を固定し、読んでいる節に合わせて表示期間が切り替わります。本文は当時価格、チャートは2026年11月6日基準の分割調整後です。タップで両方の価格を確認できます。[更新手順](docs/stock-history-reader.md) を参照してください。
 
 この相場史の執筆・推敲には [natural-japanese](.codex/skills/natural-japanese/SKILL.md) を使います。数値や出典、事実と考察の区別を保ちながら、自然な日本語に整えます。
 
