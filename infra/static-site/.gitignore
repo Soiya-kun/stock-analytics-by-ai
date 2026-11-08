@@ -6,3 +6,5 @@ cdk.out/
 dist/
 .daily-content/
 cdk.daily.out/
+.reader-content/
+cdk.reader.out/

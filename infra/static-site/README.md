@@ -19,6 +19,12 @@ URL を `.html` に解決するため、たとえば次の両方で同じレポ�
 
 ## 初回セットアップ
 
+チャート付きキオクシア相場史は、専用の `StockAnalyticsHistoryReader285A` スタックで
+`market-history/kioxia/` へ追加します。生成後、リポジトリルートから
+`./infra/static-site/scripts/deploy-report.ps1 -HistoryReader` を実行してください。
+HTMLだけをSHA-256で検証して配置し、既存サイト全体の収集・再配置は行いません。
+[本文・株価の更新手順](../../docs/stock-history-reader.md) を参照してください。
+
 ```powershell
 cd infra/static-site
 npm install
