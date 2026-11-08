@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>キオクシア 上場からの全日足</title>
+<style>
+:root{color-scheme:light;--ink:#182b3b;--muted:#627586;--line:#dce4eb;--accent:#185f74}
+*{box-sizing:border-box}body{margin:0;background:#f4f7fa;color:var(--ink);font-family:system-ui,"Yu Gothic UI",sans-serif}
+main{max-width:1800px;margin:auto;padding:24px 28px 18px}header{display:flex;justify-content:space-between;align-items:start;gap:18px}
+.eyebrow{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:.1em}h1{font-size:25px;margin:6px 0 8px;font-weight:650}
+.subtitle,footer{font-size:12px;color:var(--muted);line-height:1.8}.latest{text-align:right;white-space:nowrap}.latest strong{font-size:27px;font-weight:600}.latest small{display:block;color:var(--muted);font-size:11px}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:18px 0 0;padding:12px 14px;border:1px solid var(--line);border-radius:10px 10px 0 0;background:white}
+button,select,input{font:inherit;font-size:12px;min-height:33px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink);padding:5px 9px}
+button{cursor:pointer}button:hover{border-color:var(--accent);color:var(--accent)}button[aria-pressed=true]{background:var(--accent);color:white;border-color:var(--accent)}
+.spacer{flex:1}.dates{display:flex;align-items:center;gap:5px}.chart-panel{background:white;border:1px solid var(--line);border-top:0;border-radius:0 0 10px 10px;overflow:hidden}
+#chart{height:max(590px,calc(100vh - 238px));min-height:590px}#selection{padding:8px 16px;border-bottom:1px solid #edf1f5;font-size:12px;color:var(--muted)}
+footer{margin-top:10px}a{color:var(--accent)}.legend{display:inline-flex;gap:13px;margin-left:12px}.red{color:#cc494e}.blue{color:#2c79b7}#error{padding:20px;color:#b43c3c}
+@media(max-width:800px){main{padding:14px 10px}h1{font-size:19px}.latest strong{font-size:22px}.spacer{display:none}.dates{width:100%;flex-wrap:wrap}.toolbar{padding:10px}#chart{height:650px}}
+</style>
+</head>
+<body>
+<main>
+<header><div><div class="eyebrow">株価の歴史 / 285A</div><h1>キオクシアホールディングス</h1><div id="period" class="subtitle"></div></div><div class="latest"><strong id="latest"></strong><small id="basis-label"></small></div></header>
+<div class="toolbar" aria-label="チャートの設定">
+<button data-preset="all">全期間</button><button data-preset="ipo">上場後3か月</button><button data-preset="2025">2025年</button><button data-preset="2026">2026年</button><button data-preset="recent">直近3か月</button>
+<div class="spacer"></div>
+<select id="basis" aria-label="株価の表示基準"><option value="adjusted">分割調整後</option><option value="raw">当時の株価</option></select>
+<button id="log" aria-pressed="false">対数表示</button>
+<div class="dates"><input id="start" type="date" aria-label="開始日"><span>〜</span><input id="end" type="date" aria-label="終了日"><button id="apply">期間を表示</button></div>
+</div>
+<div class="chart-panel"><div id="selection"></div><div id="chart" role="img" aria-label="キオクシアの上場以来の全日足と出来高"></div><div id="error" hidden></div></div>
+<footer><span id="source-note"></span><span class="legend"><span class="red">■ 陽線</span><span class="blue">■ 陰線</span></span><br>ドラッグで拡大・下のスライダーで期間移動・ダブルクリックで全期間。四本値と出来高は足にカーソルを合わせて確認できます。<br><span id="sources"></span></footer>
+</main>
+<script>__PLOTLY_JS__</script>
+<script id="history-data" type="application/json">__HISTORY_DATA__</script>
+<script>
+const historyData=JSON.parse(document.getElementById('history-data').textContent);
+const rows=historyData.candles, chart=document.getElementById('chart'), start=document.getElementById('start'), end=document.getElementById('end');
+const yen=new Intl.NumberFormat('ja-JP',{maximumFractionDigits:2}), integer=new Intl.NumberFormat('ja-JP',{maximumFractionDigits:0});
+let basis='adjusted', log=false, rendering=false, selected=[historyData.start,historyData.end];
+document.title=`${historyData.name} 上場からの全日足`;
+document.querySelector('h1').textContent=historyData.name;
+document.querySelector('.eyebrow').textContent=`株価の歴史 / ${historyData.sc}`;
+chart.setAttribute('aria-label',`${historyData.name}の全日足と出来高`);
+document.getElementById('period').textContent=`${historyData.start} 〜 ${historyData.end} ｜ 全${historyData.bars}営業日・日足`;
+for(const input of [start,end]){input.min=historyData.start;input.max=historyData.end;}
+start.value=selected[0];end.value=selected[1];
+document.getElementById('latest').textContent=`${yen.format(rows.at(-1).raw.close)} 円`;
+function updateLabels(){
+ document.getElementById('basis-label').textContent=`${historyData.end} 終値`;
+ document.getElementById('source-note').textContent=basis==='adjusted'?`KABU+ 日足 ｜ ${historyData.end}時点の株数に分割調整（株価・出来高）`:'KABU+ 日足 ｜ 当時の未調整株価・出来高';
+ const shown=rows.filter(r=>r.date>=selected[0].slice(0,10)&&r.date<=selected[1].slice(0,10));
+ document.getElementById('selection').textContent=`表示 ${selected[0].slice(0,10)} 〜 ${selected[1].slice(0,10)} ｜ ${shown.length}本 / 全${rows.length}本${log?' ｜ 対数目盛':''}`;
+ start.value=selected[0].slice(0,10);end.value=selected[1].slice(0,10);
+}
+function traces(){
+ const values=rows.map(r=>r[basis]), dates=rows.map(r=>r.date), colors=values.map(r=>r.close>=r.open?'#cc494e':'#2c79b7');
+ return [{type:'candlestick',name:'日足',x:dates,open:values.map(r=>r.open),high:values.map(r=>r.high),low:values.map(r=>r.low),close:values.map(r=>r.close),
+  increasing:{line:{color:'#cc494e',width:1},fillcolor:'#cc494e'},decreasing:{line:{color:'#2c79b7',width:1},fillcolor:'#2c79b7'},
+  text:rows.map((r,i)=>`${r.date}<br>始値 ${yen.format(values[i].open)} 円<br>高値 ${yen.format(values[i].high)} 円<br>安値 ${yen.format(values[i].low)} 円<br>終値 ${yen.format(values[i].close)} 円<br>出来高 ${integer.format(values[i].volume)} 株`),hoverinfo:'text'},
+ {type:'bar',name:'出来高',x:dates,y:values.map(r=>r.volume),yaxis:'y2',marker:{color:colors,opacity:.65},hovertemplate:'%{x|%Y-%m-%d}<br>出来高 %{y:,.0f} 株<extra></extra>'}];
+}
+function bounds(){const values=rows.filter(r=>r.date>=selected[0].slice(0,10)&&r.date<=selected[1].slice(0,10)).map(r=>r[basis]);if(!values.length)return {};let low=Math.min(...values.map(r=>r.low)),high=Math.max(...values.map(r=>r.high));if(log){low=Math.log10(low);high=Math.log10(high);}const pad=Math.max((high-low)*.07,log?.01:1);return {'yaxis.range':[Math.max(log?-Infinity:0,low-pad),high+pad],'yaxis.autorange':false,'yaxis2.range':[0,Math.max(...values.map(r=>r.volume))*1.15]};}
+function annotations(){return historyData.actions.map(a=>({x:a.date,y:1.015,xref:'x',yref:'paper',text:`${a.date} ${a.evidence.ratio||'株式分割'}`,showarrow:false,font:{size:11,color:'#627586'},xanchor:'right'}));}
+function layout(){return {margin:{l:18,r:84,t:38,b:28},paper_bgcolor:'#fff',plot_bgcolor:'#fff',font:{family:'system-ui, sans-serif',color:'#44596b',size:11},showlegend:false,dragmode:'zoom',hovermode:'closest',bargap:.18,
+ xaxis:{type:'date',range:[...selected],autorange:false,anchor:'y2',rangeslider:{visible:true,thickness:.085,bordercolor:'#dce4eb',borderwidth:1,bgcolor:'#f5f8fa'},tickformat:'%Y/%m',gridcolor:'#eef2f5',showspikes:true,spikemode:'across',spikesnap:'cursor'},
+ yaxis:{domain:[.27,1],side:'right',type:log?'log':'linear',title:{text:'株価（円）',font:{size:11}},gridcolor:'#e9eef3',fixedrange:false,tickformat:',.0f',zeroline:false},
+ yaxis2:{domain:[0,.19],side:'right',title:{text:'出来高',font:{size:11}},gridcolor:'#f0f3f6',fixedrange:true,tickformat:'.2s',rangemode:'tozero'},annotations:annotations()};}
+async function render(){const range=[...selected];rendering=true;try{await Plotly.react(chart,traces(),layout(),{responsive:true,displaylogo:false,scrollZoom:true,modeBarButtonsToRemove:['select2d','lasso2d'],toImageButtonOptions:{format:'png',filename:`${historyData.sc}-daily-history`,scale:2}});selected=range;await Plotly.relayout(chart,{'xaxis.autorange':false,'xaxis.range':[...range],...bounds()});updateLabels();}finally{rendering=false;}}
+async function setRange(a,b){if(a>b||b<historyData.start||a>historyData.end)return;selected=[a<historyData.start?historyData.start:a,b>historyData.end?historyData.end:b];await Plotly.relayout(chart,{'xaxis.autorange':false,'xaxis.range':[...selected],...bounds()});updateLabels();}
+document.querySelectorAll('[data-preset]').forEach(button=>button.onclick=()=>{const key=button.dataset.preset;if(key==='all')return setRange(historyData.start,historyData.end);if(key==='ipo'){const d=new Date(historyData.start+'T00:00:00Z');d.setUTCMonth(d.getUTCMonth()+3);return setRange(historyData.start,d.toISOString().slice(0,10));}if(key==='recent'){const d=new Date(historyData.end+'T00:00:00Z');d.setUTCMonth(d.getUTCMonth()-3);return setRange(d.toISOString().slice(0,10),historyData.end);}setRange(key+'-01-01',key+'-12-31');});
+document.getElementById('basis').onchange=async event=>{basis=event.target.value;await render();};
+document.getElementById('log').onclick=async event=>{log=!log;event.currentTarget.setAttribute('aria-pressed',String(log));await render();};
+document.getElementById('apply').onclick=()=>setRange(start.value,end.value);
+const sources=document.getElementById('sources');
+if(historyData.listingSource){const a=document.createElement('a');a.href=historyData.listingSource;a.target='_blank';a.rel='noopener';a.textContent='上場日の公式発表';sources.append(a);}
+for(const action of historyData.actions){sources.append(document.createTextNode(' ｜ '));const a=document.createElement('a');a.href=action.evidence.source;a.target='_blank';a.rel='noopener';a.textContent=`${action.date} 分割根拠（${action.evidence.ratio||action.source}）`;sources.append(a);}
+render().then(()=>{chart.on('plotly_relayout',async event=>{if(rendering)return;let range=event['xaxis.range']||(event['xaxis.range[0]']&&[event['xaxis.range[0]'],event['xaxis.range[1]']]);if(event['xaxis.autorange'])return setRange(historyData.start,historyData.end);if(range){selected=[...range];updateLabels();await Plotly.relayout(chart,bounds());}});document.body.dataset.chartReady='true';}).catch(error=>{const box=document.getElementById('error');box.hidden=false;box.textContent='チャートの描画に失敗しました: '+error.message;});
+</script>
+</body></html>

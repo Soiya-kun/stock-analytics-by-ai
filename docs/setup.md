@@ -212,6 +212,19 @@ When the import service exits, the load is finished. Progress can also be checke
 docker compose exec db psql -U stock -d stock_analytics -c "select * from analytics.import_status order by dataset_key;"
 ```
 
+## 個別銘柄の全日足
+
+`config/stock-market-history.json` に、相場史を書く目的・長期／中期／短期の視点・ユーザー指定の分析順と記憶を保存します。`scripts/generate_stock_history.py` はローカルPostgreSQLを読取専用で参照し、銘柄の全日足を単独HTMLへ出力します。500本や1年で打ち切らず、元データと同数・同日付の足を含むことを検証します。公式確認値を優先して表示最終日までの分割を反映し、当時の未調整OHLCVも保持します。
+
+Plotly 3.1.0の公式配布 `https://cdn.plot.ly/plotly-3.1.0.min.js` を `outputs/stock-history/vendor/plotly-3.1.0.min.js` に配置してから実行します。生成時にSHA-256 `122e3be346d66616944d0b83eaaf7242581508c3c1cfa0995a17af0d83eff770` と照合し、HTML内へ埋め込むため閲覧時のCDN接続は不要です。
+
+```powershell
+docker compose run --rm -T --entrypoint python analysis `
+  /workspace/scripts/generate_stock_history.py --sc 285A
+```
+
+`outputs/stock-history/285A/index.html` がチャート、`prices.json` が原値／調整値、`manifest.json` が件数・期間・分割根拠・hashです。キオクシアは公式上場日2024-12-18との一致も検証します。内部ブラウザでHTTP表示する場合は `python -m http.server 8877 --bind 127.0.0.1 --directory outputs/stock-history` でこの生成物のディレクトリだけを配信し、`http://127.0.0.1:8877/285A/` を開きます。AWSへの公開や定期更新は行いません。
+
 ## Daily Stock Review Pipeline
 
 公開ページの定期更新は `StockAnalyticsDailyReview` スタックのAWS Lambda `stock-analytics-daily-review` が担当します。EventBridge Schedulerが平日16:40・17:10・18:10 JSTに実行します。PCやDocker、個人のAWS SSOログインには依存しません。VPC/NAT Gatewayや常設DBは使いません。

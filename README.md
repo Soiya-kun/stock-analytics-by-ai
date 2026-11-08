@@ -2,6 +2,16 @@
 
 Kabuplus の年次 ZIP と日次 CSV を PostgreSQL に取り込み、SQL で株価分析を進めるための初期基盤です。`docker compose` で DB を起動し、ZIP または CSV を `raw` レイヤへ投入し、`analytics` レイヤの typed view から分析を始めます。株式分割・併合は raw 価格を壊さず、`analytics.inferred_price_actions` と `analytics.stock_prices_adjusted_daily` で非破壊に扱います。加えて、固定の X 監視対象アカウントについては専用 collector で投稿を PostgreSQL へ蓄積し、benchmark / candidate の役割を分けた trust evaluation まで進められます。
 
+## 個別銘柄の相場史
+
+キオクシアの本文は [上場から2025年末までの相場史](https://chatgpt.com/space/page_4209db1a12688191816d1c17d8d03f48) に集約します。IPO時の評価・決算・業界ニュース・指定投資家の投稿と当時価格を時系列で記録し、同じ文書へ追記します。
+
+この相場史の執筆・推敲には [natural-japanese](.codex/skills/natural-japanese/SKILL.md) を使います。数値や出典、事実と考察の区別を保ちながら、自然な日本語に整えます。
+
+業績や市況予想は「いつ公表された情報で、何年何月の期をどう予想していたか」を明記します。比較対象の期、通期・四半期単独・累計、実績と予想も区別します。「次の四半期」「翌期」だけでは書きません。保存本数・取得件数・集計手順や更新予定などの作業説明は本文から省き、出典や価格基準など内容の理解に必要な情報を残します。詳しい執筆ルールは [分析候補と優先順](config/stock-market-history.json) に保存しています。
+
+[分析候補と優先順](config/stock-market-history.json) に、長期・中期・短期の視点で値動きと当時の判断を記録する方針を保存しています。最初はキオクシアの上場日から全日足を確認します。[全日足HTML](outputs/stock-history/285A/index.html) は、分割調整後／当時価格の切り替え・期間拡大・対数表示に対応します。生成方法は [セットアップ](docs/setup.md#個別銘柄の全日足) を参照してください。
+
 ## 毎日の株価確認
 
 [日次株価ページ](https://d3fvqjccwn6gec.cloudfront.net/daily/) は、AWS Lambdaが平日16:40 JSTに更新します。17:10・18:10にも再確認します。KABU+の当日CSV一覧確認・取得、非公開S3の価格履歴更新、売買代金30億円以上の上位300銘柄・250営業日のチャート生成、既存CloudFrontへの公開までAWS内で完結し、PC起動やSSOログインは不要です。未公開日は前回ページを保持し、公開後はHTTPS本文のSHA-256一致を確認します。
