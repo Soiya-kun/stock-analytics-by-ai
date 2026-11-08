@@ -11,6 +11,7 @@ from pathlib import Path
 import re
 
 from markdown_it import MarkdownIt
+from markdown_it.token import Token
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATES = ROOT / "templates/stock-history-reader"
@@ -49,9 +50,51 @@ def validate_prices(source: dict, config: dict) -> list[dict]:
                                    for basis in ("raw", "adjusted")}} for c in candles]
 
 
+def format_reader_tables(state) -> None:
+    """Keep one semantic table, with visible field labels when rows become cards."""
+    result, headers = [], []
+    in_table = in_header = False
+    column = 0
+    for index, token in enumerate(state.tokens):
+        if token.type == "table_open":
+            in_table, headers = True, []
+            wrapper = Token("html_block", "", 0)
+            wrapper.content = '<div class="table-wrap">\n'
+            result.append(wrapper)
+            token.attrSet("role", "table")
+        elif in_table and token.type in ("thead_open", "tbody_open"):
+            in_header = token.type == "thead_open"
+            token.attrSet("role", "rowgroup")
+        elif in_table and token.type == "tr_open":
+            column = 0
+            token.attrSet("role", "row")
+        elif in_table and token.type == "th_open":
+            token.attrSet("scope", "col")
+            token.attrSet("role", "columnheader")
+            inline = state.tokens[index + 1]
+            headers.append("".join(" " if child.type in ("softbreak", "hardbreak") else child.content
+                                   for child in inline.children or []))
+        elif in_table and not in_header and token.type == "td_open":
+            token.attrSet("role", "cell")
+            result.append(token)
+            label = Token("html_inline", "", 0)
+            label.content = '<span class="cell-label" aria-hidden="true">' + escape(headers[column]) + '</span>'
+            result.append(label)
+            column += 1
+            continue
+        result.append(token)
+        if token.type == "table_close":
+            in_table = False
+            wrapper = Token("html_block", "", 0)
+            wrapper.content = '</div>\n'
+            result.append(wrapper)
+    state.tokens = result
+
+
 def render_reader(article: str, config: dict, prices: dict) -> tuple[str, dict]:
     candles = validate_prices(prices, config)
     parser = MarkdownIt("commonmark", {"html": False, "linkify": False}).enable("table")
+    parser.core.ruler.after("inline", "reader_tables", format_reader_tables)
     # Map the section heading explicitly, never financial forecast dates inside paragraphs.
     pieces = re.split(r"(?m)^(#{1,3}) (.+)$", article)
     sections = [{"heading": "相場の流れ", "level": 0, "body": pieces[0],

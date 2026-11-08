@@ -65,6 +65,19 @@ class StockHistoryReaderTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'explicit timeline'):
             render_reader('見出しがない', self.config, self.prices)
 
+    def test_table_cards_keep_column_labels_values_and_links_without_javascript(self):
+        article = ('# 分割の日\n\n| 日付 | 評価 "<img src=x>" |\n| --- | --- |\n'
+                   '| 2026年9月29日 | **18,000円**。[出典](https://example.com/source) |\n')
+        html, _ = render_reader(article, self.config, self.prices)
+        prose = html.split('<main id="article"')[1].split('</main>')[0]
+        self.assertIn('scope="col"', prose)
+        self.assertIn('<strong>18,000円</strong>', prose)
+        self.assertIn('href="https://example.com/source"', prose)
+        self.assertIn('class="cell-label" aria-hidden="true">日付</span>', prose)
+        self.assertIn('&lt;img src=x&gt;', prose)
+        self.assertNotIn('<img src=x>', prose)
+        self.assertEqual(prose.count('2026年9月29日'), 1)
+
     def test_future_or_stale_ranges_and_invalid_prices_are_rejected(self):
         cfg = copy.deepcopy(self.config)
         cfg['sections'][0]['end'] = '2031-03-31'

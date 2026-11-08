@@ -131,12 +131,6 @@
   byId('close-toc').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', e => {if (e.target === dialog) dialog.close();});
   dialog.querySelectorAll('a').forEach(a => a.addEventListener('click', () => dialog.close()));
-  document.querySelectorAll('.story-section table').forEach(table => {
-    const wrap = document.createElement('div');
-    wrap.className = 'table-wrap'; wrap.tabIndex = 0;
-    wrap.setAttribute('role', 'region'); wrap.setAttribute('aria-label', '表。横にスクロールできます');
-    table.before(wrap); wrap.append(table);
-  });
   const observer = new ResizeObserver(() => {
     document.documentElement.style.setProperty('--panel-height', `${panel.getBoundingClientRect().height}px`);
     draw(); schedule();
