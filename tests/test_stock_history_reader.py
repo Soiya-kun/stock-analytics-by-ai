@@ -29,6 +29,21 @@ class StockHistoryReaderTest(unittest.TestCase):
         self.assertEqual(manifest['files'].keys(), {'index.html'})
         self.assertNotIn('DO_NOT_PUBLISH', html)
 
+    def test_other_security_uses_its_own_name_and_only_requested_history(self):
+        cfg = copy.deepcopy(self.config)
+        cfg.update(sc='4062', name='イビデン', title='イビデンの相場史',
+                   public_path='market-history/ibiden', chart_start_date='2026-09-29')
+        prices = copy.deepcopy(self.prices)
+        prices['sc'] = '4062'
+        html, manifest = render_reader('# 分割の日\n本文。', cfg, prices)
+        self.assertIn('4062 · イビデン', html)
+        self.assertEqual(manifest['prefix'], 'market-history/ibiden')
+        self.assertEqual([c['date'] for c in self.payload(html)['candles']], ['2026-09-29'])
+        self.assertEqual(self.payload(html)['segments'][0]['start'], '2026-09-29')
+        cfg['chart_start_date'] = '2030-01-01'
+        with self.assertRaisesRegex(ValueError, 'No prices'):
+            render_reader('# 分割の日', cfg, prices)
+
     def test_split_keeps_adjusted_and_contemporaneous_prices_separate(self):
         html, _ = render_reader('# 分割の日\n本文。', self.config, self.prices)
         c = self.payload(html)['candles']

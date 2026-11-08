@@ -8,10 +8,13 @@ import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
 import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
 
 const infraRoot = path.resolve(__dirname, '..');
-const sourceDir = path.resolve(infraRoot, '../../outputs/stock-history-reader/285A');
+const readers: Record<string, string> = {'285A': 'kioxia', '4062': 'ibiden'};
+const code = process.env.READER_SC || '285A';
+if (!Object.hasOwn(readers, code)) throw new Error('Unsupported history reader security code');
+const sourceDir = path.resolve(infraRoot, '../../outputs/stock-history-reader', code);
 const manifest = JSON.parse(fs.readFileSync(path.join(sourceDir, 'publish.json'), 'utf8'));
-const prefix = 'market-history/kioxia';
-if (manifest.schema_version !== 1 || manifest.sc !== '285A' || manifest.prefix !== prefix ||
+const prefix = `market-history/${readers[code]}`;
+if (manifest.schema_version !== 1 || manifest.sc !== code || manifest.prefix !== prefix ||
     JSON.stringify(Object.keys(manifest.files)) !== JSON.stringify(['index.html'])) {
   throw new Error('Unexpected history reader public manifest');
 }
@@ -25,9 +28,9 @@ if (fs.readdirSync(staging).some(name => name !== 'index.html')) throw new Error
 fs.writeFileSync(path.join(staging, 'index.html'), html);
 
 const app = new cdk.App();
-const stack = new cdk.Stack(app, 'StockAnalyticsHistoryReader285A', {
+const stack = new cdk.Stack(app, `StockAnalyticsHistoryReader${code}`, {
   env: {account: '373117960731', region: process.env.STACK_REGION ?? 'ap-northeast-1'},
-  description: 'Publish the scroll-linked Kioxia history reader to a separate existing-site prefix',
+  description: `Publish the scroll-linked ${readers[code]} history reader to a separate existing-site prefix`,
 });
 const bucketName = new cdk.CfnParameter(stack, 'SiteBucketName', {type: 'String'});
 const distributionId = new cdk.CfnParameter(stack, 'SiteDistributionId', {type: 'String'});

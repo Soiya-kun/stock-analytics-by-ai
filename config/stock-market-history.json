@@ -29,7 +29,7 @@
   },
   "priority": [
     {"sc": "285A", "name": "キオクシア", "status": "draft_through_2026_11_08"},
-    {"sc": "4062", "name": "イビデン", "status": "queued"},
+    {"sc": "4062", "name": "イビデン", "status": "draft_through_2026_11_08"},
     {"sc": "7011", "name": "三菱重工", "status": "queued"},
     {"sc": "9101", "name": "日本郵船", "status": "queued"},
     {"sc": "9984", "name": "ソフトバンクグループ", "status": "queued"},
@@ -42,6 +42,17 @@
     {"sc": "3962", "name": "CHANGE", "status": "queued"},
     {"sc": "4488", "name": "AI Inside", "status": "queued"}
   ],
+  "ibiden": {
+    "document_page_id": "page_1e3b2dd4ed3081918c01290bb9c2a7e0",
+    "document_url": "https://chatgpt.com/space/page_1e3b2dd4ed3081918c01290bb9c2a7e0",
+    "reader_url": "https://d3fvqjccwn6gec.cloudfront.net/market-history/ibiden/",
+    "reader_article": "docs/market-history/ibiden.md",
+    "document_scope_start": "2025-01-01",
+    "document_scope_end": "2026-11-08",
+    "last_price_date": "2026-11-06",
+    "last_researched_on": "2026-11-08",
+    "price_basis_date": "2026-11-06"
+  },
   "kioxia": {
     "document_page_id": "page_4209db1a12688191816d1c17d8d03f48",
     "document_url": "https://chatgpt.com/space/page_4209db1a12688191816d1c17d8d03f48",

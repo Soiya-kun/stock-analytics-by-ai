@@ -8,3 +8,4 @@ dist/
 cdk.daily.out/
 .reader-content/
 cdk.reader.out/
+cdk.reader.*.out/

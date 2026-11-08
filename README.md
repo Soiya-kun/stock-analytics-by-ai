@@ -4,15 +4,20 @@ Kabuplus の年次 ZIP と日次 CSV を PostgreSQL に取り込み、SQL で株
 
 ## 個別銘柄の相場史
 
-キオクシアの本文は [上場から2026年11月までの相場史](https://chatgpt.com/space/page_4209db1a12688191816d1c17d8d03f48) に集約します。IPO時の評価・決算・業界ニュース・指定投資家の投稿と当時価格を時系列で記録し、同じ文書へ追記します。
+個別銘柄ごとに、決算・業界ニュース・指定投資家の投稿と当時価格を時系列で記録し、同じ文書へ追記します。
 
-[スマホ向けのチャート付き相場史](https://d3fvqjccwn6gec.cloudfront.net/market-history/kioxia/) は、画面上部に日足を固定し、読んでいる節に合わせて表示期間が切り替わります。本文は当時価格、チャートは2026年11月6日基準の分割調整後です。タップで両方の価格を確認できます。[更新手順](docs/stock-history-reader.md) を参照してください。
+| 銘柄・対象期間 | チャート付きHTML | 追記用の文書 |
+| --- | --- | --- |
+| キオクシア・上場から2026年11月まで | [読む](https://d3fvqjccwn6gec.cloudfront.net/market-history/kioxia/) | [Page](https://chatgpt.com/space/page_4209db1a12688191816d1c17d8d03f48) |
+| イビデン・2025年1月から2026年11月まで | [読む](https://d3fvqjccwn6gec.cloudfront.net/market-history/ibiden/) | [Page](https://chatgpt.com/space/page_1e3b2dd4ed3081918c01290bb9c2a7e0) |
+
+スマホ向けHTMLは画面上部に日足を固定し、読んでいる節に合わせて表示期間が切り替わります。本文は当時価格、チャートは2026年11月6日基準の分割調整後です。タップで両方の価格を確認できます。[更新手順](docs/stock-history-reader.md) を参照してください。
 
 この相場史の執筆・推敲には [natural-japanese](.codex/skills/natural-japanese/SKILL.md) を使います。数値や出典、事実と考察の区別を保ちながら、自然な日本語に整えます。
 
 業績や市況予想は「いつ公表された情報で、何年何月の期をどう予想していたか」を明記します。比較対象の期、通期・四半期単独・累計、実績と予想も区別します。「次の四半期」「翌期」だけでは書きません。保存本数・取得件数・集計手順や更新予定などの作業説明は本文から省き、出典や価格基準など内容の理解に必要な情報を残します。詳しい執筆ルールは [分析候補と優先順](config/stock-market-history.json) に保存しています。
 
-[分析候補と優先順](config/stock-market-history.json) に、長期・中期・短期の視点で値動きと当時の判断を記録する方針を保存しています。最初はキオクシアの上場日から全日足を確認します。[全日足HTML](outputs/stock-history/285A/index.html) は、分割調整後／当時価格の切り替え・期間拡大・対数表示に対応します。生成方法は [セットアップ](docs/setup.md#個別銘柄の全日足) を参照してください。
+[分析候補と優先順](config/stock-market-history.json) に、長期・中期・短期の視点で値動きと当時の判断を記録する方針を保存しています。[キオクシアの全日足HTML](outputs/stock-history/285A/index.html) は、分割調整後／当時価格の切り替え・期間拡大・対数表示に対応します。生成方法は [セットアップ](docs/setup.md#個別銘柄の全日足) を参照してください。
 
 上値のブレイクと局所的な天井付近では、当時のニュースとXの強気・警戒・目標の変化を追います。高値より前の発言と、下落後の諦めや撤退を分けて記録します。
 

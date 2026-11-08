@@ -214,7 +214,7 @@ docker compose exec db psql -U stock -d stock_analytics -c "select * from analyt
 
 ## チャート付き相場史
 
-本文と日足がスクロールで連動するスマホ向けHTMLは、[更新手順](stock-history-reader.md) に従って生成・公開します。キオクシアは既存サイトの `market-history/kioxia/` へ配置し、日次ページや全日足HTMLとは別に管理します。
+本文と日足がスクロールで連動するスマホ向けHTMLは、[更新手順](stock-history-reader.md) に従って生成・公開します。キオクシアは既存サイトの `market-history/kioxia/`、イビデンは `market-history/ibiden/` へ配置し、日次ページや全日足HTMLとは別に管理します。
 
 ## 個別銘柄の全日足
 

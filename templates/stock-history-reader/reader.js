@@ -34,7 +34,7 @@
     const y = p => top + (high - transform(p)) / (high - low) * (priceBottom - top);
     const x = i => left + (i - r.start + 1) * step;
     const volumeMax = Math.max(1, ...rows.map(c => c.adjusted.volume));
-    const pieces = ['<title id="plot-title">キオクシアの日足チャート</title>',
+    const pieces = ['<title id="plot-title">日足チャート</title>',
       `<desc id="plot-desc">${day(candles[r.start].date)}から${day(candles[r.end].date)}。緑の帯は本文の対象期間。分割調整後の株価と出来高。</desc>`];
     const focusLeft = Math.max(left, x(r.first) - step * .6);
     pieces.push(`<rect x="${focusLeft}" y="${top}" width="${Math.max(2, x(r.focusEnd) + step * .6 - focusLeft)}" height="${bottom - top}" fill="#dcece0"/>`);

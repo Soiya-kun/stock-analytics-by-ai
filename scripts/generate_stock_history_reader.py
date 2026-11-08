@@ -28,6 +28,11 @@ def validate_prices(source: dict, config: dict) -> list[dict]:
     days = [c["date"] for c in candles]
     if not days or days != sorted(set(days)) or days[-1] != config["price_basis_date"]:
         raise ValueError("Dates must be unique, ascending and end at the configured price basis date")
+    if config.get("chart_start_date"):
+        date.fromisoformat(config["chart_start_date"])
+        candles = [c for c in candles if c["date"] >= config["chart_start_date"]]
+        if not candles:
+            raise ValueError("No prices on or after chart start date")
     for candle in candles:
         date.fromisoformat(candle["date"])
         for basis in ("raw", "adjusted"):
@@ -83,6 +88,7 @@ def render_reader(article: str, config: dict, prices: dict) -> tuple[str, dict]:
     data = {"sc": config["sc"], "priceBasisDate": config["price_basis_date"], "candles": candles, "segments": segments}
     substitutions = {
         "TITLE": escape(config["title"]), "SUBTITLE": escape(config["subtitle"]),
+        "SC": escape(config["sc"]), "NAME": escape(config.get("name", source_name(prices, config))),
         "PRICE_DATE": escape(config["price_basis_date"]), "INFO_DATE": escape(config["information_date"]),
         "ARTICLE": "\n".join(rendered), "TOC": "\n".join(navigation), "DATA": script_json(data),
         "CSS": (TEMPLATES / "reader.css").read_text(encoding="utf8"),
@@ -98,19 +104,29 @@ def render_reader(article: str, config: dict, prices: dict) -> tuple[str, dict]:
     return html, manifest
 
 
+def source_name(prices: dict, config: dict) -> str:
+    return prices.get("name", config["title"].removesuffix("の相場史"))
+
+
 def main() -> None:
     arg = argparse.ArgumentParser(description=__doc__)
-    arg.add_argument("--config", type=Path, default=ROOT / "config/stock-history-reader-285A.json")
-    arg.add_argument("--prices", type=Path, default=ROOT / "outputs/stock-history/285A/prices.json")
-    arg.add_argument("--output-dir", type=Path, default=ROOT / "outputs/stock-history-reader/285A")
+    arg.add_argument("--sc", default="285A")
+    arg.add_argument("--config", type=Path)
+    arg.add_argument("--prices", type=Path)
+    arg.add_argument("--output-dir", type=Path)
     args = arg.parse_args()
-    config = json.loads(args.config.read_text(encoding="utf8"))
+    if not re.fullmatch(r"(?:[0-9]{4}|[0-9]{3}[A-Z])", args.sc):
+        raise ValueError("Invalid security code")
+    config_file = args.config or ROOT / f"config/stock-history-reader-{args.sc}.json"
+    config = json.loads(config_file.read_text(encoding="utf8"))
+    price_file = args.prices or ROOT / "outputs/stock-history" / config["sc"] / "prices.json"
+    output_dir = args.output_dir or ROOT / "outputs/stock-history-reader" / config["sc"]
     article = (ROOT / config["article"]).read_text(encoding="utf8")
-    html, manifest = render_reader(article, config, json.loads(args.prices.read_text(encoding="utf8")))
-    args.output_dir.mkdir(parents=True, exist_ok=True)
-    (args.output_dir / "index.html").write_text(html, encoding="utf8")
-    (args.output_dir / "publish.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
-    print(json.dumps({"path": str(args.output_dir / "index.html"), **manifest}, ensure_ascii=False))
+    html, manifest = render_reader(article, config, json.loads(price_file.read_text(encoding="utf8")))
+    output_dir.mkdir(parents=True, exist_ok=True)
+    (output_dir / "index.html").write_text(html, encoding="utf8")
+    (output_dir / "publish.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
+    print(json.dumps({"path": str(output_dir / "index.html"), **manifest}, ensure_ascii=False))
 
 
 if __name__ == "__main__":
