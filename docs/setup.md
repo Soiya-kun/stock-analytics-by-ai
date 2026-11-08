@@ -212,6 +212,63 @@ When the import service exits, the load is finished. Progress can also be checke
 docker compose exec db psql -U stock -d stock_analytics -c "select * from analytics.import_status order by dataset_key;"
 ```
 
+## Daily Stock Review Pipeline
+
+公開ページの定期更新は `StockAnalyticsDailyReview` スタックのAWS Lambda `stock-analytics-daily-review` が担当します。EventBridge Schedulerが平日16:40・17:10・18:10 JSTに実行します。PCやDocker、個人のAWS SSOログインには依存しません。VPC/NAT Gatewayや常設DBは使いません。
+
+Lambdaは初回だけローカルDBから複製した価格履歴を、非公開S3の `state/prices.sqlite.gz` に保存します。SQLiteはLambda内の一時作業ファイルとして使い、永続化はS3が担当します。KABU+当日一覧を先に確認し、対象日が無ければ過去日に切り替えず `skipped / csv_not_published` として終了します。公開済みの日は再取得を省略でき、未反映の公開済みCSVがあれば最大31日分を補います。
+
+同時実行はS3の条件付き書き込みによる `control/run-lock.json` のリースで排他します。リースはLambdaの15分タイムアウトより長い960秒で失効し、異常終了時も次の定期確認で回復できます。公開済み状態と公開オブジェクトのhashが一致する日は `already_current` として再取得・再公開を省略します。
+
+取り込んだCSVは非公開S3の `raw/daily/` に保持します。初回は `analytics.effective_price_actions` の公式確認値優先で分割補正を引き継ぎます。以後の新規分割は、KABU+の株価・前日比が示す比較基準と前日終値の比から暫定補正を追加します。OHLCの急騰急落だけで分割を推測しません。既に公式確認済みの補正は優先し、暫定補正は公開payloadにも件数を保持します。後日公式値を更新する場合はローカルDBで確認した上で価格履歴を再export・deployします。
+
+対象日・CSV件数・価格・重複・現在値と最新足の一致を検証してから、既存サイトの `daily/index.html` だけを公開します。CloudFrontキャッシュ無効化の完了と公開HTTPS本文のSHA-256一致まで成功条件に含みます。生CSV、SQLite、認証情報、実行記録は公開しません。実行ロールの公開先権限はこの1オブジェクトと対象CloudFront配信に限定します。KABU+ Basic認証はSecrets Managerに保存し、Lambda環境変数やCDKテンプレートへ値を書きません。
+
+### 分割補正のDB定義
+
+新規DBには `sql/init/05_price_action_overrides.sql` が公式確認値を優先するテーブルとビューを作成します。既存DBには、seedのexportより先に次の定義を適用します。
+
+```powershell
+docker compose exec -T db psql -v ON_ERROR_STOP=1 -U stock -d stock_analytics -f /workspace/sql/migrations/20260928_verified_price_actions.sql
+docker compose exec -T db psql -v ON_ERROR_STOP=1 -U stock -d stock_analytics -f /workspace/sql/init/10_views.sql
+```
+
+`20261013_kioxia_shipping_verified_splits.sql` と `20261107_daily_review_verified_splits.sql` は確認済みの個別補正です。後者は2026年9月29日のKABU+原値との一致を検査するため、その日のCSVを取り込んだDBへ適用します。生の株価は書き換えません。
+
+### 初回デプロイ・再デプロイ
+
+デプロイ作業だけはAWSへログインした端末で実行します。平常運用のLambdaはこのSSO認証を使いません。初回は `infra/static-site` で `npm ci` を実行し、既存の `StockAnalyticsStaticSite` スタックを用意してから、リポジトリルートで次の操作を行います。
+
+```powershell
+aws sso login --profile 373117960731_AdministratorAccess
+
+# 毎回新しい出力ディレクトリを指定。PostgreSQLは読み取り専用で参照する。
+docker compose run --rm -T --entrypoint python analysis `
+  /workspace/scripts/export_daily_stock_seed.py `
+  --output-dir /workspace/outputs/daily-stock-cloud/seed-YYYYMMDD-v1
+
+python -X utf8 scripts/deploy_daily_stock_cloud.py `
+  --seed-dir outputs/daily-stock-cloud/seed-YYYYMMDD-v1
+```
+
+デプロイスクリプトはCDK build/synth/diff/deploy、Docker環境からの認証情報登録、価格履歴のアップロード、実LambdaによるKABU+取得・公開、別経路でのHTTPS本文検証を実行します。検証に成功してから定期実行を有効にします。`.daily-content/` はコード3ファイルとチャートテンプレート1ファイルだけを梱包し、`.env`・DB・研究生成物は含めません。出力は `infra/static-site/cdk.daily.out/deployed-outputs.json` とseedディレクトリの `deployment.json` です。
+
+### 状態・障害の確認
+
+非公開データバケット名とロググループ名はCDK出力にあります。`status/latest-run.json` が最新結果、`status/last-published.json` が最後の公開検証成功、`status/runs/<request-id>.json` が各実行記録です。失敗時は `phase` と例外クラスだけを記録し、秘密情報や外部例外メッセージは残しません。LambdaのエラーはCloudWatch Alarm、配送・再試行失敗はSQSのdead-letter queueで確認できます。
+
+データバケットとSecretはスタック削除時も保持します。日次取得CSVは保持し、価格状態はS3バージョニングで復旧可能です。31日以上更新できず古い状態になった場合は、ローカル価格履歴を再exportしてから再デプロイします。
+
+### ローカルDockerへの取り込み
+
+既存のローカルスケジュール `kabuplus-daily-import`（平日16:40 JST）は次を実行します。こちらは従来通りPC・アプリ・Dockerの稼働が必要です。公開はLambdaが独立して担当し、ローカル処理はAWS APIやSSOを使いません。
+
+```powershell
+python -X utf8 scripts/daily_stock_review.py import --date today
+```
+
+`run`（既定）にすればチャートのローカル生成・検証も行います。`--skip-fetch` は指定日の取り込み完了を必須にします。`--min-turnover-million-yen` / `--limit` / `--lookback-bars` で表示条件を変更できます。実行結果とHTMLは `outputs/daily-stock-review/` に保存します。
+
 ## Query
 
 Open `psql` inside the database container:

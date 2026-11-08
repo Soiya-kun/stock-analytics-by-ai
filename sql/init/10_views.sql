@@ -215,7 +215,7 @@ scored as (
         coalesce(
             (
                 select exp(sum(ln(ipa.price_multiplier::double precision)))::numeric(20, 10)
-                from analytics.inferred_price_actions ipa
+                from analytics.effective_price_actions ipa
                 where ipa.sc = p.sc
                   and ipa.action_date > p.trade_date
             ),

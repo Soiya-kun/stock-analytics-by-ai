@@ -2,6 +2,22 @@
 
 Kabuplus の年次 ZIP と日次 CSV を PostgreSQL に取り込み、SQL で株価分析を進めるための初期基盤です。`docker compose` で DB を起動し、ZIP または CSV を `raw` レイヤへ投入し、`analytics` レイヤの typed view から分析を始めます。株式分割・併合は raw 価格を壊さず、`analytics.inferred_price_actions` と `analytics.stock_prices_adjusted_daily` で非破壊に扱います。加えて、固定の X 監視対象アカウントについては専用 collector で投稿を PostgreSQL へ蓄積し、benchmark / candidate の役割を分けた trust evaluation まで進められます。
 
+## 毎日の株価確認
+
+[日次株価ページ](https://d3fvqjccwn6gec.cloudfront.net/daily/) は、AWS Lambdaが平日16:40 JSTに更新します。17:10・18:10にも再確認します。KABU+の当日CSV一覧確認・取得、非公開S3の価格履歴更新、売買代金30億円以上の上位300銘柄・250営業日のチャート生成、既存CloudFrontへの公開までAWS内で完結し、PC起動やSSOログインは不要です。未公開日は前回ページを保持し、公開後はHTTPS本文のSHA-256一致を確認します。
+
+ローカルの `Kabuplus daily import` は従来通り平日16:40にDocker PostgreSQLへ当日株価を取り込みます。こちらはPC・アプリ・Dockerの稼働が必要ですが、AWS認証は使いません。
+
+```powershell
+# ローカルDBへの取り込みだけを実行
+python -X utf8 scripts/daily_stock_review.py import --date today
+
+# 取り込み済みの株価でローカルHTMLを確認（公開は行わない）
+python -X utf8 scripts/daily_stock_review.py --date 2026-11-06 --skip-fetch
+```
+
+初回デプロイ、価格履歴の準備、認証情報の登録、障害確認は [Setup](docs/setup.md#daily-stock-review-pipeline) を参照してください。過去研究の自動再開やX/Jevの追加取得は行いません。
+
 ## Quick Start
 
 ```powershell

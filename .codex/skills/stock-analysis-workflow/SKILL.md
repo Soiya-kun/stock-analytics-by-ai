@@ -38,3 +38,7 @@ python C:\Users\djmaa\.codex\skills\.system\skill-creator\scripts\quick_validate
 
 - For change discipline and update targets, read `references/maintenance-checklist.md`.
 - For repository layout and preferred extension points, read `references/repo-map.md`.
+
+## Daily stock review
+
+Public charts update independently in the `StockAnalyticsDailyReview` Lambda using execution-role authentication and private S3 price history. `scripts/deploy_daily_stock_cloud.py` handles the initial authenticated deployment; daily execution does not need a PC, PostgreSQL or SSO. The local daily import remains separate through `scripts/daily_stock_review.py import --date today`. See `docs/setup.md` under Daily Stock Review Pipeline.
