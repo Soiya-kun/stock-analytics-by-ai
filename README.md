@@ -11,9 +11,9 @@ Kabuplus の年次 ZIP と日次 CSV を PostgreSQL に取り込み、SQL で株
 | キオクシア・上場から2026年11月まで | [読む](https://d3fvqjccwn6gec.cloudfront.net/market-history/kioxia/) | [Page](https://chatgpt.com/space/page_4209db1a12688191816d1c17d8d03f48) |
 | イビデン・2025年1月から2026年11月まで | [読む](https://d3fvqjccwn6gec.cloudfront.net/market-history/ibiden/) | [Page](https://chatgpt.com/space/page_1e3b2dd4ed3081918c01290bb9c2a7e0) |
 
-スマホ向けHTMLは画面上部に日足を固定し、読んでいる節に合わせて表示期間が切り替わります。本文は当時価格、チャートは2026年11月6日基準の分割調整後です。タップで両方の価格を確認できます。[更新手順](docs/stock-history-reader.md) を参照してください。
+スマホ向けHTMLは画面上部に日足を固定し、読んでいる節に合わせて表示期間が切り替わります。表は見出し付きのカードに並べ替え、横スクロールなしで読めます。この表示は今後追加する銘柄にも共通です。本文は当時価格、チャートは2026年11月6日基準の分割調整後です。タップで両方の価格を確認できます。[更新手順](docs/stock-history-reader.md) を参照してください。
 
-この相場史の執筆・推敲には [natural-japanese](.codex/skills/natural-japanese/SKILL.md) を使います。数値や出典、事実と考察の区別を保ちながら、自然な日本語に整えます。
+この相場史の執筆・推敲には [natural-japanese](.codex/skills/natural-japanese/SKILL.md) を使います。[文体方針](style-profile.md) に従って当時の事実と判断材料を直接書き、読み手の誤解を先回りした念押しや弁明を省きます。数値や出典、事実と考察の区別を保ちながら、自然な日本語に整えます。
 
 業績や市況予想は「いつ公表された情報で、何年何月の期をどう予想していたか」を明記します。比較対象の期、通期・四半期単独・累計、実績と予想も区別します。「次の四半期」「翌期」だけでは書きません。保存本数・取得件数・集計手順や更新予定などの作業説明は本文から省き、出典や価格基準など内容の理解に必要な情報を残します。詳しい執筆ルールは [分析候補と優先順](config/stock-market-history.json) に保存しています。
 
