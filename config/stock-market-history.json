@@ -28,7 +28,7 @@
     "scope": "個別銘柄の相場史の執筆と推敲。数値・出典・確信の度合いを保ち、曖昧な比喩や回りくどい表現を直す。"
   },
   "priority": [
-    {"sc": "285A", "name": "キオクシア", "status": "draft_through_2026_06"},
+    {"sc": "285A", "name": "キオクシア", "status": "draft_through_2026_11_08"},
     {"sc": "4062", "name": "イビデン", "status": "queued"},
     {"sc": "7011", "name": "三菱重工", "status": "queued"},
     {"sc": "9101", "name": "日本郵船", "status": "queued"},
@@ -45,8 +45,8 @@
   "kioxia": {
     "document_page_id": "page_4209db1a12688191816d1c17d8d03f48",
     "document_url": "https://chatgpt.com/space/page_4209db1a12688191816d1c17d8d03f48",
-    "document_scope_end": "2026-06-30",
-    "last_price_date": "2026-06-30",
+    "document_scope_end": "2026-11-08",
+    "last_price_date": "2026-11-06",
     "last_researched_on": "2026-11-08",
     "start": "listing",
     "listing_date": "2024-12-18",
@@ -55,6 +55,6 @@
       {"text": "上場したすぐあと、ちょっと見ていた", "kind": "user_recollection"},
       {"text": "そのあと、爆上げした4、5月くらいからも見ていた", "kind": "user_recollection", "year": null}
     ],
-    "next": "2026年6月末までの相場史を同じドキュメントに保存済み。本人の記憶と追加資料を照合する。4・5月の記憶の年と2025年3月7日の単独材料は未確定。"
+    "next": "2026年11月8日時点の情報と11月6日までの株価を同じドキュメントに保存済み。本人の記憶と追加資料を照合する。4・5月の記憶の年と2025年3月7日の単独材料は未確定。"
   }
 }
