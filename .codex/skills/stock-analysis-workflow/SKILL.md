@@ -42,3 +42,7 @@ python C:\Users\djmaa\.codex\skills\.system\skill-creator\scripts\quick_validate
 ## Daily stock review
 
 Public charts update independently in the `StockAnalyticsDailyReview` Lambda using execution-role authentication and private S3 price history. `scripts/deploy_daily_stock_cloud.py` handles the initial authenticated deployment; daily execution does not need a PC, PostgreSQL or SSO. The local daily import remains separate through `scripts/daily_stock_review.py import --date today`. See `docs/setup.md` under Daily Stock Review Pipeline.
+
+## Stock market history writing
+
+Use `config/stock-market-history.json` for the ordered stock-history queue and writing rules. Apply `.codex/skills/natural-japanese/SKILL.md`. State publication/as-of dates, target calendar periods, comparison periods and actual/forecast status together. Distinguish annual, single-quarter and cumulative results; give the price date and earnings period for PER. Omit collection counts, implementation details and authoring plans from the narrative; preserve source limits and price bases that affect interpretation. The Kioxia narrative stays in the existing personal Page linked from the config. Keep raw prices and protected X posts out of Git.
