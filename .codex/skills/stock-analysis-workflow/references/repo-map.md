@@ -7,6 +7,8 @@
 
 ## Data Stack
 
+- `docs/stock-history-reader.md`: per-stock Page and scroll-linked mobile reader workflow. `scripts/generate_stock_history_reader.py --sc 285A|4062` uses each stock's explicit section/date mapping and raw/adjusted prices. `deploy-report.ps1 -HistoryReader -SecurityCode 285A|4062` publishes only its single HTML under the allowlisted `market-history/kioxia/` or `market-history/ibiden/` prefix and verifies HTTPS SHA-256.
+
 - `docker-compose.yml`: PostgreSQL and importer services.
 - `sql/init/00_schemas.sql`: schema creation.
 - `sql/init/01_tables.sql`: raw and ingest tables.

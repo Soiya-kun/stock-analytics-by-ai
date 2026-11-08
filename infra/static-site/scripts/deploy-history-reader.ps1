@@ -1,16 +1,20 @@
 param(
+    [ValidateSet('285A','4062')][string]$SecurityCode = '285A',
     [string]$Profile = '373117960731_AdministratorAccess',
     [string]$Region = 'ap-northeast-1'
 )
 $ErrorActionPreference = 'Stop'
 $previousRegion = $env:STACK_REGION
+$previousCode = $env:READER_SC
 Push-Location (Join-Path $PSScriptRoot '..')
 try {
     $env:STACK_REGION = $Region
+    $env:READER_SC = $SecurityCode
+    $assembly = if ($SecurityCode -eq '285A') { 'cdk.reader.out' } else { "cdk.reader.$SecurityCode.out" }
     npm run build
     if ($LASTEXITCODE -ne 0) { throw 'TypeScript build failed' }
     $app = 'npx ts-node --prefer-ts-exts bin/history-reader.ts'
-    npx cdk synth --app $app --output cdk.reader.out --profile $Profile --quiet
+    npx cdk synth --app $app --output $assembly --profile $Profile --quiet
     if ($LASTEXITCODE -ne 0) { throw 'Reader synthesis failed' }
     $identityJson = aws sts get-caller-identity --profile $Profile --output json
     if ($LASTEXITCODE -ne 0) { throw "AWS login required: aws sso login --profile $Profile" }
@@ -26,14 +30,14 @@ try {
     if (!$bucket -or !$siteUrl -or $distributions.Count -ne 1) { throw 'Existing site outputs are incomplete or ambiguous' }
     $siteDomain = ([uri]$siteUrl).Host
     $distribution = $distributions[0].PhysicalResourceId
-    npx cdk diff --app cdk.reader.out --profile $Profile --no-change-set
+    npx cdk diff --app $assembly --profile $Profile --no-change-set
     if ($LASTEXITCODE -ne 0) { throw 'CDK diff failed' }
-    $deployArgs = @('--app', 'cdk.reader.out', '--profile', $Profile,
+    $deployArgs = @('--app', $assembly, '--profile', $Profile,
         '--parameters', "SiteBucketName=$bucket", '--parameters', "SiteDistributionId=$distribution",
         '--parameters', "SiteDomainName=$siteDomain")
-    npx cdk deploy @deployArgs --require-approval never --outputs-file cdk.reader.out/deployed-outputs.json
+    npx cdk deploy @deployArgs --require-approval never --outputs-file "$assembly/deployed-outputs.json"
     if ($LASTEXITCODE -ne 0) { throw 'CDK deployment failed' }
-    $deployed = (Get-Content -LiteralPath 'cdk.reader.out/deployed-outputs.json' -Raw | ConvertFrom-Json).StockAnalyticsHistoryReader285A
+    $deployed = (Get-Content -LiteralPath "$assembly/deployed-outputs.json" -Raw | ConvertFrom-Json)."StockAnalyticsHistoryReader$SecurityCode"
     $verified = $false
     for ($attempt = 0; $attempt -lt 12; $attempt++) {
         $download = [System.IO.Path]::GetTempFileName()
@@ -50,5 +54,6 @@ try {
     Write-Host "Verified history reader: $($deployed.ReportUrl)"
 } finally {
     $env:STACK_REGION = $previousRegion
+    $env:READER_SC = $previousCode
     Pop-Location
 }

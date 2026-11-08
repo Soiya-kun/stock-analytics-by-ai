@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#f8f7f3">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23126b58'/%3E%3Cpath d='M8 23V15m8 8V8m8 15V12' stroke='%23f8f7f3' stroke-width='3'/%3E%3C/svg%3E">
-  <meta name="description" content="キオクシアの値動きと、その時に出ていたニュース・決算・投資家の見方を、日足チャートと一緒にたどる。">
+  <meta name="description" content="{{NAME}}の値動きと、その時に出ていたニュース・決算・投資家の見方を、日足チャートと一緒にたどる。">
   <title>{{TITLE}}｜チャートとたどる</title>
   <style>{{CSS}}</style>
 </head>
@@ -13,7 +13,7 @@
   <a class="skip-link" href="#article">本文へ</a>
   <aside id="chart-panel" aria-label="本文に連動する日足チャート">
     <div class="chart-inner">
-      <div class="masthead"><a href="#s-0" class="brand">相場をたどる <span>285A · キオクシア</span></a><button id="contents" aria-haspopup="dialog">目次 <span aria-hidden="true">☰</span></button></div>
+      <div class="masthead"><a href="#s-0" class="brand">相場をたどる <span>{{SC}} · {{NAME}}</span></a><button id="contents" aria-haspopup="dialog">目次 <span aria-hidden="true">☰</span></button></div>
       <div class="chart-heading"><div><p id="period-label">上場から直近まで</p><p class="basis">日足 · {{PRICE_DATE}}基準の分割調整後</p></div><button id="follow" aria-pressed="true"><span class="follow-dot"></span><span id="follow-label">本文と連動</span></button></div>
       <div id="chart" tabindex="0" role="group" aria-label="日足チャート。タップ、または左右の矢印キーで各日の株価を確認できます。"><svg id="plot" role="img" aria-labelledby="plot-title plot-desc"></svg></div>
       <div class="chart-footer"><span><i class="legend"></i>本文の期間</span><label>表示 <select id="window" aria-label="チャートの表示期間"><option value="60">本文に合わせる</option><option value="120">長めに見る</option><option value="all">全期間</option></select></label><label><input id="log-scale" type="checkbox">対数目盛</label></div>

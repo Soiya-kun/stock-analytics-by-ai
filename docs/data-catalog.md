@@ -5,10 +5,10 @@
 - `outputs/daily-stock-cloud/seed-*/`: 読取専用PostgreSQLからの初期価格状態、hash付き `seed.json`、比較用HTML、実Lambda結果、`deployment.json`。秘密情報は含めない。初期データは日足約500暦日と分割補正、クラウドのローリング保存上限は1000暦日。
 - `outputs/daily-stock-review/`: ローカルDB取り込みと任意チャート生成の記録。`status=imported` はDB取り込み完了、`generated` はローカルHTML検証まで、`skipped` は未公開日、`failed` は処理失敗。公開の成否はクラウド側の記録で確認する。
 
-- `config/stock-market-history.json`: ユーザー指定の相場史13銘柄の優先順、長期・中期・短期の記述方針、本人の記憶と公式上場日の根拠。キオクシア本文は同ファイルの `document_page_id` / `document_url` が示す個人用Pageへ集約し、期間を追加して更新する。既存モメンタム研究の実行状態とは独立して管理する。
-- `docs/market-history/kioxia.md`: Page本文の公開用コピー。ニュース・決算・X投稿の要旨と出典を保持し、非公開投稿の原文は含めない。
-- `config/stock-history-reader-285A.json`: 公開用本文の各見出しとチャート対象期間の対応。業績予想の対象年月から表示期間を推定せず、明示した期間だけを使う。
-- `outputs/stock-history-reader/285A/index.html` / `publish.json`: 本文・調整後／当時価格の日足を含む単独HTMLとSHA-256。公開対象はHTMLだけ。生成元の `outputs/stock-history/285A/prices.json` や調査用キャッシュは公開しない。
+- `config/stock-market-history.json`: ユーザー指定の相場史13銘柄の優先順、長期・中期・短期の記述方針、本人の記憶と公式上場日の根拠。キオクシアとイビデンの本文は、それぞれの `document_page_id` / `document_url` が示す個人用Pageへ集約し、期間を追加して更新する。既存モメンタム研究の実行状態とは独立して管理する。
+- `docs/market-history/kioxia.md` / `ibiden.md`: Page本文の公開用コピー。ニュース・決算・X投稿の要旨と出典を保持し、非公開投稿の原文は含めない。
+- `config/stock-history-reader-285A.json` / `stock-history-reader-4062.json`: 公開用本文の各見出しとチャート対象期間の対応。業績予想の対象年月から表示期間を推定せず、明示した期間だけを使う。イビデンは2025年1月以降に表示範囲を限定する。
+- `outputs/stock-history-reader/<SC>/index.html` / `publish.json`: 本文・調整後／当時価格の日足を含む単独HTMLとSHA-256。公開対象はHTMLだけ。生成元の `outputs/stock-history/<SC>/prices.json` や調査用キャッシュは公開しない。
 - `outputs/stock-history/<SC>/`: 上場以来の全日足HTMLと `prices.json`、件数・始終日・分割根拠・SHA-256を持つ `manifest.json`。未調整OHLCVを保持し、最新日基準の調整OHLCVを併記する。キオクシア初回は2024-12-18〜2026-11-06の457営業日。ブラウザ表示用の生成物であり、分析方針の出典にはしない。
 
 ## Storage Layers
