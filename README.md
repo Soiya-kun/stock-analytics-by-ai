@@ -23,7 +23,7 @@ Kabuplus の年次 ZIP と日次 CSV を PostgreSQL に取り込み、SQL で株
 
 ## 毎日の株価確認
 
-[日次株価ページ](https://d3fvqjccwn6gec.cloudfront.net/daily/) は、AWS Lambdaが平日16:40 JSTに更新します。17:10・18:10にも再確認します。KABU+の当日CSV一覧確認・取得、非公開S3の価格履歴更新、売買代金30億円以上の上位300銘柄・250営業日のチャート生成、既存CloudFrontへの公開までAWS内で完結し、PC起動やSSOログインは不要です。未公開日は前回ページを保持し、公開後はHTTPS本文のSHA-256一致を確認します。
+[日次株価ページ](https://d3fvqjccwn6gec.cloudfront.net/daily/) は、AWS Lambdaが平日16:40 JSTに更新します。17:10・18:10にも再確認します。KABU+の当日CSV一覧確認・取得、非公開S3の価格履歴更新、売買代金30億円以上の上位300銘柄のチャート生成、既存CloudFrontへの公開までAWS内で完結し、PC起動やSSOログインは不要です。日足・週足を切り替えられ、単純移動平均は日足5・25・75日、週足13・26・52週。初期表示は約1年で、スライダーから保存済みの過去の期間も選べます。未公開日は前回ページを保持し、公開後はHTTPS本文のSHA-256一致を確認します。
 
 ローカルの `Kabuplus daily import` は従来通り平日16:40にDocker PostgreSQLへ当日株価を取り込みます。こちらはPC・アプリ・Dockerの稼働が必要ですが、AWS認証は使いません。
 

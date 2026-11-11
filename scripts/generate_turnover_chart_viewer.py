@@ -10,7 +10,7 @@ from typing import Any, Sequence
 
 import psycopg
 from psycopg.rows import dict_row
-from stock_review_page import as_number, build_payload, write_html
+from stock_review_page import HISTORY_DAYS, as_number, build_payload, write_html
 
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
@@ -44,7 +44,7 @@ def parse_args() -> argparse.Namespace:
         "--lookback-bars",
         type=int,
         default=250,
-        help="Trading sessions per chart. Default: 250 (about one year).",
+        help="Initially visible daily sessions. Default: 250 (about one year).",
     )
     parser.add_argument(
         "--limit",
@@ -129,9 +129,8 @@ def fetch_price_history(
 ) -> list[dict[str, Any]]:
     if not stock_codes:
         return []
-    # The calendar bound keeps the adjusted view query small while allowing for
-    # weekends and Japanese market holidays. row_number applies the exact bar cap.
-    start_date = target_date - timedelta(days=max(lookback_bars * 2, 180))
+    # Retain warm-up history for the SMAs and weekly view; crop only in the UI.
+    start_date = target_date - timedelta(days=HISTORY_DAYS)
     sql = """
         select
             security_code as sc,
@@ -193,7 +192,7 @@ def fetch_price_history(
     return [
         row
         for sc in stock_codes
-        for row in adjusted_by_code.get(sc, [])[-lookback_bars:]
+        for row in adjusted_by_code.get(sc, [])
     ]
 
 

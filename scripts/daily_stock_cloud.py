@@ -22,7 +22,7 @@ import time
 import urllib.request
 
 from fetch_kabuplus_daily_csv import LISTING_URL, JST, build_auth_header, http_get, parse_listing
-from stock_review_page import build_payload, write_html, validate_html
+from stock_review_page import HISTORY_DAYS, build_payload, write_html, validate_html
 
 STATE_KEY = "state/prices.sqlite.gz"
 MAX_CATCHUP_DAYS = 31
@@ -159,7 +159,7 @@ def make_payload(conn: sqlite3.Connection, day: date, *, threshold: int = 3000, 
         raise ValueError("No current stocks match the chart threshold")
     price_rows = []
     provisional = 0
-    start = (day - timedelta(days=max(lookback * 2, 180))).isoformat()
+    start = (day - timedelta(days=HISTORY_DAYS)).isoformat()
     for stock in candidates:
         actions = conn.execute(
             "select day,multiplier,source from actions where sc=? and day>? and day<=? order by day",
@@ -169,8 +169,8 @@ def make_payload(conn: sqlite3.Connection, day: date, *, threshold: int = 3000, 
         rows = conn.execute("""
             select * from prices where sc=? and day between ? and ?
               and open is not null and high is not null and low is not null and close is not null
-            order by day desc limit ?
-        """, (stock["sc"], start, day.isoformat(), lookback)).fetchall()
+            order by day desc
+        """, (stock["sc"], start, day.isoformat())).fetchall()
         for row in reversed(rows):
             factor = Decimal(1)
             for action in actions:
@@ -253,7 +253,7 @@ def process(event: dict, context, *, s3, secrets, cloudfront, today: date | None
                 receipt.update(validate_html(html, day))
                 receipt["provisional_adjustments"] = payload["meta"]["provisionalAdjustments"]
                 with conn:
-                    conn.execute("delete from prices where day<?", ((day - timedelta(days=1000)).isoformat(),))
+                    conn.execute("delete from prices where day<?", ((day - timedelta(days=HISTORY_DAYS)).isoformat(),))
                 conn.execute("vacuum")
             finally:
                 conn.close()
