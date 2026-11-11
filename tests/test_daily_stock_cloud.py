@@ -120,6 +120,20 @@ class CloudTests(unittest.TestCase):
         self.assertEqual(result["status"], "already_current")
         self.assertEqual(len(self.s3.writes), writes + 2)  # Only private run receipts.
 
+    def test_chart_history_is_kept_before_visible_window_and_adjusted_once(self):
+        conn = cloud.open_state(self.root / "warmup.sqlite")
+        self.addCleanup(conn.close)
+        cloud.import_csv(conn, daily_csv(date(2026, 11, 5), count=1), date(2026, 11, 5), min_rows=1)
+        cloud.import_csv(conn, daily_csv(date(2026, 11, 6), count=1, close=48, change=-2), date(2026, 11, 6), min_rows=1)
+        stock = cloud.make_payload(conn, date(2026, 11, 6), lookback=1)["stocks"][0]
+        self.assertEqual(len(stock["prices"]), 2)
+        week = stock["weeklyPrices"][0]
+        self.assertEqual(week["open"], 50)
+        self.assertEqual(week["high"], 50.5)
+        self.assertEqual(week["low"], 47)
+        self.assertEqual(week["close"], 48)
+        self.assertEqual(week["volume"], 30000)
+
     def test_only_one_lease_holder_and_release_allows_next(self):
         first = cloud.acquire_lock(self.s3, "private", "owner-1", now=100)
         self.assertIsNotNone(first)

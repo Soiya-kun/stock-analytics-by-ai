@@ -231,6 +231,8 @@ docker compose run --rm -T --entrypoint python analysis `
 
 ## Daily Stock Review Pipeline
 
+公開チャートはページ上部で日足・週足を切り替えます。単純移動平均は日足5・25・75日、週足13・26・52週です。週足は月曜始まりで、当週は対象日までの調整済み日足をOHLC・出来高合計にまとめます。移動平均は表示範囲を切り出す前に計算し、必要な本数に達するまで線を表示しません。初期表示は日足250本・週足52本で、スライダーは保存済みの過去の期間も選べます。Lambdaとローカル生成は共通テンプレート・計算処理を使います。
+
 公開ページの定期更新は `StockAnalyticsDailyReview` スタックのAWS Lambda `stock-analytics-daily-review` が担当します。EventBridge Schedulerが平日16:40・17:10・18:10 JSTに実行します。PCやDocker、個人のAWS SSOログインには依存しません。VPC/NAT Gatewayや常設DBは使いません。
 
 Lambdaは初回だけローカルDBから複製した価格履歴を、非公開S3の `state/prices.sqlite.gz` に保存します。SQLiteはLambda内の一時作業ファイルとして使い、永続化はS3が担当します。KABU+当日一覧を先に確認し、対象日が無ければ過去日に切り替えず `skipped / csv_not_published` として終了します。公開済みの日は再取得を省略でき、未反映の公開済みCSVがあれば最大31日分を補います。

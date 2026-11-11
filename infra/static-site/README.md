@@ -17,6 +17,8 @@ URL を `.html` に解決するため、たとえば次の両方で同じレポ�
 
 コード入口は `bin/daily-review.ts` / `lib/daily-review-stack.ts`、運用入口はリポジトリルートの `scripts/deploy_daily_stock_cloud.py` です。初回はスケジュールを無効にして作成し、価格履歴・Secrets Managerを準備し、実Lambdaで取得・公開・HTTPS本文hashを検証してから有効にします。[運用手順](../../docs/setup.md#daily-stock-review-pipeline) を参照してください。
 
+日足・週足と移動平均は `scripts/stock_review_page.py` と `site/turnover-chart-viewer/template.html` が担当し、このCDKエントリがLambdaへ同梱します。既存運用へのコード更新は同じスタックの現在のパラメータを保持してデプロイします。`deploy_daily_stock_cloud.py` は初期seed・認証情報の投入を伴うため、コード更新だけの用途では再実行しません。
+
 ## 初回セットアップ
 
 チャート付きキオクシア相場史は、専用の `StockAnalyticsHistoryReader285A` スタックで

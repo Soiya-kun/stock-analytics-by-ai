@@ -9,6 +9,42 @@ import re
 from typing import Any
 
 JST = timezone(timedelta(hours=9))
+DAILY_MA_PERIODS = (5, 25, 75)
+WEEKLY_MA_PERIODS = (13, 26, 52)
+HISTORY_DAYS = 1000
+
+
+def add_moving_averages(prices: list[dict], periods: tuple[int, ...]) -> list[dict]:
+    """Compute trailing close SMAs before the browser crops its visible window."""
+    sums = [0.0] * len(periods)
+    result = []
+    for index, row in enumerate(prices):
+        values = []
+        for slot, period in enumerate(periods):
+            sums[slot] += row["close"]
+            if index >= period:
+                sums[slot] -= prices[index - period]["close"]
+            values.append(sums[slot] / period if index + 1 >= period else None)
+        result.append({**row, "ma": values})
+    return result
+
+
+def weekly_candles(prices: list[dict]) -> list[dict]:
+    """Aggregate adjusted daily OHLCV into Monday-based Japanese trading weeks."""
+    weeks: list[dict] = []
+    for row in prices:
+        day = date.fromisoformat(row["date"])
+        monday = (day - timedelta(days=day.weekday())).isoformat()
+        if not weeks or weeks[-1]["date"] != monday:
+            weeks.append({**row, "date": monday, "through": row["date"]})
+        else:
+            week = weeks[-1]
+            week.update(high=max(week["high"], row["high"]),
+                        low=min(week["low"], row["low"]), close=row["close"],
+                        through=row["date"])
+            week["volume"] = (week["volume"] + row["volume"]
+                              if week["volume"] is not None and row["volume"] is not None else None)
+    return weeks
 
 
 def as_number(value: object) -> float | int | None:
@@ -43,6 +79,7 @@ def build_payload(
 
     stocks = []
     for row in candidates:
+        prices = sorted(prices_by_code.get(row["sc"], []), key=lambda price: price["date"])
         stocks.append(
             {
                 "sc": row["sc"],
@@ -56,7 +93,8 @@ def build_payload(
                     if row["turnover_thousand_yen"] is not None
                     else None
                 ),
-                "prices": prices_by_code.get(row["sc"], []),
+                "prices": add_moving_averages(prices, DAILY_MA_PERIODS),
+                "weeklyPrices": add_moving_averages(weekly_candles(prices), WEEKLY_MA_PERIODS),
             }
         )
 
@@ -66,6 +104,7 @@ def build_payload(
             "targetDate": target_date.isoformat(),
             "minTurnoverMillionYen": float(min_turnover_million_yen),
             "lookbackBars": lookback_bars,
+            "movingAverages": {"daily": DAILY_MA_PERIODS, "weekly": WEEKLY_MA_PERIODS},
             "matchedCount": matched_count,
             "displayedCount": len(stocks),
             "generatedAt": datetime.now(tz=JST).isoformat(),

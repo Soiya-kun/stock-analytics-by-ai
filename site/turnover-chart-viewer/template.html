@@ -16,6 +16,9 @@
       --up: #d4483b;
       --down: #2570c4;
       --accent: #1d5c46;
+      --ma-short: #a96500;
+      --ma-medium: #9452bf;
+      --ma-long: #00858c;
       --shadow: 0 1px 2px rgba(17, 31, 44, .06);
     }
     * { box-sizing: border-box; }
@@ -155,6 +158,11 @@
     .numbers { text-align: right; white-space: nowrap; }
     .price { font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; }
     .turnover { margin-top: 2px; color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+    .ma-legend { display: flex; flex-wrap: wrap; gap: 12px; padding: 3px 11px 0; font-size: 11px; }
+    .ma-legend span::before { display: inline-block; width: 14px; margin-right: 4px; border-top: 2px solid currentColor; content: ''; vertical-align: middle; }
+    .ma-legend span:nth-child(1) { color: var(--ma-short); }
+    .ma-legend span:nth-child(2) { color: var(--ma-medium); }
+    .ma-legend span:nth-child(3) { color: var(--ma-long); }
     .up { color: var(--up); }
     .down { color: var(--down); }
     canvas { display: block; width: 100%; height: 300px; touch-action: pan-y; cursor: grab; }
@@ -169,7 +177,8 @@
       header { padding-left: 9px; padding-right: 9px; }
       .bar { flex-wrap: wrap; }
       .title { width: 100%; }
-      input { flex: 1; width: auto; }
+      #search { flex: 1 1 120px; width: auto; min-width: 0; }
+      select { min-width: 0; padding-right: 20px; font-size: 13px; }
       .range-dock {
         bottom: calc(6px + env(safe-area-inset-bottom));
         width: calc(100% - 12px);
@@ -184,7 +193,7 @@
       canvas { height: 270px; }
     }
     @media (prefers-color-scheme: dark) {
-      :root { color-scheme: dark; --bg: #11171d; --panel: #192128; --ink: #edf2f5; --muted: #99a6b2; --line: #2b3741; --up: #ff7165; --down: #63a9f2; --accent: #70d0aa; --shadow: none; }
+      :root { color-scheme: dark; --bg: #11171d; --panel: #192128; --ink: #edf2f5; --muted: #99a6b2; --line: #2b3741; --up: #ff7165; --down: #63a9f2; --accent: #70d0aa; --ma-short: #edb44d; --ma-medium: #c38be7; --ma-long: #42c2c8; --shadow: none; }
     }
   </style>
 </head>
@@ -196,6 +205,10 @@
         <div class="summary" id="summary"></div>
       </div>
       <input id="search" type="search" inputmode="search" placeholder="コード・銘柄名" aria-label="コード・銘柄名で絞り込み">
+      <select id="timeframe" aria-label="ローソク足の種類">
+        <option value="daily">日足</option>
+        <option value="weekly">週足</option>
+      </select>
       <select id="sort" aria-label="並び順">
         <option value="turnover">売買代金順</option>
         <option value="change-desc">上昇率順</option>
@@ -231,6 +244,7 @@
       const search = document.getElementById('search');
       const sort = document.getElementById('sort');
       const density = document.getElementById('density');
+      const timeframe = document.getElementById('timeframe');
       const rangeSlider = document.getElementById('range-slider');
       const rangeStart = document.getElementById('range-start');
       const rangeEnd = document.getElementById('range-end');
@@ -240,29 +254,42 @@
       const number = new Intl.NumberFormat('ja-JP', { maximumFractionDigits: 1 });
       const priceNumber = new Intl.NumberFormat('ja-JP', { maximumFractionDigits: 2 });
       const stockByCode = new Map(payload.stocks.map(stock => [stock.sc, stock]));
-      const timeline = payload.stocks.reduce(
-        (longest, stock) => stock.prices.length > longest.length ? stock.prices : longest,
-        []
-      ).map(row => row.date);
-      const rangeMax = Math.max(0, timeline.length - 1);
-      const minimumRange = Math.min(9, rangeMax);
+      let timeline = [];
+      let rangeMax = 0;
+      let minimumRange = 0;
       let rangeStartIndex = 0;
       let rangeEndIndex = rangeMax;
       let rangeFrame = 0;
       let visible = [...payload.stocks];
 
-      for (const input of [rangeStart, rangeEnd]) {
-        input.min = '0';
-        input.max = String(rangeMax);
-        input.step = '1';
-      }
-      rangeStart.value = '0';
-      rangeEnd.value = String(rangeMax);
-
       document.getElementById('summary').textContent =
         `${payload.meta.targetDate} ・ ${formatTurnover(payload.meta.minTurnoverMillionYen)}以上 ・ ${payload.meta.displayedCount}/${payload.meta.matchedCount}銘柄`;
-      document.getElementById('footer').textContent =
-        `${payload.meta.lookbackBars}営業日・調整後株価｜生成 ${new Date(payload.meta.generatedAt).toLocaleString('ja-JP')}`;
+      function series(stock) {
+        return timeframe.value === 'weekly' ? stock.weeklyPrices : stock.prices;
+      }
+
+      function periods() { return payload.meta.movingAverages[timeframe.value]; }
+
+      function defaultStart() {
+        const count = timeframe.value === 'weekly' ? 52 : payload.meta.lookbackBars;
+        return Math.max(0, timeline.length - count);
+      }
+
+      function configureTimeframe() {
+        timeline = [...new Set(payload.stocks.flatMap(stock => series(stock).map(row => row.date)))].sort();
+        rangeMax = Math.max(0, timeline.length - 1);
+        minimumRange = Math.min(timeframe.value === 'weekly' ? 3 : 9, rangeMax);
+        for (const input of [rangeStart, rangeEnd]) {
+          input.min = '0'; input.max = String(rangeMax); input.step = '1';
+        }
+        rangeStart.value = String(defaultStart());
+        rangeEnd.value = String(rangeMax);
+        const weeklyNote = timeframe.value === 'weekly' ? `週足は月曜始まり・当週は${payload.meta.targetDate}まで。` : '';
+        document.getElementById('footer').textContent =
+          `調整後株価・単純移動平均。必要な本数がそろった区間に線を表示。${weeklyNote}右上の株価・騰落率は${payload.meta.targetDate}の日次終値・前日比。`;
+        updateRange('end');
+        render();
+      }
 
       const observer = new IntersectionObserver(entries => {
         for (const entry of entries) {
@@ -284,7 +311,7 @@
         if (!stock || !timeline.length) return [];
         const startDate = timeline[rangeStartIndex];
         const endDate = timeline[rangeEndIndex];
-        return stock.prices.filter(row => row.date >= startDate && row.date <= endDate);
+        return series(stock).filter(row => row.date >= startDate && row.date <= endDate);
       }
 
       function compactDate(value) {
@@ -310,7 +337,7 @@
         rangeEndDate.textContent = compactDate(timeline[end]);
         rangeStart.setAttribute('aria-valuetext', timeline[start] || '');
         rangeEnd.setAttribute('aria-valuetext', timeline[end] || '');
-        rangeReset.disabled = start === 0 && end === rangeMax;
+        rangeReset.disabled = start === defaultStart() && end === rangeMax;
         if (rangeFrame) cancelAnimationFrame(rangeFrame);
         rangeFrame = requestAnimationFrame(refreshCharts);
       }
@@ -404,10 +431,18 @@
 
         const canvas = document.createElement('canvas');
         canvas.setAttribute('role', 'img');
-        canvas.setAttribute('aria-label', `${stock.sc} ${stock.name}のローソク足チャート。左右にドラッグして表示期間を移動できます`);
+        canvas.setAttribute('aria-label', `${stock.sc} ${stock.name}の${timeframe.value === 'weekly' ? '週足' : '日足'}ローソク足と移動平均チャート。左右にドラッグして表示期間を移動できます`);
         canvas.title = '左右にドラッグして表示期間を移動';
         enablePanning(canvas);
-        card.append(head, canvas);
+        const legend = document.createElement('div');
+        legend.className = 'ma-legend';
+        legend.setAttribute('aria-label', '単純移動平均');
+        for (const period of periods()) {
+          const item = document.createElement('span');
+          item.textContent = `${period}${timeframe.value === 'weekly' ? '週' : '日'}`;
+          legend.append(item);
+        }
+        card.append(head, legend, canvas);
         return card;
       }
 
@@ -446,10 +481,11 @@
         const plotWidth = width - margin.left - margin.right;
         const highs = prices.map(row => row.high);
         const lows = prices.map(row => row.low);
-        const rawMin = Math.min(...lows);
-        const rawMax = Math.max(...highs);
+        const averages = prices.flatMap(row => row.ma.filter(value => value !== null));
+        const rawMin = Math.min(...lows, ...averages);
+        const rawMax = Math.max(...highs, ...averages);
         const pad = Math.max((rawMax - rawMin) * .06, rawMax * .004, .01);
-        const minPrice = rawMin - pad;
+        const minPrice = Math.max(0, rawMin - pad);
         const maxPrice = rawMax + pad;
         const maxVolume = Math.max(...prices.map(row => row.volume || 0), 1);
         const x = index => margin.left + (index + .5) * plotWidth / prices.length;
@@ -489,6 +525,21 @@
           ctx.globalAlpha = 1;
         });
 
+        ['--ma-short', '--ma-medium', '--ma-long'].forEach((color, slot) => {
+          ctx.strokeStyle = styles.getPropertyValue(color).trim();
+          ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          let connected = false;
+          prices.forEach((row, index) => {
+            const value = row.ma[slot];
+            if (value === null) { connected = false; return; }
+            if (connected) ctx.lineTo(x(index), y(value));
+            else ctx.moveTo(x(index), y(value));
+            connected = true;
+          });
+          ctx.stroke();
+        });
+
         ctx.fillStyle = muted;
         ctx.textAlign = 'left';
         ctx.textBaseline = 'alphabetic';
@@ -514,10 +565,11 @@
 
       search.addEventListener('input', applyFilters);
       sort.addEventListener('change', applyFilters);
+      timeframe.addEventListener('change', configureTimeframe);
       rangeStart.addEventListener('input', () => updateRange('start'));
       rangeEnd.addEventListener('input', () => updateRange('end'));
       rangeReset.addEventListener('click', () => {
-        rangeStart.value = '0';
+        rangeStart.value = String(defaultStart());
         rangeEnd.value = String(rangeMax);
         updateRange('end');
       });
@@ -528,8 +580,9 @@
         grid.style.setProperty('--columns', large ? '2' : '3');
         render();
       });
-      updateRange('end');
-      render();
+      window.addEventListener('resize', () => updateRange('resize'));
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', refreshCharts);
+      configureTimeframe();
     })();
   </script>
 </body>
