@@ -1,5 +1,9 @@
 # Setup
 
+## kabuステーションAPI
+
+Windows本体の起動、口座側の利用プラン、本体のAPI設定、認証・株価取得の確認は [kabuステーションAPIの操作・接続確認](kabu-station-api.md) を参照してください。2026年11月7日に単発の接続確認まで完了しています。常時収集・DB保存は未設定で、既存のKABU+取り込みとクラウド公開を維持します。
+
 ## Components
 
 - `db`: PostgreSQL 16. Data is persisted in `./pgdata`.

@@ -25,6 +25,7 @@
 
 ## Documentation
 
+- `AGENTS.md` and `docs/kabu-station-api.md`: current agent instructions and kabu Station operations, dated production connection evidence, localhost routing, manual authentication handoff, and limits/unimplemented continuous collection. No kabu Station DB tables or background collector have been added.
 - `README.md`: entry point and quick start.
 - `docs/setup.md`: operational setup and reset.
 - `docs/data-catalog.md`: dataset inventory and curated views.

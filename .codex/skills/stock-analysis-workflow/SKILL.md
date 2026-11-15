@@ -36,6 +36,8 @@ python C:\Users\djmaa\.codex\skills\.system\skill-creator\scripts\quick_validate
 
 ## References
 
+- For kabu Station operations, read `AGENTS.md` and `docs/kabu-station-api.md`. The 2026-11-07 production authentication and board query passed; ongoing collection, DB persistence and PUSH reception are not configured or verified. Use `localhost` for HTTP, hand login/password entry to the user, and keep connection tests limited to authentication and information reads. Preserve the independent KABU+ jobs and paused research state.
+
 - For change discipline and update targets, read `references/maintenance-checklist.md`.
 - For repository layout and preferred extension points, read `references/repo-map.md`.
 

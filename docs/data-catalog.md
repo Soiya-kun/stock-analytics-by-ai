@@ -1,5 +1,13 @@
 # Data Catalog
 
+## kabuステーションAPI
+
+- 2026年11月7日に、認証と三菱UFJ（8306）の株価・出来高取得を確認した。応答の価格・出来高は2026年11月6日15:30 JST時点。
+- 常時収集・DBへの保存先テーブルは未設定。KABU+の既存テーブルへ取り込んだ実績はない。
+- API応答の原本とパスワード・トークンはGitへ追加しない。操作方法、ローカルのテスト記録、取得制限は [操作ガイド](kabu-station-api.md) を参照する。
+
+## 日次株価・相場史
+
 - 日次クラウドの非公開S3データ: `state/prices.sqlite.gz` は日足OHLCV・売買代金・銘柄辞書・分割補正の作業状態。ローカルDBの全履歴やX投稿は含めない。`raw/daily/` は一覧確認後に取得したKABU+ CSV原本。`status/latest-run.json` / `status/last-published.json` / `status/runs/<ID>.json` に対象日・取得件数・段階・公開HTMLのSHA-256を保存する。公開対象は別の既存サイトバケットの `daily/index.html` だけ。
 - `control/run-lock.json`: クラウド更新の排他リース。所有request-id・失効時刻とS3 ETagの条件付き更新で多重起動を防ぐ。失効後に回復でき、データ原本ではない。
 - 日次ページpayloadの `prices` / `weeklyPrices`: 調整済み日足と月曜始まりの週足OHLCV。各足の `ma` は日足5・25・75日、週足13・26・52週の単純移動平均で、必要本数に満たない値はnull。`weeklyPrices.through` は週内の最終取引日。当週も対象日までで集計する。最大1000暦日の保存済み履歴で計算し、画面の初期表示範囲を超える履歴を計算に使う。
