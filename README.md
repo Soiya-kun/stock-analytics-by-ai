@@ -37,6 +37,10 @@ python -X utf8 scripts/daily_stock_review.py --date 2026-11-06 --skip-fetch
 
 初回デプロイ、価格履歴の準備、認証情報の登録、障害確認は [Setup](docs/setup.md#daily-stock-review-pipeline) を参照してください。過去研究の自動再開やX/Jevの追加取得は行いません。
 
+## kabuステーションAPI
+
+kabuステーションは、2026年11月7日に本番APIの認証・株価取得まで確認済みです。起動・利用プラン・API設定・再接続の手順は [操作ガイド](docs/kabu-station-api.md) を参照してください。常時収集・DB保存は未設定です。
+
 ## Quick Start
 
 ```powershell
